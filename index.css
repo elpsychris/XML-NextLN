@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css?family=Anton|Roboto+Condensed');
+html {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #6f7275;
+}
+
+body {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.card-1 {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.card-1:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.card-2 {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.card-3 {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.card-4 {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.card-5 {
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+
+.nav-bar {
+    width: 100%;
+    height: auto;
+    background: #FFFFFF;
+    display: flex;
+    font-family: 'Anton', sans-serif;
+    position: absolute;
+    align-items: center;
+    font-size: .75em;
+}
+
+.nav-bar input {
+    width: 50vw;
+    margin-right: auto;
+    margin-left: 15px;
+    padding: 5px;
+}
+
+.nav-item {
+    padding: 12px 20px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: 0 5px;
+}
+
+.nav-item a {
+    color: #d7d8d9;
+}
+
+.nav-item.focus a {
+    color: #454a4e;
+}
+
+.focus::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background: #ffa028;
+}
+
+.banner {
+    width: 100%;
+    height: 50vw;
+    background: url('./res/Snkv2.svg');
+    background-size: 100% auto;
+}
+
+.main-content {
+    width: 100%;
+    position: relative;
+}
+
+.card-panel-horz {
+    width: 100%;
+    padding: 10px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.card-panel-horz .panel-header {
+    font-size: 1.5em;
+    margin: 20px 0;
+}
+
+.panel-content {
+    display: flex;
+    position: relative;
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap; 
+}
+
+.panel-content .content-card {
+    width: 250px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 10px;
+    border-radius: 5px;
+}
+
+.content-card .title {
+    display: flex;
+    position: relative;
+    width: 100%;
+    justify-content: center;
+    padding: 20px 10px 10px 10px;    
+    box-sizing: border-box;
+}
+
+.content-card .title::before {
+    content: ' ';
+    width: 3px;
+    height: 50%;
+    position: absolute;
+    left: 0;
+    background: #5DB0F4;
+}
+
+.title .divider-1 {
+    margin-left: 5px;
+    position: relative;
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.divider-1 .divider-head {
+    font-size: .8em;
+    position: absolute;
+    top: -3px;
+}
+
+.divider-1 .diviver-content {
+    font-size: 3em;
+    display: flex;
+    justify-content: center;
+}
+
+.title .divider-2 {
+    margin-left: 5px;
+    position: relative;
+    padding: 5px 5px 14px 5px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    box-sizing: border-box;    
+}
+
+.divider-2 .divider-head {
+    font-size: 1.5em;
+    display: flex;
+    width: 100%;
+}
+
+.divider-2 .diviver-content {
+    font-size: 0.8em;
+    display: flex;
+    justify-content: center;
+    color: #aab2bd;    
+}
+
+.panel-content .thumbnail {
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    background: #5DB0F4;
+}
+
+.panel-content .author {
+    position: relative;
+    width: 100%;
+    padding: 10px 5px 0 5px;
+    font-weight: bold;
+}
+
+.panel-content .time {
+    position: relative;
+    width: 100%;
+    padding: 5px 5px 2px 5px;
+    font-size: .8em;
+}
+
+.panel-content .followers {
+    position: relative;
+    width: 100%;
+    padding: 10px 5px 5px 5px;    
+    display: flex;
+}
+
+.followers .follower {
+    width: 30px;
+    height: 30px;
+    margin: 0 2px;
+    background: #5DB0F4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: .8em;
+    border-radius: 5px;
+}
