@@ -1,13 +1,17 @@
-@import url('https://fonts.googleapis.com/css?family=Anton|Roboto+Condensed');
+
+@import url('https://fonts.googleapis.com/css?family=Baloo+Chettan|Lalezar|Roboto');
+
 html {
     padding: 0;
     margin: 0;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Roboto', sans-serif;
     color: #6f7275;
 }
 
 body {
     margin: 0;
+    position: relative;
+    width: 100%;
 }
 
 a {
@@ -16,11 +20,13 @@ a {
 }
 
 .card-1 {
+    transition: all .3s;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
 .card-1:hover {
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    z-index: 10;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25), 0 5px 5px rgba(0, 0, 0, 0.22);
 }
 
 .card-2 {
@@ -44,7 +50,7 @@ a {
     height: auto;
     background: #FFFFFF;
     display: flex;
-    font-family: 'Anton', sans-serif;
+    font-family: 'Baloo Chettan', cursive;
     position: absolute;
     align-items: center;
     font-size: .75em;
@@ -84,7 +90,7 @@ a {
     color: #454a4e;
 }
 
-.focus::after {
+.nav-item.focus::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -238,13 +244,15 @@ a {
     border-radius: 5px;
 }
 
-.banner .project-info {
-    position: absolute;
+.project-info {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
-    top: 30vw;
     font-size: .8em;
+    margin-top: -15vw;
+    margin-bottom: 15px;
     justify-content: center;
+    width: 100%;
 }
 
 .project-info .project-info-item {
@@ -452,4 +460,73 @@ a {
     font-size: 2em;
     display: flex;
     justify-content: center;
+}
+
+.project-nav {
+    position: relative;
+    display: flex;
+    background: white;
+    padding-left: 15px;
+}
+
+.project-nav .project-nav-item {
+    padding: 20px 20px;
+    color: #dcdcdc;
+    font-family: 'Baloo Chettan', cursive;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.project-nav-item.focus {
+    color: #5DB0F4;
+}
+
+.project-nav-item.focus::after {
+    content: '';
+    height: 2px;
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+    background: #5DB0F4;
+}
+
+.card-panel-horz .panel-content.table {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.card-panel-horz .panel-content>div {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    padding: 0 10px;    
+}
+
+.card-panel-horz .panel-content>div>div {
+    width: 200px;
+}
+
+.panel-content .headers div{
+    font-size: .9em;
+    color: #8290af;
+    padding: 10px 0;
+    font-family: 'Lalezar', cursive;
+}
+
+.panel-content .row-card .col{
+    padding: 20px 0;
+    display: flex;
+    align-items: center;    
+}
+
+.panel-content.table .row-card:nth-child(odd) {
+    background: white;
+}
+
+.panel-content.table .row-card:nth-child(even) {
+    background: #f9fbfe;
 }
