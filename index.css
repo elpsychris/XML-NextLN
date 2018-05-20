@@ -104,7 +104,6 @@ a {
 .main-content {
     width: 100%;
     position: relative;
-    margin-top: 10vw;
 }
 
 .card-panel-horz {
@@ -124,7 +123,7 @@ a {
     position: relative;
     width: 100%;
     justify-content: space-around;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
 }
 
 .panel-content .content-card {
@@ -140,7 +139,7 @@ a {
     position: relative;
     width: 100%;
     justify-content: center;
-    padding: 20px 10px 10px 10px;    
+    padding: 20px 10px 10px 10px;
     box-sizing: border-box;
 }
 
@@ -182,7 +181,7 @@ a {
     display: flex;
     flex-wrap: wrap;
     align-content: flex-end;
-    box-sizing: border-box;    
+    box-sizing: border-box;
 }
 
 .divider-2 .divider-head {
@@ -195,7 +194,7 @@ a {
     font-size: 0.8em;
     display: flex;
     justify-content: center;
-    color: #aab2bd;    
+    color: #aab2bd;
 }
 
 .panel-content .thumbnail {
@@ -222,7 +221,7 @@ a {
 .panel-content .followers {
     position: relative;
     width: 100%;
-    padding: 10px 5px 5px 5px;    
+    padding: 10px 5px 5px 5px;
     display: flex;
 }
 
@@ -243,7 +242,7 @@ a {
     position: absolute;
     display: flex;
     flex-wrap: wrap;
-    bottom: -10vw;
+    top: 30vw;
     font-size: .8em;
     justify-content: center;
 }
@@ -252,7 +251,205 @@ a {
     width: 25%;
     min-width: 250px;
     margin: 15px 15px;
-    padding: 5px;
+    padding: 60px 15px 15px 15px;
     box-sizing: border-box;
     background: white;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.project-info-item .side-info::before {
+    content: "Thông tin";
+    color: #325d81;
+    font-weight: bold;
+    font-size: 1.75em;
+    position: absolute;
+    top: 10px;
+}
+
+.project-info-item .main-info::before {
+    content: "Giới thiệu";
+    color: #f48c47;
+    font-weight: bold;
+    font-size: 1.75em;
+    position: absolute;
+    top: 10px;
+}
+
+.project-info-item .rating-info::before {
+    content: "Đánh giá";
+    color: #d65e6f;
+    font-weight: bold;
+    font-size: 1.75em;
+    position: absolute;
+    top: 10px;
+}
+
+.project-info-item .side-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.side-info>div {
+    width: 50%;
+    padding: 15px 0 5px 0;
+    font-size: 1.25em;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.side-info .start-date::before {
+    content: "Bắt đầu";
+    color: black;
+    font-size: .75em;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+}
+
+.side-info .country::before {
+    content: "Xuất xứ";
+    color: black;
+    font-size: .75em;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+}
+
+.side-info .publisher::before {
+    content: "NXB";
+    color: black;
+    font-size: .75em;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+}
+
+.side-info .status::before {
+    content: "Trạng thái";
+    color: black;
+    font-size: .75em;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+}
+
+.side-info .genre::before {
+    content: "Thể loại";
+    color: black;
+    font-size: .75em;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+}
+
+.side-info .genre {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.side-info .genre a {
+    border: 1px solid black;
+    padding: 5px;
+    margin: 2px;
+    font-size: .85em;
+    border-radius: 5px;
+}
+
+.side-info .tag::before {
+    content: "Tag";
+    color: black;
+    font-size: .75em;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+}
+
+.side-info .tag {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.side-info .tag a {
+    margin: 2px;
+    font-size: .85em;
+}
+
+.side-info .tag a::before {
+    content: "#";
+}
+
+.project-info-item .main-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.main-info>div {
+    padding: 15px 0 5px 0;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.main-info>div:not(.synopsis) {
+    width: 50%;
+    font-size: 1.25em;
+}
+
+.main-info .author::before {
+    content: "Tác giả";
+    color: black;
+    font-size: .75em;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+}
+
+.main-info .artist::before {
+    content: "Minh họa";
+    color: black;
+    font-size: .75em;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+}
+
+.main-info .synopsis::before {
+    content: "Tóm tắt";
+    color: black;
+    font-size: 1em;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+}
+
+.project-info-item .rating-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.rating-info>div {
+    padding: 15px 0 5px 0;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.rating-info .content-rating {
+    width: 50%;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+}
+
+.rating-info .interact-rating {
+    width: 50%;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
 }
