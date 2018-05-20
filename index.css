@@ -49,6 +49,7 @@ a {
     align-items: center;
     font-size: .75em;
     justify-content: space-around;
+    z-index: 100;
 }
 
 .nav-bar #logo {
@@ -97,11 +98,13 @@ a {
     height: 50vw;
     background: url('./res/Snkv2.svg');
     background-size: 100% auto;
+    position: relative;
 }
 
 .main-content {
     width: 100%;
     position: relative;
+    margin-top: 10vw;
 }
 
 .card-panel-horz {
@@ -234,4 +237,22 @@ a {
     color: white;
     font-size: .8em;
     border-radius: 5px;
+}
+
+.banner .project-info {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    bottom: -10vw;
+    font-size: .8em;
+    justify-content: center;
+}
+
+.project-info .project-info-item {
+    width: 25%;
+    min-width: 250px;
+    margin: 15px 15px;
+    padding: 5px;
+    box-sizing: border-box;
+    background: white;
 }
