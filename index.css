@@ -138,6 +138,7 @@ a {
     flex-wrap: wrap;
     margin: 20px 10px;
     border-radius: 5px;
+    position: relative;
 }
 
 .content-card .title {
@@ -476,6 +477,11 @@ a {
     position: relative;
     display: flex;
     justify-content: center;
+    cursor: pointer;
+}
+
+.project-nav .project-nav-item:hover {
+    color: rgba(93, 176, 244, .3);
 }
 
 .project-nav-item.focus {
@@ -499,14 +505,14 @@ a {
     box-sizing: border-box;
 }
 
-.card-panel-horz .panel-content>div {
+.card-panel-horz .panel-content.table>div {
     display: flex;
     width: 100%;
     justify-content: space-around;
     padding: 0 10px;    
 }
 
-.card-panel-horz .panel-content>div>div {
+.card-panel-horz .panel-content.table>div>div {
     width: 200px;
 }
 
@@ -530,3 +536,8 @@ a {
 .panel-content.table .row-card:nth-child(even) {
     background: #f9fbfe;
 }
+
+.tab .tab-content:not(.show) {
+    display: none;
+}
+
