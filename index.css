@@ -1,5 +1,11 @@
-
 @import url('https://fonts.googleapis.com/css?family=Baloo+Chettan|Lalezar|Roboto');
+@font-face {
+    font-family: "FontAwesome";
+    font-weight: normal;
+    font-style: normal;
+    src: url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.eot?v=4.3.0");
+    src: url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.eot?#iefix&v=4.3.0") format("embedded-opentype"), url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff2?v=4.3.0") format("woff2"), url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff?v=4.3.0") format("woff"), url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.ttf?v=4.3.0") format("truetype"), url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular") format("svg");
+}
 
 html {
     padding: 0;
@@ -53,7 +59,7 @@ a {
     font-family: 'Baloo Chettan', cursive;
     position: absolute;
     align-items: center;
-    font-size: .75em;
+    font-size: .9em;
     justify-content: space-around;
     z-index: 100;
 }
@@ -61,40 +67,62 @@ a {
 .nav-bar #logo {
     background: url('./res/logo.png') no-repeat center;
     background-size: 100% 100%;
-    width: 38px;
-    height: 38px;
+    width: 60px;
+    height: 60px;
     margin-right: auto;
     margin-left: 15px;
     position: relative;
 }
 
-.nav-bar input {
-    width: 50vw;
-    max-width: 400px;
-    padding: 5px;
+.nav-item-center {
+    flex-grow: 4;
+    display: flex;
+    padding-left: 35px;
 }
 
-.nav-item {
-    padding: 12px 20px;
+.search-bar {
+    width: 50vw;
+    max-width: 700px;
+    padding: 8px;
+    padding-left: 35px;
+    font-size: 1.1em;
+    position: relative;
+    background: url('./res/search-icon.png') no-repeat;
+    background-size: auto 70%;
+    background-position-y: center;
+    background-position-x: 5px;
+    box-sizing: border-box;
+    border: 1px solid #dcdcdc;
+}
+
+
+.nav-item-right {
+    display: flex;
+    flex-grow: 2;
+    justify-content: flex-end;
+}
+
+.nav-item-right>div {
+    padding: 20px 30px;
     position: relative;
     display: flex;
     justify-content: center;
     margin: 0 5px;
 }
 
-.nav-item a {
+.nav-item-right a {
     color: #d7d8d9;
 }
 
-.nav-item.focus a {
+.nav-item-right>div.focus a {
     color: #454a4e;
 }
 
-.nav-item.focus::after {
+.nav-item-right>div.focus::after {
     content: '';
     position: absolute;
     bottom: 0;
-    height: 2px;
+    height: 3px;
     width: 100%;
     background: #ffa028;
 }
@@ -509,24 +537,24 @@ a {
     display: flex;
     width: 100%;
     justify-content: space-around;
-    padding: 0 10px;    
+    padding: 0 10px;
 }
 
 .card-panel-horz .panel-content.table>div>div {
     width: 200px;
 }
 
-.panel-content .headers div{
+.panel-content .headers div {
     font-size: .9em;
     color: #8290af;
     padding: 10px 0;
     font-family: 'Lalezar', cursive;
 }
 
-.panel-content .row-card .col{
+.panel-content .row-card .col {
     padding: 20px 0;
     display: flex;
-    align-items: center;    
+    align-items: center;
 }
 
 .panel-content.table .row-card:nth-child(odd) {
@@ -540,4 +568,3 @@ a {
 .tab .tab-content:not(.show) {
     display: none;
 }
-
