@@ -18,6 +18,7 @@ body {
     margin: 0;
     position: relative;
     width: 100%;
+    min-height: 1700px;
 }
 
 a {
@@ -95,7 +96,6 @@ a {
     border: 1px solid #dcdcdc;
 }
 
-
 .nav-item-right {
     display: flex;
     flex-grow: 2;
@@ -132,6 +132,12 @@ a {
     height: 50vw;
     background: url('./res/Snkv2.svg');
     background-size: 100% auto;
+    position: relative;
+}
+
+.banner-empty {
+    width: 100%;
+    height: 50px;
     position: relative;
 }
 
@@ -567,4 +573,146 @@ a {
 
 .tab .tab-content:not(.show) {
     display: none;
+}
+
+.search-info {
+    position: relative;
+    display: flex;
+    padding: 10px;
+    margin: 45px 25px;
+    flex-wrap: wrap;
+    clear: both;
+}
+
+.search-info .search-info-header {
+    font-size: 1.4em;
+    color: #6f7275;
+    margin: 15px 0;
+}
+
+.search-section {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+    margin-bottom: 10px;    
+}
+
+.search-section .section-name {
+    width: 100%;
+    font-size: 0.9em;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.search-section.origin {
+    width: 100%;
+}
+
+.search-section .section-item {
+    padding: 10px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-section input[type=number] {
+    padding: 5px;
+    font-size: .9em;
+    margin-left: 10px;
+}
+
+.search-section.genre {
+    justify-content: space-around;
+}
+
+.search-section.genre .section-item {
+    width: 20%;
+    min-width: 100px;
+    display: flex;
+    position: relative;
+}
+
+
+
+
+
+
+
+.container {
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+input[type=checkbox] {
+    position: absolute;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 10;
+    /* Double-sized Checkboxes */
+    -ms-transform: scale(2);
+    /* IE */
+    -moz-transform: scale(2);
+    /* FF */
+    -webkit-transform: scale(2);
+    /* Safari and Chrome */
+    -o-transform: scale(2);
+    /* Opera */
+}
+
+/* Create a custom checkbox */
+
+.cus-checkbox {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    margin-right: 5px;
+    background-color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* On mouse-over, add a grey background color */
+
+.container:hover input~.cus-checkbox {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+
+.container input:checked~.cus-checkbox {
+    background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+
+.cus-checkbox:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+
+.container input:checked~.cus-checkbox:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+
+.container .cus-checkbox:after {
+    width: 4px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
 }
