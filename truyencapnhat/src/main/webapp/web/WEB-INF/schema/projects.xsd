@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://www.truyencapnhat.vn/schema/projects"
+            xmlns="http://www.truyencapnhat.vn/schema/projects"
+            elementFormDefault="qualified">
+    <xsd:element name="project" type="Project"/>
+    <xsd:complexType name="Project">
+        <xsd:sequence>
+            <xsd:sequence>
+                <xsd:element name="project_id" type="xsd:string"/>
+                <xsd:element name="name" type="xsd:string"/>
+                <xsd:element name="alter_name" type="xsd:string"/>
+                <xsd:element name="origin" type="xsd:string"/>
+                <xsd:element name="publish_date" type="xsd:string"/>
+                <xsd:element name="author_name" type="xsd:string"/>
+                <xsd:element name="illustrator_name" type="xsd:string"/>
+                <xsd:element name="synopsis" type="xsd:string"/>
+                <xsd:element name="hashcode" type="xsd:string"/>
+                <xsd:element name="project_tag" type="xsd:string"/>
+                <xsd:element name="publisher" type="xsd:string"/>
+            </xsd:sequence>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>

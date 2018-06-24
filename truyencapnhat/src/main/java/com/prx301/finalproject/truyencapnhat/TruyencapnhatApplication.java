@@ -1,4 +1,4 @@
-package com.prx301.truyencapnhat.truyencapnhat;
+package com.prx301.finalproject.truyencapnhat;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

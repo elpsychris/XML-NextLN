@@ -1,0 +1,718 @@
+@import url('https://fonts.googleapis.com/css?family=Baloo+Chettan|Lalezar|Roboto');
+@font-face {
+    font-family: "FontAwesome";
+    font-weight: normal;
+    font-style: normal;
+    src: url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.eot?v=4.3.0");
+    src: url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.eot?#iefix&v=4.3.0") format("embedded-opentype"), url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff2?v=4.3.0") format("woff2"), url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff?v=4.3.0") format("woff"), url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.ttf?v=4.3.0") format("truetype"), url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular") format("svg");
+}
+
+html {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #6f7275;
+}
+
+body {
+    margin: 0;
+    position: relative;
+    width: 100%;
+    min-height: 1700px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.card-1 {
+    transition: all .3s;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.card-1:hover {
+    z-index: 10;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25), 0 5px 5px rgba(0, 0, 0, 0.22);
+}
+
+.card-2 {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.card-3 {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.card-4 {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.card-5 {
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+
+.nav-bar {
+    width: 100%;
+    height: auto;
+    background: #FFFFFF;
+    display: flex;
+    font-family: 'Baloo Chettan', cursive;
+    position: absolute;
+    align-items: center;
+    font-size: .9em;
+    justify-content: space-around;
+    z-index: 100;
+}
+
+.nav-bar #logo {
+    background: url('/res/logo.png') no-repeat center;
+    background-size: 100% 100%;
+    width: 60px;
+    height: 60px;
+    margin-right: auto;
+    margin-left: 15px;
+    position: relative;
+}
+
+.nav-item-center {
+    flex-grow: 4;
+    display: flex;
+    padding-left: 35px;
+}
+
+.search-bar {
+    width: 50vw;
+    max-width: 700px;
+    padding: 8px;
+    padding-left: 35px;
+    font-size: 1.1em;
+    position: relative;
+    background: url('/res/search-icon.png') no-repeat;
+    background-size: auto 70%;
+    background-position-y: center;
+    background-position-x: 5px;
+    box-sizing: border-box;
+    border: 1px solid #dcdcdc;
+}
+
+.nav-item-right {
+    display: flex;
+    flex-grow: 2;
+    justify-content: flex-end;
+}
+
+.nav-item-right>div {
+    padding: 20px 30px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: 0 5px;
+}
+
+.nav-item-right a {
+    color: #d7d8d9;
+}
+
+.nav-item-right>div.focus a {
+    color: #454a4e;
+}
+
+.nav-item-right>div.focus::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    background: #ffa028;
+}
+
+.banner {
+    width: 100%;
+    height: 50vw;
+    background: url('/res/Snkv2.svg');
+    background-size: 100% auto;
+    position: relative;
+}
+
+.banner-empty {
+    width: 100%;
+    height: 50px;
+    position: relative;
+}
+
+.main-content {
+    width: 100%;
+    position: relative;
+}
+
+.card-panel-horz {
+    width: 100%;
+    padding: 10px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.card-panel-horz .panel-header {
+    font-size: 1.5em;
+    margin: 20px 0;
+}
+
+.panel-content {
+    display: flex;
+    position: relative;
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.panel-content .content-card {
+    width: 250px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 10px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.content-card .title {
+    display: flex;
+    position: relative;
+    width: 100%;
+    justify-content: center;
+    padding: 20px 10px 10px 10px;
+    box-sizing: border-box;
+}
+
+.content-card .title::before {
+    content: ' ';
+    width: 3px;
+    height: 50%;
+    position: absolute;
+    left: 0;
+    background: #5DB0F4;
+}
+
+.title .divider-1 {
+    margin-left: 5px;
+    position: relative;
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.divider-1 .divider-head {
+    font-size: .8em;
+    position: absolute;
+    top: -3px;
+}
+
+.divider-1 .diviver-content {
+    font-size: 3em;
+    display: flex;
+    justify-content: center;
+}
+
+.title .divider-2 {
+    margin-left: 5px;
+    position: relative;
+    padding: 5px 5px 14px 5px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    box-sizing: border-box;
+}
+
+.divider-2 .divider-head {
+    font-size: 1.5em;
+    display: flex;
+    width: 100%;
+}
+
+.divider-2 .diviver-content {
+    font-size: 0.8em;
+    display: flex;
+    justify-content: center;
+    color: #aab2bd;
+}
+
+.panel-content .thumbnail {
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    background: #5DB0F4;
+}
+
+.panel-content .author {
+    position: relative;
+    width: 100%;
+    padding: 10px 5px 0 5px;
+    font-weight: bold;
+}
+
+.panel-content .time {
+    position: relative;
+    width: 100%;
+    padding: 5px 5px 2px 5px;
+    font-size: .8em;
+}
+
+.panel-content .followers {
+    position: relative;
+    width: 100%;
+    padding: 10px 5px 5px 5px;
+    display: flex;
+}
+
+.followers .follower {
+    width: 30px;
+    height: 30px;
+    margin: 0 2px;
+    background: #5DB0F4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: .8em;
+    border-radius: 5px;
+}
+
+.project-info {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: .8em;
+    margin-top: -15vw;
+    margin-bottom: 15px;
+    justify-content: center;
+    width: 100%;
+}
+
+.project-info .project-info-item {
+    width: 25%;
+    min-width: 250px;
+    margin: 15px 15px;
+    padding: 60px 15px 15px 15px;
+    box-sizing: border-box;
+    background: white;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.project-info-item .side-info::before {
+    content: "Thông tin";
+    color: #325d81;
+    font-weight: bold;
+    font-size: 1.75em;
+    position: absolute;
+    top: 10px;
+}
+
+.project-info-item .main-info::before {
+    content: "Giới thiệu";
+    color: #f48c47;
+    font-weight: bold;
+    font-size: 1.75em;
+    position: absolute;
+    top: 10px;
+}
+
+.project-info-item .rating-info::before {
+    content: "Đánh giá";
+    color: #d65e6f;
+    font-weight: bold;
+    font-size: 1.75em;
+    position: absolute;
+    top: 10px;
+}
+
+.project-info-item .side-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.side-info>div {
+    width: 50%;
+    padding: 15px 0 5px 0;
+    font-size: 1.25em;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.side-info .start-date::before {
+    content: "Bắt đầu";
+    color: black;
+    font-size: .75em;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+}
+
+.side-info .country::before {
+    content: "Xuất xứ";
+    color: black;
+    font-size: .75em;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+}
+
+.side-info .publisher::before {
+    content: "NXB";
+    color: black;
+    font-size: .75em;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+}
+
+.side-info .status::before {
+    content: "Trạng thái";
+    color: black;
+    font-size: .75em;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+}
+
+.side-info .genre::before {
+    content: "Thể loại";
+    color: black;
+    font-size: .75em;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+}
+
+.side-info .genre {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.side-info .genre a {
+    border: 1px solid black;
+    padding: 5px;
+    margin: 2px;
+    font-size: .85em;
+    border-radius: 5px;
+}
+
+.side-info .tag::before {
+    content: "Tag";
+    color: black;
+    font-size: .75em;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+}
+
+.side-info .tag {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.side-info .tag a {
+    margin: 2px;
+    font-size: .85em;
+}
+
+.side-info .tag a::before {
+    content: "#";
+}
+
+.project-info-item .main-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.main-info>div {
+    padding: 15px 0 5px 0;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.main-info>div:not(.synopsis) {
+    width: 50%;
+    font-size: 1.25em;
+}
+
+.main-info .author::before {
+    content: "Tác giả";
+    color: black;
+    font-size: .75em;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+}
+
+.main-info .artist::before {
+    content: "Minh họa";
+    color: black;
+    font-size: .75em;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+}
+
+.main-info .synopsis::before {
+    content: "Tóm tắt";
+    color: black;
+    font-size: 1em;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+}
+
+.project-info-item .rating-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.rating-info>div {
+    padding: 15px 0 5px 0;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.rating-info .content-rating {
+    width: 50%;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+}
+
+.rating-info .interact-rating {
+    width: 50%;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+}
+
+.project-nav {
+    position: relative;
+    display: flex;
+    background: white;
+    padding-left: 15px;
+}
+
+.project-nav .project-nav-item {
+    padding: 20px 20px;
+    color: #dcdcdc;
+    font-family: 'Baloo Chettan', cursive;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.project-nav .project-nav-item:hover {
+    color: rgba(93, 176, 244, .3);
+}
+
+.project-nav-item.focus {
+    color: #5DB0F4;
+}
+
+.project-nav-item.focus::after {
+    content: '';
+    height: 2px;
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+    background: #5DB0F4;
+}
+
+.card-panel-horz .panel-content.table {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.card-panel-horz .panel-content.table>div {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    padding: 0 10px;
+}
+
+.card-panel-horz .panel-content.table>div>div {
+    width: 200px;
+}
+
+.panel-content .headers div {
+    font-size: .9em;
+    color: #8290af;
+    padding: 10px 0;
+    font-family: 'Lalezar', cursive;
+}
+
+.panel-content .row-card .col {
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+}
+
+.panel-content.table .row-card:nth-child(odd) {
+    background: white;
+}
+
+.panel-content.table .row-card:nth-child(even) {
+    background: #f9fbfe;
+}
+
+.tab .tab-content:not(.show) {
+    display: none;
+}
+
+.search-info {
+    position: relative;
+    display: flex;
+    padding: 10px;
+    margin: 45px 25px;
+    flex-wrap: wrap;
+    clear: both;
+}
+
+.search-info .search-info-header {
+    font-size: 1.4em;
+    color: #6f7275;
+    margin: 15px 0;
+}
+
+.search-section {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+    margin-bottom: 10px;    
+}
+
+.search-section .section-name {
+    width: 100%;
+    font-size: 0.9em;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.search-section.origin {
+    width: 100%;
+}
+
+.search-section .section-item {
+    padding: 10px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-section input[type=number] {
+    padding: 5px;
+    font-size: .9em;
+    margin-left: 10px;
+}
+
+.search-section.genre {
+    justify-content: space-around;
+}
+
+.search-section.genre .section-item {
+    width: 20%;
+    min-width: 100px;
+    display: flex;
+    position: relative;
+}
+
+
+
+
+
+
+
+.container {
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+input[type=checkbox] {
+    position: absolute;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 10;
+    /* Double-sized Checkboxes */
+    -ms-transform: scale(2);
+    /* IE */
+    -moz-transform: scale(2);
+    /* FF */
+    -webkit-transform: scale(2);
+    /* Safari and Chrome */
+    -o-transform: scale(2);
+    /* Opera */
+}
+
+/* Create a custom checkbox */
+
+.cus-checkbox {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    margin-right: 5px;
+    background-color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* On mouse-over, add a grey background color */
+
+.container:hover input~.cus-checkbox {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+
+.container input:checked~.cus-checkbox {
+    background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+
+.cus-checkbox:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+
+.container input:checked~.cus-checkbox:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+
+.container .cus-checkbox:after {
+    width: 4px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
