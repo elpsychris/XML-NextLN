@@ -1,20 +1,20 @@
 package com.prx301.finalproject.truyencapnhat.service;
 
-import com.prx301.finalproject.truyencapnhat.model.Project;
-import com.prx301.finalproject.truyencapnhat.repository.ProjectRepository;
+import com.prx301.finalproject.truyencapnhat.model.ProjectEntity;
+import com.prx301.finalproject.truyencapnhat.repository.ProjectRepo;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
 public class ProjectService {
-    private ProjectRepository projectRepository;
+    private ProjectRepo projectRepository;
 
-    public ProjectService(ProjectRepository projectRepository) {
+    public ProjectService(ProjectRepo projectRepository) {
         this.projectRepository = projectRepository;
     }
 
-    public List<Project> getAllProjects() {
+    public List<ProjectEntity> getAllProjects() {
         return projectRepository.findAll();
     }
 }

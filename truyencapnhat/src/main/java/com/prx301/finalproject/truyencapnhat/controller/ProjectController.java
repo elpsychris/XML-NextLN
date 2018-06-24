@@ -1,6 +1,7 @@
 package com.prx301.finalproject.truyencapnhat.controller;
 
 import com.prx301.finalproject.truyencapnhat.model.Project;
+import com.prx301.finalproject.truyencapnhat.model.ProjectEntity;
 import com.prx301.finalproject.truyencapnhat.service.ProjectService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -21,7 +22,7 @@ public class ProjectController {
 
     @GetMapping(value = {"/index"})
     public String index(Model model) {
-        List<Project> projectList = projectService.getAllProjects();
+        List<ProjectEntity> projectList = projectService.getAllProjects();
         model.addAttribute("projectList",projectList);
         return "index";
     }

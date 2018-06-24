@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://t3.com/2018/project-page"
+            xmlns="http://t3.com/2018/project-page"
+            elementFormDefault="qualified">
+    <xsd:include schemaLocation="update.xsd"/>
+
+    <xsd:complexType name="project-type">
+        <xsd:sequence>
+            <xsd:element name="name" type="xsd:string" minOccurs="1"/>
+            <xsd:element name="alter-name" type="xsd:string" />
+            <xsd:element name="author" type="xsd:string"/>
+            <xsd:element name="illustrator" type="xsd:string"/>
+            <xsd:element name="synopsis" type="xsd:string"/>
+            <xsd:element name="genres">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="genre" minOccurs="0" maxOccurs="unbounded"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="view">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:pattern value="[0-9]+[.,]?[0-9]+"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="link" type="xsd:string"/>
+            <xsd:element name="updates">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="update" type="update" minOccurs="0" maxOccurs="unbounded"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>
