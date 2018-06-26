@@ -1,4 +1,4 @@
-package com.prx301.finalproject.truyencapnhat.service.spider;//package crawler.spider;
+package com.prx301.finalproject.truyencapnhat.model;//package crawler.spider;
 //
 //import crawler.model.ProjectEntity;
 //import crawler.repository.ProjectRepo;

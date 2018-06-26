@@ -9,4 +9,5 @@ import java.util.List;
 @Repository
 public interface ProjectRepo extends JpaRepository<ProjectEntity, Integer> {
     List<ProjectEntity> findAll();
+    ProjectEntity findByProjectId(int id);
 }

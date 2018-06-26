@@ -1,18 +1,16 @@
 package com.prx301.finalproject.truyencapnhat.controller;
 
-import com.prx301.finalproject.truyencapnhat.service.spider.SpiderService;
-import com.prx301.finalproject.truyencapnhat.spider.Spider;
+import com.prx301.finalproject.truyencapnhat.model.Spider;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 @RequestMapping("/crawler")
 public class CrawlerController {
-    private SpiderService spiderService;
+    private Spider spiderService;
 
-    public CrawlerController(SpiderService spiderService) {
+    public CrawlerController(Spider spiderService) {
         this.spiderService = spiderService;
     }
 

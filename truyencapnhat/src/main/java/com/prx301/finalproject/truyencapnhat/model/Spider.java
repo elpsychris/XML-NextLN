@@ -1,15 +1,11 @@
-package com.prx301.finalproject.truyencapnhat.service.spider;
+package com.prx301.finalproject.truyencapnhat.model;
 
 
-import com.prx301.finalproject.truyencapnhat.model.ProjectEntity;
-import com.prx301.finalproject.truyencapnhat.model.Projects;
-import com.prx301.finalproject.truyencapnhat.model.UpdateEntity;
 import com.prx301.finalproject.truyencapnhat.repository.ProjectRepo;
 import com.prx301.finalproject.truyencapnhat.utils.ComUtils;
 import com.prx301.finalproject.truyencapnhat.utils.JAXBUtils;
 import com.prx301.finalproject.truyencapnhat.utils.Logger;
 import com.prx301.finalproject.truyencapnhat.utils.TrAXUtils;
-import org.springframework.stereotype.Service;
 import org.xml.sax.SAXException;
 
 import javax.xml.bind.JAXBException;
@@ -21,11 +17,10 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
-@Service
-public class SpiderService {
-    final String DEFAULT_PARENT_PATH = "src/main/java/crawl_temp";
-    ProjectRepo projectRepo = null;
-    DOMResult result = null;
+public class Spider {
+    private final String DEFAULT_PARENT_PATH = "src/main/java/com/prx301/finalproject/truyencapnhat";
+    private ProjectRepo projectRepo = null;
+    private DOMResult result = null;
     private Logger logger = null;
 
 //    public Spider() {
@@ -37,8 +32,9 @@ public class SpiderService {
 //    }
 
 
-    public SpiderService(ProjectRepo projectRepo) {
+    public Spider(ProjectRepo projectRepo) {
         this.projectRepo = projectRepo;
+        this.logger = Logger.getLogger();
     }
 
     interface ParserHandler {
@@ -53,26 +49,26 @@ public class SpiderService {
     }
 
     public void start(String configPath, String xslPath) {
-        Runnable thread = () -> {
-            try {
-                Thread.sleep(3000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            TrAXUtils.stop();
-            Thread.interrupted();
-        };
-
-        Thread thread1 = new Thread(thread);
-        thread1.start();
+//        Runnable thread = () -> {
+//            try {
+//                Thread.sleep(3000);
+//            } catch (InterruptedException e) {
+//                e.printStackTrace();
+//            }
+//            TrAXUtils.stop();
+//            Thread.interrupted();
+//        };
+//
+//        Thread thread1 = new Thread(thread);
+//        thread1.start();
         try {
             this.result = this.crawl(configPath, xslPath);
         } catch (TransformerException e) {
-            logger.log(Logger.LOG_LEVEL.ERROR, e, SpiderService.class);
+            logger.log(Logger.LOG_LEVEL.ERROR, e, Spider.class);
         } catch (IOException e) {
-            logger.log(Logger.LOG_LEVEL.ERROR, e, SpiderService.class);
+            logger.log(Logger.LOG_LEVEL.ERROR, e, Spider.class);
         } catch (InterruptedException e) {
-            logger.log(Logger.LOG_LEVEL.ERROR, e, SpiderService.class);
+            logger.log(Logger.LOG_LEVEL.ERROR, e, Spider.class);
         }
 
         try {
@@ -89,7 +85,7 @@ public class SpiderService {
         } catch (SAXException e) {
             logger.log(Logger.LOG_LEVEL.WARNING, "SAXException", e, ComUtils.class);
         } catch (JAXBException e) {
-            logger.log(Logger.LOG_LEVEL.ERROR, e, SpiderService.class);
+            logger.log(Logger.LOG_LEVEL.ERROR, e, Spider.class);
         }
 
 //        handler.onParsed(this.result);

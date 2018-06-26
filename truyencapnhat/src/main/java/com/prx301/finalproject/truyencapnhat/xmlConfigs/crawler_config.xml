@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<crawler-config xmlns="http://t3.com/2018/xml"
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <components>
+        <component name="hako">
+            <stylesheet>hako_style.xsl</stylesheet>
+            <config>hako_project.xml</config>
+        </component>
+    </components>
+</crawler-config>
