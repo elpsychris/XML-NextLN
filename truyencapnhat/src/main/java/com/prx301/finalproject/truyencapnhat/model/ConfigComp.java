@@ -7,14 +7,26 @@ import javax.xml.bind.annotation.XmlType;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ConfigComp", propOrder = {
+        "name",
         "stylesheet",
         "config",
 })
 public class ConfigComp {
+    @XmlElement(name = "name")
+    private String name;
     @XmlElement(name = "stylesheet")
     private String stylesheet;
     @XmlElement(name = "config")
     private String config;
+
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 
     public String getStylesheet() {
         return stylesheet;

@@ -1,5 +1,8 @@
 package com.prx301.finalproject.truyencapnhat.utils;
 
+import com.prx301.finalproject.truyencapnhat.model.CrawlerConfig;
+
+import javax.xml.bind.JAXBException;
 import java.io.*;
 import java.net.URL;
 import java.net.URLConnection;
@@ -13,6 +16,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class ComUtils {
+    private final static String DEFAULT_CRAWLER_CONFIG_DIR = "src/main/java/com/prx301/finalproject/truyencapnhat/xmlConfigs/crawler_config.xml";
     private final static String USER_AGENT_HEADER = "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.95 Safari/537.11";
     private final static int RETRY_INTERVAL = 20000;
     private final static int TIMEOUT = 6000;
@@ -215,6 +219,18 @@ public class ComUtils {
                 }
             }
         }
+    }
+
+    public static CrawlerConfig getCrawlerConfig() {
+        File file = new File(DEFAULT_CRAWLER_CONFIG_DIR);
+
+        CrawlerConfig crawlerConfig = null;
+        try {
+            crawlerConfig = JAXBUtils.xmlToObject(file, CrawlerConfig.class);
+        } catch (JAXBException e) {
+            logger.log(Logger.LOG_LEVEL.ERROR, "Cannot retrieve crawler config", e, ComUtils.class);
+        }
+        return crawlerConfig;
     }
 
 

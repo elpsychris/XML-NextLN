@@ -19,6 +19,20 @@ public class JAXBUtils {
         return xmlToObject(xml, null, classes);
     }
 
+    public static <T> T xmlToObject(File file, Class<T> tClass) throws JAXBException {
+        JAXBContext context = JAXBContext.newInstance(tClass);
+        Unmarshaller unmarshaller = context.createUnmarshaller();
+
+        T result = null;
+
+        try {
+            result = (T) unmarshaller.unmarshal(file);
+        } catch (UnmarshalException e) {
+            logger.log(Logger.LOG_LEVEL.ERROR, e, JAXBUtils.class);
+        }
+        return result;
+    }
+
     public static <T> T xmlToObject(DOMResult xml, Schema schema, Class<T>... classes) throws JAXBException {
         JAXBContext context = JAXBContext.newInstance(classes);
         Unmarshaller unmarshaller = context.createUnmarshaller();

@@ -2,7 +2,12 @@
 <crawler-config xmlns="http://t3.com/2018/xml"
                     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <components>
-        <component name="hako">
+        <component status="active">
+            <name>Hako.re</name>
+            <stylesheet>hako_style.xsl</stylesheet>
+            <config>hako_project.xml</config>
+        </component>
+        <component status="inactive">
             <stylesheet>hako_style.xsl</stylesheet>
             <config>hako_project.xml</config>
         </component>

@@ -1,7 +1,7 @@
 package com.prx301.finalproject.truyencapnhat.model;
 
-
 import com.prx301.finalproject.truyencapnhat.repository.ProjectRepo;
+import com.prx301.finalproject.truyencapnhat.service.spider.SpiderService;
 import com.prx301.finalproject.truyencapnhat.utils.ComUtils;
 import com.prx301.finalproject.truyencapnhat.utils.JAXBUtils;
 import com.prx301.finalproject.truyencapnhat.utils.Logger;
@@ -16,39 +16,38 @@ import javax.xml.validation.Schema;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Map;
 
-public class Spider {
-    private final String DEFAULT_PARENT_PATH = "src/main/java/com/prx301/finalproject/truyencapnhat";
-    private ProjectRepo projectRepo = null;
+public class CrawlerAgent implements Runnable {
+    private ConfigComp config = null;
+    private Logger logger = Logger.getLogger();
     private DOMResult result = null;
-    private Logger logger = null;
+    private ProjectRepo projectRepo = null;
 
-//    public Spider() {
-//    }
-//
-//    public Spider(ProjectRepo projectRepo, Logger logger) {
-//        this.projectRepo = projectRepo;
-//        this.logger = logger;
-//    }
-
-
-    public Spider(ProjectRepo projectRepo) {
+    public CrawlerAgent(ConfigComp config, ProjectRepo projectRepo) {
+        this.config = config;
         this.projectRepo = projectRepo;
-        this.logger = Logger.getLogger();
+    }
+
+    @Override
+    public void run() {
+        if (config != null) {
+            start(config.getConfig(), config.getStylesheet());
+        }
     }
 
     interface ParserHandler {
         void onParsed(DOMResult domResult);
-
         void onError(Exception e);
     }
 
-    public void start(String configPath, String xslPath, ParserHandler handler) throws IOException, TransformerException, InterruptedException {
-        this.result = this.crawl(configPath, xslPath);
-        handler.onParsed(this.result);
-    }
+//
+//    private void start(String configPath, String xslPath, ParserHandler handler) throws IOException, TransformerException, InterruptedException {
+//        this.result = this.crawl(configPath, xslPath);
+//        handler.onParsed(this.result);
+//    }
 
-    public void start(String configPath, String xslPath) {
+    private void start(String configPath, String xslPath) {
 //        Runnable thread = () -> {
 //            try {
 //                Thread.sleep(3000);
@@ -64,11 +63,11 @@ public class Spider {
         try {
             this.result = this.crawl(configPath, xslPath);
         } catch (TransformerException e) {
-            logger.log(Logger.LOG_LEVEL.ERROR, e, Spider.class);
+            logger.log(Logger.LOG_LEVEL.ERROR, e, SpiderService.class);
         } catch (IOException e) {
-            logger.log(Logger.LOG_LEVEL.ERROR, e, Spider.class);
+            logger.log(Logger.LOG_LEVEL.ERROR, e, SpiderService.class);
         } catch (InterruptedException e) {
-            logger.log(Logger.LOG_LEVEL.ERROR, e, Spider.class);
+            logger.log(Logger.LOG_LEVEL.ERROR, e, SpiderService.class);
         }
 
         try {
@@ -85,7 +84,7 @@ public class Spider {
         } catch (SAXException e) {
             logger.log(Logger.LOG_LEVEL.WARNING, "SAXException", e, ComUtils.class);
         } catch (JAXBException e) {
-            logger.log(Logger.LOG_LEVEL.ERROR, e, Spider.class);
+            logger.log(Logger.LOG_LEVEL.ERROR, e, SpiderService.class);
         }
 
 //        handler.onParsed(this.result);
@@ -125,7 +124,6 @@ public class Spider {
 //        Writer writer = null;
     private DOMResult crawl(String configPath, String xslPath) throws TransformerException, IOException, InterruptedException {
         StreamSource xsl = new StreamSource(xslPath);
-
         InputStream is = new FileInputStream(configPath);
         StreamSource config = new StreamSource(is);
 
