@@ -1,6 +1,6 @@
 <%@ page pageEncoding="UTF-8"%>
 <%@ page contentType="text/html;charset=UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jstl/core"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <!DOCTYPE html>
 <html>
@@ -33,29 +33,31 @@
     <div class="card-panel-horz">
         <div class="panel-header">Mới nhất</div>
         <div class="panel-content">
-            <div class="content-card card-2">
-                <div class="title">
-                    <div class="divider-1">
-                        <div class="divider-head">Tập</div>
-                        <div class="diviver-content">2</div>
+            <c:forEach var="update" items="${updateEntityList}">
+                <div class="content-card card-2">
+                    <div class="title">
+                        <div class="divider-1">
+                            <div class="divider-head">Tập</div>
+                            <div class="diviver-content">2</div>
+                        </div>
+                        <div class="divider-2">
+                            <div class="divider-head">Chương 1</div>
+                            <div class="diviver-content">${update.updateName}</div>
+                        </div>
                     </div>
-                    <div class="divider-2">
-                        <div class="divider-head">Chương 1</div>
-                        <div class="diviver-content">Thủ lĩnh những thẻ cào</div>
-                    </div>
-                </div>
-                <div class="thumbnail">
+                    <div class="thumbnail">
 
+                    </div>
+                    <span class="author">Sonako | NguyenAn</span>
+                    <span class="time">8:30 Chiều, 19 Th5 2018</span>
+                    <div class="followers">
+                        <div class="follower"></div>
+                        <div class="follower"></div>
+                        <div class="follower"></div>
+                        <div class="follower">+12</div>
+                    </div>
                 </div>
-                <span class="author">Sonako | NguyenAn</span>
-                <span class="time">8:30 Chiều, 19 Th5 2018</span>
-                <div class="followers">
-                    <div class="follower"></div>
-                    <div class="follower"></div>
-                    <div class="follower"></div>
-                    <div class="follower">+12</div>
-                </div>
-            </div>
+            </c:forEach>
 
 
             <div class="content-card card-2">

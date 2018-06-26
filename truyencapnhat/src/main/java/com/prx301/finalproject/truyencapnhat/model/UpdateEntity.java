@@ -1,7 +1,7 @@
 package com.prx301.finalproject.truyencapnhat.model;
 
-import crawler.utils.GroupAdapter;
-import crawler.utils.SqlTimeAdapter;
+import com.prx301.finalproject.truyencapnhat.utils.GroupAdapter;
+import com.prx301.finalproject.truyencapnhat.utils.SqlTimeAdapter;
 
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlAccessType;

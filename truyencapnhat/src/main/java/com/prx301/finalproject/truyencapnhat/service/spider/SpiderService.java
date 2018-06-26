@@ -1,4 +1,4 @@
-package com.prx301.finalproject.truyencapnhat.spider;
+package com.prx301.finalproject.truyencapnhat.service.spider;
 
 
 import com.prx301.finalproject.truyencapnhat.model.ProjectEntity;
@@ -13,35 +13,38 @@ import org.springframework.stereotype.Service;
 import org.xml.sax.SAXException;
 
 import javax.xml.bind.JAXBException;
-import javax.xml.transform.Source;
-
 import javax.xml.transform.TransformerException;
 import javax.xml.transform.dom.DOMResult;
 import javax.xml.transform.stream.StreamSource;
 import javax.xml.validation.Schema;
-import java.io.*;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
 
 @Service
-public class Spider {
+public class SpiderService {
     final String DEFAULT_PARENT_PATH = "src/main/java/crawl_temp";
     ProjectRepo projectRepo = null;
     DOMResult result = null;
     private Logger logger = null;
 
-//    public Spider(Logger logger) {
+//    public Spider() {
+//    }
+//
+//    public Spider(ProjectRepo projectRepo, Logger logger) {
+//        this.projectRepo = projectRepo;
 //        this.logger = logger;
 //    }
 
-    public Spider(ProjectRepo projectRepo) {
+
+    public SpiderService(ProjectRepo projectRepo) {
         this.projectRepo = projectRepo;
-        this.logger = Logger.getLogger();
     }
 
-
     interface ParserHandler {
-        public void onParsed(DOMResult domResult);
+        void onParsed(DOMResult domResult);
 
-        public void onError(Exception e);
+        void onError(Exception e);
     }
 
     public void start(String configPath, String xslPath, ParserHandler handler) throws IOException, TransformerException, InterruptedException {
@@ -49,7 +52,7 @@ public class Spider {
         handler.onParsed(this.result);
     }
 
-    public void start(String configPath, String xslPath) throws IOException, TransformerException, InterruptedException, JAXBException {
+    public void start(String configPath, String xslPath) {
         Runnable thread = () -> {
             try {
                 Thread.sleep(3000);
@@ -59,12 +62,21 @@ public class Spider {
             TrAXUtils.stop();
             Thread.interrupted();
         };
+
         Thread thread1 = new Thread(thread);
         thread1.start();
-        this.result = this.crawl(configPath, xslPath);
+        try {
+            this.result = this.crawl(configPath, xslPath);
+        } catch (TransformerException e) {
+            logger.log(Logger.LOG_LEVEL.ERROR, e, SpiderService.class);
+        } catch (IOException e) {
+            logger.log(Logger.LOG_LEVEL.ERROR, e, SpiderService.class);
+        } catch (InterruptedException e) {
+            logger.log(Logger.LOG_LEVEL.ERROR, e, SpiderService.class);
+        }
 
         try {
-            Schema schema = JAXBUtils.getSchema("src/main/java/crawler/schema/project_page.xsd");
+            Schema schema = JAXBUtils.getSchema("src/main/java/com/prx301/finalproject/truyencapnhat/schema/project_page.xsd");
             Projects projects = JAXBUtils.<Projects>xmlToObject(this.result, schema, Projects.class);
             for (ProjectEntity project : projects.getProjects()) {
                 project.setProjectHash(project.hashCode() + "");
@@ -76,6 +88,8 @@ public class Spider {
 
         } catch (SAXException e) {
             logger.log(Logger.LOG_LEVEL.WARNING, "SAXException", e, ComUtils.class);
+        } catch (JAXBException e) {
+            logger.log(Logger.LOG_LEVEL.ERROR, e, SpiderService.class);
         }
 
 //        handler.onParsed(this.result);

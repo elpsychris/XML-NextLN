@@ -1,21 +1,9 @@
 package com.prx301.finalproject.truyencapnhat.repository;
 
-import crawler.model.GroupEntity;
-import crawler.utils.Logger;
+import com.prx301.finalproject.truyencapnhat.model.GenreEntity;
+import com.prx301.finalproject.truyencapnhat.model.GroupEntity;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-public class GroupRepo extends AbstractRepo<GroupEntity> {
-    public GroupRepo() {
-        this.idKey = "groupId";
-    }
-
-    public GroupEntity findExist(GroupEntity obj) {
-        try {
-            return this.findExist(GroupEntity.class, obj.getGroupId());
-        } catch (IllegalAccessException e) {
-            logger.log(Logger.LOG_LEVEL.ERROR, e, GroupEntity.class);
-        } catch (InstantiationException e) {
-            logger.log(Logger.LOG_LEVEL.ERROR, "Error in the findExist function", e, GroupEntity.class);
-        }
-        return null;
-    }
+public interface GroupRepo extends JpaRepository<GroupEntity, String> {
+    public GroupEntity findFirstByGroupId(String groupId);
 }

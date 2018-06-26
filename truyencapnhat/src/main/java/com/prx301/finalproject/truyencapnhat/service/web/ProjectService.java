@@ -1,4 +1,4 @@
-package com.prx301.finalproject.truyencapnhat.service;
+package com.prx301.finalproject.truyencapnhat.service.web;
 
 import com.prx301.finalproject.truyencapnhat.model.ProjectEntity;
 import com.prx301.finalproject.truyencapnhat.repository.ProjectRepo;

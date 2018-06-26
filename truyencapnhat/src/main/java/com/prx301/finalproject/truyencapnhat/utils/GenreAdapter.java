@@ -1,17 +1,25 @@
 package com.prx301.finalproject.truyencapnhat.utils;
 
-import crawler.model.GenreEntity;
-import crawler.repository.GenreRepo;
+
+import com.prx301.finalproject.truyencapnhat.model.GenreEntity;
+import com.prx301.finalproject.truyencapnhat.repository.GenreRepo;
+import org.springframework.stereotype.Service;
 
 import javax.xml.bind.annotation.adapters.XmlAdapter;
 
+@Service
 public class GenreAdapter extends XmlAdapter<GenreEntity, GenreEntity> {
+    private GenreRepo genreRepo = null;
+
+    public GenreAdapter(GenreRepo genreRepo) {
+        this.genreRepo = genreRepo;
+    }
+
     @Override
     public GenreEntity unmarshal(GenreEntity v) throws Exception {
-        GenreRepo genreRepo = new GenreRepo();
-        GenreEntity obj = genreRepo.findExist(v);
+        GenreEntity obj = genreRepo.findFirstByGenreId(v.getGenreId());
         if (obj == null) {
-            genreRepo.add(v);
+            genreRepo.save(v);
             return v;
         } else {
             return obj;
