@@ -3,14 +3,12 @@ package com.prx301.finalproject.truyencapnhat.model;
 
 import com.prx301.finalproject.truyencapnhat.utils.LowerCaseAdapter;
 
-import javax.annotation.Generated;
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 

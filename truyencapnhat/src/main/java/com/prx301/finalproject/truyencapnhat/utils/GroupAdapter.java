@@ -10,7 +10,7 @@ public class GroupAdapter extends XmlAdapter<GroupEntity, GroupEntity> {
 
     @Override
     public GroupEntity unmarshal(GroupEntity v) throws Exception {
-        GroupEntity obj = AdapterHelper.findGroupExist(v.getGroupContact());
+        GroupEntity obj = AdapterHelper.findGroupExist(v.getGroupName());
         if (obj == null) {
             AdapterHelper.addNew(v);
             return v;
