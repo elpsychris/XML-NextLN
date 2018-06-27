@@ -2,6 +2,8 @@ package com.prx301.finalproject.truyencapnhat.model;
 
 import com.prx301.finalproject.truyencapnhat.utils.GroupAdapter;
 import com.prx301.finalproject.truyencapnhat.utils.SqlTimeAdapter;
+import com.prx301.finalproject.truyencapnhat.utils.UpdateNrmlAdapter;
+import com.prx301.finalproject.truyencapnhat.utils.VolNrmlAdapter;
 
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -36,7 +38,9 @@ public class UpdateEntity {
     @XmlElement(name = "id")
     private int updateId;
     @XmlElement(name = "chapter-name")
+    @XmlJavaTypeAdapter(UpdateNrmlAdapter.class)
     private String updateName;
+    @XmlJavaTypeAdapter(VolNrmlAdapter.class)
     @XmlElement(name = "volume-name")
     private String updateVol;
     @XmlElement(name = "chapter-date")
