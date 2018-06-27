@@ -3,23 +3,17 @@ package com.prx301.finalproject.truyencapnhat.utils;
 
 import com.prx301.finalproject.truyencapnhat.model.GenreEntity;
 import com.prx301.finalproject.truyencapnhat.repository.GenreRepo;
-import org.springframework.stereotype.Service;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import javax.xml.bind.annotation.adapters.XmlAdapter;
 
-@Service
 public class GenreAdapter extends XmlAdapter<GenreEntity, GenreEntity> {
-    private GenreRepo genreRepo = null;
-
-    public GenreAdapter(GenreRepo genreRepo) {
-        this.genreRepo = genreRepo;
-    }
-
     @Override
-    public GenreEntity unmarshal(GenreEntity v) throws Exception {
-        GenreEntity obj = genreRepo.findFirstByGenreId(v.getGenreId());
+    public GenreEntity unmarshal(GenreEntity v) {
+        GenreEntity obj = AdapterHelper.findGenreExist(v.getGenreId());
         if (obj == null) {
-            genreRepo.save(v);
+            AdapterHelper.addNew(v);
             return v;
         } else {
             return obj;

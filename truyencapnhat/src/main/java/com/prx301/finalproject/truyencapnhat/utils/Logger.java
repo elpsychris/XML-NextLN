@@ -63,7 +63,7 @@ public class Logger {
         log.append(message);
         if (e != null) {
             log.append("\n\tDETAIL:\t");
-            log.append(Arrays.toString(e.getStackTrace()));
+            log.append(Arrays.toString(e.getStackTrace()).replaceAll(",", "\n\t"));
         }
 
         if (level.isSilence()) {

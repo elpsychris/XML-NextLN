@@ -1,4 +1,4 @@
-package com.prx301.finalproject.truyencapnhat.model;
+package com.prx301.finalproject.truyencapnhat.model.crawler.model;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -10,6 +10,7 @@ import javax.xml.bind.annotation.XmlType;
         "name",
         "stylesheet",
         "config",
+        "status"
 })
 public class ConfigComp {
     @XmlElement(name = "name")
@@ -18,6 +19,8 @@ public class ConfigComp {
     private String stylesheet;
     @XmlElement(name = "config")
     private String config;
+    @XmlElement(name = "status")
+    private String status;
 
 
     public String getName() {
@@ -42,5 +45,13 @@ public class ConfigComp {
 
     public void setConfig(String config) {
         this.config = config;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 }

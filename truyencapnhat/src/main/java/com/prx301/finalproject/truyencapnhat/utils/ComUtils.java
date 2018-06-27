@@ -1,6 +1,6 @@
 package com.prx301.finalproject.truyencapnhat.utils;
 
-import com.prx301.finalproject.truyencapnhat.model.CrawlerConfig;
+import com.prx301.finalproject.truyencapnhat.model.crawler.model.CrawlerConfig;
 
 import javax.xml.bind.JAXBException;
 import java.io.*;
@@ -163,6 +163,12 @@ public class ComUtils {
 
         String document = stringBuffer.toString();
         document = document.replaceAll("<script[^>]*>[^<]*</script>", "");
+        document = document.replaceAll("<header class=\"inline-block none-l mobile-toggle_header\">Bình luận</header>[\\s\\S]+</div>[^<]+</div>[^<]+</section>[^<]+</main>","");
+        document = document.replaceAll("<script>[\\s\\S]+</script>","");
+//        System.out.println("=============================================");
+//        System.out.println(document);
+//        System.out.println("=============================================");
+
         stringBuffer = new StringBuffer(document);
 
         return stringBuffer;

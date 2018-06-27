@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<crawler-config xmlns="http://t3.com/2018/xml"
-                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<crawler-config xmlns="http://t3.com/2018/xml/config">
     <components>
-        <component status="active">
+        <component>
             <name>Hako.re</name>
-            <stylesheet>hako_style.xsl</stylesheet>
-            <config>hako_project.xml</config>
+            <stylesheet>src/main/java/com/prx301/finalproject/truyencapnhat/stylesheet/hako_style.xsl</stylesheet>
+            <config>src/main/java/com/prx301/finalproject/truyencapnhat/xmlConfigs/hako_project.xml</config>
+            <status>active</status>
         </component>
         <component status="inactive">
             <stylesheet>hako_style.xsl</stylesheet>
             <config>hako_project.xml</config>
+            <status>inactive</status>
         </component>
     </components>
 </crawler-config>

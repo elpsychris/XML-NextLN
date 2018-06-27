@@ -6,4 +6,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface GroupRepo extends JpaRepository<GroupEntity, String> {
     public GroupEntity findFirstByGroupId(String groupId);
+    public GroupEntity findFirstByGroupName(String groupName);
 }

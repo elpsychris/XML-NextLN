@@ -1,5 +1,8 @@
-package com.prx301.finalproject.truyencapnhat.model;
+package com.prx301.finalproject.truyencapnhat.model.crawler.model;
 
+import com.prx301.finalproject.truyencapnhat.model.ProjectEntity;
+import com.prx301.finalproject.truyencapnhat.model.Projects;
+import com.prx301.finalproject.truyencapnhat.model.UpdateEntity;
 import com.prx301.finalproject.truyencapnhat.repository.ProjectRepo;
 import com.prx301.finalproject.truyencapnhat.service.spider.SpiderService;
 import com.prx301.finalproject.truyencapnhat.utils.ComUtils;
@@ -16,7 +19,6 @@ import javax.xml.validation.Schema;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.Map;
 
 public class CrawlerAgent implements Runnable {
     private ConfigComp config = null;

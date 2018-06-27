@@ -1,4 +1,4 @@
-package com.prx301.finalproject.truyencapnhat.model;
+package com.prx301.finalproject.truyencapnhat.model.crawler.model;
 
 import javax.xml.bind.annotation.*;
 import java.util.List;

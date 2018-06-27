@@ -5,6 +5,7 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
+import java.io.Serializable;
 import java.util.Set;
 
 @Entity
@@ -12,23 +13,27 @@ import java.util.Set;
 @XmlType(name = "GroupEntity", propOrder = {
         "groupId",
         "groupName",
+        "groupContact",
         "updates"
 })
 @Table(name = "TransGroup", schema = "dbo", catalog = "NU_DB")
 public class GroupEntity {
-    @XmlElement(name = "group-link")
-    private String groupId;
+    @XmlElement(name = "group-id")
+    private int groupId;
     @XmlElement(name = "group-name")
     private String groupName;
+    @XmlElement(name = "group-link")
+    private String groupContact;
     private Set<UpdateEntity> updates;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "group_id")
-    public String getGroupId() {
+    public int getGroupId() {
         return groupId;
     }
 
-    public void setGroupId(String groupId) {
+    public void setGroupId(int groupId) {
         this.groupId = groupId;
     }
 
@@ -40,6 +45,15 @@ public class GroupEntity {
 
     public void setGroupName(String groupName) {
         this.groupName = groupName;
+    }
+
+    @Column(name="group_contact")
+    public String getGroupContact() {
+        return groupContact;
+    }
+
+    public void setGroupContact(String groupContact) {
+        this.groupContact = groupContact;
     }
 
     @OneToMany(mappedBy = "updateGroup")
