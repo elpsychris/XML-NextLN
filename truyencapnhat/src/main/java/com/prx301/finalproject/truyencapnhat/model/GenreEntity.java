@@ -53,6 +53,6 @@ public class GenreEntity {
     }
 
     public void setProjects(Set<ProjectEntity> projects) {
-        this.projects = projects;
+//        this.projects = projects;
     }
 }

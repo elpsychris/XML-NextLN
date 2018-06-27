@@ -12,6 +12,8 @@ import java.util.List;
 public interface UpdateRepo extends JpaRepository<UpdateEntity, Integer> {
     List<UpdateEntity> findAll();
 
-    @Procedure(name = "latest_updates")
-    List<UpdateEntity> getUpdatePage(@Param("PageNumber") int pageNo, @Param("PageSize") int pageSize);
+    List<UpdateEntity> getTop5ByOrderByUpdateDateDesc();
+
+//    @Procedure(name = "latest_updates")
+//    List<UpdateEntity> getUpdatePage(@Param("PageNumber") int pageNo, @Param("PageSize") int pageSize);
 }

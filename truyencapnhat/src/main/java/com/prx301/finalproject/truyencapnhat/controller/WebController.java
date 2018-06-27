@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.xml.transform.dom.DOMResult;
 import java.util.List;
 
 @Controller
@@ -26,7 +27,7 @@ public class WebController {
 
     @GetMapping("/")
     public String getIndexPage(ModelMap model) {
-        List<UpdateEntity> latestUpdateList = updateService.getLatestUpdates();
+        DOMResult latestUpdateList = updateService.getLatestUpdatesByXML();
         model.addAttribute("updateList", latestUpdateList);
         return "index";
     }

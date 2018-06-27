@@ -4,6 +4,7 @@ import org.xml.sax.SAXException;
 
 import javax.xml.XMLConstants;
 import javax.xml.bind.*;
+import javax.xml.transform.Result;
 import javax.xml.transform.Source;
 import javax.xml.transform.dom.DOMResult;
 import javax.xml.transform.stream.StreamSource;
@@ -12,8 +13,18 @@ import javax.xml.validation.SchemaFactory;
 import java.io.File;
 
 public class JAXBUtils {
+    private final static String DEFAULT_ENCODE = "UTF-8";
     private final static SchemaFactory schemaFactory = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
     private static Logger logger = Logger.getLogger();
+
+    public static <T> void objectToXML(T src, Result result) throws JAXBException {
+        JAXBContext context = JAXBContext.newInstance(src.getClass());
+        Marshaller marshaller = context.createMarshaller();
+
+        marshaller.setProperty(Marshaller.JAXB_ENCODING, DEFAULT_ENCODE);
+//        marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
+        marshaller.marshal(src, result);
+    }
 
     public static <T> T xmlToObject(DOMResult xml, Class<T>... classes) throws JAXBException {
         return xmlToObject(xml, null, classes);

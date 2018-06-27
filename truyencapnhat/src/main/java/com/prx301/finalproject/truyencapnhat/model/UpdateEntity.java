@@ -24,14 +24,14 @@ import java.sql.Timestamp;
 })
 @Entity
 @Table(name = "UpdateChap", schema = "dbo", catalog = "NU_DB")
-@NamedStoredProcedureQueries({
-        @NamedStoredProcedureQuery(name = "latest_updates",
-        procedureName = "UpdateChap_LATEST_UPDATE_CHAPTER",
-        parameters = {
-                @StoredProcedureParameter(mode = ParameterMode.IN, name = "PageNumber", type = Integer.class),
-                @StoredProcedureParameter(mode = ParameterMode.IN, name = "PageSize", type = Integer.class)
-        })
-})
+//@NamedStoredProcedureQueries({
+//        @NamedStoredProcedureQuery(name = "latest_updates",
+//        procedureName = "UpdateChap_LATEST_UPDATE_CHAPTER",
+//        parameters = {
+//                @StoredProcedureParameter(mode = ParameterMode.IN, name = "PageNumber", type = Integer.class),
+//                @StoredProcedureParameter(mode = ParameterMode.IN, name = "PageSize", type = Integer.class)
+//        })
+//})
 public class UpdateEntity {
     @XmlElement(name = "id")
     private int updateId;
