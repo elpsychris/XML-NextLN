@@ -17,6 +17,7 @@ import java.util.regex.Pattern;
 
 public class ComUtils {
     private final static String DEFAULT_CRAWLER_CONFIG_DIR = "src/main/java/com/prx301/finalproject/truyencapnhat/xmlConfigs/crawler_config.xml";
+    private final static String DEFAULT_STYLESHEET_DIR = "src/main/java/com/prx301/finalproject/truyencapnhat/stylesheet";
     private final static String USER_AGENT_HEADER = "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.95 Safari/537.11";
     private final static int RETRY_INTERVAL = 20000;
     private final static int TIMEOUT = 6000;
@@ -163,8 +164,8 @@ public class ComUtils {
 
         String document = stringBuffer.toString();
         document = document.replaceAll("<script[^>]*>[^<]*</script>", "");
-        document = document.replaceAll("<header class=\"inline-block none-l mobile-toggle_header\">Bình luận</header>[\\s\\S]+</div>[^<]+</div>[^<]+</section>[^<]+</main>","");
-        document = document.replaceAll("<script>[\\s\\S]+</script>","");
+        document = document.replaceAll("<header class=\"inline-block none-l mobile-toggle_header\">Bình luận</header>[\\s\\S]+</div>[^<]+</div>[^<]+</section>[^<]+</main>", "");
+        document = document.replaceAll("<script>[\\s\\S]+</script>", "");
 //        System.out.println("=============================================");
 //        System.out.println(document);
 //        System.out.println("=============================================");
@@ -221,7 +222,7 @@ public class ComUtils {
                 try {
                     fos.close();
                 } catch (IOException e) {
-                    logger.info("Cannot close FileOutputStream",  ComUtils.class);
+                    logger.info("Cannot close FileOutputStream", ComUtils.class);
                 }
             }
         }
@@ -237,6 +238,43 @@ public class ComUtils {
             logger.log(Logger.LOG_LEVEL.ERROR, "Cannot retrieve crawler config", e, ComUtils.class);
         }
         return crawlerConfig;
+    }
+
+    public static String getStreamFromFile(String fileName) {
+        File file = new File(DEFAULT_STYLESHEET_DIR + "/" + fileName);
+        InputStream fis = null;
+        BufferedReader reader = null;
+        String line = null;
+        StringBuilder builder = new StringBuilder();
+        try {
+            fis = new FileInputStream(file);
+            reader = new BufferedReader(new InputStreamReader(fis));
+            while ((line = reader.readLine()) != null) {
+                builder.append(line);
+            }
+
+        } catch (FileNotFoundException e) {
+            logger.log(Logger.LOG_LEVEL.ERROR, "Cannot read file: " + fileName, e, ComUtils.class);
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if (reader != null) {
+                try {
+                    reader.close();
+                } catch (IOException e) {
+                    logger.log(Logger.LOG_LEVEL.ERROR, e, ComUtils.class);
+                }
+            }
+
+            if (fis != null) {
+                try {
+                    fis.close();
+                } catch (IOException e) {
+                    logger.log(Logger.LOG_LEVEL.ERROR, e, ComUtils.class);
+                }
+            }
+        }
+        return builder.toString();
     }
 
 
