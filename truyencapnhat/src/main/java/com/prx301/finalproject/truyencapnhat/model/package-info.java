@@ -1,8 +1,11 @@
 @XmlSchema(
         elementFormDefault = XmlNsForm.QUALIFIED,
         namespace = "http://t3.com/2018/project-page",
-        xmlns = {@XmlNs(prefix = "t",
-                namespaceURI = "http://t3.com/2018/xml"),
+        xmlns = {
+                @XmlNs(prefix = "p",
+                        namespaceURI = "http://t3.com/2018/project-page"),
+                @XmlNs(prefix = "t",
+                        namespaceURI = "http://t3.com/2018/xml"),
                 @XmlNs(prefix = "pr",
                         namespaceURI = "http://t3.com/2018/project"),
                 @XmlNs(prefix = "up",

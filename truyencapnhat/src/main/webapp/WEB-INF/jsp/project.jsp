@@ -5,77 +5,74 @@
 <head>
     <title>Truyện cập nhật</title>
     <link rel="stylesheet" type="text/css" href="index.css">
-    <script type="text/javascript" src="js/utilities.js"></script>
+    <script type="text/javascript" src="./js/utilities.js"></script>
 </head>
 
 <body>
-<div class="nav-bar card-2">
-    <div id="logo"></div>
+<div class="header-bar">
+    <div class="crumb-bar">
+            <span>
+                <a>Trang chủ</a> >
+                <a>Re:Zero Kara...</a>
+            </span>
+    </div>
     <div class="nav-item-center">
         <input class="search-bar" type="search" placeholder="Nhập tên truyện cần tìm">
     </div>
-    <div class="nav-item-right">
-        <div class="signup focus">
-            <a href="#">Đăng ký</a>
+</div>
+<div class="banner-project">
+
+</div>
+
+<!--Information section-->
+<div class="info-wrapper">
+    <div class="project-cover">
+            <span> The NEET Yamano Masaru (23 years old) went to Hello Work and found an interesting job offer. [A sword and sorcery
+                fantasy, test play for Miniature Garden of Razgrad. Extended period of time, preferred to be able to live
+                on site. Monthly salary of 250,000+]. He immediately went to the interview and signed a contract. However,
+                the place of employment is in another world. Because of the contract, he’s taken there, and in order to survive,
+                Masaru received a cheat but is told the shocking truth. "This world will be destroyed in 20 years."
+                <br/> Can a simple NEET prevent the destruction of the world!?
+            </span>
+        <div class="project-cover-item">
+            <img src='res/Volume_9_Cover.png' class="card-2"/>
         </div>
-        <div class="login">
-            <a href="#">Đăng nhập</a>
+    </div>
+    <div class="project-info">
+        <div class="project-info-item card-3">
+            <div class="side-info">
+                <div class="start-date">2007</div>
+                <div class="country">Nhật Bản</div>
+                <div class="publisher">Enterbrain</div>
+                <div class="status">Đã kết thúc</div>
+                <div class="genre">
+                    <a href="#">Romance</a>
+                    <a href="#">Sci-fi</a>
+                    <a href="#">Fantasy</a>
+                    <a href="#">Action</a>
+                </div>
+                <div class="tag">
+                    <a href="#">Academy</a>
+                    <a href="#">Cross-dressing</a>
+                    <a href="#">Trap</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-info-item card-3">
+            <div class="main-info">
+                <div class="author">Inoue Kenji</div>
+                <div class="artist">Haga Yui</div>
+                <div class="alter-name">
+                    <ul>Re:Zero - Restarting Life from Zero in Another World</ul>
+                    <ul>Re：ゼロから始める異世界生活</ul>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 
-<div class="banner">
-
-</div>
-
-<div class="project-info">
-    <div class="project-info-item card-3">
-        <div class="side-info">
-            <div class="start-date">n/a</div>
-            <div class="country">Nhật Bản</div>
-            <div class="publisher">n/a</div>
-            <div class="status">n/a</div>
-            <div class="genre">
-                <c:choose>
-                    <c:when test="${not empty project.genres}">
-                        <c:forEach items="${project.genres}" var="genre">
-                            <a href="#">${genre.genreId}</a>
-                        </c:forEach>
-                    </c:when>
-                </c:choose>
-                <%--<a href="#">Sci-fi</a>--%>
-                <%--<a href="#">Fantasy</a>--%>
-                <%--<a href="#">Action</a>--%>
-            </div>
-            <div class="tag">
-                <a href="#">Academy</a>
-                <a href="#">Cross-dressing</a>
-                <a href="#">Trap</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="project-info-item card-3">
-        <div class="main-info">
-            <div class="author">${project.projectAuthor}</div>
-            <div class="artist">${project.projectIllustrator}</div>
-            <div class="synopsis">
-                ${project.projectSynopsis}
-            </div>
-        </div>
-    </div>
-
-    <div class="project-info-item card-3">
-        <div class="rating-info">
-            <div class="content-rating">4.3</div>
-            <div class="interact-rating">3.5</div>
-            <div class="random">
-                <div class="review">Rất hay và hấp dẫn...</div>
-                <div class="reviewer">alphaGo@</div>
-            </div>
-        </div>
-    </div>
-</div>
+<!--Nav bar-->
 <div class="project-nav card-2">
     <div class="project-nav-item tab-button focus" onClick=changeTab(this,0)>Cập nhật</div>
     <div class="project-nav-item tab-button" onClick=changeTab(this,1)>Bình luận</div>
@@ -174,9 +171,9 @@
             <h1>This is tab3</h1>
         </div>
     </div>
-</div>
-<div class="recommend">
+    <div class="recommend">
 
+    </div>
 </div>
 </body>
 

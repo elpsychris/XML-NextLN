@@ -6,7 +6,7 @@ import com.prx301.finalproject.truyencapnhat.model.UpdateVolEntity;
 
 import javax.xml.bind.annotation.adapters.XmlAdapter;
 
-public class UpdateAdapter extends XmlAdapter<UpdateVolEntity, UpdateVolEntity> {
+public class VolAdapter extends XmlAdapter<UpdateVolEntity, UpdateVolEntity> {
     @Override
     public UpdateVolEntity unmarshal(UpdateVolEntity v) {
         UpdateVolEntity obj = AdapterHelper.findVolExist(v.getVolName());

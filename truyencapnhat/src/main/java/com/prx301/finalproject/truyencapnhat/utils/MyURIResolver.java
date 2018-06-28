@@ -34,9 +34,6 @@ public class MyURIResolver implements URIResolver {
             try {
                 InputStream httpResult = ComUtils.getHttp(href);
                 String httpContent = preProcessInputStream(httpResult);
-                if (href.equals("https://ln.hako.re/truyen/2666-akuyaku-reijo-ni-koi-wo-shite")) {
-                    System.out.println("found it");
-                }
 
                 InputStream testStream = new ByteArrayInputStream(httpContent.getBytes());
                 DOMResult testDOM = TrAXUtils.transform(new StreamSource(testStream), null);

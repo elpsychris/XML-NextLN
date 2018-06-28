@@ -62,7 +62,7 @@ public class GroupEntity {
     }
 
     public void setUpdates(Set<UpdateEntity> updates) {
-        this.updates = updates;
+//        this.updates = updates;
     }
 
     @Override

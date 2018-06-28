@@ -22,7 +22,7 @@ public class JAXBUtils {
         Marshaller marshaller = context.createMarshaller();
 
         marshaller.setProperty(Marshaller.JAXB_ENCODING, DEFAULT_ENCODE);
-//        marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
+        marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.FALSE);
         marshaller.marshal(src, result);
     }
 

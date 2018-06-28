@@ -1,17 +1,38 @@
 package com.prx301.finalproject.truyencapnhat.model;
 
+import com.prx301.finalproject.truyencapnhat.utils.VolNrmlAdapter;
+
 import javax.persistence.*;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
 @Table(name = "UpdateVol", schema = "dbo", catalog = "NU_DB")
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "UpdateVolEntity", propOrder = {
+        "id",
+        "volName",
+        "volNo",
+        "volCover",
+        "updateEntities"
+})
 public class UpdateVolEntity {
     private int id;
+    @XmlJavaTypeAdapter(VolNrmlAdapter.class)
+    @XmlElement(name = "volume-name")
     private String volName;
     private Integer volNo;
+    @XmlElement(name = "volume-cover")
     private String volCover;
+    private List<UpdateEntity> updateEntities;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     public int getId() {
         return id;
@@ -49,6 +70,15 @@ public class UpdateVolEntity {
 
     public void setVolCover(String volCover) {
         this.volCover = volCover;
+    }
+
+    @OneToMany(mappedBy = "updateVol", cascade = CascadeType.MERGE)
+    public List<UpdateEntity> getUpdateEntities() {
+        return updateEntities;
+    }
+
+    public void setUpdateEntities(List<UpdateEntity> updateEntities) {
+//        this.updateEntities = updateEntities;
     }
 
     @Override

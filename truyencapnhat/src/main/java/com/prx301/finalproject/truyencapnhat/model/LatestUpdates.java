@@ -9,7 +9,8 @@ import java.util.List;
         "updateEntities"
 })
 public class LatestUpdates {
-    @XmlElement(name = "updates")
+    @XmlElementWrapper(name = "updates")
+    @XmlElement(name = "update")
     private List<UpdateEntity> updateEntities;
 
     public LatestUpdates() {

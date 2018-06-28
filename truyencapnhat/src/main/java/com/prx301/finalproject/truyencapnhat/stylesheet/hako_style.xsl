@@ -1,5 +1,4 @@
 <xsl:stylesheet version="1.0"
-                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                 xmlns:t="http://t3.com/2018/xml"
                 xmlns="http://t3.com/2018/project-page" xmlns:xsd="http://www.w3.org/1999/XSL/Transform">
@@ -50,7 +49,9 @@
                                 <xsl:for-each
                                         select="$projDoc//div[@class='ln_info-item clear']/span[text()='Thể loại']/../span[@class='ln_info-value col-7']/a">
                                     <genre>
-                                        <genre-id><xsl:value-of select="."/></genre-id>
+                                        <genre-id>
+                                            <xsl:value-of select="."/>
+                                        </genre-id>
                                     </genre>
                                 </xsl:for-each>
                             </genres>
@@ -66,7 +67,8 @@
                             <xsl:variable name="group-link"
                                           select="$projDoc//section[@class='fantrans-section']/div[contains(@class,'value')]/a/@href"/>
                             <xsl:variable name="uploader" select="$projDoc//span[@class='listall-user_name']/a"/>
-                            <xsl:variable name="uploader-link" select="$projDoc//span[@class='listall-user_name']/a/@href"/>
+                            <xsl:variable name="uploader-link"
+                                          select="$projDoc//span[@class='listall-user_name']/a/@href"/>
                             <updates>
                                 <xsl:for-each
                                         select="$projDoc//section[@class='ln_chapters-volume basic-section mobile-view clear']">
@@ -76,13 +78,6 @@
                                                   select="normalize-space(.//div[@class='ln_chapters-vol_img col-3 col-3-m col-2-l col-2-xl']/a/img/@src)"/>
                                     <xsl:for-each select=".//div[contains(@class,'ln_chapters-vol_main')]/article">
                                         <update>
-                                            <volume-name>
-                                                <xsl:value-of select="$volume-name"/>
-                                            </volume-name>
-                                            <volume-cover>
-                                                <xsl:value-of
-                                                        select="$volume-img"/>
-                                            </volume-cover>
                                             <chapter-name>
                                                 <xsl:value-of select="normalize-space(./div[1]/a/.)"/>
                                             </chapter-name>
@@ -110,6 +105,15 @@
                                             <update-link>
                                                 <xsl:value-of select="normalize-space(./div[1]/a/@href)"/>
                                             </update-link>
+                                            <update-volume>
+                                                <volume-name>
+                                                    <xsl:value-of select="$volume-name"/>
+                                                </volume-name>
+                                                <volume-cover>
+                                                    <xsl:value-of
+                                                            select="$volume-img"/>
+                                                </volume-cover>
+                                            </update-volume>
                                         </update>
                                     </xsl:for-each>
                                 </xsl:for-each>

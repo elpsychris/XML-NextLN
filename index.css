@@ -18,7 +18,7 @@ body {
     margin: 0;
     position: relative;
     width: 100%;
-    min-height: 1700px;
+    min-height: 100%;
 }
 
 a {
@@ -247,6 +247,12 @@ a {
     height: 100px;
     overflow: hidden;
     background: #5DB0F4;
+    display: flex;
+    align-items: center;
+}
+
+.panel-content .thumbnail img {
+    width: 100%;
 }
 
 .panel-content .author {
@@ -288,18 +294,41 @@ a {
     width: 100%;
     flex-wrap: wrap;
     position: absolute;
-    margin-top: -50vw;
-    height: 60vw;
+    height: 100%;
+    top: -10vw;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
 }
+
 
 .project-info {
     position: relative;
     display: flex;
     flex-wrap: wrap;
     font-size: .8em;
-    justify-content: flex-start;
+    justify-content: center;
+    width: 60%;
+    min-width: 300px;
+    top: 2vw;
+}
+
+.project-info .synopsis {
+    color: black;
+    display: flex;
     width: 100%;
-    top: -10vw;
+    position: relative;
+    font-size: 1.2vw;
+    justify-content: center;
+    padding: 10px;
+    font-weight: bold;
+    margin-bottom: 2vw;
+}
+
+.synopsis span {
+    display: block;
+    max-width: 60%;
 }
 
 .project-info .project-info-item {
@@ -410,7 +439,7 @@ a {
     border: 1px solid black;
     padding: 5px;
     margin: 2px;
-    font-size: .85em;
+    font-size: .75em;
     border-radius: 5px;
 }
 
@@ -489,7 +518,6 @@ a {
     margin: 2px;
 }
 
-
 .project-info-item .rating-info {
     display: flex;
     flex-wrap: wrap;
@@ -519,30 +547,18 @@ a {
 
 .project-cover {
     position: relative;
-    width: 100%;
+    width: 30%;
     display: flex;
     justify-content: flex-end;
-    margin-bottom: 5vw;
     position: relative;
-    top: -5vw;
-    margin-right: 10vw;
+    min-width: 200px;
+    order: 3;
 }
 
 .project-cover .project-cover-item {
-    position: relative;
-    width: 40%;
-    max-width: 20vw;
+    position: fixed;
     top: 8vw;
-}
-
-.project-cover span {
-    color: black;
-    display: block;
     width: 20vw;
-    max-width: 300px;
-    margin-right: 8vw;
-    position: relative;
-    font-size: 1vw;
 }
 
 .project-cover-item img {
@@ -768,7 +784,7 @@ input[type=checkbox] {
 
 .banner-project {
     width: 100%;
-    height: 65vw;
+    height: 70vw;
     background: url('./res/bg.svg');
     background-size: 100% auto;
     position: relative;
@@ -785,7 +801,7 @@ input[type=checkbox] {
     position: absolute;
     z-index: 10;
     width: 100%;
-    padding: 20px;
+    padding: 20px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -795,23 +811,36 @@ input[type=checkbox] {
     color: #051A38;
     font-size: 1.15vw;
     position: relative;
-    font-weight: bold;
-    text-shadow: 0px 0px 1px rgba(255, 255, 255, .7);
+    margin-left: 10px;
 }
 
 .crumb-bar a {
-    padding: 10px;
+    padding: 10px 15px;
     background: rgba(255, 255, 255, .7);
     border-radius: 20px;
 }
 
 .header-bar .nav-item-center {
-    position: absolute;
+    position: fixed;
     right: 10vw;
+    top: 10px;
     width: 25%;
 }
 
 .header-bar .nav-item-center .search-bar {
     border: none;
     border-bottom: 1px solid #dcdcdc;
+}
+
+/* SIDE WINDOW */
+
+.side-window {
+    width: 60%;
+    height: 100%;
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    background: white;
+    z-index: 100;
 }

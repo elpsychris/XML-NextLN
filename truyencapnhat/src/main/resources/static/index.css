@@ -248,7 +248,7 @@ a {
     overflow: hidden;
     background: #5DB0F4;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .panel-content .thumbnail img {

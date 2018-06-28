@@ -1,5 +1,6 @@
 package com.prx301.finalproject.truyencapnhat.model;
 
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.prx301.finalproject.truyencapnhat.utils.GenreAdapter;
 import com.prx301.finalproject.truyencapnhat.utils.SqlDateAdapter;
 import com.prx301.finalproject.truyencapnhat.utils.ViewHakoAdapter;
@@ -227,7 +228,7 @@ public class ProjectEntity {
     }
 
     public void setUpdates(List<UpdateEntity> updates) {
-        this.updates = updates;
+//        this.updates = updates;
     }
 
     @Basic

@@ -86,6 +86,7 @@ public class CrawlerAgent implements Runnable {
         } catch (SAXException e) {
             logger.log(Logger.LOG_LEVEL.WARNING, "SAXException", e, ComUtils.class);
         } catch (JAXBException e) {
+//            e.printStackTrace();
             logger.log(Logger.LOG_LEVEL.ERROR, e, SpiderService.class);
         }
 

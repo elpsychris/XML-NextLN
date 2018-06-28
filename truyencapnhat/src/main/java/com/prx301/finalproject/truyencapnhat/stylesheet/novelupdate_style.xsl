@@ -1,4 +1,4 @@
-<xsl:stylesheet version="1.0"
+<xsl:stylesheet version="2.0"
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                 xmlns:t="http://t3.com/2018/xml"
                 xmlns="http://t3.com/2018/project-page" xmlns:xsd="http://www.w3.org/1999/XSL/Transform">
@@ -12,23 +12,23 @@
                         select="$listDoc//div[@class='pagination_wrap']/a[contains(@class,'current')]/following-sibling::a[1][text()!='Cuối']/@href"/>
             </next-page>
             <projects>
-                <xsl:for-each select="$listDoc//article[@class='listext-item clear']/div[1]/a">
+                <xsl:for-each select="$listDoc//tbody/tr/td/a">
                     <xsl:variable name="cur_project_link" select="@href"/>
                     <xsl:variable name="projDoc" select="document($cur_project_link)"/>
-                    <xsl:if test="boolean($projDoc//h2[@class='listall_title animation fade-in-up']/a)">
+                    <xsl:if test="boolean($projDoc//div[contains(@class,'seriestitlenu')])">
                         <project>
                             <id>
                                 <xsl:value-of
-                                        select="normalize-space($projDoc//h2[@class='listall_title animation fade-in-up']/a/@href)"/>
+                                        select="normalize-space($projDoc//div[contains(@class,'seriestitlenu')])"/>
                             </id>
                             <name>
                                 <xsl:value-of
-                                        select="normalize-space($projDoc//h2[@class='listall_title animation fade-in-up']/a)"/>
+                                        select="normalize-space($projDoc//div[contains(@class,'seriestitlenu')])"/>
                             </name>
                             <alter-name>
                                 <xsl:variable name="alterName"/>
                                 <xsl:for-each
-                                        select="$projDoc//div[@class='ln_info-item clear']/span[text()='Tên khác']/../span[@class='ln_info-value col-7']/span">
+                                        select="tokenize($projDoc//div[@id='editassociated'],'<br>')">
                                     <xsl:value-of select="concat(.,', ')"/>
                                 </xsl:for-each>
                             </alter-name>

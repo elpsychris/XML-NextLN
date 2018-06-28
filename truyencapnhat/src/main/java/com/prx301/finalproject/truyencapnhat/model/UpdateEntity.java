@@ -1,9 +1,7 @@
 package com.prx301.finalproject.truyencapnhat.model;
 
-import com.prx301.finalproject.truyencapnhat.utils.GroupAdapter;
-import com.prx301.finalproject.truyencapnhat.utils.SqlTimeAdapter;
-import com.prx301.finalproject.truyencapnhat.utils.UpdateNrmlAdapter;
-import com.prx301.finalproject.truyencapnhat.utils.VolNrmlAdapter;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.prx301.finalproject.truyencapnhat.utils.*;
 
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -40,9 +38,9 @@ public class UpdateEntity {
     @XmlElement(name = "chapter-name")
     @XmlJavaTypeAdapter(UpdateNrmlAdapter.class)
     private String updateName;
-    @XmlJavaTypeAdapter(VolNrmlAdapter.class)
-    @XmlElement(name = "volume-name")
-    private String updateVol;
+    @XmlElement(name = "update-volume")
+    @XmlJavaTypeAdapter(VolAdapter.class)
+    private UpdateVolEntity updateVol;
     @XmlElement(name = "chapter-date")
     @XmlJavaTypeAdapter(SqlTimeAdapter.class)
     private Timestamp updateDate;
@@ -53,7 +51,9 @@ public class UpdateEntity {
     private String updateLink;
     @XmlElement(name = "update-hash")
     private String updateHash;
+    @XmlElement(name = "project")
     private ProjectEntity project;
+
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -76,13 +76,13 @@ public class UpdateEntity {
         this.updateName = updateName;
     }
 
-    @Basic
-    @Column(name = "update_vol")
-    public String getUpdateVol() {
+    @ManyToOne(cascade = CascadeType.MERGE, fetch = FetchType.EAGER)
+    @JoinColumn(name = "update_vol")
+    public UpdateVolEntity getUpdateVol() {
         return updateVol;
     }
 
-    public void setUpdateVol(String updateVol) {
+    public void setUpdateVol(UpdateVolEntity updateVol) {
         this.updateVol = updateVol;
     }
 
@@ -126,8 +126,8 @@ public class UpdateEntity {
         this.updateHash = updateHash;
     }
 
-    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    @JoinColumn(name = "project_id", nullable = false)
+    @ManyToOne(cascade = CascadeType.MERGE, fetch = FetchType.EAGER)
+    @JoinColumn(name = "project_id", referencedColumnName = "project_id")
     public ProjectEntity getProject() {
         return project;
     }

@@ -9,6 +9,8 @@ import org.springframework.stereotype.Service;
 
 import javax.xml.bind.JAXBException;
 import javax.xml.transform.dom.DOMResult;
+import javax.xml.transform.stream.StreamResult;
+import java.io.StringWriter;
 import java.util.List;
 
 @Service
@@ -21,27 +23,29 @@ public class UpdateService {
     }
 
 //    public List<UpdateEntity> getLatestUpdates(int pageNo, int pageSize) {
-//        return updateRepo.getUpdatePage(pageNo, pageSize);
+//        return volRepo.getUpdatePage(pageNo, pageSize);
 //    }
 //
 //    public List<UpdateEntity> getLatestUpdates(int pageNo) {
-//        return updateRepo.getUpdatePage(pageNo, DEFAULT_PAGE_SIZE);
+//        return volRepo.getUpdatePage(pageNo, DEFAULT_PAGE_SIZE);
 //    }
 //
 //    public List<UpdateEntity> getLatestUpdates() {
-//        return updateRepo.getUpdatePage(1, DEFAULT_PAGE_SIZE);
+//        return volRepo.getUpdatePage(1, DEFAULT_PAGE_SIZE);
 //    }
 
-    public DOMResult getLatestUpdatesByXML() {
+    public String getLatestUpdatesByXML() {
         List<UpdateEntity> updateEntities = updateRepo.getTop5ByOrderByUpdateDateDesc();
         LatestUpdates latestUpdates = new LatestUpdates(updateEntities);
-        DOMResult domResult = new DOMResult();
+        StringWriter writer = new StringWriter();
+
+        StreamResult domResult = new StreamResult(writer);
         try {
             JAXBUtils.objectToXML(latestUpdates, domResult);
         } catch (JAXBException e) {
             e.printStackTrace();
             Logger.getLogger().log(Logger.LOG_LEVEL.ERROR, e, UpdateService.class);
         }
-        return domResult;
+        return writer.toString();
     }
 }
