@@ -66,7 +66,7 @@ a {
 }
 
 .nav-bar #logo {
-    background: url('/res/logo.png') no-repeat center;
+    background: url('./res/logo.png') no-repeat center;
     background-size: 100% 100%;
     width: 60px;
     height: 60px;
@@ -88,7 +88,7 @@ a {
     padding-left: 35px;
     font-size: 1.1em;
     position: relative;
-    background: url('/res/search-icon.png') no-repeat;
+    background: url('./res/search-icon.png') no-repeat;
     background-size: auto 70%;
     background-position-y: center;
     background-position-x: 5px;
@@ -130,7 +130,7 @@ a {
 .banner {
     width: 100%;
     height: 50vw;
-    background: url('/res/Snkv2.svg');
+    background: url('./res/Snkv2.svg');
     background-size: 100% auto;
     position: relative;
 }
@@ -193,6 +193,10 @@ a {
     background: #5DB0F4;
 }
 
+.title .divider-mono {
+    font-weight: bold;
+}
+
 .title .divider-1 {
     margin-left: 5px;
     position: relative;
@@ -243,6 +247,12 @@ a {
     height: 100px;
     overflow: hidden;
     background: #5DB0F4;
+    display: flex;
+    align-items: center;
+}
+
+.panel-content .thumbnail img {
+    width: 100%;
 }
 
 .panel-content .author {
@@ -279,22 +289,30 @@ a {
     border-radius: 5px;
 }
 
+.info-wrapper {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    position: absolute;
+    margin-top: -50vw;
+    height: 60vw;
+}
+
 .project-info {
     position: relative;
     display: flex;
     flex-wrap: wrap;
     font-size: .8em;
-    margin-top: -15vw;
-    margin-bottom: 15px;
-    justify-content: center;
+    justify-content: flex-start;
     width: 100%;
+    top: -10vw;
 }
 
 .project-info .project-info-item {
     width: 25%;
     min-width: 250px;
-    margin: 15px 15px;
-    padding: 60px 15px 15px 15px;
+    margin: 15px 25px;
+    padding: 50px 15px 15px 10px;
     box-sizing: border-box;
     background: white;
     display: flex;
@@ -436,9 +454,10 @@ a {
     padding: 15px 0 5px 0;
     box-sizing: border-box;
     position: relative;
+    width: 100%;
 }
 
-.main-info>div:not(.synopsis) {
+.main-info>div:not(.alter-name) {
     width: 50%;
     font-size: 1.25em;
 }
@@ -461,14 +480,21 @@ a {
     top: 0;
 }
 
-.main-info .synopsis::before {
-    content: "Tóm tắt";
+.main-info .alter-name::before {
+    content: "Tên khác";
     color: black;
     font-size: 1em;
     font-weight: bold;
     position: absolute;
-    top: 0;
+    top: 0px;
+    margin-bottom: 2px;
 }
+
+.main-info .alter-name ul {
+    padding: 0px;
+    margin: 2px;
+}
+
 
 .project-info-item .rating-info {
     display: flex;
@@ -495,6 +521,41 @@ a {
     font-size: 2em;
     display: flex;
     justify-content: center;
+}
+
+.project-cover {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 5vw;
+    position: relative;
+    top: -5vw;
+    margin-right: 10vw;
+}
+
+.project-cover .project-cover-item {
+    position: relative;
+    width: 40%;
+    max-width: 20vw;
+    top: 8vw;
+}
+
+.project-cover span {
+    color: black;
+    display: block;
+    width: 20vw;
+    max-width: 300px;
+    margin-right: 8vw;
+    position: relative;
+    font-size: 1vw;
+}
+
+.project-cover-item img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 .project-nav {
@@ -595,7 +656,7 @@ a {
     display: flex;
     flex-wrap: wrap;
     padding: 5px;
-    margin-bottom: 10px;    
+    margin-bottom: 10px;
 }
 
 .search-section .section-name {
@@ -632,12 +693,6 @@ a {
     display: flex;
     position: relative;
 }
-
-
-
-
-
-
 
 .container {
     position: relative;
@@ -715,4 +770,54 @@ input[type=checkbox] {
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
+}
+
+.banner-project {
+    width: 100%;
+    height: 65vw;
+    background: url('./res/bg.svg');
+    background-size: 100% auto;
+    position: relative;
+    background-color: #00B4DB;
+    /* fallback for old browsers */
+    background-color: -webkit-linear-gradient(to bottom, #0083B0, #00B4DB);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background-color: linear-gradient(to bottom, #0083B0, #00B4DB);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.header-bar {
+    flex-wrap: wrap;
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.crumb-bar {
+    color: #051A38;
+    font-size: 1.15vw;
+    position: relative;
+    font-weight: bold;
+    text-shadow: 0px 0px 1px rgba(255, 255, 255, .7);
+}
+
+.crumb-bar a {
+    padding: 10px;
+    background: rgba(255, 255, 255, .7);
+    border-radius: 20px;
+}
+
+.header-bar .nav-item-center {
+    position: absolute;
+    right: 10vw;
+    width: 25%;
+}
+
+.header-bar .nav-item-center .search-bar {
+    border: none;
+    border-bottom: 1px solid #dcdcdc;
 }
