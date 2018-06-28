@@ -193,6 +193,10 @@ a {
     background: #5DB0F4;
 }
 
+.title .divider-mono {
+    font-weight: bold;
+}
+
 .title .divider-1 {
     margin-left: 5px;
     position: relative;
