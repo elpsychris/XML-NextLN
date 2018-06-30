@@ -2,7 +2,7 @@ package com.prx301.finalproject.truyencapnhat.utils;
 
 import javax.xml.bind.annotation.adapters.XmlAdapter;
 
-public class ViewHakoAdapter extends XmlAdapter<String, Integer> {
+public class ViewAdapter extends XmlAdapter<String, Integer> {
 
 
     @Override

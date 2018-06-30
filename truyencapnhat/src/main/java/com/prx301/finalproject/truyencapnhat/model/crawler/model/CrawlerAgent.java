@@ -5,10 +5,7 @@ import com.prx301.finalproject.truyencapnhat.model.Projects;
 import com.prx301.finalproject.truyencapnhat.model.UpdateEntity;
 import com.prx301.finalproject.truyencapnhat.repository.ProjectRepo;
 import com.prx301.finalproject.truyencapnhat.service.spider.SpiderService;
-import com.prx301.finalproject.truyencapnhat.utils.ComUtils;
-import com.prx301.finalproject.truyencapnhat.utils.JAXBUtils;
-import com.prx301.finalproject.truyencapnhat.utils.Logger;
-import com.prx301.finalproject.truyencapnhat.utils.TrAXUtils;
+import com.prx301.finalproject.truyencapnhat.utils.*;
 import org.xml.sax.SAXException;
 
 import javax.xml.bind.JAXBException;
@@ -21,47 +18,27 @@ import java.io.IOException;
 import java.io.InputStream;
 
 public class CrawlerAgent implements Runnable {
-    private ConfigComp config = null;
+    private ConfigComp configComponent = null;
     private Logger logger = Logger.getLogger();
     private DOMResult result = null;
+    private MyURIResolver uriResolver = null;
     private ProjectRepo projectRepo = null;
 
     public CrawlerAgent(ConfigComp config, ProjectRepo projectRepo) {
-        this.config = config;
+        this.configComponent = config;
         this.projectRepo = projectRepo;
     }
 
     @Override
     public void run() {
-        if (config != null) {
-            start(config.getConfig(), config.getStylesheet());
+        if (configComponent != null) {
+            configCrawler();
+            start(configComponent.getConfig(), configComponent.getStylesheet());
         }
     }
 
-    interface ParserHandler {
-        void onParsed(DOMResult domResult);
-        void onError(Exception e);
-    }
-
-//
-//    private void start(String configPath, String xslPath, ParserHandler handler) throws IOException, TransformerException, InterruptedException {
-//        this.result = this.crawl(configPath, xslPath);
-//        handler.onParsed(this.result);
-//    }
 
     private void start(String configPath, String xslPath) {
-//        Runnable thread = () -> {
-//            try {
-//                Thread.sleep(3000);
-//            } catch (InterruptedException e) {
-//                e.printStackTrace();
-//            }
-//            TrAXUtils.stop();
-//            Thread.interrupted();
-//        };
-//
-//        Thread thread1 = new Thread(thread);
-//        thread1.start();
         try {
             this.result = this.crawl(configPath, xslPath);
         } catch (TransformerException e) {
@@ -89,91 +66,41 @@ public class CrawlerAgent implements Runnable {
 //            e.printStackTrace();
             logger.log(Logger.LOG_LEVEL.ERROR, e, SpiderService.class);
         }
-
-//        handler.onParsed(this.result);
     }
 
 
-//    public void setStartUrls(List<String> startUrls, Pattern pattern, String xslPath) {
-//        try {
-//            execute(startUrls, pattern, xslPath);
-//        } catch (FileNotFoundException e) {
-//            e.printStackTrace();
-//        } catch (XMLStreamException e) {
-//            e.printStackTrace();
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
-//        } catch (UnsupportedEncodingException e) {
-//            e.printStackTrace();
-//        }
-//    }
+    private void configCrawler() {
+        if (this.configComponent.getUriResolverClassName() != null) {
+            try {
+                this.uriResolver = (MyURIResolver) Class.forName(this.configComponent.getUriResolverClassName()).newInstance();
+                this.uriResolver.config(this.configComponent);
+            } catch (InstantiationException e) {
+                e.printStackTrace();
+            } catch (IllegalAccessException e) {
+                e.printStackTrace();
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            }
+        } else {
+            this.uriResolver = new MyURIResolver();
+            this.uriResolver.config(this.configComponent);
+        }
+    }
 
-//    public void setStartUrls(List<String> startUrls, ParserHandler handler, Pattern pattern) {
-//        try {
-//            execute(startUrls, handler, pattern);
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
-//        }
-//    }
-//
-//    public void setStartUrls(String startUrl, Pattern pattern) {
-//        List<String> startUrls = new ArrayList<String>();
-//        startUrls.add(startUrl);
-//        setStartUrls(startUrls, pattern);
-//    }
-
-    //
-//    private void getContent(String filePath, String uri) throws InterruptedException {
-//        Writer writer = null;
     private DOMResult crawl(String configPath, String xslPath) throws TransformerException, IOException, InterruptedException {
         StreamSource xsl = new StreamSource(xslPath);
         InputStream is = new FileInputStream(configPath);
         StreamSource config = new StreamSource(is);
 
-        return TrAXUtils.transform(config, xsl);
+        return TrAXUtils.transform(config, xsl, uriResolver);
     }
 
-    //
-//    abstract void parse(String startUrl, InputStream document);
+    public void stop() {
+        if (this.uriResolver == null) {
+            logger.info("No attached URIResolver", CrawlerAgent.class);
+            return;
+        }
+        this.uriResolver.stop();
+    }
 
-    //
-//    private void execute(List<String> startUrls, Pattern pattern) throws FileNotFoundException, XMLStreamException, InterruptedException, UnsupportedEncodingException {
-//        if (startUrls != null) {
-//            for (String url : startUrls) {
-////                getContent(url, pattern);
-////                ByteArrayInputStream documentInputStream = new ByteArrayInputStream(document.getBytes());
-////                XMLEventReader reader = StAXUtils.getEventReader(byteInputStream);
-//                parse(url, documentInputStream);
-//            } // end for
-//        }// end if
-//    }
-
-    //
-//    private void execute(List<String> startUrls, ParserHandler handler, Pattern pattern, String configPath, String xslPath) throws InterruptedException, FileNotFoundException {
-//        if (startUrls != null) {
-//            for (String page : startUrls) {
-//                getContent(page);
-//                try {
-//                    ByteArrayInputStream documentInputStream = new ByteArrayInputStream(document.getBytes());
-////                    XMLEventReader reader = StAXUtils.getEventReader(byteInputStream);
-//                    handler.onParse(page, documentInputStream);
-//                } catch (InterruptedException e) {
-//                    e.printStackTrace();
-//                }
-//            } // end for
-//        }// end if
-//    }
-
-    //
-//    public void close() {
-//        this.webDriver.quit();
-//    }
-//
-//    public List<WebElement> extractElements(String expr) throws NoSuchElementException {
-//        return this.webDriver.findElements(By.xpath(expr));
-//    }
-//
-//    public WebElement extractElement(String expr) throws NoSuchElementException {
-//        return this.webDriver.findElement(By.xpath(expr));
-//    }
 }

@@ -1,9 +1,6 @@
 package com.prx301.finalproject.truyencapnhat.model;
 
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.prx301.finalproject.truyencapnhat.utils.GenreAdapter;
-import com.prx301.finalproject.truyencapnhat.utils.SqlDateAdapter;
-import com.prx301.finalproject.truyencapnhat.utils.ViewHakoAdapter;
+import com.prx301.finalproject.truyencapnhat.utils.*;
 
 import javax.persistence.*;
 import javax.xml.bind.annotation.*;
@@ -18,7 +15,7 @@ import java.util.Set;
         "projectId",
         "projectName",
         "projectAlterName",
-        "projectYear",
+        "projectPublishDate",
         "projectAuthor",
         "projectIllustrator",
         "projectSynopsis",
@@ -41,8 +38,9 @@ public class ProjectEntity {
     private String projectName;
     @XmlElement(required = true, name = "alter-name")
     private String projectAlterName;
-    @XmlElement(name = "year")
-    private Integer projectYear;
+    @XmlJavaTypeAdapter(PublishDateAdapter.class)
+    @XmlElement(name = "publish-date")
+    private Date projectPublishDate;
     @XmlElement(name = "author")
     private String projectAuthor;
     @XmlElement(name = "illustrator")
@@ -53,11 +51,12 @@ public class ProjectEntity {
     private String projectHash;
     @XmlElement(name = "tag")
     private String projectTag;
-    @XmlJavaTypeAdapter(ViewHakoAdapter.class)
+    @XmlJavaTypeAdapter(ViewAdapter.class)
     @XmlElement(name = "view")
     private Integer projectView;
+    @XmlJavaTypeAdapter(PointAdapter.class)
     @XmlElement(name = "point")
-    private Integer projectPoint;
+    private Double projectPoint;
 
     @XmlElementWrapper(name = "genres")
     @XmlElement(name = "genre")
@@ -109,13 +108,13 @@ public class ProjectEntity {
     }
 
     @Basic
-    @Column(name = "project_year")
-    public Integer getProjectYear() {
-        return projectYear;
+    @Column(name = "project_publish_date")
+    public Date getProjectPublishDate() {
+        return projectPublishDate;
     }
 
-    public void setProjectYear(Integer projectYear) {
-        this.projectYear = projectYear;
+    public void setProjectPublishDate(Date projectPublishDate) {
+        this.projectPublishDate = projectPublishDate;
     }
 
     @Basic
@@ -178,13 +177,12 @@ public class ProjectEntity {
         this.projectView = projectView;
     }
 
-    @Basic
     @Column(name = "project_point")
-    public Integer getProjectPoint() {
+    public Double getProjectPoint() {
         return projectPoint;
     }
 
-    public void setProjectPoint(Integer projectPoint) {
+    public void setProjectPoint(Double projectPoint) {
         this.projectPoint = projectPoint;
     }
 
@@ -231,6 +229,7 @@ public class ProjectEntity {
 //        this.updates = updates;
     }
 
+
     @Basic
     @Column(name = "project_link")
     public String getProjectLink() {
@@ -252,7 +251,7 @@ public class ProjectEntity {
         if (projectName != null ? !projectName.equals(that.projectName) : that.projectName != null) return false;
         if (projectAlterName != null ? !projectAlterName.equals(that.projectAlterName) : that.projectAlterName != null)
             return false;
-        if (projectYear != null ? !projectYear.equals(that.projectYear) : that.projectYear != null) return false;
+        if (projectPublishDate != null ? !projectPublishDate.equals(that.projectPublishDate) : that.projectPublishDate != null) return false;
         if (projectAuthor != null ? !projectAuthor.equals(that.projectAuthor) : that.projectAuthor != null)
             return false;
         if (projectIllustrator != null ? !projectIllustrator.equals(that.projectIllustrator) : that.projectIllustrator != null)
@@ -276,7 +275,7 @@ public class ProjectEntity {
         int result = projectId;
         result = 31 * result + (projectName != null ? projectName.hashCode() : 0);
         result = 31 * result + (projectAlterName != null ? projectAlterName.hashCode() : 0);
-        result = 31 * result + (projectYear != null ? projectYear.hashCode() : 0);
+        result = 31 * result + (projectPublishDate != null ? projectPublishDate.hashCode() : 0);
         result = 31 * result + (projectAuthor != null ? projectAuthor.hashCode() : 0);
         result = 31 * result + (projectIllustrator != null ? projectIllustrator.hashCode() : 0);
         result = 31 * result + (projectSynopsis != null ? projectSynopsis.hashCode() : 0);

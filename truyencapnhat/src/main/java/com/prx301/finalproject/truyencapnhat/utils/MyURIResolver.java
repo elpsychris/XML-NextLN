@@ -1,28 +1,38 @@
 package com.prx301.finalproject.truyencapnhat.utils;
 
 
+import com.prx301.finalproject.truyencapnhat.model.crawler.model.CleanFilter;
+import com.prx301.finalproject.truyencapnhat.model.crawler.model.ConfigComp;
+import com.prx301.finalproject.truyencapnhat.model.crawler.model.CrawlerConfig;
+
 import javax.xml.transform.Source;
 import javax.xml.transform.URIResolver;
 import javax.xml.transform.dom.DOMResult;
 import javax.xml.transform.stream.StreamSource;
 import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class MyURIResolver implements URIResolver {
-    private static volatile boolean isStop = false;
-    private static volatile boolean isPause = false;
-    private static InputStream empty = null;
-    private static final String DEFAULT_XML_DOCUMENT = "src/main/java/com/prx301/finalproject/truyencapnhat/xmlConfigs/default_xml.xml";
+    protected static volatile boolean isStop = false;
+    protected static volatile boolean isPause = false;
+    protected static final String EMPTY_HTML_CONTENT = "<html xmlns=\"http://www.w3.org/1999/xhtml\"></html>";
+    private ConfigComp crawlerConfig = null;
+    private final double PATTERN_INDENTICAL_MEAN = 0.8;
+    protected static final String DEFAULT_XML_DOCUMENT = "src/main/java/com/prx301/finalproject/truyencapnhat/xmlConfigs/default_xml.xml";
 
+    public MyURIResolver() {
+        super();
+    }
 
     @Override
-    public Source resolve(String href, String base)  {
+    public Source resolve(String href, String base) {
         Logger.getLogger().info("Resolving content from: " + href, MyURIResolver.class);
 
-
-
-        StringBuffer emptyHtml = new StringBuffer();
-        emptyHtml.append("<html xmlns=\"http://www.w3.org/1999/xhtml\"></html>");
-        empty = new ByteArrayInputStream(emptyHtml.toString().getBytes());
+        if (href.equals("https://ln.hako.re/truyen/557-adolescent-adam")) {
+            System.out.println("found it");
+        }
+        // Pause handler
         while (isPause && !isStop) {
             try {
                 Thread.sleep(1000);
@@ -30,19 +40,49 @@ public class MyURIResolver implements URIResolver {
                 Logger.getLogger().log(Logger.LOG_LEVEL.ERROR, "Crawler cannot be paused", e, MyURIResolver.class);
             }
         }
+
+
         if (href != null && !isStop) {
             try {
-                InputStream httpResult = ComUtils.getHttp(href);
-                String httpContent = preProcessInputStream(httpResult);
+                // Get content from website
+                InputStream contentStream = ComUtils.getHttp(href);
+                // Preprocess to string
+                String rawContent = ComUtils.inputStreamToString(contentStream);
 
-                InputStream testStream = new ByteArrayInputStream(httpContent.getBytes());
-                DOMResult testDOM = TrAXUtils.transform(new StreamSource(testStream), null);
+                List<String> filters = getToBeApplyFilter(this.crawlerConfig, href);
+
+                StringBuilder builder = new StringBuilder();
+                if (filters.size() > 1) {
+                    builder.append("<html>\n<body>\n");
+                }
+                if (filters != null) {
+                    for (String filter : filters) {
+                        String temp = ComUtils.getSubString(rawContent, filter);
+                        builder.append(temp);
+                    }
+                }
+                if (filters.size() > 1) {
+                    builder.append("</body>\n</html>");
+                }
+                rawContent = builder.toString();
+
+                String cleanedContent = ComUtils.cleanHTML(rawContent);
+                cleanedContent = processContent(cleanedContent);
+
+                InputStream testStream = new ByteArrayInputStream(cleanedContent.getBytes());
+                DOMResult testDOM = TrAXUtils.transform(new StreamSource(testStream), null, this);
+
+                //  Do Parsing Test the document beforehand
                 if (testDOM.getNode() != null) {
                     Logger.getLogger().info("HTML Content parsing test SUCCEED", MyURIResolver.class);
-                    InputStream realStream = new ByteArrayInputStream(httpContent.getBytes());
+
+
+                    InputStream realStream = new ByteArrayInputStream(cleanedContent.getBytes());
                     return new StreamSource(realStream);
                 } else {
                     Logger.getLogger().info("HTML Content parsing test FAILED", MyURIResolver.class);
+
+
                     InputStream defaultFile = new FileInputStream(new File(DEFAULT_XML_DOCUMENT));
                     return new StreamSource(defaultFile);
                 }
@@ -53,7 +93,12 @@ public class MyURIResolver implements URIResolver {
             }
         }
 
-        return new StreamSource(empty);
+        return new StreamSource(new ByteArrayInputStream(EMPTY_HTML_CONTENT.getBytes()));
+    }
+
+    public String processContent(String before) {
+        Logger.getLogger().info("Default empty process method", MyURIResolver.class);
+        return before;
     }
 
     public void pause() {
@@ -72,9 +117,19 @@ public class MyURIResolver implements URIResolver {
         Logger.getLogger().info("Continue signal for Crawler fired", MyURIResolver.class);
     }
 
-    private String preProcessInputStream(InputStream httpResult) throws IOException {
-        StringBuffer stringBuffer = ComUtils.cleanHTML(httpResult);
-        return stringBuffer.toString();
+    public void config (ConfigComp configComp) {
+        this.crawlerConfig = configComp;
+    }
+
+
+    private List<String> getToBeApplyFilter(ConfigComp crawlerConfig, String href) {
+        List<CleanFilter> allFilter = crawlerConfig.getCleanFilter();
+        for (CleanFilter filter : allFilter) {
+            if (StringComparator.computeMatching(filter.getPageUri(), href) >= PATTERN_INDENTICAL_MEAN) {
+                return filter.getFilterPatterns();
+            }
+        }
+        return null;
     }
 
 

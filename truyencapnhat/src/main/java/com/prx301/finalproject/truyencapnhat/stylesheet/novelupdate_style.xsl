@@ -1,4 +1,4 @@
-<xsl:stylesheet version="2.0"
+<xsl:stylesheet version="1.0"
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                 xmlns:t="http://t3.com/2018/xml"
                 xmlns="http://t3.com/2018/project-page" xmlns:xsd="http://www.w3.org/1999/XSL/Transform">
@@ -12,42 +12,40 @@
                         select="$listDoc//div[@class='pagination_wrap']/a[contains(@class,'current')]/following-sibling::a[1][text()!='Cuối']/@href"/>
             </next-page>
             <projects>
-                <xsl:for-each select="$listDoc//tbody/tr/td/a">
+                <xsl:for-each select="$listDoc//tr[@class='ranking-list']//a[@class='hoverinfo_trigger fs14 fw-b']">
                     <xsl:variable name="cur_project_link" select="@href"/>
                     <xsl:variable name="projDoc" select="document($cur_project_link)"/>
-                    <xsl:if test="boolean($projDoc//div[contains(@class,'seriestitlenu')])">
+                    <xsl:if test="boolean($projDoc//h1[@class='h1']/span)">
                         <project>
                             <id>
                                 <xsl:value-of
-                                        select="normalize-space($projDoc//div[contains(@class,'seriestitlenu')])"/>
+                                        select="normalize-space($cur_project_link)"/>
                             </id>
                             <name>
                                 <xsl:value-of
-                                        select="normalize-space($projDoc//div[contains(@class,'seriestitlenu')])"/>
+                                        select="normalize-space($projDoc//h1[@class='h1']/span)"/>
                             </name>
                             <alter-name>
-                                <xsl:variable name="alterName"/>
                                 <xsl:for-each
-                                        select="tokenize($projDoc//div[@id='editassociated'],'<br>')">
+                                        select="$projDoc//h2[text()='Alternative Titles']/following-sibling::div[@class='spaceit_pad']">
                                     <xsl:value-of select="concat(.,', ')"/>
                                 </xsl:for-each>
                             </alter-name>
+                            <publish-date>
+                                <xsl:value-of
+                                        select="normalize-space($projDoc//div[span[text()='Published:']]/text())"/>
+                            </publish-date>
                             <author>
                                 <xsl:value-of
-                                        select="$projDoc//div[@class='ln_info-item clear']/span[text()='Tác giả']/..//a"/>
+                                        select="$projDoc//div[span[text()='Authors:']]/a[1]"/>
                             </author>
                             <illustrator>
                                 <xsl:value-of
-                                        select="$projDoc//div[@class='ln_info-item clear']/span[text()='Họa sĩ']/..//a"/>
+                                        select="$projDoc//div[span[text()='Authors:']]/a[2]"/>
                             </illustrator>
-                            <synopsis>
-                                <xsl:for-each select="$projDoc//div[@class = 'listall_summary none force-block-l']/p">
-                                    <xsl:value-of select="normalize-space(.)"/>
-                                </xsl:for-each>
-                            </synopsis>
                             <genres>
                                 <xsl:for-each
-                                        select="$projDoc//div[@class='ln_info-item clear']/span[text()='Thể loại']/../span[@class='ln_info-value col-7']/a">
+                                        select="$projDoc//div[@class='spaceit' and span[text()='Genres:']]/a">
                                     <genre>
                                         <genre-id>
                                             <xsl:value-of select="."/>
@@ -57,67 +55,15 @@
                             </genres>
                             <view>
                                 <xsl:value-of
-                                        select="$projDoc//div[@class='ln_info-item clear']/span[text()='Lượt xem']/../span[@class='ln_info-value col-7']"/>
+                                        select="normalize-space($projDoc//div[span[text()='Members:']]/text())"/>
                             </view>
+                            <point>
+                                <xsl:value-of select="normalize-space($projDoc//span[@itemprop='ratingValue']/text())"/>
+                            </point>
                             <link>
                                 <xsd:value-of select="$cur_project_link"/>
                             </link>
-                            <xsl:variable name="group"
-                                          select="$projDoc//section[@class='fantrans-section']/div[contains(@class,'value')]/a"/>
-                            <xsl:variable name="group-link"
-                                          select="$projDoc//section[@class='fantrans-section']/div[contains(@class,'value')]/a/@href"/>
-                            <xsl:variable name="uploader" select="$projDoc//span[@class='listall-user_name']/a"/>
-                            <xsl:variable name="uploader-link"
-                                          select="$projDoc//span[@class='listall-user_name']/a/@href"/>
-                            <updates>
-                                <xsl:for-each
-                                        select="$projDoc//section[@class='ln_chapters-volume basic-section mobile-view clear']">
-                                    <xsl:variable name="volume-name"
-                                                  select="normalize-space(.//span[@class='sect-title']/a/text())"/>
-                                    <xsl:variable name="volume-img"
-                                                  select="normalize-space(.//div[@class='ln_chapters-vol_img col-3 col-3-m col-2-l col-2-xl']/a/img/@src)"/>
-                                    <xsl:for-each select=".//div[contains(@class,'ln_chapters-vol_main')]/article">
-                                        <update>
-                                            <chapter-name>
-                                                <xsl:value-of select="normalize-space(./div[1]/a/.)"/>
-                                            </chapter-name>
-                                            <chapter-date>
-                                                <xsl:value-of select="normalize-space(./div[2]/.)"/>
-                                            </chapter-date>
-                                            <update-group>
-                                                <group-link>
-                                                    <xsl:if test="$group">
-                                                        <xsl:value-of select="$group-link"/>
-                                                    </xsl:if>
-                                                    <xsl:if test="not(boolean($group))">
-                                                        <xsl:value-of select="$uploader-link"/>
-                                                    </xsl:if>
-                                                </group-link>
-                                                <group-name>
-                                                    <xsl:if test="$group">
-                                                        <xsl:value-of select="$group"/>
-                                                    </xsl:if>
-                                                    <xsl:if test="not(boolean($group))">
-                                                        <xsl:value-of select="$uploader"/>
-                                                    </xsl:if>
-                                                </group-name>
-                                            </update-group>
-                                            <update-link>
-                                                <xsl:value-of select="normalize-space(./div[1]/a/@href)"/>
-                                            </update-link>
-                                            <update-volume>
-                                                <volume-name>
-                                                    <xsl:value-of select="$volume-name"/>
-                                                </volume-name>
-                                                <volume-cover>
-                                                    <xsl:value-of
-                                                            select="$volume-img"/>
-                                                </volume-cover>
-                                            </update-volume>
-                                        </update>
-                                    </xsl:for-each>
-                                </xsl:for-each>
-                            </updates>
+                            <updates/>
                         </project>
                     </xsl:if>
                 </xsl:for-each>

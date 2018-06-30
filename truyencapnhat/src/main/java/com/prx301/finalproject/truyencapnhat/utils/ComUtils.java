@@ -9,9 +9,7 @@ import java.net.URLConnection;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -97,82 +95,116 @@ public class ComUtils {
         return connection;
     }
 
-    public static StringBuffer cleanHTML(InputStream httpResult) throws IOException {
+    public static String inputStreamToString(InputStream stream) throws IOException {
         StringBuffer stringBuffer = new StringBuffer();
-        InputStreamReader inputStreamReader = new InputStreamReader(httpResult, "UTF-8");
+        InputStreamReader inputStreamReader = null;
+        BufferedReader bufferedReader = null;
+
+        String line;
+        try {
+            inputStreamReader = new InputStreamReader(stream, "UTF-8");
+            bufferedReader = new BufferedReader(inputStreamReader);
+
+            while ((line = bufferedReader.readLine()) != null) {
+                stringBuffer.append(line.trim()).append("\n");
+            }
+        }catch (IOException e) {
+            Logger.getLogger().log(Logger.LOG_LEVEL.ERROR, e, ComUtils.class);
+        } finally {
+            if (bufferedReader != null) {
+                bufferedReader.close();
+            }
+
+            if (inputStreamReader != null) {
+                inputStreamReader.close();
+            }
+        }
+        return stringBuffer.toString();
+    }
+
+    public static String cleanHTML(String rawContent) throws IOException {
+
+        StringBuffer stringBuffer = new StringBuffer();
 
         Pattern pattern = null;
         Matcher matcher = null;
 
-        BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
-        String line;
         stringBuffer.append(XML_DECLARATION + "\n");
-        while ((line = bufferedReader.readLine()) != null) {
-            if (line.contains("<html") && line.contains("xmlns=\"http://www.w3.org/1999/xhtml\"")) {
-                line = line.replace("<html", "<html xmlns=\"http://www.w3.org/1999/xhtml\"");
-            }
-            if (line.contains("src") || line.contains("href")) {
-                line = line.replace("&", "&amp;");
-            }
+//
+//        if (line.contains("<html") && !line.contains("xmlns=\"http://www.w3.org/1999/xhtml\"")) {
+//            line = line.replace("<html", "<html xmlns=\"http://www.w3.org/1999/xhtml\"");
+//        }
+//        if (rawContent.contains("src") || rawContent.contains("href")) {
+//        }
 
-            // Remove all meta tag
-            line = line.replaceAll("<meta[ ]?[^>]+[ ]?>", "");
+        rawContent = rawContent.replace("&", "&amp;");
 
-            // Remove all base tag
-            line = line.replaceAll("<base[ ]?[^>]+[ ]?>", "");
+        // Remove all meta tag
+        rawContent = rawContent.replaceAll("<meta[ ]?[^>]+[ ]?>", "");
 
-            // Remove all link tag
-            line = line.replaceAll("<link ]?[^>]+[ ]?>", "");
+        // Remove all base tag
+        rawContent = rawContent.replaceAll("<base[ ]?[^>]+[ ]?>", "");
 
-            // Remove all input tag
-            line = line.replaceAll("<input[ ]?[^>]+[ ]?>", "");
+        // Remove all link tag
+        rawContent = rawContent.replaceAll("<link ]?[^>]+[ ]?>", "");
 
-            // Remove all br tag
-            line = line.replaceAll("<[/]?br[/]?>", "");
+        // Remove all input tag
+        rawContent = rawContent.replaceAll("<input[ ]?[^>]+[ ]?>", "");
 
-            // Remove all li alone tag
-            line = line.replaceAll("<li class=\"filter-type_item\">", "");
+        // Remove all br tag
+        rawContent = rawContent.replaceAll("<[/]?br[/]?>", "");
+
+        // Remove all li alone tag
+        rawContent = rawContent.replaceAll("<li class=\"filter-type_item\">", "");
 //            line = line.replaceAll("<li class=\"filter-type_item\">", "");
 
-            line = line.replace("<main class=\"sect-body none force-block-l clear long-text\" style=\"word-wrap: break-word;\"", "<main class=\"sect-body none force-block-l clear long-text\" style=\"word-wrap: break-word;\">");
+        rawContent = rawContent.replace("<main class=\"sect-body none force-block-l clear long-text\" style=\"word-wrap: break-word;\"", "<main class=\"sect-body none force-block-l clear long-text\" style=\"word-wrap: break-word;\">");
 
-            // (R) char and ... and non-breaking space char replacement
-            line = line
-                    .replace("&reg;", "&#174;")
-                    .replace("&hellip;", "")
-                    .replace("&nbsp;", "");
+        // (R) char and ... and non-breaking space char replacement
+        rawContent = rawContent
+                .replace("&reg;", "&#174;")
+                .replace("&hellip;", "")
+                .replace("&nbsp;", "");
 
-            pattern = Pattern.compile("<img [^>]+[^/]>");
-            matcher = pattern.matcher(line);
-            while (matcher.find()) {
-                String sMatched = matcher.group(0);
-                int start = line.indexOf(sMatched);
-                line = line.substring(0, start + sMatched.length()) + "</img>" + line.substring(start + sMatched.length());
+        rawContent = rawContent.replaceAll("itemscope", "");
+        rawContent = rawContent.replaceAll("nowrap", "");
+
+        pattern = Pattern.compile("<img [^>]+[^/]>");
+        matcher = pattern.matcher(rawContent);
+
+        Set<String> matchedImg = new HashSet<>();
+        while (matcher.find()) {
+            String sMatched = matcher.group(0);
+            if (sMatched.contains("No Game No Life")) {
+                System.out.println("find it");
             }
-
-            // remove <h3 class="ln-comment-count">
-            line = line.trim();
-            if (!line.isEmpty()) {
-                if (!line.contains("<h3 class=\"ln-comment-count\">") && !line.contains("<hr class=\"ln-comment\">")) {
-                    stringBuffer.append(line.trim() + "\n");
-
-                }
+            if (!matchedImg.contains(sMatched)) {
+                rawContent = rawContent.replace(sMatched, sMatched + "</img>");
+                matchedImg.add(sMatched);
             }
-
-
+//            int start = rawContent.indexOf(sMatched);
+//            rawContent = rawContent.substring(0, start + sMatched.length()) + "</img>" + rawContent.substring(start + sMatched.length());
         }
+        rawContent = rawContent.replaceAll("<script[^>]*>[^<]*</script>", "");
+        rawContent = rawContent.replaceAll("<header class=\"inline-block none-l mobile-toggle_header\">Bình luận</header>[\\s\\S]+</div>[^<]+</div>[^<]+</section>[^<]+</main>", "");
+        rawContent = rawContent.replaceAll("<script>[\\s\\S]+</script>", "");
 
-        String document = stringBuffer.toString();
-        document = document.replaceAll("<script[^>]*>[^<]*</script>", "");
-        document = document.replaceAll("<header class=\"inline-block none-l mobile-toggle_header\">Bình luận</header>[\\s\\S]+</div>[^<]+</div>[^<]+</section>[^<]+</main>", "");
-        document = document.replaceAll("<script>[\\s\\S]+</script>", "");
-//        System.out.println("=============================================");
-//        System.out.println(document);
-//        System.out.println("=============================================");
+        stringBuffer.append(rawContent);
 
-        stringBuffer = new StringBuffer(document);
+//        while ((line = bufferedReader.readLine()) != null) {
+//
+//
+//            // remove <h3 class="ln-comment-count">
+//            line = line.trim();
+//            if (!line.isEmpty()) {
+//                if (!line.contains("<h3 class=\"ln-comment-count\">") && !line.contains("<hr class=\"ln-comment\">")) {
+//                    stringBuffer.append(line.trim() + "\n");
+//                }
+//            }
+//
+//        }
 
-        return stringBuffer;
+        return stringBuffer.toString();
     }
 
     public static String hashString(String src) {
@@ -184,6 +216,16 @@ public class ComUtils {
             e.printStackTrace();
         }
         return null;
+    }
+
+    public static String getSubString(String before, String regEx) {
+        String after = "";
+        Pattern pattern = Pattern.compile(regEx);
+        Matcher matcher = pattern.matcher(before);
+        while (matcher.find()) {
+            after = after + matcher.group(0);
+        }
+        return after;
     }
 
     public static void writeToFile(File file, String msg) {

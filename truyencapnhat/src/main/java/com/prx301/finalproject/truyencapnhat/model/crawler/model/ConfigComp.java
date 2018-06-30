@@ -1,15 +1,15 @@
 package com.prx301.finalproject.truyencapnhat.model.crawler.model;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
+import java.util.List;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ConfigComp", propOrder = {
         "name",
         "stylesheet",
         "config",
+        "uriResolverClassName",
+        "cleanFilter",
         "status"
 })
 public class ConfigComp {
@@ -19,6 +19,11 @@ public class ConfigComp {
     private String stylesheet;
     @XmlElement(name = "config")
     private String config;
+    @XmlElement(name = "uri-resolver")
+    private String uriResolverClassName;
+    @XmlElementWrapper(name = "clean-filters")
+    @XmlElement(name = "filter")
+    private List<CleanFilter> cleanFilter;
     @XmlElement(name = "status")
     private String status;
 
@@ -45,6 +50,22 @@ public class ConfigComp {
 
     public void setConfig(String config) {
         this.config = config;
+    }
+
+    public String getUriResolverClassName() {
+        return uriResolverClassName;
+    }
+
+    public void setUriResolverClassName(String uriResolverClassName) {
+        this.uriResolverClassName = uriResolverClassName;
+    }
+
+    public List<CleanFilter> getCleanFilter() {
+        return cleanFilter;
+    }
+
+    public void setCleanFilter(List<CleanFilter> cleanFilter) {
+        this.cleanFilter = cleanFilter;
     }
 
     public String getStatus() {

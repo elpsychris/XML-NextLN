@@ -8,10 +8,11 @@
     <xsd:complexType name="project-type">
         <xsd:sequence>
             <xsd:element name="name" type="xsd:string" minOccurs="1"/>
-            <xsd:element name="alter-name" type="xsd:string" />
-            <xsd:element name="author" type="xsd:string"/>
-            <xsd:element name="illustrator" type="xsd:string"/>
-            <xsd:element name="synopsis" type="xsd:string"/>
+            <xsd:element name="alter-name" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="publish-date" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="author" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="illustrator" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="synopsis" type="xsd:string" minOccurs="0"/>
             <xsd:element name="genres">
                 <xsd:complexType>
                     <xsd:sequence>
@@ -20,6 +21,13 @@
                 </xsd:complexType>
             </xsd:element>
             <xsd:element name="view">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:pattern value="[0-9]+[.,]?[0-9]+"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="point" minOccurs="0">
                 <xsd:simpleType>
                     <xsd:restriction base="xsd:string">
                         <xsd:pattern value="[0-9]+[.,]?[0-9]+"/>
