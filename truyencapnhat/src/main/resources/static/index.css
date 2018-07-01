@@ -848,6 +848,8 @@ input[type=checkbox] {
     position: relative;
     width: 100%;
     padding: 50px 20px 70px 20px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .crawler-config {
@@ -856,11 +858,14 @@ input[type=checkbox] {
     max-width: 300px;
     flex-wrap: wrap;
     position: relative;
+    margin: 0 20px 0 10px;
+    min-width: 200px;
 }
 
 .crawler-config .name {
     font-size: 1.25em;
     width: 100%;
+    font-weight: bold;
 }
 
 .crawler-config:before {
@@ -893,16 +898,18 @@ input[type=checkbox] {
 
 .crawler-config li {
     list-style-type: none;
+    margin-left: 20px;
+    position: relative;
 }
 
 .crawler-info li:before {
     font-size: 0.75em;
     font-weight: bold;
-    padding: 0 10px;
     position: relative;
     color: #ccc;
     width: 50px;
-    display: inline-block;
+    display: block;
+    right: 10px;
 }
 
 .config-xsl:before {

@@ -1,12 +1,43 @@
 <%@ page pageEncoding="UTF-8" %>
 <%@ page contentType="text/html;charset=UTF-8" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jstl/core" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="x" uri="http://java.sun.com/jsp/jstl/xml" %>
 
 <html>
+
 <head>
-    <title>Crawler</title>
+    <title>Truyện cập nhật</title>
+    <link rel="stylesheet" type="text/css" href="../index.css">
+    <script type="text/javascript" src="../js/utilities.js"></script>
 </head>
+
 <body>
-<h1>Crawler is currently working</h1>
+<div class="nav-bar card-2">
+    <div id="logo"></div>
+    <div class="nav-item-center">
+        <input class="search-bar" type="search" placeholder="Nhập tên truyện cần tìm">
+    </div>
+    <div class="nav-item-right">
+        <div class="signup focus">
+            <a href="#">Đăng ký</a>
+        </div>
+        <div class="login">
+            <a href="#">Đăng nhập</a>
+        </div>
+    </div>
+</div>
+
+
+<div class="banner-empty"></div>
+
+<div class="search-info card-2">
+    <div class="search-info-header">Thu thập dữ liệu</div>
+    <div class="config-list">
+        <x:transform doc="${configXml}" xslt="${configXsl}"/>
+    </div>
+</div>
+</div>
+
 </body>
+
 </html>
