@@ -7,13 +7,13 @@
             <config>src/main/java/com/prx301/finalproject/truyencapnhat/xmlConfigs/hako_project.xml</config>
             <clean-filters>
                 <filter>
-                    <page-uri>https://ln.hako.re/danh-sach</page-uri>
+                    <page-uri>/danh-sach</page-uri>
                     <filter-patterns>
                         <pattern>&lt;section class=&quot;browse-section noheader-section col-12&quot;&gt;[\s\S]+&lt;/footer&gt;[\s]+&lt;/section&gt;</pattern>
                     </filter-patterns>
                 </filter>
                 <filter>
-                    <page-uri>https://ln.hako.re/truyen/</page-uri>
+                    <page-uri>/truyen/</page-uri>
                     <filter-patterns>
                         <pattern>&lt;article class=&quot;listall-item clear&quot;&gt;[\S\s]+&lt;/div&gt;[\s]+&lt;/div&gt;[\s]+&lt;/article&gt;</pattern>
                         <pattern>&lt;div class=&quot;reg-part clear&quot; style=&quot;padding-bottom: 20px&quot;&gt;[\S\s]+&lt;/section&gt;[\s]{2,}&lt;/div&gt;[\s]+&lt;/div&gt;[\s]+&lt;/div&gt;</pattern>
@@ -29,13 +29,14 @@
             <uri-resolver>com.prx301.finalproject.truyencapnhat.utils.MALURIResolver</uri-resolver>
             <clean-filters>
                 <filter>
-                    <page-uri>https://myanimelist.net/topmanga.php?type=novels</page-uri>
+                    <page-uri>/manga.php?q=&amp;type=2</page-uri>
                     <filter-patterns>
-                            <pattern>&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;100%&quot; class=&quot;top-ranking-table\&quot;&gt;[\S\s]+&lt;/table&gt;</pattern>
+                            <pattern>&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;100%&quot;&gt;[\s\S]+&lt;/table&gt;</pattern>
+                            <pattern>&lt;div class=&quot;normal_header clearfix pt16&quot;&gt;[\S\s]+Search Results&lt;/div&gt;</pattern>
                     </filter-patterns>
                 </filter>
                 <filter>
-                    <page-uri>https://myanimelist.net/manga</page-uri>
+                    <page-uri>/manga</page-uri>
                     <filter-patterns>
                         <pattern>&lt;h1 class=&quot;h1&quot;&gt;&lt;span itemprop=&quot;name&quot;&gt;[\S\s]+&lt;/h1&gt;</pattern>
                         <pattern>&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;100%&quot;&gt;[\S\s]+&lt;/table&gt;</pattern>
@@ -43,11 +44,6 @@
                 </filter>
             </clean-filters>
             <status>active</status>
-        </component>
-        <component status="inactive">
-            <stylesheet>hako_style.xsl</stylesheet>
-            <config>hako_project.xml</config>
-            <status>inactive</status>
         </component>
     </components>
 </crawler-config>
