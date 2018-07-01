@@ -95,6 +95,6 @@ public class UpdateVolEntity {
     @Override
     public int hashCode() {
 
-        return Objects.hash(id, volName, volNo, volCover);
+        return Objects.hash(volName, volNo, volCover);
     }
 }

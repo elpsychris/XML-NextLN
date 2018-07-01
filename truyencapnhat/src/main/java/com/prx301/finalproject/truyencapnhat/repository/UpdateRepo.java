@@ -1,5 +1,6 @@
 package com.prx301.finalproject.truyencapnhat.repository;
 
+import com.prx301.finalproject.truyencapnhat.model.ProjectEntity;
 import com.prx301.finalproject.truyencapnhat.model.UpdateEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.query.Procedure;
@@ -11,6 +12,7 @@ import java.util.List;
 @Repository
 public interface UpdateRepo extends JpaRepository<UpdateEntity, Integer> {
     List<UpdateEntity> findAll();
+    List<UpdateEntity> findByProject(ProjectEntity projectEntity);
     List<UpdateEntity> getTop5ByOrderByUpdateDateDesc();
 
 //    @Procedure(name = "latest_updates")

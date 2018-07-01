@@ -1,9 +1,17 @@
 package com.prx301.finalproject.truyencapnhat.utils;
 
 import java.util.Arrays;
+import java.util.regex.Pattern;
 
 public class StringComparator {
-    public static int computeMatching(String a, String b) {
+    private static String pattern = "[^A-Za-z0-9 ]";
+    public static String normalizeString(String target) {
+        return target.toLowerCase().replaceAll(pattern,"");
+    }
+    public static double computeMatching(String a, String b) {
+        a = normalizeString(a);
+        b = normalizeString(b);
+
         int n = a.length();
 
         int m = b.length();
@@ -19,6 +27,6 @@ public class StringComparator {
             }
         }
 
-        return dp[n][m]/Math.min(m, n);
+        return (double)dp[n][m]/Math.min(m, n);
     }
 }

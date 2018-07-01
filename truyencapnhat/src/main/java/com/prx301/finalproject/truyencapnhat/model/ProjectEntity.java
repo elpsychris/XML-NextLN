@@ -35,6 +35,7 @@ public class ProjectEntity {
     @XmlElement(name = "id")
     private int projectId;
     @XmlElement(required = true, name = "name")
+    @XmlJavaTypeAdapter(NameAdapter.class)
     private String projectName;
     @XmlElement(required = true, name = "alter-name")
     private String projectAlterName;
@@ -206,7 +207,7 @@ public class ProjectEntity {
         this.projectTotalUpdate = projectTotalUpdate;
     }
 
-    @ManyToMany(cascade = {CascadeType.MERGE}, targetEntity = GenreEntity.class, fetch = FetchType.EAGER)
+    @ManyToMany(targetEntity = GenreEntity.class, fetch = FetchType.EAGER)
     @JoinTable(
             name = "GenreMap",
             joinColumns = {@JoinColumn(name = "project_id")},
@@ -228,7 +229,6 @@ public class ProjectEntity {
     public void setUpdates(List<UpdateEntity> updates) {
 //        this.updates = updates;
     }
-
 
     @Basic
     @Column(name = "project_link")
@@ -272,19 +272,19 @@ public class ProjectEntity {
 
     @Override
     public int hashCode() {
-        int result = projectId;
+        int result = 0;
         result = 31 * result + (projectName != null ? projectName.hashCode() : 0);
         result = 31 * result + (projectAlterName != null ? projectAlterName.hashCode() : 0);
         result = 31 * result + (projectPublishDate != null ? projectPublishDate.hashCode() : 0);
         result = 31 * result + (projectAuthor != null ? projectAuthor.hashCode() : 0);
         result = 31 * result + (projectIllustrator != null ? projectIllustrator.hashCode() : 0);
         result = 31 * result + (projectSynopsis != null ? projectSynopsis.hashCode() : 0);
-        result = 31 * result + (projectHash != null ? projectHash.hashCode() : 0);
+//        result = 31 * result + (projectHash != null ? projectHash.hashCode() : 0);
         result = 31 * result + (projectTag != null ? projectTag.hashCode() : 0);
         result = 31 * result + (projectView != null ? projectView.hashCode() : 0);
         result = 31 * result + (projectPoint != null ? projectPoint.hashCode() : 0);
-        result = 31 * result + (projectLastUpdate != null ? projectLastUpdate.hashCode() : 0);
-        result = 31 * result + (projectTotalUpdate != null ? projectTotalUpdate.hashCode() : 0);
+//        result = 31 * result + (projectLastUpdate != null ? projectLastUpdate.hashCode() : 0);
+//        result = 31 * result + (projectTotalUpdate != null ? projectTotalUpdate.hashCode() : 0);
         return result;
     }
 }

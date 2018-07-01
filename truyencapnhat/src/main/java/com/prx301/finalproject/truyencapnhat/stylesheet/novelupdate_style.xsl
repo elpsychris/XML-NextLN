@@ -9,10 +9,10 @@
         <project-page>
             <next-page>
                 <xsl:value-of
-                        select="$listDoc//div[@class='pagination_wrap']/a[contains(@class,'current')]/following-sibling::a[1][text()!='Cuối']/@href"/>
+                        select="$listDoc//div[@class='fl-r di-ib fs11 fw-n']/a[contains(text(),'Next')]/@href"/>
             </next-page>
             <projects>
-                <xsl:for-each select="$listDoc//tr[@class='ranking-list']//a[@class='hoverinfo_trigger fs14 fw-b']">
+                <xsl:for-each select="$listDoc//td/a[@class='hoverinfo_trigger fw-b']">
                     <xsl:variable name="cur_project_link" select="@href"/>
                     <xsl:variable name="projDoc" select="document($cur_project_link)"/>
                     <xsl:if test="boolean($projDoc//h1[@class='h1']/span)">

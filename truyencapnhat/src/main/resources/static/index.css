@@ -962,3 +962,7 @@ ul.config:before {
     background: #ff88a4;
     color: white;
 }
+
+.action-btn {
+    cursor: pointer;
+}

@@ -6,6 +6,7 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 import java.io.Serializable;
+import java.util.Objects;
 import java.util.Set;
 
 @Entity
@@ -80,6 +81,7 @@ public class GroupEntity {
 
     @Override
     public int hashCode() {
-        return super.hashCode();
+
+        return Objects.hash(groupName, groupContact);
     }
 }

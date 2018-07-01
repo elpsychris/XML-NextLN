@@ -155,7 +155,7 @@ public class UpdateEntity {
 
     @Override
     public int hashCode() {
-        int result = updateId;
+        int result = 0;
         result = 31 * result + (updateName != null ? updateName.hashCode() : 0);
         result = 31 * result + (updateVol != null ? updateVol.hashCode() : 0);
         result = 31 * result + (updateDate != null ? updateDate.hashCode() : 0);

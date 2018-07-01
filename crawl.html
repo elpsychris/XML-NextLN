@@ -4,6 +4,7 @@
     <title>Truyện cập nhật</title>
     <link rel="stylesheet" type="text/css" href="index.css">
     <script type="text/javascript" src="./js/utilities.js"></script>
+    <script type="text/javascript" src="./js/button-event.js"></script>
 </head>
 
 <body>
@@ -33,14 +34,25 @@
                     <span>Hako.re</span>
                 </div>
                 <ul class="crawler-info config">
-                    <li class="config-xsl">novelupdate_style.xsl</li>
+                    <li class="config-xsl">src/main/java/com/prx301/finalproject/truyencapnhat/stylesheet/hako_style.xsl</li>
                     <li class="config-xml">novelupdate_project.xml</li>
                 </ul>
                 <div class="crawler-action">
-                    <div class="action-btn pause">Pause</div>
-                    <div class="action-btn stop">Stop</div>
+                    <div class="action-btn run">Run</div>
                 </div>
             </div>
+            <div class="crawler-config card-2 running">
+                    <div class="crawler-info name">
+                        <span>Hako.re</span>
+                    </div>
+                    <ul class="crawler-info config">
+                        <li class="config-xsl">src/main/java/com/prx301/finalproject/truyencapnhat/stylesheet/hako_style.xsl</li>
+                        <li class="config-xml">novelupdate_project.xml</li>
+                    </ul>
+                    <div class="crawler-action">
+                        <div class="action-btn run" onclick="onRunCrawler(this)">Run</div>
+                    </div>
+                </div>
         </div>
     </div>
     </div>

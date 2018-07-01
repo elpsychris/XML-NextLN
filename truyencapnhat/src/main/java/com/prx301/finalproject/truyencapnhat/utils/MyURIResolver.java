@@ -29,9 +29,6 @@ public class MyURIResolver implements URIResolver {
     public Source resolve(String href, String base) {
         Logger.getLogger().info("Resolving content from: " + href, MyURIResolver.class);
 
-        if (href.equals("https://ln.hako.re/truyen/557-adolescent-adam")) {
-            System.out.println("found it");
-        }
         // Pause handler
         while (isPause && !isStop) {
             try {
@@ -49,7 +46,7 @@ public class MyURIResolver implements URIResolver {
                 // Preprocess to string
                 String rawContent = ComUtils.inputStreamToString(contentStream);
 
-                List<String> filters = getToBeApplyFilter(this.crawlerConfig, href);
+                List<String> filters = getToBeApplyFilter(this.crawlerConfig, getRelUrl(href));
 
                 StringBuilder builder = new StringBuilder();
                 if (filters.size() > 1) {
@@ -78,6 +75,7 @@ public class MyURIResolver implements URIResolver {
 
 
                     InputStream realStream = new ByteArrayInputStream(cleanedContent.getBytes());
+                    Thread.sleep(1200);
                     return new StreamSource(realStream);
                 } else {
                     Logger.getLogger().info("HTML Content parsing test FAILED", MyURIResolver.class);
@@ -124,12 +122,22 @@ public class MyURIResolver implements URIResolver {
 
     private List<String> getToBeApplyFilter(ConfigComp crawlerConfig, String href) {
         List<CleanFilter> allFilter = crawlerConfig.getCleanFilter();
+        CleanFilter result = null;
+        double maxIdentical = 0;
         for (CleanFilter filter : allFilter) {
-            if (StringComparator.computeMatching(filter.getPageUri(), href) >= PATTERN_INDENTICAL_MEAN) {
-                return filter.getFilterPatterns();
+            double curIdentical = StringComparator.computeMatching(filter.getPageUri(), href);
+            if (curIdentical >= PATTERN_INDENTICAL_MEAN && curIdentical > maxIdentical) {
+                maxIdentical = curIdentical;
+                result = filter;
             }
         }
-        return null;
+        return result.getFilterPatterns();
+    }
+
+    private String getRelUrl(String fullUrl) {
+        String woProtocol = fullUrl.split("//")[1];
+        String baseUrl = woProtocol.split("/")[0];
+        return woProtocol.replace(baseUrl, "");
     }
 
 

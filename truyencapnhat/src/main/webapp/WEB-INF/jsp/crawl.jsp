@@ -9,6 +9,7 @@
     <title>Truyện cập nhật</title>
     <link rel="stylesheet" type="text/css" href="../index.css">
     <script type="text/javascript" src="../js/utilities.js"></script>
+    <script type="text/javascript" src="../js/button-event.js"></script>
 </head>
 
 <body>

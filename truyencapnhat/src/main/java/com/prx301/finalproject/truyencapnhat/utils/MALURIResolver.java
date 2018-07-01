@@ -10,6 +10,7 @@ public class MALURIResolver extends MyURIResolver{
     @Override
     public String processContent(String before) {
         String after = before.replaceAll("<td valign=\"top\" style=\"padding-left: 5px;\">[\\s\\S]+</td>","");
+        after = after.replaceAll("</span>[\\s]*</small>", "</small>");
         return after;
     }
 }

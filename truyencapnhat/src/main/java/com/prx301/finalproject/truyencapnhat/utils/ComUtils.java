@@ -1,9 +1,11 @@
 package com.prx301.finalproject.truyencapnhat.utils;
 
+import com.prx301.finalproject.truyencapnhat.model.ProjectEntity;
 import com.prx301.finalproject.truyencapnhat.model.crawler.model.CrawlerConfig;
 
 import javax.xml.bind.JAXBException;
 import java.io.*;
+import java.lang.reflect.Field;
 import java.net.URL;
 import java.net.URLConnection;
 import java.security.MessageDigest;
@@ -108,7 +110,7 @@ public class ComUtils {
             while ((line = bufferedReader.readLine()) != null) {
                 stringBuffer.append(line.trim()).append("\n");
             }
-        }catch (IOException e) {
+        } catch (IOException e) {
             Logger.getLogger().log(Logger.LOG_LEVEL.ERROR, e, ComUtils.class);
         } finally {
             if (bufferedReader != null) {
@@ -319,5 +321,55 @@ public class ComUtils {
         return builder.toString();
     }
 
+    public static ProjectEntity findIdenticalExist(ProjectEntity curProject, List<ProjectEntity> projectEntities) {
+        String curProjectName = curProject.getProjectName();
+
+        double maxScore = 0;
+        ProjectEntity identicalProject = null;
+        for (ProjectEntity projectEntity : projectEntities) {
+            String otherName = projectEntity.getProjectName();
+
+            double ratio = ((double)curProjectName.length())/otherName.length();
+            if (ratio < 0.5 || ratio > 2) {
+                continue;
+            }
+            double curScore = StringComparator.computeMatching(curProjectName, otherName);
+            if (curScore > maxScore) {
+                System.out.printf("\t\tUpdate identical score - %s : %f\n", otherName, curScore);
+                maxScore = curScore;
+                identicalProject = projectEntity;
+            }
+        }
+
+        if (maxScore > 0.9) {
+            return identicalProject;
+        }
+        return null;
+    }
+
+    public static <T> T mergeObject(T curObj, T newObj) throws IllegalAccessException {
+        Field[] fields = curObj.getClass().getDeclaredFields();
+        for (Field field : fields) {
+            field.setAccessible(true);
+            Class<?> aClass = field.getType();
+
+            // Add to current if null
+            if (field.get(curObj) == null && field.get(newObj) != null) {
+                field.set(curObj, field.get(newObj));
+            }
+
+            // Append to current if String
+            if (aClass.getSimpleName().equals(String.class.getSimpleName())
+                    && field.get(newObj) != null) {
+                String newString = (String) field.get(newObj);
+                String oldString = (String) field.get(curObj);
+                if (!oldString.contains(newString)) {
+                    oldString += ";" + newString.trim();
+                    field.set(curObj, oldString);
+                }
+            }
+        }
+        return curObj;
+    }
 
 }

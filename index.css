@@ -302,7 +302,6 @@ a {
     box-sizing: border-box;
 }
 
-
 .project-info {
     position: relative;
     display: flex;
@@ -843,4 +842,127 @@ input[type=checkbox] {
     left: 0;
     background: white;
     z-index: 100;
+}
+
+.config-list {
+    position: relative;
+    width: 100%;
+    padding: 50px 20px 70px 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.crawler-config {
+    display: flex;
+    padding: 20px;
+    max-width: 300px;
+    flex-wrap: wrap;
+    position: relative;
+    margin: 0 20px 0 10px;
+    min-width: 200px;
+}
+
+.crawler-config .name {
+    font-size: 1.25em;
+    width: 100%;
+    font-weight: bold;
+}
+
+.crawler-config:before {
+    font-size: .7em;
+    font-weight: bold;
+    padding: 5px;
+    width: 50px;    
+    text-align: center;
+}
+
+.crawler-config.inactive:before {
+    content: "Inactive";
+    color: white;
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    background: #ccc;
+}
+
+.crawler-config.running:before {
+    content: "Running...";
+    background: #2b91c5;
+    color: white;
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 20px
+}
+
+.crawler-config li {
+    list-style-type: none;
+    margin-left: 20px;
+    position: relative;
+}
+
+.crawler-info li:before {
+    font-size: 0.75em;
+    font-weight: bold;
+    position: relative;
+    color: #ccc;
+    width: 50px;
+    display: block;
+    right: 10px;
+}
+
+.config-xsl:before {
+    content: 'XSL dir:';
+}
+
+.config-xml:before {
+    content: 'XML dir:';
+}
+
+ul.config {
+    position: relative;
+    padding: 10px;
+    margin-bottom: 40px;
+}
+
+ul.config:before {
+    content: "Chi tiết:";
+    font-size: .8em;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;        
+}
+
+.crawler-action {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    width: 70%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.action-btn {
+    padding: 10px 20px; 
+    margin: 0 5px;   
+}
+
+.action-btn.run {
+    background: #61d195;
+    color: white;
+}
+
+.action-btn.pause {
+    background: #fff6dd;
+    color: black;
+}
+
+.action-btn.stop {
+    background: #ff88a4;
+    color: white;
+}
+
+.action-btn {
+    cursor: pointer;
 }

@@ -24,4 +24,12 @@ public class Projects {
     public void setProjects(List<ProjectEntity> projects) {
         this.projects = projects;
     }
+
+    public String getNextList() {
+        return nextList;
+    }
+
+    public void setNextList(String nextList) {
+        this.nextList = nextList;
+    }
 }

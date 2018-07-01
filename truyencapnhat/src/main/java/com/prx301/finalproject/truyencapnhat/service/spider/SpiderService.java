@@ -5,11 +5,14 @@ import com.prx301.finalproject.truyencapnhat.model.crawler.model.ConfigComp;
 import com.prx301.finalproject.truyencapnhat.model.crawler.model.CrawlerAgent;
 import com.prx301.finalproject.truyencapnhat.model.crawler.model.CrawlerConfig;
 import com.prx301.finalproject.truyencapnhat.repository.ProjectRepo;
-import com.prx301.finalproject.truyencapnhat.utils.ComUtils;
-import com.prx301.finalproject.truyencapnhat.utils.Logger;
+import com.prx301.finalproject.truyencapnhat.repository.UpdateRepo;
+import com.prx301.finalproject.truyencapnhat.utils.*;
 import org.apache.commons.jxpath.JXPathContext;
 import org.springframework.stereotype.Service;
 
+import javax.xml.bind.JAXBException;
+import javax.xml.transform.stream.StreamResult;
+import java.io.StringWriter;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
@@ -18,6 +21,8 @@ import java.util.Map;
 public class SpiderService {
     private final String DEFAULT_PARENT_PATH = "src/main/java/com/prx301/finalproject/truyencapnhat";
     private ProjectRepo projectRepo = null;
+    private UpdateRepo updateRepo = null;
+
     private Logger logger = Logger.getLogger();
     private Map<String, ConfigComp> configMap = null;
 
@@ -30,8 +35,9 @@ public class SpiderService {
 //    }
 
 
-    public SpiderService(ProjectRepo projectRepo) {
+    public SpiderService(ProjectRepo projectRepo, UpdateRepo updateRepo) {
         this.projectRepo = projectRepo;
+        this.updateRepo = updateRepo;
     }
 
     private void config() {
@@ -48,13 +54,30 @@ public class SpiderService {
         }
     }
 
+    public String getXslConfigMenu() {
+        return ComUtils.getStreamFromFile("xml_config.xsl");
+    }
+
+    public String getConfigMenu() {
+        StringWriter writer = new StringWriter();
+        StreamResult streamResult = new StreamResult(writer);
+
+        try {
+            JAXBUtils.objectToXML(ComUtils.getCrawlerConfig(), streamResult);
+        } catch (JAXBException e) {
+            logger.log(Logger.LOG_LEVEL.ERROR, "Cannot parse Crawler XML config file", e, SpiderService.class);
+        }
+
+        return writer.toString();
+    }
+
     public void startCrawling() {
         // Read website for crawling from XML config gile
         config();
 
         for (Map.Entry entry : this.configMap.entrySet()) {
             ConfigComp configComp = (ConfigComp) entry.getValue();
-            CrawlerAgent crawlerAgent = new CrawlerAgent(configComp, projectRepo);
+            CrawlerAgent crawlerAgent = new CrawlerAgent(configComp, projectRepo, updateRepo);
             new Thread(crawlerAgent).start();
         }
     }
