@@ -1,30 +1,40 @@
 package com.prx301.finalproject.truyencapnhat.controller;
 
-import com.prx301.finalproject.truyencapnhat.model.UserEntity;
+import com.prx301.finalproject.truyencapnhat.model.AccountEntity;
+import com.prx301.finalproject.truyencapnhat.model.web.model.AuthTicket;
+import com.prx301.finalproject.truyencapnhat.model.web.model.LoginRequest;
+import com.prx301.finalproject.truyencapnhat.service.web.AccountService;
 import org.springframework.http.MediaType;
-import org.springframework.util.MultiValueMap;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Map;
+import javax.servlet.http.HttpSession;
 
 @RestController
 @RequestMapping("/api")
 public class APIController {
-    @RequestMapping(value = "/login", method = RequestMethod.POST, consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE)
-    public String login(@RequestParam Map<String, String> body) {
-        String username = body.get("username");
-        String password = body.get("password");
+    private AccountService accountService = null;
 
-        UserEntity newLoginRequest = new UserEntity();
-        newLoginRequest.setUsername(username);
-        newLoginRequest.setPassword(password);
+    public APIController(AccountService accountService) {
+        this.accountService = accountService;
+    }
 
-
-        return "failed";
+    @RequestMapping(value = "/login", method = RequestMethod.POST, consumes = MediaType.APPLICATION_XML_VALUE, produces = MediaType.APPLICATION_XML_VALUE)
+    public AuthTicket login(HttpSession session, @RequestBody LoginRequest loginRequest) {
+        return accountService.checkLogin(loginRequest, session);
     }
 
     @PostMapping("/signup")
-    public String signup(@RequestBody UserEntity signupReq) {
+    public String signup(@RequestBody AccountEntity signupReq) {
         return "failed";
+    }
+
+    @RequestMapping(value = "/logout/{tokenId}", method = RequestMethod.GET)
+    public void logout(HttpSession session, @PathVariable("tokenId") String token, ModelMap modelMap) {
+        if (token == null || token.isEmpty()) {
+            token = (String) session.getAttribute(AccountService.TOKEN_KEY);
+        }
+        AuthTicket authTicket = new AuthTicket(token);
+        accountService.logout(authTicket);
     }
 }

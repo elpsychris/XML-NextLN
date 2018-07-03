@@ -1,27 +1,25 @@
 package com.prx301.finalproject.truyencapnhat.model.web.model;
 
 import javax.xml.bind.annotation.*;
+import java.util.Calendar;
+import java.util.Objects;
 
-@XmlType(name = "AuthTicket", propOrder = {
+@XmlType(name = "LoginRequest", propOrder = {
         "username",
         "password",
-        "token",
         "isAdmin",
-        "stateCode"
+        "time"
 })
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlRootElement(name = "ticket")
-public class AuthTicket {
+@XmlRootElement(name = "login-request")
+public class LoginRequest {
     @XmlElement(name = "username")
     private String username;
     @XmlElement(name = "password")
     private String password;
-    @XmlElement(name = "token")
-    private String token;
     @XmlElement(name = "is-admin")
-    private int isAdmin;
-    @XmlElement(name = "state-code")
-    private int stateCode;
+    private boolean isAdmin = false;
+    private long time = Calendar.getInstance().getTime().getTime();
 
     public String getUsername() {
         return username;
@@ -39,29 +37,35 @@ public class AuthTicket {
         this.password = password;
     }
 
-    public String getToken() {
-        return token;
-    }
-
-    public void setToken(String token) {
-        this.token = token;
-    }
-
-    public int getIsAdmin() {
+    public boolean isAdmin() {
         return isAdmin;
     }
 
-    public void setIsAdmin(int isAdmin) {
-        this.isAdmin = isAdmin;
+    public void setAdmin(boolean admin) {
+        isAdmin = admin;
     }
 
-    public int getStateCode() {
-        return stateCode;
+    public long getTime() {
+        return time;
     }
 
-    public void setStateCode(int stateCode) {
-        this.password = null;
-        this.username = null;
-        this.stateCode = stateCode;
+    public void setTime(long time) {
+        this.time = time;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        LoginRequest that = (LoginRequest) o;
+        return isAdmin == that.isAdmin &&
+                Objects.equals(username, that.username) &&
+                Objects.equals(password, that.password);
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(username, password, isAdmin, time);
     }
 }

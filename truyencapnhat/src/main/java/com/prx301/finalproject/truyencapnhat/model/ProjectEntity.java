@@ -57,7 +57,7 @@ public class ProjectEntity {
     private Integer projectView;
     @XmlJavaTypeAdapter(PointAdapter.class)
     @XmlElement(name = "point")
-    private Double projectPoint;
+    private Double projectPoint = 5.0;
 
     @XmlElementWrapper(name = "genres")
     @XmlElement(name = "genre")

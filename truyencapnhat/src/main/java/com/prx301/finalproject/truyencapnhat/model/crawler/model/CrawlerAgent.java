@@ -17,6 +17,8 @@ import javax.xml.transform.dom.DOMResult;
 import javax.xml.transform.stream.StreamSource;
 import javax.xml.validation.Schema;
 import java.io.*;
+import java.sql.Date;
+import java.util.Calendar;
 import java.util.List;
 
 public class CrawlerAgent implements Runnable {
@@ -92,7 +94,7 @@ public class CrawlerAgent implements Runnable {
                     }
                 }
                 // If there is a project with same name or identical name, then compare hash
-                if (existProject != null && !existProject.getProjectHash().equals(project.getProjectHash())) {
+                if (existProject != null) {
                     // If two hash codes are not the same
                     if (!existProject.getProjectHash().equals(project.getProjectHash())) {
                         try {
@@ -102,7 +104,9 @@ public class CrawlerAgent implements Runnable {
 
                             // Move current project name to new project's altername
                             String curAlter = project.getProjectAlterName() == null ? "" : project.getProjectAlterName();
-                            curAlter = curAlter + project.getProjectName() + ",";
+                            if (!curAlter.toLowerCase().contains(project.getProjectName().toLowerCase())) {
+                                curAlter = curAlter + project.getProjectName();
+                            }
                             // Remove old project name and hash for preparing to merge
                             project.setProjectName(null);
                             project.setProjectHash(null);
@@ -111,7 +115,7 @@ public class CrawlerAgent implements Runnable {
                             existProject.getGenres().addAll(project.getGenres());
 
                             existProject = ComUtils.mergeObject(existProject, project);
-                            projectRepo.save(existProject);
+                            existProject.hashCode();
                             int countTotal = 0;
                             int countExist = 0;
 
@@ -143,9 +147,13 @@ public class CrawlerAgent implements Runnable {
                             logger.log(Logger.LOG_LEVEL.ERROR, "Cannot access object", e, CrawlerAgent.class);
                             e.printStackTrace();
                         }
+                        existProject.hashCode();
+                        existProject.setProjectLastUpdate(new Date(Calendar.getInstance().getTime().getTime()));
+                        projectRepo.save(existProject);
                     }
-                } else if (existProject == null) {
+                } else {
                     System.out.println("\tSave new project: " + (project.getUpdateVols()  == null ? 0 : project.getUpdateVols().size() + " (updates)"));
+                    project.setProjectLastUpdate(new Date(Calendar.getInstance().getTime().getTime()));
                     projectRepo.save(project);
                     projectEntityList.add(project);
                 }

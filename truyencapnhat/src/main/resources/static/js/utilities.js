@@ -1,21 +1,38 @@
-changeTab = (tabEl, childId) => {
-    removeClassFromClassGroup("focus","tab-button")
-    tabEl.classList.add("focus")
-    changeTabContent(childId)
-}
+changeTab = function (tabEl, childId) {
+    removeClassFromClassGroup("focus", "tab-button");
+    tabEl.classList.add("focus");
+    changeTabContent(childId);
+};
 
-changeTabContent = (childId) => {
-    removeClassFromClassGroup("show","tab-content")
-    var allTabContent = document.getElementsByClassName("tab-content")       
-    allTabContent[childId].classList.add("show")
-}
+changeTabContent = function (childId) {
+    removeClassFromClassGroup("show", "tab-content");
+    var allTabContent = document.getElementsByClassName("tab-content");
+    allTabContent[childId].classList.add("show");
+};
 
-removeClassFromClassGroup = (kw, className) => {
-    var allEl = document.getElementsByClassName(className)
-    for (i = 0; i < allEl.length; i++) {
-        let curEl = allEl[i]
+removeClassFromClassGroup = function (kw, className) {
+    var allEl = document.getElementsByClassName(className);
+    for (var i = 0; i < allEl.length; i++) {
+        var curEl = allEl[i];
         if (curEl.classList.contains(kw)) {
-            curEl.classList.remove(kw)
+            curEl.classList.remove(kw);
         }
     }
+};
+
+function obj2XML(obj, name) {
+    var xmlText = createStartTag(name);
+    for (prop in obj) {
+        xmlText += createStartTag(prop) + obj[prop] + createEndTag(prop);
+    }
+    xmlText += createEndTag(name);
+    return xmlText;
+}
+
+function createEndTag(tagName) {
+    return "</" + tagName + ">";
+}
+
+function createStartTag(tagName) {
+    return "<" + tagName + ">";
 }

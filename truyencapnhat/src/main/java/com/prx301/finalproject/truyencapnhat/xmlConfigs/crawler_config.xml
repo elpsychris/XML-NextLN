@@ -9,7 +9,7 @@
                 <filter>
                     <page-uri>/danh-sach</page-uri>
                     <filter-patterns>
-                        <pattern>&lt;section class=&quot;browse-section noheader-section col-12&quot;&gt;[\s\S]+&lt;/footer&gt;[\s]+&lt;/section&gt;</pattern>
+                        <pattern>&lt;section class=&quot;noheader-section&quot;&gt;[\s\S]+&lt;/footer&gt;[\s]+&lt;/section&gt;</pattern>
                     </filter-patterns>
                 </filter>
                 <filter>
@@ -20,7 +20,7 @@
                     </filter-patterns>
                 </filter>
             </clean-filters>
-            <status>inactive</status>
+            <status>active</status>
         </component>
         <component>
             <name>MAL</name>
@@ -43,7 +43,7 @@
                     </filter-patterns>
                 </filter>
             </clean-filters>
-            <status>active</status>
+            <status>inactive</status>
         </component>
     </components>
 </crawler-config>
