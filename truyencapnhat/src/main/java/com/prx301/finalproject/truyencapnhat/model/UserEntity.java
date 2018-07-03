@@ -8,7 +8,7 @@ import java.util.Objects;
 public class UserEntity {
     private String username;
     private String password;
-    private Boolean isAdmin;
+    private Boolean isAdmin = false;
 
     @Id
     @Column(name = "username")
