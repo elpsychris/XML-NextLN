@@ -1,6 +1,7 @@
 package com.prx301.finalproject.truyencapnhat.service.web;
 
-import com.prx301.finalproject.truyencapnhat.model.UserEntity;
+import com.prx301.finalproject.truyencapnhat.model.AccountEntity;
+import com.prx301.finalproject.truyencapnhat.model.web.model.LoginRequest;
 import com.prx301.finalproject.truyencapnhat.repository.UserRepo;
 import org.springframework.stereotype.Service;
 
@@ -20,17 +21,21 @@ public class UserService {
         this.userRepo = userRepo;
     }
 
-    public int checkLogin(UserEntity userEntity) {
-        if (userEntity == null) {
-            return LOGIN_FAILED;
+    public LoginRequest checkLogin(LoginRequest loginRequest) {
+        if (loginRequest == null) {
+            loginRequest.setStateCode(LOGIN_FAILED);
+            return loginRequest;
         }
-        UserEntity existUser = userRepo.findByUsername(userEntity.getUsername());
-        if (existUser.getPassword().equals(userEntity.getPassword())) {
+        AccountEntity existUser = userRepo.findByUsername(loginRequest.getUsername());
+        if (existUser != null && existUser.getPassword().equals(loginRequest.getPassword())) {
             if (existUser.getAdmin()) {
-                return LOGIN_AS_ADMIN;
+                loginRequest.setStateCode(LOGIN_AS_ADMIN);
+                return loginRequest;
             }
-            return LOGIN_AS_USER;
+            loginRequest.setStateCode(LOGIN_AS_USER);
+            return loginRequest;
         }
-        return LOGIN_FAILED;
+        loginRequest.setStateCode(LOGIN_FAILED);
+        return loginRequest;
     }
 }
