@@ -329,7 +329,7 @@ public class ComUtils {
         for (ProjectEntity projectEntity : projectEntities) {
             String otherName = projectEntity.getProjectName();
 
-            double ratio = ((double)curProjectName.length())/otherName.length();
+            double ratio = ((double) curProjectName.length()) / otherName.length();
             if (ratio < 0.5 || ratio > 2) {
                 continue;
             }
@@ -367,6 +367,25 @@ public class ComUtils {
                     oldString += ";" + newString.trim();
                     field.set(curObj, oldString);
                 }
+            }
+
+            if (aClass.getSimpleName().equals(Double.class.getSimpleName())
+                    && field.get(newObj) != null && field.get(curObj) != null) {
+                Double newVal = (Double) field.get(newObj);
+                Double curVal = (Double) field.get(curObj);
+                if (newVal > 1.5 * curVal) {
+                    field.set(curObj, (newVal + curVal) / 2);
+                } else {
+                    field.set(curObj, newVal);
+                }
+            }
+
+            if (aClass.getSimpleName().equals(Integer.class.getSimpleName())
+                    && field.get(newObj) != null && field.get(curObj) != null) {
+                Integer newVal = (Integer) field.get(newObj);
+                Integer curVal = (Integer) field.get(curObj);
+
+                field.set(curObj, (newVal + curVal) / 2);
             }
         }
         return curObj;

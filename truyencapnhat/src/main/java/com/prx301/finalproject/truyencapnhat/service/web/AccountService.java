@@ -1,7 +1,7 @@
 package com.prx301.finalproject.truyencapnhat.service.web;
 
 import com.prx301.finalproject.truyencapnhat.model.AccountEntity;
-import com.prx301.finalproject.truyencapnhat.model.web.model.LoginRequest;
+import com.prx301.finalproject.truyencapnhat.model.web.model.AuthTicket;
 import com.prx301.finalproject.truyencapnhat.repository.UserRepo;
 import org.springframework.stereotype.Service;
 
@@ -21,21 +21,21 @@ public class UserService {
         this.userRepo = userRepo;
     }
 
-    public LoginRequest checkLogin(LoginRequest loginRequest) {
-        if (loginRequest == null) {
-            loginRequest.setStateCode(LOGIN_FAILED);
-            return loginRequest;
+    public AuthTicket checkLogin(AuthTicket authTicket) {
+        if (authTicket == null) {
+            authTicket.setStateCode(LOGIN_FAILED);
+            return authTicket;
         }
-        AccountEntity existUser = userRepo.findByUsername(loginRequest.getUsername());
-        if (existUser != null && existUser.getPassword().equals(loginRequest.getPassword())) {
+        AccountEntity existUser = userRepo.findByUsername(authTicket.getUsername());
+        if (existUser != null && existUser.getPassword().equals(authTicket.getPassword())) {
             if (existUser.getAdmin()) {
-                loginRequest.setStateCode(LOGIN_AS_ADMIN);
-                return loginRequest;
+                authTicket.setStateCode(LOGIN_AS_ADMIN);
+                return authTicket;
             }
-            loginRequest.setStateCode(LOGIN_AS_USER);
-            return loginRequest;
+            authTicket.setStateCode(LOGIN_AS_USER);
+            return authTicket;
         }
-        loginRequest.setStateCode(LOGIN_FAILED);
-        return loginRequest;
+        authTicket.setStateCode(LOGIN_FAILED);
+        return authTicket;
     }
 }
