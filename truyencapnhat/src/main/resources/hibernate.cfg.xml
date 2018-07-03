@@ -13,6 +13,7 @@
         <mapping class="com.prx301.finalproject.truyencapnhat.model.UpdateEntity"/>
         <mapping class="com.prx301.finalproject.truyencapnhat.model.GenreEntity"/>
         <mapping class="com.prx301.finalproject.truyencapnhat.model.UpdateVolEntity"/>
+        <mapping class="com.prx301.finalproject.truyencapnhat.model.UserEntity"/>
 
 
         <!-- DB schema will be updated if needed -->
