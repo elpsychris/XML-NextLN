@@ -10,6 +10,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.util.HashSet;
+import java.util.Objects;
 import java.util.Set;
 
 @Entity
@@ -54,5 +55,20 @@ public class GenreEntity {
 
     public void setProjects(Set<ProjectEntity> projects) {
 //        this.projects = projects;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        GenreEntity that = (GenreEntity) o;
+        return Objects.equals(genreId, that.genreId) &&
+                Objects.equals(genreName, that.genreName) &&
+                Objects.equals(projects, that.projects);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(genreName);
     }
 }

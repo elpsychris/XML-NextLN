@@ -21,11 +21,11 @@
             <xsl:variable name="chap-full" select="normalize-space(substring-after($chap-name,':'))"/>
 
             <xsl:element name="a">
-                <xsl:attribute name="href"><xsl:value-of select="concat('project-detail?name=',//p:project/p:id)"/></xsl:attribute>
+                <xsl:attribute name="href"><xsl:value-of select="concat('project-detail?name=',.//p:project/p:id)"/></xsl:attribute>
                 <div class="content-card card-2">
                     <div class="title">
                         <div class="divider-1">
-                            <xsl:variable name="isSpecialVol" select="boolean($vol-number='' or $vol-full='')"/>
+                            <xsl:variable name="isSpecialVol" select="boolean($vol-number='' or $vol-full='' or $vol-name='Ngoại chương')"/>
                             <xsl:choose>
                                 <xsl:when test="$isSpecialVol">
                                     <div class="divider-mono">Đặc biệt</div>

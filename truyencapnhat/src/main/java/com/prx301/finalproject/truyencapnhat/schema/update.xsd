@@ -15,14 +15,6 @@
                     </xsd:sequence>
                 </xsd:complexType>
             </xsd:element>
-            <xsd:element name="update-volume">
-                <xsd:complexType>
-                    <xsd:sequence>
-                        <xsd:element name="volume-name" type="xsd:string"/>
-                        <xsd:element name="volume-cover" type="xsd:string" minOccurs="0"/>
-                    </xsd:sequence>
-                </xsd:complexType>
-            </xsd:element>
         </xsd:sequence>
     </xsd:complexType>
 </xsd:schema>

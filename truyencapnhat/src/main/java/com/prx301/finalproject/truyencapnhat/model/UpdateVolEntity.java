@@ -3,11 +3,9 @@ package com.prx301.finalproject.truyencapnhat.model;
 import com.prx301.finalproject.truyencapnhat.utils.VolNrmlAdapter;
 
 import javax.persistence.*;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -19,7 +17,9 @@ import java.util.Objects;
         "volName",
         "volNo",
         "volCover",
-        "updateEntities"
+        "project",
+        "updateEntities",
+        "volHash"
 })
 public class UpdateVolEntity {
     private int id;
@@ -29,7 +29,13 @@ public class UpdateVolEntity {
     private Integer volNo;
     @XmlElement(name = "volume-cover")
     private String volCover;
+    @XmlElement(name = "project")
+    private ProjectEntity project;
+    @XmlElementWrapper(name = "updates")
+    @XmlElement(name = "update")
     private List<UpdateEntity> updateEntities;
+    @XmlElement(name = "vol-hash")
+    private String volHash;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -72,13 +78,33 @@ public class UpdateVolEntity {
         this.volCover = volCover;
     }
 
-    @OneToMany(mappedBy = "updateVol", cascade = CascadeType.MERGE)
+    @ManyToOne(cascade = {CascadeType.MERGE})
+    @JoinColumn(name = "project_id")
+    public ProjectEntity getProject() {
+        return project;
+    }
+
+    public void setProject(ProjectEntity project) {
+        this.project = project;
+    }
+
+    @OneToMany(mappedBy = "updateVol", cascade = {CascadeType.ALL})
     public List<UpdateEntity> getUpdateEntities() {
         return updateEntities;
     }
 
     public void setUpdateEntities(List<UpdateEntity> updateEntities) {
 //        this.updateEntities = updateEntities;
+    }
+
+    @Basic
+    @Column(name = "vol_hash")
+    public String getVolHash() {
+        return volHash;
+    }
+
+    public void setVolHash(String volHash) {
+        this.volHash = volHash;
     }
 
     @Override
@@ -94,7 +120,12 @@ public class UpdateVolEntity {
 
     @Override
     public int hashCode() {
+        int hash = Objects.hash(volName, volNo, volCover);
+        if (updateEntities != null) {
+            hash += updateEntities.hashCode();
+        }
 
-        return Objects.hash(volName, volNo, volCover);
+        this.volHash = hash + "";
+        return hash;
     }
 }

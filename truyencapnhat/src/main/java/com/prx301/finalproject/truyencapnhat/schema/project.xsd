@@ -35,10 +35,24 @@
                 </xsd:simpleType>
             </xsd:element>
             <xsd:element name="link" type="xsd:string"/>
-            <xsd:element name="updates">
+            <xsd:element name="volumes">
                 <xsd:complexType>
                     <xsd:sequence>
-                        <xsd:element name="update" type="update" minOccurs="0" maxOccurs="unbounded"/>
+                        <xsd:element name="volume" minOccurs="0" maxOccurs="unbounded">
+                            <xsd:complexType>
+                                <xsd:sequence>
+                                    <xsd:element name="volume-name" type="xsd:string"/>
+                                    <xsd:element name="volume-cover" type="xsd:string"/>
+                                    <xsd:element name="updates">
+                                        <xsd:complexType>
+                                            <xsd:sequence>
+                                                <xsd:element name="update" type="update"/>
+                                            </xsd:sequence>
+                                        </xsd:complexType>
+                                    </xsd:element>
+                                </xsd:sequence>
+                            </xsd:complexType>
+                        </xsd:element>
                     </xsd:sequence>
                 </xsd:complexType>
             </xsd:element>

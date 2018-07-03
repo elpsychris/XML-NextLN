@@ -12,7 +12,6 @@ import java.util.List;
 @Repository
 public interface UpdateRepo extends JpaRepository<UpdateEntity, Integer> {
     List<UpdateEntity> findAll();
-    List<UpdateEntity> findByProject(ProjectEntity projectEntity);
     List<UpdateEntity> getTop5ByOrderByUpdateDateDesc();
 
 //    @Procedure(name = "latest_updates")

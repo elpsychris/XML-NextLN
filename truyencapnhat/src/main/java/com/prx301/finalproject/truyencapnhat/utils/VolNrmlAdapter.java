@@ -12,7 +12,7 @@ public class VolNrmlAdapter extends XmlAdapter<String, String> {
         if (matcher.find()) {
             String matched = matcher.group(0);
             Logger.getLogger().info("Found name: " + v, UpdateNrmlAdapter.class);
-            v = matched;
+            v = matched.trim();
             Logger.getLogger().info("Normalize name to: " + v, UpdateNrmlAdapter.class);
         } else {
             v = "Ngoại chương";

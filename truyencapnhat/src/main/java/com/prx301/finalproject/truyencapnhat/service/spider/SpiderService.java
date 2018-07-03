@@ -6,6 +6,7 @@ import com.prx301.finalproject.truyencapnhat.model.crawler.model.CrawlerAgent;
 import com.prx301.finalproject.truyencapnhat.model.crawler.model.CrawlerConfig;
 import com.prx301.finalproject.truyencapnhat.repository.ProjectRepo;
 import com.prx301.finalproject.truyencapnhat.repository.UpdateRepo;
+import com.prx301.finalproject.truyencapnhat.repository.VolRepo;
 import com.prx301.finalproject.truyencapnhat.utils.*;
 import org.apache.commons.jxpath.JXPathContext;
 import org.springframework.stereotype.Service;
@@ -22,6 +23,7 @@ public class SpiderService {
     private final String DEFAULT_PARENT_PATH = "src/main/java/com/prx301/finalproject/truyencapnhat";
     private ProjectRepo projectRepo = null;
     private UpdateRepo updateRepo = null;
+    private VolRepo volRepo = null;
 
     private Logger logger = Logger.getLogger();
     private Map<String, ConfigComp> configMap = null;
@@ -35,9 +37,10 @@ public class SpiderService {
 //    }
 
 
-    public SpiderService(ProjectRepo projectRepo, UpdateRepo updateRepo) {
+    public SpiderService(ProjectRepo projectRepo, UpdateRepo updateRepo, VolRepo volRepo) {
         this.projectRepo = projectRepo;
         this.updateRepo = updateRepo;
+        this.volRepo = volRepo;
     }
 
     private void config() {
@@ -77,7 +80,7 @@ public class SpiderService {
 
         for (Map.Entry entry : this.configMap.entrySet()) {
             ConfigComp configComp = (ConfigComp) entry.getValue();
-            CrawlerAgent crawlerAgent = new CrawlerAgent(configComp, projectRepo, updateRepo);
+            CrawlerAgent crawlerAgent = new CrawlerAgent(configComp, projectRepo, updateRepo, volRepo);
             new Thread(crawlerAgent).start();
         }
     }

@@ -19,8 +19,6 @@ import java.sql.Timestamp;
         "updateDate",
         "updateGroup",
         "updateLink",
-        "updateHash",
-        "project"
 })
 @Entity
 @Table(name = "UpdateChap", schema = "dbo", catalog = "NU_DB")
@@ -49,10 +47,6 @@ public class UpdateEntity {
     private GroupEntity updateGroup;
     @XmlElement(name = "update-link")
     private String updateLink;
-    @XmlElement(name = "update-hash")
-    private String updateHash;
-    @XmlElement(name = "project")
-    private ProjectEntity project;
 
 
     @Id
@@ -96,7 +90,7 @@ public class UpdateEntity {
         this.updateDate = updateDate;
     }
 
-    @ManyToOne(cascade = CascadeType.MERGE, fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "update_group", nullable = false)
     public GroupEntity getUpdateGroup() {
         return updateGroup;
@@ -116,25 +110,6 @@ public class UpdateEntity {
         this.updateLink = updateLink;
     }
 
-    @Basic
-    @Column(name = "update_hash")
-    public String getUpdateHash() {
-        return updateHash;
-    }
-
-    public void setUpdateHash(String updateHash) {
-        this.updateHash = updateHash;
-    }
-
-    @ManyToOne(cascade = CascadeType.MERGE, fetch = FetchType.EAGER)
-    @JoinColumn(name = "project_id", referencedColumnName = "project_id")
-    public ProjectEntity getProject() {
-        return project;
-    }
-
-    public void setProject(ProjectEntity project) {
-        this.project = project;
-    }
 
     @Override
     public boolean equals(Object o) {
@@ -157,10 +132,12 @@ public class UpdateEntity {
     public int hashCode() {
         int result = 0;
         result = 31 * result + (updateName != null ? updateName.hashCode() : 0);
-        result = 31 * result + (updateVol != null ? updateVol.hashCode() : 0);
+//        result = 31 * result + (updateVol != null ? updateVol.hashCode() : 0);
         result = 31 * result + (updateDate != null ? updateDate.hashCode() : 0);
         result = 31 * result + (updateGroup != null ? updateGroup.hashCode() : 0);
         result = 31 * result + (updateLink != null ? updateLink.hashCode() : 0);
+
+
         return result;
     }
 }

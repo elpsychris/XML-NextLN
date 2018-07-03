@@ -24,7 +24,7 @@ import java.util.Set;
         "projectView",
         "projectPoint",
         "genres",
-        "updates",
+        "updateVols",
         "projectLastUpdate",
         "projectTotalUpdate",
         "projectLink"
@@ -64,14 +64,14 @@ public class ProjectEntity {
     @XmlJavaTypeAdapter(GenreAdapter.class)
     private Set<GenreEntity> genres = new HashSet<>();
 
-    @XmlElementWrapper(name = "updates")
-    @XmlElement(name = "update")
-    private List<UpdateEntity> updates;
+    @XmlElementWrapper(name = "volumes")
+    @XmlElement(name = "volume")
+    private List<UpdateVolEntity> updateVols;
 
     @XmlJavaTypeAdapter(SqlDateAdapter.class)
     @XmlElement(name = "last_update")
     private Date projectLastUpdate;
-    @XmlElement(name = "updates")
+    @XmlElement(name = "total_update")
     private Integer projectTotalUpdate;
     @XmlElement(name = "link")
     private String projectLink;
@@ -207,7 +207,7 @@ public class ProjectEntity {
         this.projectTotalUpdate = projectTotalUpdate;
     }
 
-    @ManyToMany(targetEntity = GenreEntity.class, fetch = FetchType.EAGER)
+    @ManyToMany(cascade = {CascadeType.MERGE}, targetEntity = GenreEntity.class, fetch = FetchType.EAGER)
     @JoinTable(
             name = "GenreMap",
             joinColumns = {@JoinColumn(name = "project_id")},
@@ -221,13 +221,13 @@ public class ProjectEntity {
         this.genres = genres;
     }
 
-    @OneToMany(cascade = { CascadeType.ALL }, mappedBy = "project")
-    public List<UpdateEntity> getUpdates() {
-        return updates;
+    @OneToMany(cascade = {CascadeType.ALL}, mappedBy = "project", fetch = FetchType.EAGER)
+    public List<UpdateVolEntity> getUpdateVols() {
+        return updateVols;
     }
 
-    public void setUpdates(List<UpdateEntity> updates) {
-//        this.updates = updates;
+    public void setUpdateVols(List<UpdateVolEntity> updateVols) {
+//        this.updateVols = updateVols;
     }
 
     @Basic
@@ -238,6 +238,10 @@ public class ProjectEntity {
 
     public void setProjectLink(String projectLink) {
         this.projectLink = projectLink;
+    }
+
+    public void clearUpdateVols() {
+        this.updateVols = null;
     }
 
     @Override
@@ -251,7 +255,8 @@ public class ProjectEntity {
         if (projectName != null ? !projectName.equals(that.projectName) : that.projectName != null) return false;
         if (projectAlterName != null ? !projectAlterName.equals(that.projectAlterName) : that.projectAlterName != null)
             return false;
-        if (projectPublishDate != null ? !projectPublishDate.equals(that.projectPublishDate) : that.projectPublishDate != null) return false;
+        if (projectPublishDate != null ? !projectPublishDate.equals(that.projectPublishDate) : that.projectPublishDate != null)
+            return false;
         if (projectAuthor != null ? !projectAuthor.equals(that.projectAuthor) : that.projectAuthor != null)
             return false;
         if (projectIllustrator != null ? !projectIllustrator.equals(that.projectIllustrator) : that.projectIllustrator != null)
@@ -279,6 +284,7 @@ public class ProjectEntity {
         result = 31 * result + (projectAuthor != null ? projectAuthor.hashCode() : 0);
         result = 31 * result + (projectIllustrator != null ? projectIllustrator.hashCode() : 0);
         result = 31 * result + (projectSynopsis != null ? projectSynopsis.hashCode() : 0);
+        result = 31 * result + (updateVols != null ? updateVols.hashCode() : 0);
 //        result = 31 * result + (projectHash != null ? projectHash.hashCode() : 0);
         result = 31 * result + (projectTag != null ? projectTag.hashCode() : 0);
         result = 31 * result + (projectView != null ? projectView.hashCode() : 0);

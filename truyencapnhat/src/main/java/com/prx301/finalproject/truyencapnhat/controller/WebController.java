@@ -1,19 +1,12 @@
 package com.prx301.finalproject.truyencapnhat.controller;
 
-import com.prx301.finalproject.truyencapnhat.model.ProjectEntity;
 import com.prx301.finalproject.truyencapnhat.service.web.ProjectService;
 import com.prx301.finalproject.truyencapnhat.service.web.UpdateService;
 import com.prx301.finalproject.truyencapnhat.utils.ComUtils;
-import com.prx301.finalproject.truyencapnhat.utils.StringComparator;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.servlet.ModelAndView;
-
-import javax.xml.transform.dom.DOMResult;
-import java.io.InputStream;
 
 @Controller
 public class WebController {

@@ -23,7 +23,7 @@
             <status>inactive</status>
         </component>
         <component>
-            <name>Novelupdate</name>
+            <name>MAL</name>
             <stylesheet>src/main/java/com/prx301/finalproject/truyencapnhat/stylesheet/novelupdate_style.xsl</stylesheet>
             <config>src/main/java/com/prx301/finalproject/truyencapnhat/xmlConfigs/novelupdate_project.xml</config>
             <uri-resolver>com.prx301.finalproject.truyencapnhat.utils.MALURIResolver</uri-resolver>

@@ -56,6 +56,7 @@ public class JAXBUtils {
         try {
             object = (T) unmarshaller.unmarshal(xml.getNode());
         }catch (UnmarshalException ex) {
+            ex.printStackTrace();
             logger.log(Logger.LOG_LEVEL.ERROR, "Error happened in the Unmarshalling progress", ex, JAXBUtils.class);
         }
         return object;

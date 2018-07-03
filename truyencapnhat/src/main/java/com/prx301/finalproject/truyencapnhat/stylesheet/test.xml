@@ -1,52 +1,307 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<?xml-stylesheet type="text/xsl" href="xml_config.xsl"?>
-<p:crawler-config xmlns:p="http://t3.com/2018/xml/config">
-    <p:components>
-        <p:component>
-            <p:name>Hako.re</p:name>
-            <p:stylesheet>src/main/java/com/prx301/finalproject/truyencapnhat/stylesheet/hako_style.xsl</p:stylesheet>
-            <p:config>src/main/java/com/prx301/finalproject/truyencapnhat/xmlConfigs/hako_project.xml</p:config>
-            <p:clean-filters>
-                <p:filter>
-                    <p:page-uri>/danh-sach</p:page-uri>
-                    <p:filter-patterns>
-                        <p:pattern>&lt;section class="browse-section noheader-section col-12"&gt;[\s\S]+&lt;/footer&gt;[\s]+&lt;/section&gt;</p:pattern>
-                    </p:filter-patterns>
-                </p:filter>
-                <p:filter>
-                    <p:page-uri>/truyen/</p:page-uri>
-                    <p:filter-patterns>
-                        <p:pattern>&lt;article class="listall-item clear"&gt;[\S\s]+&lt;/div&gt;[\s]+&lt;/div&gt;[\s]+&lt;/article&gt;</p:pattern>
-                        <p:pattern>&lt;div class="reg-part clear" style="padding-bottom: 20px"&gt;[\S\s]+&lt;/section&gt;[\s]{2,}&lt;/div&gt;[\s]+&lt;/div&gt;[\s]+&lt;/div&gt;</p:pattern>
-                    </p:filter-patterns>
-                </p:filter>
-            </p:clean-filters>
-            <p:status>inactive</p:status>
-        </p:component>
-        <p:component>
-            <p:name>Novelupdate</p:name>
-            <p:stylesheet>src/main/java/com/prx301/finalproject/truyencapnhat/stylesheet/novelupdate_style.xsl
-            </p:stylesheet>
-            <p:config>src/main/java/com/prx301/finalproject/truyencapnhat/xmlConfigs/novelupdate_project.xml</p:config>
-            <p:uri-resolver>com.prx301.finalproject.truyencapnhat.utils.MALURIResolver</p:uri-resolver>
-            <p:clean-filters>
-                <p:filter>
-                    <p:page-uri>/manga.php?q=&amp;type=2</p:page-uri>
-                    <p:filter-patterns>
-                        <p:pattern>&lt;table border="0" cellpadding="0" cellspacing="0" width="100%"&gt;[\s\S]+&lt;/table&gt;</p:pattern>
-                        <p:pattern>&lt;div class="normal_header clearfix pt16"&gt;[\S\s]+Search Results&lt;/div&gt;
-                        </p:pattern>
-                    </p:filter-patterns>
-                </p:filter>
-                <p:filter>
-                    <p:page-uri>/manga</p:page-uri>
-                    <p:filter-patterns>
-                        <p:pattern>&lt;h1 class="h1"&gt;&lt;span itemprop="name"&gt;[\S\s]+&lt;/h1&gt;</p:pattern>
-                        <p:pattern>&lt;table border="0" cellpadding="0" cellspacing="0" width="100%"&gt;[\S\s]+&lt;/table&gt;</p:pattern>
-                    </p:filter-patterns>
-                </p:filter>
-            </p:clean-filters>
-            <p:status>active</p:status>
-        </p:component>
-    </p:components>
-</p:crawler-config>
+<p:latest-update xmlns:p="http://t3.com/2018/project-page"
+>
+    <p:updates>
+        <p:update>
+            <p:id>1635</p:id>
+            <p:chapter-name>Chương 1:(Phần 2)</p:chapter-name>
+            <p:update-volume>
+                <p:id>168</p:id>
+                <p:volume-name>Vol 1</p:volume-name>
+                <p:volume-cover>
+                    https://3.bp.blogspot.com/-FXsCKmrKYKY/WzhZgbllshI/AAAAAAABXUs/qBvvizLkfj45OX6SYEPjoSZyAGQ852tTgCHMYCw/w220/default.jpg
+                </p:volume-cover>
+                <p:project>
+                    <p:id>55</p:id>
+                    <p:name>C3 Cube-Curse-Curious</p:name>
+                    <p:alter-name></p:alter-name>
+                    <p:author>Minase Hazuki</p:author>
+                    <p:illustrator>SasoriGatame</p:illustrator>
+                    <p:synopsis>Học sinh cao trung Yachi Haruaki một ngày nhận được một chiếc hộp bí ẩn từ người bố của
+                        mình. Đó là một vật phẩm "Nguyền rủa" dạng con người. Chiếc hộp màu đen đấy tên là Fear đến với
+                        Haruaki vì muốn được giải thoát khỏi lời nguyền. Cùng với Haruaki và người bạn thủa nhỏ của cậu,
+                        Konoha, Fear quyết định sẽ cố gắng giúp ích cho mọi người để có thể trung hòa những cảm xúc tiêu
+                        cực của cô ấy, và để có thể được giải thoát khỏi lời nguyền của bản thân mình.
+                    </p:synopsis>
+                    <p:hash>-55388890</p:hash>
+                    <p:view>475</p:view>
+                    <p:genres>
+                        <p:genre>
+                            <p:genre-id>action</p:genre-id>
+                        </p:genre>
+                        <p:genre>
+                            <p:genre-id>comedy</p:genre-id>
+                        </p:genre>
+                        <p:genre>
+                            <p:genre-id>ecchi</p:genre-id>
+                        </p:genre>
+                        <p:genre>
+                            <p:genre-id>school life</p:genre-id>
+                        </p:genre>
+                        <p:genre>
+                            <p:genre-id>shounen</p:genre-id>
+                        </p:genre>
+                        <p:genre>
+                            <p:genre-id>supernatural</p:genre-id>
+                        </p:genre>
+                    </p:genres>
+                    <p:link>https://ln.hako.re/truyen/2837-c3-cube-curse-curious</p:link>
+                </p:project>
+                <p:vol-hash>877372978</p:vol-hash>
+            </p:update-volume>
+            <p:chapter-date>02/07/2018</p:chapter-date>
+            <p:update-group>
+                <p:group-id>4093</p:group-id>
+                <p:group-name>1 thành viên</p:group-name>
+                <p:group-link>https://ln.hako.re/nhom-dich/237-glory-group</p:group-link>
+            </p:update-group>
+            <p:update-link>https://ln.hako.re/truyen/2837-c3-cube-curse-curious/c34183-chuong-1-phan-2</p:update-link>
+        </p:update>
+        <p:update>
+            <p:id>2576</p:id>
+            <p:update-volume>
+                <p:id>266</p:id>
+                <p:volume-name>Tập 14</p:volume-name>
+                <p:volume-cover>
+                    https://4.bp.blogspot.com/-xi2YWdZ0Kgs/Woei-xOkKGI/AAAAAAAA-tQ/bdlgJ0iI6U8BOsttsUk_R3TfXEedXGCgACHMYCw/w220/default.jpg
+                </p:volume-cover>
+                <p:project>
+                    <p:id>74</p:id>
+                    <p:name>Death March kara Hajimaru Isekai Kyusoukyoku</p:name>
+                    <p:alter-name>デスマーチからはじまる異世界狂想曲, Death Marching to the Parallel World Rhapsody, Desumachi
+                    </p:alter-name>
+                    <p:author>AINANA Hiro</p:author>
+                    <p:illustrator>shiri</p:illustrator>
+                    <p:synopsis>Suzuki, một lập trình viên trưởng thành, đang làm việc và ngủ thức dậy đột nhiên chú ý
+                        rằng cậu bị ném vào thế giới khác khi đang mặc một bộ quần áo bình thường ở cấp độ 1. Cậu đạt
+                        được cấp độ cao và kho báu sau khi sử dụng phép thuật-sẵn-có-3 lần, Mưa Thiên Thạch, chỉ với một
+                        lần và lên cấp thánh . Sau đó việc cậu dự định làm ở thế giới khác là một “chuyến du hành tham
+                        thú ngắm cảnh”? Gặp gỡ ba cô gái người thú, chị em gái tóc tím và đen xinh đẹp và một cô gái yêu
+                        tinh tóc vàng kì dị cùng với rất nhiều người trên chuyến du hành của cậu sau này xuất hiện và
+                        gia nhập dàn harem. Dù phải chiến đấu với ma quái và chúa quỉ, đây vẫn là câu chuyện viễn tưởng
+                        ấm áp xúc động.
+                    </p:synopsis>
+                    <p:hash>896516071</p:hash>
+                    <p:view>1102541</p:view>
+                    <p:genres>
+                        <p:genre>
+                            <p:genre-id>adventure</p:genre-id>
+                        </p:genre>
+                        <p:genre>
+                            <p:genre-id>comedy</p:genre-id>
+                        </p:genre>
+                        <p:genre>
+                            <p:genre-id>fantasy</p:genre-id>
+                        </p:genre>
+                        <p:genre>
+                            <p:genre-id>harem</p:genre-id>
+                        </p:genre>
+                        <p:genre>
+                            <p:genre-id>romance</p:genre-id>
+                        </p:genre>
+                        <p:genre>
+                            <p:genre-id>ecchi</p:genre-id>
+                        </p:genre>
+                        <p:genre>
+                            <p:genre-id>slice of life</p:genre-id>
+                        </p:genre>
+                        <p:genre>
+                            <p:genre-id>web novel</p:genre-id>
+                        </p:genre>
+                    </p:genres>
+                    <p:link>https://ln.hako.re/truyen/219-death-march-kara-hajimaru-isekai-kyusoukyoku</p:link>
+                </p:project>
+                <p:vol-hash>-276745160</p:vol-hash>
+            </p:update-volume>
+            <p:chapter-date>02/07/2018</p:chapter-date>
+            <p:update-group>
+                <p:group-id>4082</p:group-id>
+                <p:group-name>Sonata no Koe</p:group-name>
+                <p:group-link>https://ln.hako.re/nhom-dich/3-sonata-no-koe</p:group-link>
+            </p:update-group>
+            <p:update-link>
+                https://ln.hako.re/truyen/219-death-march-kara-hajimaru-isekai-kyusoukyoku/c34175-14-19-ba-tho-muno-4
+            </p:update-link>
+        </p:update>
+        <p:update>
+            <p:id>3831</p:id>
+            <p:chapter-name>Chương 09: Mệnh lệnh từ hoàng gia (phần II)</p:chapter-name>
+            <p:update-volume>
+                <p:id>415</p:id>
+                <p:volume-name>Ngoại chương</p:volume-name>
+                <p:volume-cover>img/nocover.png</p:volume-cover>
+                <p:project>
+                    <p:id>118</p:id>
+                    <p:name>Hero x Maou</p:name>
+                    <p:alter-name>Anh hùng và Ma vương, Ta - một Ma vương, không hiểu vì sao bị anh hùng bám đuôi,
+                        私、魔王。――なぜか勇者に溺愛されています。;HeroxMaou,
+                    </p:alter-name>
+                    <p:author>Puni-chan ぷにちゃん;ぷにちゃん(Puni-chan)</p:author>
+                    <p:illustrator>;N\A</p:illustrator>
+                    <p:synopsis>Một anh hùng có máu lolicon từ đầu tới chân được cử đi giết quỷ vương, tình cờ quỷ vương
+                        lại là loli siêu cute. Thế là đánh thắng xong anh liền trải thảm đón quỷ vương về dinh, ngày
+                        ngày chứng tỏ tình yêu (lolicon) với cô, vua thì nổi điên kêu quân tới nhà anh liên tục, các anh
+                        hùng khác lại ngày ngày đứng trước nhà anh la ó...;Truyện kể về một Anh Hùng (lolicon) được giao
+                        xứ mệnh đánh bại Ma Vương. Nhưng khi đánh bại Ma Vương rồi, anh hùng mới mở mặt nạ Ma Vương ra.
+                        Nhận ra Ma Vương là một bé loli siêu dễ thương, super kawaii. Máu lolicon của anh nổi lên. Nên
+                        thôi dẹp, dẹp. Không có nhà vua hay tiêu diệt Ma vương gì nữa. Anh hốt bé loli này về nhà nuôi
+                        luôn, mặc cho lũ Anh Hùng khác la ó hay nhà vua(Tổng bộ công an) kêu vệ binh Hoàng Gia (lực
+                        lượng cảnh sát) tới (hỏi thăm) nhưng khổ nỗi " anh là main"
+                    </p:synopsis>
+                    <p:hash>-1348738697</p:hash>
+                    <p:view>12664</p:view>
+                    <p:genres>
+                        <p:genre>
+                            <p:genre-id>comedy</p:genre-id>
+                        </p:genre>
+                        <p:genre>
+                            <p:genre-id>fantasy</p:genre-id>
+                        </p:genre>
+                        <p:genre>
+                            <p:genre-id>isekai</p:genre-id>
+                        </p:genre>
+                        <p:genre>
+                            <p:genre-id>romance</p:genre-id>
+                        </p:genre>
+                        <p:genre>
+                            <p:genre-id>shoujo</p:genre-id>
+                        </p:genre>
+                        <p:genre>
+                            <p:genre-id>slice of life</p:genre-id>
+                        </p:genre>
+                        <p:genre>
+                            <p:genre-id>web novel</p:genre-id>
+                        </p:genre>
+                    </p:genres>
+                    <p:link>https://ln.hako.re/truyen/2521-hero-x-maou;https://ln.hako.re/truyen/1856-heroxmaou</p:link>
+                </p:project>
+                <p:vol-hash>-11765153</p:vol-hash>
+            </p:update-volume>
+            <p:chapter-date>02/07/2018</p:chapter-date>
+            <p:update-group>
+                <p:group-id>4143</p:group-id>
+                <p:group-name>CENTERHEAD</p:group-name>
+                <p:group-link>https://ln.hako.re/nhom-dich/364-etehead</p:group-link>
+            </p:update-group>
+            <p:update-link>https://ln.hako.re/truyen/2521-hero-x-maou/c34150-chuong-09-menh-lenh-tu-hoang-gia-phan-ii
+            </p:update-link>
+        </p:update>
+        <p:update>
+            <p:id>70</p:id>
+            <p:chapter-name>Phần 7: Diễn Đàn Yuuji, Hỏi Ý Kiến Diễn Đàn về Thực Phẩm Bảo Quản</p:chapter-name>
+            <p:update-volume>
+                <p:id>7</p:id>
+                <p:volume-name>Chương 05</p:volume-name>
+                <p:volume-cover>
+                    https://2.bp.blogspot.com/-aT70MTWg_sQ/WzHWZXFUusI/AAAAAAABWm8/YpAHUwgg338vWhAL3YiYGBCzEzR3XneNgCHMYCw/w220/default.jpg
+                </p:volume-cover>
+                <p:project>
+                    <p:id>2</p:id>
+                    <p:name>10 nen goshi no HikiNiito o Yamete Gaishutsushitara Jitaku goto Isekai ni Ten’ishiteta
+                    </p:name>
+                    <p:alter-name>When I was going out from my house to stop become a Hiki-NEET after 10 years I was
+                        transported to another world, 10年ごしの引きニートを辞めて外出したら自宅ごと異世界に転移してた, Khi tôi rời khỏi nhà để ngưng
+                        trở thành một tên Hiki-NEET sau 10 năm, tôi đã bị dịch chuyển sang thế giới khác
+                    </p:alter-name>
+                    <p:author>Bandou Tarou</p:author>
+                    <p:illustrator>Benio</p:illustrator>
+                    <p:synopsis>Houjou Yuuji, 30 tuổi, thất nghiệp, là một hikiomori trong suốt 10 năm, quyết định đi ra
+                        khỏi nhà. Tuy nhiên, bên ngoài đó là một thế giới khác cùng với những sinh vật kì lạ mà cậu chưa
+                        từng biết đến.Bằng một cách nào đó, điện, nước và internet trong ngôi nhà vẫn sử dụng được. Cùng
+                        với cô chó Kotarou, cậu quyết định sống luôn ở đây.Một ngày, khi đang khám phá khu rừng gần nhà,
+                        cậu tìm thấy một cô gái tên Alice và trở thành người trông nom cho cô.
+                    </p:synopsis>
+                    <p:hash>54646246</p:hash>
+                    <p:view>60684</p:view>
+                    <p:genres>
+                        <p:genre>
+                            <p:genre-id>adventure</p:genre-id>
+                        </p:genre>
+                        <p:genre>
+                            <p:genre-id>fantasy</p:genre-id>
+                        </p:genre>
+                        <p:genre>
+                            <p:genre-id>action</p:genre-id>
+                        </p:genre>
+                        <p:genre>
+                            <p:genre-id>slice of life</p:genre-id>
+                        </p:genre>
+                        <p:genre>
+                            <p:genre-id>romance</p:genre-id>
+                        </p:genre>
+                        <p:genre>
+                            <p:genre-id>web novel</p:genre-id>
+                        </p:genre>
+                        <p:genre>
+                            <p:genre-id>comedy</p:genre-id>
+                        </p:genre>
+                        <p:genre>
+                            <p:genre-id>isekai</p:genre-id>
+                        </p:genre>
+                        <p:genre>
+                            <p:genre-id>super power</p:genre-id>
+                        </p:genre>
+                    </p:genres>
+                    <p:link>
+                        https://ln.hako.re/truyen/759-10-nen-goshi-no-hikiniito-o-yamete-gaishutsushitara-jitaku-goto-isekai-ni-tenishiteta
+                    </p:link>
+                </p:project>
+                <p:vol-hash>-856886579</p:vol-hash>
+            </p:update-volume>
+            <p:chapter-date>01/07/2018</p:chapter-date>
+            <p:update-group>
+                <p:group-id>4076</p:group-id>
+                <p:group-name>DWR</p:group-name>
+                <p:group-link>https://ln.hako.re/nhom-dich/100-doge</p:group-link>
+            </p:update-group>
+            <p:update-link>
+                https://ln.hako.re/truyen/759-10-nen-goshi-no-hikiniito-o-yamete-gaishutsushitara-jitaku-goto-isekai-ni-tenishiteta/c33835-phan-7-dien-dan-yuuji-hoi-y-kien-dien-dan-ve-thuc-pham-bao-quan
+            </p:update-link>
+        </p:update>
+        <p:update>
+            <p:id>140</p:id>
+            <p:chapter-name>Chương 1: 3 phút30 cm</p:chapter-name>
+            <p:update-volume>
+                <p:id>13</p:id>
+                <p:volume-name>Ngoại chương</p:volume-name>
+                <p:volume-cover>
+                    https://4.bp.blogspot.com/-hSpKIzrUX1k/WzjlV4NYsGI/AAAAAAABXkY/oCxSCCY6WnY6N-1AvjHuWtiHBG8Vx48TQCHMYCw/w220/default.jpg
+                </p:volume-cover>
+                <p:project>
+                    <p:id>7</p:id>
+                    <p:name>3 Minutes Boy Meets Girl</p:name>
+                    <p:alter-name>3 phút gặp nhau của những đôi trai gái</p:alter-name>
+                    <p:author>Nhiều tác giả</p:author>
+                    <p:illustrator>kyo; On; Reika; Won; Sadoru Chiba; Shirabi; Shiromiso; Subachi</p:illustrator>
+                    <p:synopsis>3 Minutes Boy Meets Girl là một tuyển tập truyện ngắn của các tác giả làm việc tại
+                        Famitsu Bunko. Có 19 chương và là 19 truyện ngắn từ 19 tác giả khác nhau. Thể loại chung chính
+                        là lãng mạn. Truyện được xuất bản vào ngày 30 tháng 7 năm 2011
+                    </p:synopsis>
+                    <p:hash>-1287318900</p:hash>
+                    <p:view>929</p:view>
+                    <p:genres>
+                        <p:genre>
+                            <p:genre-id>romance</p:genre-id>
+                        </p:genre>
+                        <p:genre>
+                            <p:genre-id>school life</p:genre-id>
+                        </p:genre>
+                        <p:genre>
+                            <p:genre-id>slice of life</p:genre-id>
+                        </p:genre>
+                    </p:genres>
+                    <p:link>https://ln.hako.re/truyen/2840-3-minutes-boy-meets-girl</p:link>
+                </p:project>
+                <p:vol-hash>1615477443</p:vol-hash>
+            </p:update-volume>
+            <p:chapter-date>01/07/2018</p:chapter-date>
+            <p:update-group>
+                <p:group-id>4082</p:group-id>
+                <p:group-name>Sonata no Koe</p:group-name>
+                <p:group-link>https://ln.hako.re/nhom-dich/3-sonata-no-koe</p:group-link>
+            </p:update-group>
+            <p:update-link>https://ln.hako.re/truyen/2840-3-minutes-boy-meets-girl/c34144-chuong-1-3-phut30-cm
+            </p:update-link>
+        </p:update>
+    </p:updates>
+</p:latest-update>

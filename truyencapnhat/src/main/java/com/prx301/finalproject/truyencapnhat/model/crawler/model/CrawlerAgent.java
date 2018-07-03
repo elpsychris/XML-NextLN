@@ -1,11 +1,12 @@
 package com.prx301.finalproject.truyencapnhat.model.crawler.model;
 
-import com.prx301.finalproject.truyencapnhat.model.GenreEntity;
 import com.prx301.finalproject.truyencapnhat.model.ProjectEntity;
 import com.prx301.finalproject.truyencapnhat.model.Projects;
 import com.prx301.finalproject.truyencapnhat.model.UpdateEntity;
+import com.prx301.finalproject.truyencapnhat.model.UpdateVolEntity;
 import com.prx301.finalproject.truyencapnhat.repository.ProjectRepo;
 import com.prx301.finalproject.truyencapnhat.repository.UpdateRepo;
+import com.prx301.finalproject.truyencapnhat.repository.VolRepo;
 import com.prx301.finalproject.truyencapnhat.service.spider.SpiderService;
 import com.prx301.finalproject.truyencapnhat.utils.*;
 import org.xml.sax.SAXException;
@@ -27,11 +28,13 @@ public class CrawlerAgent implements Runnable {
 
     private UpdateRepo updateRepo = null;
     private ProjectRepo projectRepo = null;
+    private VolRepo volRepo = null;
 
-    public CrawlerAgent(ConfigComp config, ProjectRepo projectRepo, UpdateRepo updateRepo) {
+    public CrawlerAgent(ConfigComp config, ProjectRepo projectRepo, UpdateRepo updateRepo, VolRepo volRepo) {
         this.configComponent = config;
         this.projectRepo = projectRepo;
         this.updateRepo = updateRepo;
+        this.volRepo = volRepo;
     }
 
     @Override
@@ -61,61 +64,78 @@ public class CrawlerAgent implements Runnable {
             Schema schema = JAXBUtils.getSchema("src/main/java/com/prx301/finalproject/truyencapnhat/schema/project_page.xsd");
             Projects projects = JAXBUtils.<Projects>xmlToObject(this.result, schema, Projects.class);
             List<ProjectEntity> projectEntityList = projectRepo.findAll();
+            // Check and save project
             for (ProjectEntity project : projects.getProjects()) {
                 System.out.println("Start process " + project.getProjectName());
-                for (UpdateEntity updateEntity : project.getUpdates()) {
-                    updateEntity.setUpdateHash(updateEntity.hashCode() + "");
-                    updateEntity.setProject(project);
+
+                if (project.getUpdateVols() != null) {
+                    for (UpdateVolEntity updateVol : project.getUpdateVols()) {
+                        updateVol.setProject(project);
+
+                        if (updateVol.getUpdateEntities() != null) {
+                            for (UpdateEntity updateEntity : updateVol.getUpdateEntities()) {
+                                updateEntity.setUpdateVol(updateVol);
+                            }
+                        }
+                    }
                 }
 
+                // Make new hash for new project
                 project.setProjectHash(project.hashCode() + "");
-                if (project.getProjectName().contains("kureteru")) {
-                    System.out.println("found it: " + project.getProjectName());
-                }
-
+                // Check if there is a project with same name
                 ProjectEntity existProject = projectRepo.findByProjectName(project.getProjectName());
+                // If not, check a project with identical name
                 if (existProject == null) {
                     existProject = ComUtils.findIdenticalExist(project, projectEntityList);
                     if (existProject != null) {
                         System.out.printf("Found an identical: %s | %s\n", project.getProjectName(), existProject.getProjectName());
-                        String curAlter = project.getProjectAlterName() == null ? "" : project.getProjectAlterName();
-                        curAlter = curAlter + project.getProjectName() + ",";
-                        project.setProjectName(null);
-                        project.setProjectHash(null);
-                        project.setProjectAlterName(curAlter);
-
-                        existProject.getGenres().addAll(project.getGenres());
                     }
                 }
-
-                List<UpdateEntity> existUpdateList = updateRepo.findByProject(existProject);
+                // If there is a project with same name or identical name, then compare hash
                 if (existProject != null && !existProject.getProjectHash().equals(project.getProjectHash())) {
+                    // If two hash codes are not the same
                     if (!existProject.getProjectHash().equals(project.getProjectHash())) {
                         try {
+                            // Prepare for merge info of the project
+                            List<UpdateVolEntity> newVolUpdates = project.getUpdateVols();
+                            project.clearUpdateVols();
+
+                            // Move current project name to new project's altername
+                            String curAlter = project.getProjectAlterName() == null ? "" : project.getProjectAlterName();
+                            curAlter = curAlter + project.getProjectName() + ",";
+                            // Remove old project name and hash for preparing to merge
+                            project.setProjectName(null);
+                            project.setProjectHash(null);
+                            project.setProjectAlterName(curAlter);
+                            // Join two genre sets
+                            existProject.getGenres().addAll(project.getGenres());
+
                             existProject = ComUtils.mergeObject(existProject, project);
+                            projectRepo.save(existProject);
                             int countTotal = 0;
                             int countExist = 0;
-                            if (existUpdateList != null) {
-                                for (UpdateEntity updateEntity : project.getUpdates()) {
+
+                            if (existProject.getUpdateVols() != null) {
+                                for (UpdateVolEntity newVolUpdate : newVolUpdates) {
                                     countTotal++;
                                     boolean isExist = false;
-                                    for (UpdateEntity existUpdate : existUpdateList) {
-                                        if (existUpdate.getUpdateHash().equals(updateEntity.getUpdateHash())) {
+                                    for (UpdateVolEntity existVol : existProject.getUpdateVols()) {
+                                        if (existVol.getVolHash().equals(newVolUpdate.getVolHash())) {
                                             isExist = true;
                                             break;
                                         }
                                     }
 
                                     if (!isExist) {
-                                        updateEntity.setProject(existProject);
-                                        updateRepo.save(updateEntity);
+                                        newVolUpdate.setProject(existProject);
+                                        volRepo.save(newVolUpdate);
+                                        System.out.println("\t\t\tAdd update: " + newVolUpdate.getVolName());
                                     }
                                     if (isExist) {
                                         countExist++;
                                     }
                                 }
                             }
-                            projectRepo.saveAndFlush(existProject);
                             if (countTotal > countExist) {
                                 System.out.printf("\t%s Total: %d, Exist: %d\n", existProject.getProjectName(), countTotal, countExist);
                             }
@@ -125,6 +145,7 @@ public class CrawlerAgent implements Runnable {
                         }
                     }
                 } else if (existProject == null) {
+                    System.out.println("\tSave new project: " + (project.getUpdateVols()  == null ? 0 : project.getUpdateVols().size() + " (updates)"));
                     projectRepo.save(project);
                     projectEntityList.add(project);
                 }
@@ -139,6 +160,7 @@ public class CrawlerAgent implements Runnable {
             logger.log(Logger.LOG_LEVEL.WARNING, "SAXException", e, ComUtils.class);
         } catch (JAXBException e) {
 //            e.printStackTrace();
+            e.printStackTrace();
             logger.log(Logger.LOG_LEVEL.ERROR, e, SpiderService.class);
         }
     }
