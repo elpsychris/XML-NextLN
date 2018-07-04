@@ -23,6 +23,10 @@ import java.util.Calendar;
 import java.util.List;
 
 public class CrawlerAgent implements Runnable {
+    public final static int RUNNING = 1;
+    public final static int PAUSED = 0;
+    public final static int STOPPED = -1;
+
     private ConfigComp configComponent = null;
     private Logger logger = Logger.getLogger();
     private DOMResult result = null;
@@ -32,6 +36,8 @@ public class CrawlerAgent implements Runnable {
     private UpdateRepo updateRepo = null;
     private ProjectRepo projectRepo = null;
     private VolRepo volRepo = null;
+
+    private int agentStatus = STOPPED;
 
     public CrawlerAgent(ConfigComp config, ProjectRepo projectRepo, UpdateRepo updateRepo, VolRepo volRepo) {
         this.configComponent = config;
@@ -55,6 +61,7 @@ public class CrawlerAgent implements Runnable {
     private void start(String configPath, String xslPath, String newUrl) {
         try {
             this.result = this.crawl(configPath, xslPath, newUrl);
+
         } catch (TransformerException e) {
             logger.log(Logger.LOG_LEVEL.ERROR, e, SpiderService.class);
         } catch (IOException e) {
@@ -121,7 +128,7 @@ public class CrawlerAgent implements Runnable {
 
                             List<UpdateVolEntity> existUpdateVol = volRepo.findByProject(existProject);
 
-                            if (existUpdateVol != null) {
+                            if (existUpdateVol != null && newVolUpdates != null && newVolUpdates.size() > 0) {
                                 for (UpdateVolEntity newVolUpdate : newVolUpdates) {
                                     boolean isExist = false;
                                     for (UpdateVolEntity existVol : existUpdateVol) {
@@ -218,6 +225,7 @@ public class CrawlerAgent implements Runnable {
             e.printStackTrace();
             logger.log(Logger.LOG_LEVEL.ERROR, e, SpiderService.class);
         }
+        this.agentStatus = STOPPED;
     }
 
     private void configCrawler() {
@@ -297,4 +305,29 @@ public class CrawlerAgent implements Runnable {
         this.uriResolver.stop();
     }
 
+    public void pause() {
+        if (this.uriResolver == null) {
+            logger.info("No attached URIResolver", CrawlerAgent.class);
+            return;
+        }
+        this.uriResolver.pause();
+        this.agentStatus = PAUSED;
+    }
+
+    public void resume() {
+        if (this.uriResolver == null) {
+            logger.info("No attached URIResolver", CrawlerAgent.class);
+            return;
+        }
+        this.uriResolver.cont();
+        this.agentStatus = RUNNING;
+    }
+
+    public int getAgentStatus() {
+        return agentStatus;
+    }
+
+    public void setAgentStatus(int agentStatus) {
+        this.agentStatus = agentStatus;
+    }
 }

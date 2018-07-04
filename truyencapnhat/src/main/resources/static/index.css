@@ -59,7 +59,7 @@ a {
     background: #FFFFFF;
     display: flex;
     font-family: 'Baloo Chettan', cursive;
-    position: absolute;
+    position: fixed;
     align-items: center;
     font-size: .9em;
     justify-content: space-around;
@@ -95,6 +95,7 @@ a {
     flex-grow: 4;
     display: flex;
     padding-left: 35px;
+    position: relative;
 }
 
 .search-bar {
@@ -124,7 +125,7 @@ a {
     display: flex;
     justify-content: center;
     margin: 0 5px;
-    transform: all ease .3s;
+    transition: all ease .3s;
     color: #d7d8d9;
 }
 
@@ -270,10 +271,13 @@ a {
     background: #5DB0F4;
     display: flex;
     align-items: center;
+    position: relative;
+    justify-content: center;
 }
 
 .panel-content .thumbnail img {
     width: 100%;
+    position: relative;
 }
 
 .panel-content .author {
@@ -863,10 +867,10 @@ input[type=checkbox] {
     position: absolute;
     background: white;
     top: 26px;
-    right: 10px;
     width: 90%;
     overflow: hidden;
     padding: 0;
+    display: none;
 }
 
 .dropdown li {
@@ -1029,6 +1033,7 @@ ul.config:before {
     text-align: center;
     overflow: hidden;
     display: none;
+    top: 0;
 }
 
 .icon-wrapper {
@@ -1181,7 +1186,7 @@ ul.config:before {
     margin-top: 15px;
     max-width: 100px !important;
     color: #364150;
-    transform: all ease .5s;
+    transition: all ease .5s;
 }
 
 .btn-action:hover {
@@ -1388,7 +1393,7 @@ ul.config:before {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    transform: all ease .3s;
+    transition: all ease .3s;
 }
 
 .item:hover {
@@ -1431,4 +1436,115 @@ ul.config:before {
     font-family: "Baloo Chettan";
     display: flex;
     align-items: center;
+}
+
+.thumbnail .overlay-name {
+    display: flex;
+    position: absolute;
+    top: 0;
+    background: rgba(0, 0, 0, .6);
+    height: 100%;
+    width: 100%;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    font-family: "Baloo Chettan";
+    font-size: 1.15em;
+    padding: 0 15px;
+    box-sizing: border-box;
+    transition: all ease .5s;
+}
+
+.thumbnail:hover .overlay-name {
+    border-radius: 150px;
+    opacity: 0;
+}
+
+.thumbnail img {
+    animation-name: thumbnailAnm;
+    animation-duration: 10s;
+    transition: all ease .3s;
+    animation-iteration-count: infinite;
+    animation-delay: .3s;
+}
+
+@keyframes thumbnailAnm {
+    0% {
+        top: 0;
+    }
+    25% {
+        top: 100%;
+    }
+    75% {
+        top: -100%;
+    }
+    100% {
+        top: 0%;
+    }
+}
+
+
+.error-page {
+    width: 100%;
+    height: 100%;
+    min-height: 700px;
+    position: relative;
+    background: black;
+    display: flex;
+    align-items: center;
+}
+
+.error-page .error-img {
+    background: url('tom-collared1.jpg');
+    background-size: 100% auto;
+    width: 50%;
+    height: 80%;
+    position: absolute;
+    background-position: center;
+    margin: auto 0;
+    display: block;
+    right: 0;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.error-page .error-warning {
+    position: absolute;
+    padding: 30px;
+    width: 50%;
+    box-sizing: border-box;
+    text-align: right;
+}
+
+.error-page span:nth-child(1) {
+    font-family: "Lalezar";
+    font-size: 8em;
+    color: #f7f256;
+    display: block;
+}
+.error-page span:nth-child(2) {
+    font-family: "Lalezar";
+    font-size: 2em;
+    color: #f7f256;
+    display: block;
+    position: relative;
+    top: -50px;
+}
+
+.error-warning a {
+    color: white;
+    font-size: 1.5em;
+    display: block;
+    transition: all ease .3s;
+    position: relative;
+}
+
+.error-warning a::before {
+    content: "\f053";
+    font-family: 'FontAwesome';
+    padding-right: 5px;
+}
+
+.error-warning:hover a {
+    margin-right: 40px;
 }

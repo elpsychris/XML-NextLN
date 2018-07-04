@@ -20,7 +20,7 @@
                     </filter-patterns>
                 </filter>
             </clean-filters>
-            <status>active</status>
+            <!--<status>inactive</status>-->
         </component>
         <component>
             <name>MAL</name>
@@ -43,7 +43,7 @@
                     </filter-patterns>
                 </filter>
             </clean-filters>
-            <status>inactive</status>
+            <!--<status>active</status>-->
         </component>
     </components>
 </crawler-config>

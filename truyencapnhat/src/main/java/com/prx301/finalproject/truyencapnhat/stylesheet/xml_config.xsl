@@ -43,7 +43,11 @@
                     </xsl:choose>
                 </ul>
                 <div class="crawler-action">
-                    <div class="action-btn run" onclick="onRunCrawler()">Run</div>
+                    <xsl:element name="div">
+                        <xsl:attribute name="class">action-btn run</xsl:attribute>
+                        <xsl:attribute name="onclick">onRunCrawler(this,'<xsl:value-of select="p:name"/>')</xsl:attribute>
+                        Run
+                    </xsl:element>
                 </div>
             </div>
         </xsl:for-each>

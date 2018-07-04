@@ -9,12 +9,12 @@
         <project-page>
             <next-page>
                 <xsl:value-of
-                        select="$listDoc//div[@class='fl-r di-ib fs11 fw-n']/a[contains(text(),'Next')]/@href"/>
+                        select="translate($listDoc//div[@class='fl-r di-ib fs11 fw-n']/a[contains(text(),'Next')]/@href,'°','%C2%B0')"/>
             </next-page>
             <projects>
                 <xsl:for-each select="$listDoc//td/a[@class='hoverinfo_trigger fw-b']">
                     <xsl:variable name="cur_project_link" select="@href"/>
-                    <xsl:variable name="projDoc" select="document($cur_project_link)"/>
+                    <xsl:variable name="projDoc" select="document(translate(translate(translate($cur_project_link,'°',''),'☆',''),'♪',''))"/>
                     <xsl:if test="boolean($projDoc//h1[@class='h1']/span)">
                         <project>
                             <id>

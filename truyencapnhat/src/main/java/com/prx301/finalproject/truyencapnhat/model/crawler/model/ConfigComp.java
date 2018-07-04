@@ -25,7 +25,7 @@ public class ConfigComp {
     @XmlElement(name = "filter")
     private List<CleanFilter> cleanFilter;
     @XmlElement(name = "status")
-    private String status;
+    private int status;
 
 
     public String getName() {
@@ -68,11 +68,11 @@ public class ConfigComp {
         this.cleanFilter = cleanFilter;
     }
 
-    public String getStatus() {
+    public int getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(int status) {
         this.status = status;
     }
 }

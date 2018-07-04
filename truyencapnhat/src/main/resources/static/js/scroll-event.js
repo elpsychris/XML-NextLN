@@ -2,11 +2,13 @@ var scrollCount = 0;
 var latestScrollPos = 0;
 var doc = document.documentElement;
 var curPos = window.innerHeight;
-var sideWindow = document.getElementById("side-window");
 
 window.addEventListener('scroll', function (e) {
+    var sideWindow = document.getElementById("side-window");
     var curScrollPos = window.pageYOffset;
-    console.log("new event 2", curScrollPos, latestScrollPos);
+    var navTopBar = document.getElementById("nav-top-bar");
+    var windowE = document.getElementById('user-window');
+
     if (curScrollPos > latestScrollPos) {
         if (sideWindow != null) {
             sideWindow.style.display = "block";
@@ -15,11 +17,31 @@ window.addEventListener('scroll', function (e) {
                 sideWindow.classList.remove("fadeOutLeft");
             }
         }
+
+
+        if (navTopBar != null
+            && getComputedStyle(windowE).display === 'none') {
+            navTopBar.className = "nav-bar card-2 animated";
+            navTopBar.classList.add("fadeOutUp");
+            this.setTimeout(function () {
+                if (navTopBar != null && getComputedStyle(navTopBar).display === 'flex') {
+                    navTopBar.style.display = 'none';
+                }
+            }, 200);
+        }
     } else {
         if (sideWindow != null) {
             sideWindow.classList.remove("fadeInLeft");
             sideWindow.classList.add("fadeOutLeft");
         }
+
+        if (navTopBar != null && windowE != null) {
+            navTopBar.className = "nav-bar card-2 animated";
+            navTopBar.classList.add("fadeInDown");
+            navTopBar.style.display = 'flex';
+        }
     }
+
+
     latestScrollPos = curScrollPos;
 });

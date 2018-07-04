@@ -64,47 +64,71 @@
                         <img src="ava.jpg"/>
                         <div class="name-sect"><span>anonymous</span></div>
                     </div>
-                    <div class="menu-sect">
-                        <div class="bookmark-menu">Bookmark</div>
-                        <div class="logout-menu" onclick="onLogout(this)"></div>
-                    </div>
-                    <div class="bookmark-list">
-                        <div class="item card-1">
-                            <div class="thumb">
+                    <c:choose>
+                        <c:when test="${not isAdmin}">
+                            <div class="menu-sect">
+                                <div class="bookmark-menu">Bookmark</div>
+                                <div class="logout-menu" onclick="onLogout(this)"></div>
                             </div>
-                            <div class="info">
-                                <span class="info-name">Re:Zero kara Hajimeru</span>
-                                <span class="info-chapter">13</span>
-                                <span class="info-view">50</span>
+                            <div class="bookmark-list">
+                                <div class="item card-1">
+                                    <div class="thumb">
+                                    </div>
+                                    <div class="info">
+                                        <span class="info-name">Re:Zero kara Hajimeru</span>
+                                        <span class="info-chapter">13</span>
+                                        <span class="info-view">50</span>
+                                    </div>
+                                </div>
+                                <div class="item card-1">
+                                    <div class="thumb">
+                                    </div>
+                                    <div class="info">
+                                        <span class="info-name">Re:Zero kara Hajimeru</span>
+                                        <span class="info-chapter">13</span>
+                                        <span class="info-view">50</span>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="item card-1">
-                            <div class="thumb">
+                        </c:when>
+                        <c:otherwise>
+                            <div class="menu-sect">
+                                <div class="bookmark-menu"><a href="/crawler/">Bộ Crawler</a></div>
+                                <div class="logout-menu" onclick="onLogout(this)"></div>
                             </div>
-                            <div class="info">
-                                <span class="info-name">Re:Zero kara Hajimeru</span>
-                                <span class="info-chapter">13</span>
-                                <span class="info-view">50</span>
+                            <div class="bookmark-list">
+                                <div class="item card-1">
+                                    <div class="thumb">
+                                    </div>
+                                    <div class="info">
+                                        <span class="info-name">Re:Zero kara Hajimeru</span>
+                                        <span class="info-chapter">13</span>
+                                        <span class="info-view">50</span>
+                                    </div>
+                                </div>
+                                <div class="item card-1">
+                                    <div class="thumb">
+                                    </div>
+                                    <div class="info">
+                                        <span class="info-name">Re:Zero kara Hajimeru</span>
+                                        <span class="info-chapter">13</span>
+                                        <span class="info-view">50</span>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
+                        </c:otherwise>
+                    </c:choose>
                 </div>
             </div>
         </c:otherwise>
     </c:choose>
 </div>
-<div class="nav-bar card-2">
+<div  id="nav-top-bar" class="nav-bar card-2 animated">
     <div id="logo"></div>
     <div class="nav-item-center">
-        <input class="search-bar" type="search" placeholder="Nhập tên truyện cần tìm">
+        <input class="search-bar" type="search" placeholder="Nhập tên truyện cần tìm" oninput="onSearchBarTyping(this)" onfocus="onSearchBarFocus(this)">
         <ul class="dropdown card-2">
-            <li>Kimi no na wa</li>
-            <li>Kimi no na wa</li>
-            <li>Kimi no na wa</li>
-            <li>Kimi no na wa</li>
-            <li>Kimi no na wa</li>
-            <li>Kimi no na wa</li>
-            <li>Kimi no na wa</li>
+            <li>Tìm kiếm chi tiết</li>
         </ul>
     </div>
     <div class="nav-item-right">
@@ -132,6 +156,9 @@
 <div class="main-content">
     <x:transform doc="${updateList}" xslt="${style}"/>
 </div>
+<script type="text/javascript" src="./js/scroll-event.js"></script>
+<script type="text/javascript" src="./js/search-event.js"></script>
+
 </body>
 
 </html>
