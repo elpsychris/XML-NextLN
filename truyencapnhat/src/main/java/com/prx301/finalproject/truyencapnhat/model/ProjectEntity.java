@@ -246,6 +246,18 @@ public class ProjectEntity {
         this.updateVols = null;
     }
 
+    public int countUpdate() {
+        int total = 0;
+        if (this.updateVols != null) {
+            for (UpdateVolEntity volEntity : this.updateVols) {
+                if (volEntity.getUpdateEntities() != null) {
+                    total += volEntity.getUpdateEntities().size();
+                }
+            }
+        }
+        return total;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

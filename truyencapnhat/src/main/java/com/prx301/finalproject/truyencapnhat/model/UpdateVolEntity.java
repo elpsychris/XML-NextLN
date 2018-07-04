@@ -88,7 +88,7 @@ public class UpdateVolEntity {
         this.project = project;
     }
 
-    @OneToMany(mappedBy = "updateVol", cascade = {CascadeType.ALL})
+    @OneToMany(mappedBy = "updateVol", cascade = {CascadeType.ALL}, fetch = FetchType.EAGER)
     public List<UpdateEntity> getUpdateEntities() {
         return updateEntities;
     }

@@ -12,7 +12,7 @@
                         select="$listDoc//div[@class='pagination_wrap']/a[contains(@class,'current')]/following-sibling::a[1][text()!='Cuối']/@href"/>
             </next-page>
             <projects>
-                <xsl:for-each select="$listDoc//td[@class='col-12 col-2-3-m col-6-l']/a">
+                <xsl:for-each select="$listDoc//tr/td[1]/a">
                     <xsl:variable name="cur_project_link" select="@href"/>
                     <xsl:variable name="projDoc" select="document($cur_project_link)"/>
                     <xsl:if test="boolean($projDoc//h2[@class='listall_title animation fade-in-up']/a)">

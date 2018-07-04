@@ -11,5 +11,9 @@ import java.util.List;
 public interface VolRepo extends JpaRepository<UpdateVolEntity, Integer> {
     UpdateVolEntity findByVolName(String volName);
 
+    List<UpdateVolEntity> findByProject(ProjectEntity projectEntity);
+
+    List<UpdateVolEntity> findByProjectAndVolName(ProjectEntity projectEntity, String volname);
+
 //    List<UpdateVolEntity> findByProject(int projectId);
 }

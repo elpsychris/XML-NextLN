@@ -97,6 +97,15 @@
     <div id="logo"></div>
     <div class="nav-item-center">
         <input class="search-bar" type="search" placeholder="Nhập tên truyện cần tìm">
+        <ul class="dropdown card-2">
+            <li>Kimi no na wa</li>
+            <li>Kimi no na wa</li>
+            <li>Kimi no na wa</li>
+            <li>Kimi no na wa</li>
+            <li>Kimi no na wa</li>
+            <li>Kimi no na wa</li>
+            <li>Kimi no na wa</li>
+        </ul>
     </div>
     <div class="nav-item-right">
         <c:choose>

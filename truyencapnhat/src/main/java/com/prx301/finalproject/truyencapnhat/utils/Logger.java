@@ -56,7 +56,7 @@ public class Logger {
     public void log(LOG_LEVEL level, String message, Exception e, Class eClass) {
         StringBuilder log = new StringBuilder();
 
-        log.append(String.format("\n[%s | %s] %s: ", level.logType, ComUtils.getCurrentTimeString(), eClass.getCanonicalName()));
+        log.append(String.format("[%s | %s] %s: ", level.logType, ComUtils.getCurrentTimeString(), eClass.getCanonicalName()));
         if (message == null) {
             message = e.getMessage();
         }

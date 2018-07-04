@@ -76,6 +76,9 @@
                                 <xsl:value-of select='.//p:volume-cover'/>
                             </xsl:attribute>
                         </xsl:element>
+                        <div class="overlay-name">
+                            <xsl:value-of select=".//p:project/p:name"/>
+                        </div>
                     </div>
                     <span class="author">
                         <xsl:value-of select="p:group-name"/>
