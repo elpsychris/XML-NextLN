@@ -6,6 +6,9 @@ import javax.persistence.*;
 import javax.xml.bind.annotation.*;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.sql.Date;
+import java.sql.Time;
+import java.sql.Timestamp;
+import java.util.Calendar;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -68,9 +71,8 @@ public class ProjectEntity {
     @XmlElement(name = "volume")
     private List<UpdateVolEntity> updateVols;
 
-    @XmlJavaTypeAdapter(SqlDateAdapter.class)
     @XmlElement(name = "last_update")
-    private Date projectLastUpdate;
+    private Timestamp projectLastUpdate = new Timestamp(Calendar.getInstance().getTime().getTime());
     @XmlElement(name = "total_update")
     private Integer projectTotalUpdate;
     @XmlElement(name = "link")
@@ -189,11 +191,11 @@ public class ProjectEntity {
 
     @Basic
     @Column(name = "project_last_update")
-    public Date getProjectLastUpdate() {
+    public Timestamp getProjectLastUpdate() {
         return projectLastUpdate;
     }
 
-    public void setProjectLastUpdate(Date projectLastUpdate) {
+    public void setProjectLastUpdate(Timestamp projectLastUpdate) {
         this.projectLastUpdate = projectLastUpdate;
     }
 

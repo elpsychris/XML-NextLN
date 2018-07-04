@@ -14,7 +14,7 @@ public class Logger {
 
         private int severity = 0;
         private String logType = "";
-        private int SILENCE_LEVEL = 1;
+        private int SILENCE_LEVEL = 0;
 
         LOG_LEVEL(int severity, String logType) {
             this.severity = severity;
@@ -56,7 +56,7 @@ public class Logger {
     public void log(LOG_LEVEL level, String message, Exception e, Class eClass) {
         StringBuilder log = new StringBuilder();
 
-        log.append(String.format("[%s | %s] %s: ", level.logType, ComUtils.getCurrentTimeString(), eClass.getCanonicalName()));
+        log.append(String.format("\n[%s | %s] %s: ", level.logType, ComUtils.getCurrentTimeString(), eClass.getCanonicalName()));
         if (message == null) {
             message = e.getMessage();
         }

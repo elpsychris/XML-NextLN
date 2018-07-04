@@ -28,12 +28,14 @@
                             <alter-name>
                                 <xsl:for-each
                                         select="$projDoc//div[@class='ln_info-item clear']/span[text()='Tên khác']/../span[@class='ln_info-value col-7']/span">
-                                    <xsl:if test="./following-sibling::span">
-                                        <xsl:value-of select="concat(.,', ')"/>
-                                    </xsl:if>
-                                    <xsl:if test="not(./following-sibling::span)">
-                                        <xsl:value-of select="."/>
-                                    </xsl:if>
+                                    <xsl:choose>
+                                        <xsl:when test="position() = 1">
+                                            <xsl:value-of select="."/>
+                                        </xsl:when>
+                                        <xsl:otherwise>
+                                            <xsl:value-of select="concat('; ', .)"/>
+                                        </xsl:otherwise>
+                                    </xsl:choose>
                                 </xsl:for-each>
                             </alter-name>
                             <author>
@@ -90,13 +92,13 @@
                                         </volume-cover>
                                         <updates>
                                             <xsl:for-each
-                                                    select=".//div[contains(@class,'ln_chapters-vol_main')]/article">
+                                                    select=".//tr">
                                                 <update>
                                                     <chapter-name>
-                                                        <xsl:value-of select="normalize-space(./div[1]/a/.)"/>
+                                                        <xsl:value-of select="normalize-space(./td[@class='col-12 col-9-m col-8-l col-9-xl']/a/text())"/>
                                                     </chapter-name>
                                                     <chapter-date>
-                                                        <xsl:value-of select="normalize-space(./div[2]/.)"/>
+                                                        <xsl:value-of select="normalize-space(./td[contains(@class,'chapter-time')])"/>
                                                     </chapter-date>
                                                     <update-group>
                                                         <group-link>
@@ -117,7 +119,7 @@
                                                         </group-name>
                                                     </update-group>
                                                     <update-link>
-                                                        <xsl:value-of select="normalize-space(./div[1]/a/@href)"/>
+                                                        <xsl:value-of select="normalize-space(./td[@class='col-12 col-9-m col-8-l col-9-xl']/a/@href)"/>
                                                     </update-link>
                                                 </update>
                                             </xsl:for-each>

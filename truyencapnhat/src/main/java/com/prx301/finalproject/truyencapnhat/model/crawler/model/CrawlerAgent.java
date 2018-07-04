@@ -17,7 +17,7 @@ import javax.xml.transform.dom.DOMResult;
 import javax.xml.transform.stream.StreamSource;
 import javax.xml.validation.Schema;
 import java.io.*;
-import java.sql.Date;
+import java.sql.Timestamp;
 import java.util.Calendar;
 import java.util.List;
 
@@ -68,7 +68,7 @@ public class CrawlerAgent implements Runnable {
             List<ProjectEntity> projectEntityList = projectRepo.findAll();
             // Check and save project
             for (ProjectEntity project : projects.getProjects()) {
-                System.out.println("Start process " + project.getProjectName());
+                Logger.getLogger().info("Start process " + project.getProjectName(), CrawlerAgent.class);
 
                 if (project.getUpdateVols() != null) {
                     for (UpdateVolEntity updateVol : project.getUpdateVols()) {
@@ -90,7 +90,7 @@ public class CrawlerAgent implements Runnable {
                 if (existProject == null) {
                     existProject = ComUtils.findIdenticalExist(project, projectEntityList);
                     if (existProject != null) {
-                        System.out.printf("Found an identical: %s | %s\n", project.getProjectName(), existProject.getProjectName());
+                        Logger.getLogger().info(String.format("Found an identical: %s | %s\n", project.getProjectName(), existProject.getProjectName()), CrawlerAgent.class);
                     }
                 }
                 // If there is a project with same name or identical name, then compare hash
@@ -133,7 +133,7 @@ public class CrawlerAgent implements Runnable {
                                     if (!isExist) {
                                         newVolUpdate.setProject(existProject);
                                         volRepo.save(newVolUpdate);
-                                        System.out.println("\t\t\tAdd update: " + newVolUpdate.getVolName());
+                                        Logger.getLogger().info("\t\t\tAdd update: " + newVolUpdate.getVolName(), CrawlerAgent.class);
                                     }
                                     if (isExist) {
                                         countExist++;
@@ -141,19 +141,30 @@ public class CrawlerAgent implements Runnable {
                                 }
                             }
                             if (countTotal > countExist) {
-                                System.out.printf("\t%s Total: %d, Exist: %d\n", existProject.getProjectName(), countTotal, countExist);
+                                existProject.setProjectTotalUpdate(existProject.getProjectTotalUpdate() + countTotal - countExist);
+                                Logger.getLogger().info(String.format("\t%s Total: %d, Exist: %d\n", existProject.getProjectName(), countTotal, countExist), CrawlerAgent.class);
                             }
                         } catch (IllegalAccessException e) {
                             logger.log(Logger.LOG_LEVEL.ERROR, "Cannot access object", e, CrawlerAgent.class);
-                            e.printStackTrace();
                         }
                         existProject.hashCode();
-                        existProject.setProjectLastUpdate(new Date(Calendar.getInstance().getTime().getTime()));
+                        existProject.setProjectLastUpdate(new Timestamp(Calendar.getInstance().getTime().getTime()));
                         projectRepo.save(existProject);
                     }
                 } else {
-                    System.out.println("\tSave new project: " + (project.getUpdateVols()  == null ? 0 : project.getUpdateVols().size() + " (updates)"));
-                    project.setProjectLastUpdate(new Date(Calendar.getInstance().getTime().getTime()));
+                    Logger.getLogger().info("\tSave new project: " + (project.getUpdateVols() == null ? 0 : project.getUpdateVols().size() + " (updates)"), CrawlerAgent.class);
+
+                    if (project.getUpdateVols() != null) {
+                        int total = 0;
+                        for (UpdateVolEntity volEntity : project.getUpdateVols()) {
+                            if (volEntity.getUpdateEntities() != null) {
+                                total += volEntity.getUpdateEntities().size();
+                            }
+                        }
+                        project.setProjectTotalUpdate(total);
+                    } else {
+                        project.setProjectTotalUpdate(0);
+                    }
                     projectRepo.save(project);
                     projectEntityList.add(project);
                 }
