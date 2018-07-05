@@ -1,7 +1,9 @@
 package com.prx301.finalproject.truyencapnhat.model;
 
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.prx301.finalproject.truyencapnhat.utils.*;
+import com.prx301.finalproject.truyencapnhat.utils.GroupAdapter;
+import com.prx301.finalproject.truyencapnhat.utils.SqlTimeAdapter;
+import com.prx301.finalproject.truyencapnhat.utils.UpdateNrmlAdapter;
+import com.prx301.finalproject.truyencapnhat.utils.VolAdapter;
 
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -22,14 +24,18 @@ import java.sql.Timestamp;
 })
 @Entity
 @Table(name = "UpdateChap", schema = "dbo", catalog = "NU_DB")
-//@NamedStoredProcedureQueries({
-//        @NamedStoredProcedureQuery(name = "latest_updates",
-//        procedureName = "UpdateChap_LATEST_UPDATE_CHAPTER",
-//        parameters = {
-//                @StoredProcedureParameter(mode = ParameterMode.IN, name = "PageNumber", type = Integer.class),
-//                @StoredProcedureParameter(mode = ParameterMode.IN, name = "PageSize", type = Integer.class)
-//        })
-//})
+@NamedStoredProcedureQueries({
+        @NamedStoredProcedureQuery(
+                name = "get_updates",
+                procedureName = "UpdateChap_GET_UPDATE",
+                parameters = {
+                        @StoredProcedureParameter(mode = ParameterMode.IN, name = "PageNumber", type = Integer.class),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, name = "PageSize", type = Integer.class),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, name = "ProjectID", type = Integer.class),
+                        @StoredProcedureParameter(mode = ParameterMode.OUT, name = "Total", type = Integer.class)
+                },
+                resultClasses = UpdateEntity.class)
+})
 public class UpdateEntity {
     @XmlElement(name = "id")
     private int updateId;

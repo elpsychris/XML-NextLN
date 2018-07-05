@@ -72,6 +72,12 @@ public class WebController {
     @GetMapping("/project-detail")
     public String getProjectDetail(@RequestParam(name = "name", required = true) int id, ModelMap model) {
 //        ProjectEntity projectEntity = projectService.getProjectById(id);
+        String xml = updateService.getProjectDetail(id);
+        String xsl = ComUtils.getStreamFromFile("project_detail.xsl");
+
+        model.addAttribute("sXML", xml);
+        model.addAttribute("sXSL", xsl);
+
         return "project";
     }
 

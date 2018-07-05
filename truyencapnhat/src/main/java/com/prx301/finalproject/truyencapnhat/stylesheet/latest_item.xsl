@@ -7,6 +7,12 @@
             <div class="panel-content">
                 <xsl:apply-templates/>
             </div>
+            <div class="pagination hasNext hasPrev">
+                <a href="#" class="page cur">1</a>
+                <a href="#" class="page">2</a>
+                <a href="#" class="page">3</a>
+                <a href="#" class="page next">4</a>
+            </div>
         </div>
     </xsl:template>
     <xsl:template match="p:updates">
@@ -25,7 +31,7 @@
                 <div class="content-card card-2">
                     <div class="title">
                         <div class="divider-1">
-                            <xsl:variable name="isSpecialVol" select="boolean($vol-number='' or $vol-full='' or $vol-name='Ngoại chương')"/>
+                            <xsl:variable name="isSpecialVol" select="boolean($vol-number='' or $vol-full='' or $vol-name='Ngoại chương' or string-length($vol-name) > 12)"/>
                             <xsl:choose>
                                 <xsl:when test="$isSpecialVol">
                                     <div class="divider-mono">Đặc biệt</div>

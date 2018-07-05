@@ -1546,3 +1546,40 @@ ul.config:before {
 .error-warning:hover a {
     margin-right: 40px;
 }
+
+.pagination {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    padding: 10px;
+    right: 0;
+    bottom: 0;
+    box-sizing: border-box;
+}
+
+.pagination a {
+    width: 25px;
+    height: 25px;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.hasNext::after {
+    content: "\f054";
+    font-family: "FontAwesome";
+}
+
+.hasPrev::before {
+    content: "\f053";
+    font-family: "FontAwesome";
+}
+
+.pagination a.cur {
+    background: #5DB0F4;
+    color: white;
+}

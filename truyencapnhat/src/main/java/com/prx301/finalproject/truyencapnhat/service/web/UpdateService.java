@@ -1,14 +1,19 @@
 package com.prx301.finalproject.truyencapnhat.service.web;
 
+import com.prx301.finalproject.truyencapnhat.model.PageUpdates;
 import com.prx301.finalproject.truyencapnhat.model.UpdateEntity;
 import com.prx301.finalproject.truyencapnhat.model.LatestUpdates;
 import com.prx301.finalproject.truyencapnhat.repository.UpdateRepo;
 import com.prx301.finalproject.truyencapnhat.utils.JAXBUtils;
 import com.prx301.finalproject.truyencapnhat.utils.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
+import javax.persistence.EntityManager;
+import javax.persistence.StoredProcedureQuery;
 import javax.xml.bind.JAXBException;
-import javax.xml.transform.dom.DOMResult;
 import javax.xml.transform.stream.StreamResult;
 import java.io.StringWriter;
 import java.util.List;
@@ -17,6 +22,9 @@ import java.util.List;
 public class UpdateService {
     final int DEFAULT_PAGE_SIZE = 10;
     private UpdateRepo updateRepo = null;
+
+    @Autowired
+    EntityManager em = null;
 
     public UpdateService(UpdateRepo updateRepo) {
         this.updateRepo = updateRepo;
@@ -47,5 +55,43 @@ public class UpdateService {
             Logger.getLogger().log(Logger.LOG_LEVEL.ERROR, e, UpdateService.class);
         }
         return writer.toString();
+    }
+
+    public LatestUpdates getLatestUpdateEntities(int pageNo) {
+        PageRequest pageRequest = PageRequest.of(pageNo, DEFAULT_PAGE_SIZE, Sort.by(Sort.Order.desc("updateDate")));
+        List<UpdateEntity> latestList = updateRepo.findAll(pageRequest).getContent();
+        return new LatestUpdates(latestList);
+    }
+
+    public PageUpdates getPageUpdate(int pageNo, int projectId) {
+        return retrieveUpdatePage(pageNo, 10, projectId);
+    }
+
+    public String getProjectDetail(int projectId) {
+        PageUpdates firstPage = getPageUpdate(1, projectId);
+        StringWriter stringWriter = new StringWriter();
+        StreamResult streamResult = new StreamResult(stringWriter);
+        try {
+            JAXBUtils.objectToXML(firstPage, streamResult);
+        } catch (JAXBException e) {
+            Logger.getLogger().log(Logger.LOG_LEVEL.ERROR, e, UpdateService.class);
+        }
+
+        return stringWriter.toString();
+    }
+
+    private PageUpdates retrieveUpdatePage(int pageNo, int size, int projectId) {
+//        this.entityManager.createNativeQuery("BEGIN EXEC UpdateChap_GET_UPDATE :pageNo, :pageSize, :projectId; END;")
+//                .setParameter("pageNo", pageNo)
+//                .setParameter("pageSize", size)
+//                .setParameter("projectId", projectId)
+//                .getResultList();
+        StoredProcedureQuery findUpdatesByProject = em.createNamedStoredProcedureQuery("get_updates")
+                .setParameter("PageNumber", pageNo)
+                .setParameter("PageSize", size)
+                .setParameter("ProjectID", projectId);
+        List<UpdateEntity> result = findUpdatesByProject.getResultList();
+        int total = (int) findUpdatesByProject.getOutputParameterValue("Total");
+        return new PageUpdates(result, total);
     }
 }
