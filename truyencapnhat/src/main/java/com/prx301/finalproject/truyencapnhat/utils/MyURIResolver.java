@@ -14,11 +14,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MyURIResolver implements URIResolver {
-    protected static volatile boolean isStop = false;
-    protected static volatile boolean isPause = false;
+    protected boolean isStop = false;
+    protected boolean isPause = false;
     protected static final String EMPTY_HTML_CONTENT = "<html xmlns=\"http://www.w3.org/1999/xhtml\"></html>";
     private ConfigComp crawlerConfig = null;
     private final double PATTERN_INDENTICAL_MEAN = 0.8;
+
+    private TrAXUtils trAXUtils = new TrAXUtils();
     protected static final String DEFAULT_XML_DOCUMENT = "src/main/java/com/prx301/finalproject/truyencapnhat/xmlConfigs/default_xml.xml";
 
     public MyURIResolver() {
@@ -67,7 +69,7 @@ public class MyURIResolver implements URIResolver {
                 cleanedContent = processContent(cleanedContent);
 
                 InputStream testStream = new ByteArrayInputStream(cleanedContent.getBytes());
-                DOMResult testDOM = TrAXUtils.transform(new StreamSource(testStream), null, this);
+                DOMResult testDOM = trAXUtils.transform(new StreamSource(testStream), null, this);
 
                 //  Do Parsing Test the document beforehand
                 if (testDOM.getNode() != null) {

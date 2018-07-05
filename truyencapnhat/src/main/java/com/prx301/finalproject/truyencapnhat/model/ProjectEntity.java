@@ -246,6 +246,10 @@ public class ProjectEntity {
         this.updateVols = null;
     }
 
+    public void addUpdateVols(List<UpdateVolEntity> volEntities) {
+        this.updateVols = volEntities;
+    }
+
     public int countUpdate() {
         int total = 0;
         if (this.updateVols != null) {

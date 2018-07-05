@@ -8,8 +8,10 @@
 <head>
     <title>Truyện cập nhật</title>
     <link rel="stylesheet" type="text/css" href="../index.css">
+    <link rel="stylesheet" type="text/css" href="../animate.css">
     <script type="text/javascript" src="../js/utilities.js"></script>
     <script type="text/javascript" src="../js/button-event.js"></script>
+    <script type="text/javascript" src="../js/worker-script.js"></script>
 </head>
 
 <body>
@@ -17,14 +19,6 @@
     <div id="logo"></div>
     <div class="nav-item-center">
         <input class="search-bar" type="search" placeholder="Nhập tên truyện cần tìm">
-    </div>
-    <div class="nav-item-right">
-        <div class="signup focus">
-            <a href="#">Đăng ký</a>
-        </div>
-        <div class="login">
-            <a href="#">Đăng nhập</a>
-        </div>
     </div>
 </div>
 

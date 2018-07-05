@@ -19,7 +19,9 @@ removeClassFromClassGroup = function (kw, className) {
         }
     }
 };
+function XML2Obj(xmlString) {
 
+}
 function obj2XML(obj, name) {
     var xmlText = createStartTag(name);
     for (prop in obj) {

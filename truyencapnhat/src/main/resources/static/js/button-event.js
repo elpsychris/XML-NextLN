@@ -4,38 +4,79 @@ var isSigninWindow = false;
 var isProfileWindow = false;
 var isUserWindowFocus = false;
 var curToken = null;
+var lockCrawlAct = {};
 
 
-function onRunCrawler(e, name) {
+function onActCrawler(e, name) {
     if (e.className == null) {
-        e = e.target;
+        var target = e.target;
+        e = target.pE;
+        name = e.parentElement.id.replace("btn-set-","");
     }
+    var act = e.classList[e.classList.length - 1];
+    var errMsgId = "err-msg-" + name;
+    var showErr = function (msg) {
+        var errMsgE = document.getElementById(errMsgId);
+
+        errMsgE.className = "err-msg animated";
+        setTimeout(function () {
+            errMsgE.classList.add("shake");
+        }, 200);
+        if (errMsgE.childNodes.length > 0) {
+            errMsgE.childNodes[0].remove();
+        }
+        errMsgE.appendChild(document.createTextNode(msg));
+    };
+
+    if (lockCrawlAct[name]) {
+        showErr("Đang chờ phản hồi");
+        return;
+    }
+    lockCrawlAct[name] = true;
+
 
     var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = onRunCrawlerRequestStateChange(e);
+    if (act == "run") {
+        xhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                lockCrawlAct[name] = false;
+                var msg = this.responseText;
+                if (msg !== "") {
+                    showErr(msg);
+                } else {
+                    changeButtonSet(e);
+                }
+            }
+        };
 
-    if (e.classList.contains("run")) {
         xhttp.open("GET", "/crawl/run/" + name, true);
-        xhttp.send();
-    }
+    } else if (act == "stop") {
+        xhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                lockCrawlAct[name] = false;
+                var msg = this.responseText;
+                if (msg !== "") {
+                    showErr(msg);
+                } else {
+                    changeButtonSet(e, name);
+                }
+            }
+        };
 
+        xhttp.open("GET", "/crawl/stop/" + name, true);
+    }
+    xhttp.send();
 }
 
-function onRunCrawlerRequestStateChange(e) {
-    if (this.readyState == 4 && this.status == 200) {
-        console.log(this.responseText);
-        changeButtonSet(e);
-    }
-}
-
-function changeButtonSet(e) {
-    if (e.className.indexOf("run") != -1) {
+function changeButtonSet(e, name) {
+    if (e.classList.contains("run")) {
         var parent = e.parentElement;
-        var newBtn = document.createElement("div");
+        newBtn = document.createElement("div");
 
         newBtn.className = "action-btn stop";
         newBtn.appendChild(document.createTextNode("Stop"));
-        newBtn.addEventListener("click", onRunCrawler);
+        newBtn.addEventListener("click", onActCrawler);
+        newBtn.pE = newBtn;
 
         e.className = "action-btn pause";
         e.childNodes[0].remove();

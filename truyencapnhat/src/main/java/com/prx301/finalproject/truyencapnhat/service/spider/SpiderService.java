@@ -110,6 +110,7 @@ public class SpiderService {
             }
 
             CrawlerAgent crawlerAgent = new CrawlerAgent(configComp, projectRepo, updateRepo, volRepo);
+            this.runningCrawler.put(configComp.getName(), crawlerAgent);
             new Thread(crawlerAgent).start();
             return "";
         }

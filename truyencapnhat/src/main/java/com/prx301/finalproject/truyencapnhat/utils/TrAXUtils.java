@@ -9,10 +9,10 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class TrAXUtils {
-    private static TransformerFactory factory = TransformerFactory.newInstance();
+    private TransformerFactory factory = TransformerFactory.newInstance();
 
 
-    public static DOMResult transform(StreamSource from, StreamSource xsl, MyURIResolver uriResolver) throws IOException, InterruptedException {
+    public DOMResult transform(StreamSource from, StreamSource xsl, MyURIResolver uriResolver) throws IOException, InterruptedException {
         if (factory.getURIResolver() == null) {
             factory.setURIResolver(uriResolver);
         }

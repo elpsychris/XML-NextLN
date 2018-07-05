@@ -948,6 +948,16 @@ input[type=checkbox] {
     top: 20px
 }
 
+.crawler-config.paused:before {
+    content: "Paused";
+    background: #2b91c5;
+    color: white;
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 20px
+}
+
 .crawler-config li {
     list-style-type: none;
     margin-left: 20px;
@@ -1547,4 +1557,12 @@ ul.config:before {
 
 .error-warning:hover a {
     margin-right: 40px;
+}
+
+.err-msg {
+    font-size: 0.6em;
+    color: #8a2a2d;
+    top: 45px;
+    left: 20px;
+    position: absolute;
 }

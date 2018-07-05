@@ -92,13 +92,13 @@
                                         </volume-cover>
                                         <updates>
                                             <xsl:for-each
-                                                    select=".//tr">
+                                                    select=".//ul[@class='list-chapters']/li">
                                                 <update>
                                                     <chapter-name>
-                                                        <xsl:value-of select="normalize-space(./td[@class='col-12 col-9-m col-8-l col-9-xl']/a/text())"/>
+                                                        <xsl:value-of select="normalize-space(.//div[@class='chapter-name']/a/text())"/>
                                                     </chapter-name>
                                                     <chapter-date>
-                                                        <xsl:value-of select="normalize-space(./td[contains(@class,'chapter-time')])"/>
+                                                        <xsl:value-of select="normalize-space(.//div[contains(@class,'chapter-time')])"/>
                                                     </chapter-date>
                                                     <update-group>
                                                         <group-link>
@@ -119,7 +119,7 @@
                                                         </group-name>
                                                     </update-group>
                                                     <update-link>
-                                                        <xsl:value-of select="normalize-space(./td[@class='col-12 col-9-m col-8-l col-9-xl']/a/@href)"/>
+                                                        <xsl:value-of select="normalize-space(.//div[@class='chapter-name']/a/@href)"/>
                                                     </update-link>
                                                 </update>
                                             </xsl:for-each>

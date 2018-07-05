@@ -7,6 +7,7 @@ import com.prx301.finalproject.truyencapnhat.repository.VolRepo;
 import com.prx301.finalproject.truyencapnhat.service.spider.SpiderService;
 import com.prx301.finalproject.truyencapnhat.service.web.AccountService;
 import com.prx301.finalproject.truyencapnhat.utils.AdapterHelper;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpSession;
@@ -39,7 +40,7 @@ public class CrawlerActionController {
         return spiderService.startCrawling(crawlerName);
     }
 
-    @GetMapping(value = "/stop/{crawlerName}")
+    @GetMapping(value = "/stop/{crawlerName}", produces = MediaType.APPLICATION_XML_VALUE)
     public String stopCrawler(@PathVariable("crawlerName") String crawlerName, HttpSession session) {
         boolean isAuth = false;
         if (session != null) {
@@ -55,7 +56,7 @@ public class CrawlerActionController {
         return spiderService.stopCrawling(crawlerName);
     }
 
-    @GetMapping(value = "/report")
+    @GetMapping(value = "/report", produces = MediaType.APPLICATION_XML_VALUE)
     public String getCrawlerReport(HttpSession session) {
         boolean isAuth = false;
         if (session != null) {

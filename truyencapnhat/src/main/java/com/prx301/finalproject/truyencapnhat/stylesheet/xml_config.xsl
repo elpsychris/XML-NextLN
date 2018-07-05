@@ -9,9 +9,14 @@
     <xsl:template match="p:components">
         <xsl:for-each select="p:component">
             <div class="crawler-config card-2 inactive">
+                <xsl:attribute name="id">crawler-config-<xsl:value-of select="p:name"/></xsl:attribute>
                 <div class="crawler-info name">
                     <span>
                         <xsl:value-of select="p:name"/>
+                    </span>
+                    <span>
+                        <xsl:attribute name="class">err-msg animated</xsl:attribute>
+                        <xsl:attribute name="id">err-msg-<xsl:value-of select="p:name"/></xsl:attribute>
                     </span>
                 </div>
                 <ul class="crawler-info config">
@@ -43,9 +48,10 @@
                     </xsl:choose>
                 </ul>
                 <div class="crawler-action">
+                    <xsl:attribute name="id">btn-set-<xsl:value-of select="p:name"/></xsl:attribute>
                     <xsl:element name="div">
                         <xsl:attribute name="class">action-btn run</xsl:attribute>
-                        <xsl:attribute name="onclick">onRunCrawler(this,'<xsl:value-of select="p:name"/>')</xsl:attribute>
+                        <xsl:attribute name="onclick">onActCrawler(this,'<xsl:value-of select="p:name"/>')</xsl:attribute>
                         Run
                     </xsl:element>
                 </div>

@@ -25,7 +25,8 @@ import java.util.List;
 public class CrawlerAgent implements Runnable {
     public final static int RUNNING = 1;
     public final static int PAUSED = 0;
-    public final static int STOPPED = -1;
+    public final static int STOPPING = -1;
+    public final static int STOPPED = -2;
 
     private ConfigComp configComponent = null;
     private Logger logger = Logger.getLogger();
@@ -37,7 +38,9 @@ public class CrawlerAgent implements Runnable {
     private ProjectRepo projectRepo = null;
     private VolRepo volRepo = null;
 
-    private int agentStatus = STOPPED;
+    private TrAXUtils trAXUtils = new TrAXUtils();
+
+    private volatile int agentStatus = STOPPED;
 
     public CrawlerAgent(ConfigComp config, ProjectRepo projectRepo, UpdateRepo updateRepo, VolRepo volRepo) {
         this.configComponent = config;
@@ -50,6 +53,7 @@ public class CrawlerAgent implements Runnable {
     public void run() {
         if (configComponent != null) {
             configCrawler();
+            this.agentStatus = RUNNING;
             start(configComponent.getConfig(), configComponent.getStylesheet());
         }
     }
@@ -125,75 +129,85 @@ public class CrawlerAgent implements Runnable {
 
                             existProject = ComUtils.mergeObject(existProject, project);
                             existProject.hashCode();
+                            if (newVolUpdates != null && newVolUpdates.size() > 0) {
+                                List<UpdateVolEntity> existUpdateVol = volRepo.findByProject(existProject);
 
-                            List<UpdateVolEntity> existUpdateVol = volRepo.findByProject(existProject);
-
-                            if (existUpdateVol != null && newVolUpdates != null && newVolUpdates.size() > 0) {
-                                for (UpdateVolEntity newVolUpdate : newVolUpdates) {
-                                    boolean isExist = false;
-                                    for (UpdateVolEntity existVol : existUpdateVol) {
-                                        if (existVol.getVolHash().equals(newVolUpdate.getVolHash())) {
-                                            isExist = true;
-                                            break;
+                                if (existUpdateVol != null) {
+                                    for (UpdateVolEntity newVolUpdate : newVolUpdates) {
+                                        boolean isExist = false;
+                                        for (UpdateVolEntity existVol : existUpdateVol) {
+                                            if (existVol.getVolHash().equals(newVolUpdate.getVolHash())) {
+                                                isExist = true;
+                                                break;
+                                            }
                                         }
-                                    }
 
-                                    if (!isExist && newVolUpdate.getUpdateEntities() != null) {
-                                        UpdateVolEntity sameNameVol = null;
-                                        List<UpdateVolEntity> tVol = volRepo.findByProjectAndVolName(existProject, newVolUpdate.getVolName());
-                                        if (tVol != null && tVol.size() > 0) {
-                                            sameNameVol = tVol.get(0);
-                                        }
-                                        if (sameNameVol != null) {
-                                            List<UpdateEntity> sameNameUpdateList = updateRepo.getByUpdateVol(sameNameVol);
-                                            for (UpdateEntity newUpdate : newVolUpdate.getUpdateEntities()) {
-                                                boolean isUpdateExist = false;
-                                                if (sameNameUpdateList == null) {
-                                                    sameNameUpdateList = new ArrayList<>();
-                                                }
-                                                for (UpdateEntity sameNameUpdate : sameNameUpdateList) {
-                                                    if (sameNameUpdate.hashCode() == newUpdate.hashCode()) {
-                                                        isUpdateExist = true;
-                                                        break;
-                                                    } else if (sameNameUpdate.getUpdateName().equals(newUpdate.getUpdateName())
-                                                            && sameNameUpdate.getUpdateLink().equals(newUpdate.getUpdateLink())) {
-                                                        isUpdateExist = true;
-                                                        sameNameUpdate.setUpdateDate(newUpdate.getUpdateDate());
-                                                        sameNameUpdate.setUpdateGroup(newUpdate.getUpdateGroup());
-                                                        sameNameUpdate.hashCode();
-                                                        updateRepo.save(sameNameUpdate);
-                                                        Logger.getLogger().info("\t\t\t\tUpdate an update: " + sameNameUpdate.getUpdateName(), CrawlerAgent.class);
-                                                        break;
+                                        if (!isExist && newVolUpdate.getUpdateEntities() != null) {
+                                            UpdateVolEntity sameNameVol = null;
+                                            List<UpdateVolEntity> tVol = volRepo.findByProjectAndVolName(existProject, newVolUpdate.getVolName());
+                                            if (tVol != null && tVol.size() > 0) {
+                                                sameNameVol = tVol.get(0);
+                                            }
+                                            if (sameNameVol != null) {
+                                                List<UpdateEntity> sameNameUpdateList = updateRepo.getByUpdateVol(sameNameVol);
+                                                for (UpdateEntity newUpdate : newVolUpdate.getUpdateEntities()) {
+                                                    boolean isUpdateExist = false;
+                                                    if (sameNameUpdateList == null) {
+                                                        sameNameUpdateList = new ArrayList<>();
+                                                    }
+                                                    for (UpdateEntity sameNameUpdate : sameNameUpdateList) {
+                                                        if (sameNameUpdate.hashCode() == newUpdate.hashCode()) {
+                                                            isUpdateExist = true;
+                                                            break;
+                                                        } else if (sameNameUpdate.getUpdateName().equals(newUpdate.getUpdateName())
+                                                                && sameNameUpdate.getUpdateLink().equals(newUpdate.getUpdateLink())) {
+                                                            isUpdateExist = true;
+                                                            sameNameUpdate.setUpdateDate(newUpdate.getUpdateDate());
+                                                            sameNameUpdate.setUpdateGroup(newUpdate.getUpdateGroup());
+                                                            sameNameUpdate.hashCode();
+                                                            updateRepo.save(sameNameUpdate);
+                                                            Logger.getLogger().info("\t\t\t\tUpdate an update: " + sameNameUpdate.getUpdateName(), CrawlerAgent.class);
+                                                            break;
+                                                        }
+                                                    }
+
+                                                    if (!isUpdateExist) {
+                                                        isUpdate = true;
+
+                                                        newUpdate.setUpdateVol(sameNameVol);
+                                                        updateRepo.save(newUpdate);
+                                                        Logger.getLogger().info("\t\t\t\tAdd new update: " + newUpdate.getUpdateName(), CrawlerAgent.class);
+
+                                                        ProjectEntity projectEntity = sameNameVol.getProject();
+                                                        projectEntity.setProjectTotalUpdate(projectEntity.getProjectTotalUpdate() + 1);
+                                                        projectRepo.save(projectEntity);
                                                     }
                                                 }
+                                            } else {
+                                                isUpdate = true;
+                                                newVolUpdate.setProject(existProject);
+                                                volRepo.save(newVolUpdate);
+                                                Logger.getLogger().info("\t\t\tAdd new vol: " + newVolUpdate.getVolName(), CrawlerAgent.class);
 
-                                                if (!isUpdateExist) {
-                                                    isUpdate = true;
-
-                                                    newUpdate.setUpdateVol(sameNameVol);
-                                                    updateRepo.save(newUpdate);
-                                                    Logger.getLogger().info("\t\t\t\tAdd new update: " + newUpdate.getUpdateName(), CrawlerAgent.class);
-
-                                                    ProjectEntity projectEntity = sameNameVol.getProject();
-                                                    projectEntity.setProjectTotalUpdate(projectEntity.getProjectTotalUpdate() + 1);
-                                                    projectRepo.save(projectEntity);
+                                                int newTotal = 0;
+                                                if (newVolUpdate.getUpdateEntities() != null) {
+                                                    newTotal = newVolUpdate.getUpdateEntities().size();
                                                 }
+                                                existProject.setProjectTotalUpdate(existProject.getProjectTotalUpdate() + newTotal);
+                                                Logger.getLogger().info("\t\t\tTotal new updates: " + newTotal, CrawlerAgent.class);
+                                                projectRepo.save(existProject);
                                             }
-                                        } else {
-                                            isUpdate = true;
-                                            newVolUpdate.setProject(existProject);
-                                            volRepo.save(newVolUpdate);
-                                            Logger.getLogger().info("\t\t\tAdd new vol: " + newVolUpdate.getVolName(), CrawlerAgent.class);
-
-                                            int newTotal = 0;
-                                            if (newVolUpdate.getUpdateEntities() != null) {
-                                                newTotal = newVolUpdate.getUpdateEntities().size();
-                                            }
-                                            existProject.setProjectTotalUpdate(existProject.getProjectTotalUpdate() + newTotal);
-                                            Logger.getLogger().info("\t\t\tTotal new updates: " + newTotal, CrawlerAgent.class);
-                                            projectRepo.save(existProject);
                                         }
                                     }
+                                } else {
+                                    for (UpdateVolEntity volEntity : newVolUpdates) {
+                                        volEntity.setProject(existProject);
+                                        Logger.getLogger().info("\t\t\tAdd new vol to empty project: " + volEntity.getVolName(), CrawlerAgent.class);
+                                    }
+                                    existProject.addUpdateVols(newVolUpdates);
+                                    existProject.setProjectTotalUpdate(existProject.countUpdate());
+                                    projectRepo.save(existProject);
+                                    Logger.getLogger().info("\t\t\tTotal new updates: " + existProject.countUpdate(), CrawlerAgent.class);
                                 }
                             }
                         } catch (IllegalAccessException e) {
@@ -214,7 +228,7 @@ public class CrawlerAgent implements Runnable {
 
             }
 
-            if (projects.getNextList() != null) {
+            if (projects.getNextList() != null && agentStatus == RUNNING) {
                 start(configPath, xslPath, projects.getNextList());
             }
 
@@ -258,7 +272,7 @@ public class CrawlerAgent implements Runnable {
         }
         config = new StreamSource(new ByteArrayInputStream(this.curXmlConfig.getBytes()));
 
-        return TrAXUtils.transform(config, xsl, uriResolver);
+        return trAXUtils.transform(config, xsl, uriResolver);
     }
 
     private String replaceUrl(String newUrl, String oldXmlConfig) {
@@ -302,6 +316,7 @@ public class CrawlerAgent implements Runnable {
             logger.info("No attached URIResolver", CrawlerAgent.class);
             return;
         }
+        this.agentStatus = STOPPING;
         this.uriResolver.stop();
     }
 
@@ -310,8 +325,8 @@ public class CrawlerAgent implements Runnable {
             logger.info("No attached URIResolver", CrawlerAgent.class);
             return;
         }
-        this.uriResolver.pause();
         this.agentStatus = PAUSED;
+        this.uriResolver.pause();
     }
 
     public void resume() {
