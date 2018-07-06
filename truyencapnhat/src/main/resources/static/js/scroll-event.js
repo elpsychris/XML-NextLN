@@ -2,8 +2,12 @@ var scrollCount = 0;
 var latestScrollPos = 0;
 var doc = document.documentElement;
 var curPos = window.innerHeight;
+var lockScroll = false;
 
 window.addEventListener('scroll', function (e) {
+    if (lockScroll) {
+        return;
+    }
     var sideWindow = document.getElementById("side-window");
     var curScrollPos = window.pageYOffset;
     var navTopBar = document.getElementById("nav-top-bar");
@@ -31,8 +35,15 @@ window.addEventListener('scroll', function (e) {
         }
     } else {
         if (sideWindow != null) {
+            console.log("side hide");
             sideWindow.classList.remove("fadeInLeft");
             sideWindow.classList.add("fadeOutLeft");
+            this.setTimeout(function () {
+                if (sideWindow.classList.contains("fadeOutLeft")) {
+                    sideWindow.style.display = "none";
+                    sideWindow.classList.remove("fadeOutLeft");
+                }
+            }, 200);
         }
 
         if (navTopBar != null && windowE != null) {

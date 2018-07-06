@@ -77,6 +77,7 @@ public class ProjectEntity {
     private Integer projectTotalUpdate;
     @XmlElement(name = "link")
     private String projectLink;
+    private List<BookmarkEntity> bookmarkEntityList;
 
 
     @Id
@@ -248,6 +249,15 @@ public class ProjectEntity {
 
     public void addUpdateVols(List<UpdateVolEntity> volEntities) {
         this.updateVols = volEntities;
+    }
+
+    @OneToMany(cascade = CascadeType.MERGE, mappedBy = "projectEntity")
+    public List<BookmarkEntity> getBookmarkEntityList() {
+        return bookmarkEntityList;
+    }
+
+    public void setBookmarkEntityList(List<BookmarkEntity> bookmarkEntityList) {
+        this.bookmarkEntityList = bookmarkEntityList;
     }
 
     public int countUpdate() {

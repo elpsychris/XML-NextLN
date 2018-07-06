@@ -14,6 +14,7 @@
         <mapping class="com.prx301.finalproject.truyencapnhat.model.GenreEntity"/>
         <mapping class="com.prx301.finalproject.truyencapnhat.model.UpdateVolEntity"/>
         <mapping class="com.prx301.finalproject.truyencapnhat.model.UserEntity"/>
+        <mapping class="com.prx301.finalproject.truyencapnhat.model.BookmarkEntity"/>
 
 
         <!-- DB schema will be updated if needed -->

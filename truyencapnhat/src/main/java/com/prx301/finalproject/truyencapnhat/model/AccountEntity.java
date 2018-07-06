@@ -1,6 +1,7 @@
 package com.prx301.finalproject.truyencapnhat.model;
 
 import javax.persistence.*;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -9,6 +10,7 @@ public class AccountEntity  {
     private String username;
     private String password;
     private Boolean isAdmin = false;
+    private List<BookmarkEntity> bookmarkEntityList;
 
     @Id
     @Column(name = "username")
@@ -38,6 +40,15 @@ public class AccountEntity  {
 
     public void setAdmin(Boolean admin) {
         isAdmin = admin;
+    }
+
+    @OneToMany(cascade = CascadeType.MERGE, mappedBy = "projectEntity")
+    public List<BookmarkEntity> getBookmarkEntityList() {
+        return bookmarkEntityList;
+    }
+
+    public void setBookmarkEntityList(List<BookmarkEntity> bookmarkEntityList) {
+        this.bookmarkEntityList = bookmarkEntityList;
     }
 
     @Override

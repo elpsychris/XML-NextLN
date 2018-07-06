@@ -79,4 +79,9 @@ public class AccountService {
 
         return new AuthTicket();
     }
+
+    public AccountEntity getAccount(String token) {
+        LoginRequest loginRequest = tokenMap.get(token);
+        return accountRepo.findByUsername(loginRequest.getUsername());
+    }
 }

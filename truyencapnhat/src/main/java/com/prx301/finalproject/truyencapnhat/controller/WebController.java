@@ -74,9 +74,12 @@ public class WebController {
 //        ProjectEntity projectEntity = projectService.getProjectById(id);
         String xml = updateService.getProjectDetail(id);
         String xsl = ComUtils.getStreamFromFile("project_detail.xsl");
+        String xslChap = ComUtils.getStreamFromFile("tabl_chap.xsl");
 
         model.addAttribute("sXML", xml);
+        model.addAttribute("sXSLChap", xslChap);
         model.addAttribute("sXSL", xsl);
+        model.addAttribute("projectId", id);
 
         return "project";
     }

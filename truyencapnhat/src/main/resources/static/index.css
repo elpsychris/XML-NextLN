@@ -19,7 +19,7 @@ body {
     margin: 0;
     position: relative;
     width: 100%;
-    min-height: 100%;
+    min-height: 130%;
 }
 
 a {
@@ -598,6 +598,7 @@ a {
     display: flex;
     background: white;
     padding-left: 15px;
+    z-index: 30;
 }
 
 .project-nav .project-nav-item {
@@ -673,6 +674,12 @@ a {
 
 .tab .tab-content:not(.show) {
     display: none;
+}
+
+.tab-content {
+    position: relative;
+    transition: all ease .3s;
+    padding-bottom: 100px;
 }
 
 .search-info {
@@ -895,6 +902,7 @@ input[type=checkbox] {
     left: 0;
     background: white;
     z-index: 100;
+    overflow: hidden;
 }
 
 .config-list {
@@ -1494,7 +1502,6 @@ ul.config:before {
     }
 }
 
-
 .error-page {
     width: 100%;
     height: 100%;
@@ -1533,6 +1540,7 @@ ul.config:before {
     color: #f7f256;
     display: block;
 }
+
 .error-page span:nth-child(2) {
     font-family: "Lalezar";
     font-size: 2em;
@@ -1568,16 +1576,15 @@ ul.config:before {
     position: absolute;
 }
 
-
 .pagination {
     position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 200px;
+    width: 200px !important;
     padding: 10px;
     right: 0;
-    bottom: 0;
+    bottom: -20px;
     box-sizing: border-box;
 }
 
@@ -1604,4 +1611,39 @@ ul.config:before {
 .pagination a.cur {
     background: #5DB0F4;
     color: white;
+}
+
+/*SCROLL BAR*/
+.custom-scroll {
+    position: absolute;
+    width: 15px;
+    height: 100%;
+    right: 0;
+    top: 0;
+}
+
+.custom-scroll.focus {
+    background: rgba(0, 0, 0, .02);
+}
+
+.custom-scroll div {
+    background: #9da8b9;
+    height: 30px;
+    width: 100%;
+    position: relative;
+    top: 0px;
+    transition: all ease .3s;
+    opacity: 0;
+}
+
+#side-window:hover .custom-scroll div{
+    opacity: 1;
+}
+
+#total {
+    display: none;
+}
+
+#xsl {
+    display: none;
 }
