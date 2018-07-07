@@ -43,6 +43,7 @@ function onLoadCache(num, isShow) {
                     if (this.status == 200 && this.readyState == 4) {
                         console.log("add " + number);
                         var doc = parserDOM.parseFromString(this.responseText, "application/xml");
+                        getProjectObject(doc);
                         cacheDoc[number] = doc;
 
                         if (isShow) {

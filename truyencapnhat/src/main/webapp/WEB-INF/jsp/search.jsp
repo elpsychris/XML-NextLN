@@ -35,7 +35,7 @@
                     <input type="password" id="login-password" name="password" placeholder="Mật khẩu"/>
                 </div>
                 <div class="btn-action" onclick="onLoginRequestSubmit(this)">Đăng nhập</div>
-                <span class="onclick-span" onclick="openSignupProject(this)">Chưa có tài khoản?</span>
+                <span>Chưa có tài khoản?</span>
             </div>
             <div id="signup-panel" class="signup-content animated">
                 <div class="login-text">
@@ -54,7 +54,7 @@
                     <input type="password" id="signup-confirm" placeholder="Xác nhận mật khẩu" pattern="[\w]{0,30}"/>
                 </div>
                 <div class="btn-action" onclick="onSignupRequestSubmit(this)">Đăng ký</div>
-                <span class="onclick-span" onclick="openLoginProject(this)">Tôi đã có tài khoản!</span>
+                <span>Tôi đã có tài khoản!</span>
             </div>
         </c:when>
         <c:otherwise>
@@ -149,30 +149,59 @@
         </c:choose>
     </div>
 </div>
-
-<div class="banner">
-
+<div class="bread-crumb">
+    <a href="/" class="main">Trang chủ</a>
+    <a>Tìm kiếm</a>
 </div>
-<div class="main-content">
+
+<div class="search-info card-2">
+    <div class="search-info-header">Tìm kiếm nâng cao</div>
+
+    <div class="search-section genre">
+        <div class="section-name">Thể loại</div>
+        <c:forEach var="genre" items="${genres}">
+            <div class="section-item container">
+                <input type="checkbox"/>
+                <span class="cus-checkbox"></span>
+                <span>${genre.genreId}</span>
+            </div>
+        </c:forEach>
+    </div>
+
+    <div class="search-section update-number">
+        <div class="section-name">Lượt cập nhật</div>
+        <input class="update-number" type="number" placeholder="Lớn hơn (lượt)"/>
+    </div>
+
+    <div class="search-section update-frequency">
+        <div class="section-name">Độ thường xuyên</div>
+        <input class="update-frequency" type="number" placeholder="Lớn hơn (lần/tuần)"/>
+    </div>
+</div>
+
+<div class="search-result">
     <div class="card-panel-horz">
-        <div class="panel-header">Mới nhất</div>
-        <div class="panel-content" id="latest-table">
-            <x:transform doc="${updateList}" xslt="${style}"/>
-            <script>
-                renderPagination("latest-table", 1, 25, 5)
-            </script>
+        <div class="panel-header">Kết quả: <span id="total-result"></span></div>
+        <div class="panel-content table" id="result-table">
+            <div class="headers" id="result-header">
+                <div class="header">
+                    Tên
+                </div>
+                <div class="header">
+                    Tác giả
+                </div>
+                <div class="header">
+                    Cập nhật lần cuối
+                </div>
+                <div class="header">
+                    Lượt view
+                </div>
+            </div>
+            <span id="no-result" style="display: none">Không tìm thấy kết quả nào</span>
         </div>
     </div>
-    <div class="card-panel-horz">
-        <div class="panel-header">Hot nhất</div>
-        <div class="panel-content" id="mostview-table">
-            <x:transform doc="${projectList}" xslt="${mostViewStyle}"/>
-            <script>
-                renderPagination("mostview-table", 1, 25, 5, "mostview-table")
-            </script>
-        </div>
-    </div>
 </div>
+
 <span id="xsl" class="xsl"><c:out value="${style}"/></span>
 <span id="project-xsl" class="xsl"><c:out value="${mostViewStyle}"/></span>
 <script type="text/javascript" src="./js/project-transform.js"></script>

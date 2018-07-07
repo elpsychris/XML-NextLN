@@ -20,7 +20,14 @@
             <div class="project-info">
                 <div class="synopsis">
                     <span>
-                        <xsl:value-of select="//p:synopsis"/>
+                        <xsl:choose>
+                            <xsl:when test="string-length(//p:synopsis) > 400">
+                                <xsl:value-of select="concat(substring(normalize-space(//p:synopsis),0, 400), '...')"/>
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <xsl:value-of select="normalize-space(//p:synopsis)"/>
+                            </xsl:otherwise>
+                        </xsl:choose>
                     </span>
                 </div>
                 <div class="project-info-item card-3">
@@ -82,7 +89,7 @@
                                 </xsl:otherwise>
                             </xsl:choose>
                         </div>
-                        <div class="alter-name">
+                        <div class="alter-name" id="alter">
                             <xsl:choose>
                                 <xsl:when test=".//p:project/p:alter-name">
                                     <xsl:value-of select="//p:project/p:alter-name"/>
@@ -91,8 +98,9 @@
                                     Đang cập nhật
                                 </xsl:otherwise>
                             </xsl:choose>
-                            <ul>Re:Zero - Restarting Life from Zero in Another World</ul>
-                            <ul>Re：ゼロから始める異世界生活</ul>
+                            <script>
+                                renderAlter();
+                            </script>
                         </div>
                     </div>
                 </div>

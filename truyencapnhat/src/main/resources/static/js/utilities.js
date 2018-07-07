@@ -19,16 +19,44 @@ removeClassFromClassGroup = function (kw, className) {
         }
     }
 };
+
 function XML2Obj(xmlString) {
 
 }
-function obj2XML(obj, name, ns) {
-    var xmlText = createStartTag(name, ns, true);
+
+function obj2XML(obj, name, ns, isFirst) {
+    if (isFirst == null) {
+        isFirst = true;
+    }
+    var xmlText = createStartTag(name, ns, isFirst);
     for (prop in obj) {
-        xmlText += createStartTag(prop, ns, false) + obj[prop] + createEndTag(prop, ns);
+        var childContent = obj[prop];
+
+        if (checkObjHasProp(obj[prop])) {
+            childContent = obj2XML(obj[prop], name, ns, false);
+        }
+        xmlText += createStartTag(prop, ns, false) + childContent + createEndTag(prop, ns);
     }
     xmlText += createEndTag(name, ns);
     return xmlText;
+}
+
+function arr2XML(obj, name, ns) {
+    var isNeedPrefix = false;
+    if (ns != null) {
+        isNeedPrefix = true;
+    }
+    var wrapperName = name + "s";
+    var xmlText = createStartTag(wrapperName, ns, isNeedPrefix);
+    for (prop in obj) {
+        xmlText += obj2XML(obj[prop], name, ns, false);
+    }
+    xmlText += createEndTag(wrapperName, ns);
+    return xmlText;
+}
+
+function checkObjHasProp(obj) {
+    return typeof obj !== "string";
 }
 
 function createEndTag(tagName, ns) {
@@ -42,7 +70,7 @@ function createEndTag(tagName, ns) {
 function createStartTag(tagName, ns, isFirst) {
     var prefix = "p";
     var nsDeclare = "";
-    if (ns != null){
+    if (ns != null) {
         tagName = prefix + ":" + tagName;
         if (isFirst) {
             nsDeclare = nsDeclare + " xmlns:p='" + ns + "'"
@@ -65,7 +93,7 @@ function renderPagination(e, pageNo, total, size, subId) {
         paginationE.classList.add("pagination");
         var startNo = 0;
         var endNo = 0;
-        var maxNo = Math.ceil(total/size, 10);
+        var maxNo = Math.ceil(total / size, 10);
         if (pageNo > 1) {
             paginationE.classList.add("hasPrev");
             startNo = pageNo - 1;
@@ -85,10 +113,10 @@ function renderPagination(e, pageNo, total, size, subId) {
         for (var i = startNo; i <= endNo; i++) {
             var pageLink = document.createElement("a");
             pageLink.appendChild(document.createTextNode(i));
-            (function() {
+            (function () {
                 var num = i;
                 if (num != pageNo) {
-                    pageLink.addEventListener("click", function() {
+                    pageLink.addEventListener("click", function () {
                         showCache(parseInt(num), subId);
                         renderPagination(e, parseInt(num), total, size, subId);
                     });
@@ -108,10 +136,25 @@ function renderPagination(e, pageNo, total, size, subId) {
                 endNo = endNo + 1;
             }
 
-            for (var i = endNo - 3; i <= endNo; i++) {
+            for (var i = startNo; i <= endNo; i++) {
                 tobeload.push(i);
             }
             onLoadCache(tobeload, false, subId);
         }, 1000)
+    }
+}
+
+function renderAlter() {
+    var alterE = document.getElementById("alter");
+    var raw = alterE.textContent;
+    var names = raw.split(";");
+
+    alterE.innerHTML = "";
+    for (var i = 0; i < names.length; i++) {
+        if (names[i].trim().length > 0) {
+            var newU = document.createElement("ul");
+            newU.appendChild(document.createTextNode(names[i].trim()));
+            alterE.appendChild(newU);
+        }
     }
 }

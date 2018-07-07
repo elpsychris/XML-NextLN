@@ -83,6 +83,10 @@ function onLoadCache(num, isShow, subId) {
                         var doc = parserDOM.parseFromString(this.responseText, "application/xml");
                         targetCache[number] = doc;
 
+                        if (subId != null) {
+                            getProjectObject(doc);
+                        }
+
                         if (isShow) {
                             var target = chapterTable;
                             if (subTable != null) {

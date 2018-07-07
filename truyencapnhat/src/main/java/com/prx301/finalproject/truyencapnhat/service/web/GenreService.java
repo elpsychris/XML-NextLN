@@ -11,6 +11,7 @@ import java.util.List;
 @Service
 public class GenreService {
     private GenreRepo genreRepository;
+    private List<GenreEntity> genreEntities;
 
     public GenreService(GenreRepo genreRepository) {
         this.genreRepository = genreRepository;
@@ -18,5 +19,14 @@ public class GenreService {
 
     public boolean findExist(GenreEntity genreEntity) {
         return genreRepository.findFirstByGenreId(genreEntity.getGenreId()) != null;
+    }
+
+    public List<GenreEntity> getAllGenres() {
+        if (genreEntities != null) {
+            return genreEntities;
+        }
+
+        genreEntities = genreRepository.findAll();
+        return genreEntities;
     }
 }

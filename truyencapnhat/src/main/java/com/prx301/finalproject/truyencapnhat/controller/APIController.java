@@ -1,9 +1,6 @@
 package com.prx301.finalproject.truyencapnhat.controller;
 
-import com.prx301.finalproject.truyencapnhat.model.AccountEntity;
-import com.prx301.finalproject.truyencapnhat.model.LatestUpdates;
-import com.prx301.finalproject.truyencapnhat.model.MostViewProjects;
-import com.prx301.finalproject.truyencapnhat.model.PageUpdates;
+import com.prx301.finalproject.truyencapnhat.model.*;
 import com.prx301.finalproject.truyencapnhat.model.web.model.AuthTicket;
 import com.prx301.finalproject.truyencapnhat.model.web.model.LoginRequest;
 import com.prx301.finalproject.truyencapnhat.service.web.AccountService;
@@ -63,6 +60,16 @@ public class APIController {
     @RequestMapping(value = "/projects/mostview/{page-no}", method = RequestMethod.GET, produces = MediaType.APPLICATION_XML_VALUE)
     public MostViewProjects getMostView(@PathVariable("page-no") int pageNo) {
         return projectService.getMostViewProjectEntities(pageNo);
+    }
+
+    @RequestMapping(value = "/projects/search/{keyword}", method = RequestMethod.GET, produces = MediaType.APPLICATION_XML_VALUE)
+    public SearchProjects getMostView(@PathVariable("keyword") String keyword) {
+        return projectService.searchProjectLikeName(keyword);
+    }
+
+    @RequestMapping(value = "/projects/search/{keyword}/{page-no}", method = RequestMethod.GET, produces = MediaType.APPLICATION_XML_VALUE)
+    public SearchProjects getMostView(@PathVariable("keyword") String keyword, @PathVariable("page-no") int pageNo) {
+        return projectService.searchProjectLikeName(keyword, pageNo);
     }
 
     @RequestMapping(value = "/bookmark/{project-id}", method = RequestMethod.POST)

@@ -11,7 +11,7 @@ function onActCrawler(e, name) {
     if (e.className == null) {
         var target = e.target;
         e = target.pE;
-        name = e.parentElement.id.replace("btn-set-","");
+        name = e.parentElement.id.replace("btn-set-", "");
     }
     var act = e.classList[e.classList.length - 1];
     var errMsgId = "err-msg-" + name;
@@ -99,6 +99,20 @@ function changeButtonSet(e, name) {
     }
 }
 
+function openLoginProject(e) {
+    isUserWindowOn = true;
+    isSigninWindow = true;
+
+    showUserWindow("login");
+}
+
+
+function openSignupProject(e) {
+    isUserWindowOn = true;
+    isSigninWindow = true;
+
+    showUserWindow('signup');
+}
 
 function openSignup(e) {
     e.className = "signup focus";
@@ -212,49 +226,85 @@ function showUserWindow(action) {
 
 if (document.getElementById('user-window') != null) {
     window.addEventListener('click', function (e) {
-        var signUpBtn = document.getElementById('signupBtn');
-        var loginBtn = document.getElementById('loginBtn');
-        var profileBtn = document.getElementById('profileBtn');
+            var signUpBtn = document.getElementById('signupBtn');
+            var loginBtn = document.getElementById('loginBtn');
+            var profileBtn = document.getElementById('profileBtn');
+            var burgerBtn = document.getElementById('burgerBtn');
 
-        var signupPanel = document.getElementById("signup-panel");
-        var loginPanel = document.getElementById("login-panel");
-        var profilePanel = document.getElementById("profile-panel");
+            var signupPanel = document.getElementById("signup-panel");
+            var loginPanel = document.getElementById("login-panel");
+            var profilePanel = document.getElementById("profile-panel");
 
+            if (burgerBtn != null) {
+                if (document.getElementById('user-window').contains(e.target) ||
+                    (burgerBtn != null && burgerBtn.contains(e.target))) {
 
-        if (document.getElementById('user-window').contains(e.target) ||
-            (signUpBtn != null && signUpBtn.contains(e.target)) ||
-            (loginBtn != null && loginBtn.contains(e.target)) ||
-            (profileBtn != null && profileBtn.contains(e.target))) {
+                    isUserWindowFocus = true;
+                } else {
+                    if (isUserWindowOn && isUserWindowFocus) {
+                        isUserWindowOn = false;
+                        isUserWindowFocus = false;
+                        isSigninWindow = false;
+                        isSignupWindow = false;
+                        isProfileWindow = false;
 
-            isUserWindowFocus = true;
-        } else {
-            if (isUserWindowOn && isUserWindowFocus) {
-                isUserWindowOn = false;
-                isUserWindowFocus = false;
-                isSigninWindow = false;
-                isSignupWindow = false;
-                isProfileWindow = false;
-
-                var userWindowE = document.getElementById('user-window');
-                userWindowE.classList.remove("fadeInRight");
-                userWindowE.classList.add("fadeOutRight");
-                this.setTimeout(function () {
-                    if (!isUserWindowOn) {
-                        userWindowE.style.display = "none";
-                        if (signupPanel != null) {
-                            signupPanel.style.display = "none";
-                        }
-                        if (loginPanel != null) {
-                            loginPanel.style.display = "none";
-                        }
-                        if (profilePanel != null) {
-                            profilePanel.style.display = "none";
-                        }
+                        var userWindowE = document.getElementById('user-window');
+                        userWindowE.classList.remove("fadeInRight");
+                        userWindowE.classList.add("fadeOutRight");
+                        this.setTimeout(function () {
+                            if (!isUserWindowOn) {
+                                userWindowE.style.display = "none";
+                                if (signupPanel != null) {
+                                    signupPanel.style.display = "none";
+                                }
+                                if (loginPanel != null) {
+                                    loginPanel.style.display = "none";
+                                }
+                                if (profilePanel != null) {
+                                    profilePanel.style.display = "none";
+                                }
+                            }
+                        }, 600);
                     }
-                }, 600);
+                }
+            } else {
+                if (document.getElementById('user-window').contains(e.target) ||
+                    (signUpBtn != null && signUpBtn.contains(e.target)) ||
+                    (loginBtn != null && loginBtn.contains(e.target)) ||
+                    (profileBtn != null && profileBtn.contains(e.target))) {
+
+                    isUserWindowFocus = true;
+                } else {
+                    if (isUserWindowOn && isUserWindowFocus) {
+                        isUserWindowOn = false;
+                        isUserWindowFocus = false;
+                        isSigninWindow = false;
+                        isSignupWindow = false;
+                        isProfileWindow = false;
+
+                        var userWindowE = document.getElementById('user-window');
+                        userWindowE.classList.remove("fadeInRight");
+                        userWindowE.classList.add("fadeOutRight");
+                        this.setTimeout(function () {
+                            if (!isUserWindowOn) {
+                                userWindowE.style.display = "none";
+                                if (signupPanel != null) {
+                                    signupPanel.style.display = "none";
+                                }
+                                if (loginPanel != null) {
+                                    loginPanel.style.display = "none";
+                                }
+                                if (profilePanel != null) {
+                                    profilePanel.style.display = "none";
+                                }
+                            }
+                        }, 600);
+                    }
+                } // end if burgerBtn
             }
+
         }
-    });
+    );
 }
 
 
@@ -263,6 +313,7 @@ var reloadIndex = function () {
         document.body.innerHTML = this.responseText;
     }
 };
+
 function onSignupRequestSubmit(e) {
 
     var username = document.getElementById("signup-username").value;
@@ -295,7 +346,7 @@ function onSignupRequestSubmit(e) {
         }
     };
     xhr.open("POST", "/api/signup");
-    xhr.setRequestHeader("Content-Type","application/xml");
+    xhr.setRequestHeader("Content-Type", "application/xml");
     xhr.send(xmlText);
 }
 
@@ -360,4 +411,3 @@ function showLoginResponseMessage(msg) {
         msgBox.classList.add("shake");
     }, 300);
 }
-

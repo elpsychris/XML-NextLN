@@ -68,7 +68,7 @@ public class SpiderService {
     }
 
     public String getXslConfigMenu() {
-        return ComUtils.getStreamFromFile("xml_config.xsl");
+        return ComUtils.getResourceXSL("xml_config.xsl");
     }
 
     public String getConfigMenu() {

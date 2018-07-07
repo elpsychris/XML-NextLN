@@ -27,6 +27,8 @@ public class ComUtils {
     private final static SimpleDateFormat dateFormatter = new SimpleDateFormat("ddMMyyyy");
     private final static Logger logger = Logger.getLogger();
 
+    private static Map<String, String> cacheMap = new HashMap<>();
+
 
     public static String getCurrentTimeString() {
         return timeFormatter.format(Calendar.getInstance().getTime());
@@ -284,7 +286,15 @@ public class ComUtils {
         return crawlerConfig;
     }
 
-    public static String getStreamFromFile(String fileName) {
+    public static String getResourceXSL(String resourceName) {
+        String content = cacheMap.get(resourceName);
+        if (content == null) {
+            content = getStreamFromFile(resourceName);
+        }
+        return content;
+    }
+
+    private static String getStreamFromFile(String fileName) {
         File file = new File(DEFAULT_STYLESHEET_DIR + "/" + fileName);
         InputStream fis = null;
         BufferedReader reader = null;

@@ -35,6 +35,18 @@ import java.util.Set;
 })
 @Entity
 @Table(name = "Project", schema = "dbo", catalog = "NU_DB")
+@NamedStoredProcedureQueries({
+        @NamedStoredProcedureQuery(
+                name = "search_projects",
+                procedureName = "UpdateChap_SEARCH_PROJECT",
+                parameters = {
+                        @StoredProcedureParameter(mode = ParameterMode.IN, name = "PageNumber", type = Integer.class),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, name = "PageSize", type = Integer.class),
+                        @StoredProcedureParameter(mode = ParameterMode.IN, name = "Keyword", type = String.class),
+                        @StoredProcedureParameter(mode = ParameterMode.OUT, name = "Total", type = Integer.class)
+                },
+                resultClasses = ProjectEntity.class)
+})
 public class ProjectEntity {
     @XmlElement(name = "id")
     private int projectId;
@@ -73,6 +85,7 @@ public class ProjectEntity {
     private List<UpdateVolEntity> updateVols;
 
     @XmlElement(name = "last_update")
+    @XmlJavaTypeAdapter(SqlTimeStampAdapter.class)
     private Timestamp projectLastUpdate = new Timestamp(Calendar.getInstance().getTime().getTime());
     @XmlElement(name = "total_update")
     private Integer projectTotalUpdate;
