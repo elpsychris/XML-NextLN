@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
           integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
           crossorigin="anonymous">
-
+    <script type="text/javascript" src="./js/utilities.js"></script>
 </head>
 
 <body>
@@ -43,16 +43,17 @@
                     <i class="fas fa-plus-circle"></i>
                     <span>Đăng ký</span>
                 </div>
+                <div id="signup-msg" class="message-box animated"></div>
                 <div class="info username">
-                    <input type="text" placeholder="Tài khoản"/>
+                    <input type="text" id="signup-username" placeholder="Tài khoản" pattern="[A-Za-z0-9]{0,30}"/>
                 </div>
                 <div class="info password">
-                    <input type="password" placeholder="Mật khẩu"/>
+                    <input type="password" id="signup-password" placeholder="Mật khẩu" pattern="[\w]{0,30}"/>
                 </div>
                 <div class="info confirm">
-                    <input type="password" placeholder="Xác nhận mật khẩu"/>
+                    <input type="password" id="signup-confirm" placeholder="Xác nhận mật khẩu" pattern="[\w]{0,30}"/>
                 </div>
-                <div class="btn-action">Đăng ký</div>
+                <div class="btn-action" onclick="onSignupRequestSubmit(this)">Đăng ký</div>
                 <span>Tôi đã có tài khoản!</span>
             </div>
         </c:when>
@@ -122,10 +123,11 @@
         </c:otherwise>
     </c:choose>
 </div>
-<div  id="nav-top-bar" class="nav-bar card-2 animated">
+<div id="nav-top-bar" class="nav-bar card-2 animated">
     <div id="logo"></div>
     <div class="nav-item-center">
-        <input class="search-bar" type="search" placeholder="Nhập tên truyện cần tìm" oninput="onSearchBarTyping(this)" onfocus="onSearchBarFocus(this)">
+        <input class="search-bar" type="search" placeholder="Nhập tên truyện cần tìm" oninput="onSearchBarTyping(this)"
+               onfocus="onSearchBarFocus(this)">
         <ul class="dropdown card-2">
             <li>Tìm kiếm chi tiết</li>
         </ul>
@@ -153,12 +155,31 @@
 
 </div>
 <div class="main-content">
-    <x:transform doc="${updateList}" xslt="${style}"/>
+    <div class="card-panel-horz">
+        <div class="panel-header">Mới nhất</div>
+        <div class="panel-content" id="latest-table">
+            <x:transform doc="${updateList}" xslt="${style}"/>
+            <script>
+                renderPagination("latest-table", 1, 25, 5)
+            </script>
+        </div>
+    </div>
+    <div class="card-panel-horz">
+        <div class="panel-header">Hot nhất</div>
+        <div class="panel-content" id="mostview-table">
+            <x:transform doc="${projectList}" xslt="${mostViewStyle}"/>
+            <script>
+                renderPagination("mostview-table", 1, 25, 5, "mostview-table")
+            </script>
+        </div>
+    </div>
 </div>
-<script type="text/javascript" src="./js/utilities.js"></script>
+<span id="xsl" class="xsl"><c:out value="${style}"/></span>
+<span id="project-xsl" class="xsl"><c:out value="${mostViewStyle}"/></span>
 <script type="text/javascript" src="./js/button-event.js"></script>
 <script type="text/javascript" src="./js/scroll-event.js"></script>
 <script type="text/javascript" src="./js/search-event.js"></script>
+<script type="text/javascript" src="./js/load-index-event.js"></script>
 
 </body>
 

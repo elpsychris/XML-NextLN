@@ -263,6 +263,41 @@ var reloadIndex = function () {
         document.body.innerHTML = this.responseText;
     }
 };
+function onSignupRequestSubmit(e) {
+
+    var username = document.getElementById("signup-username").value;
+    var rg = /^[a-zA-Z0-9]{1,30}$/i;
+    if (!rg.test(username)) {
+        showSignupResponseMessage("Tên tài khoản không hợp lệ!");
+        return;
+    }
+    var password = document.getElementById("signup-password").value;
+    var confirm = document.getElementById("signup-confirm").value;
+    if (password !== confirm) {
+        showSignupResponseMessage("Mật khẩu xác nhận không khớp!");
+        return;
+    }
+
+    var signupReq = {
+        "username": username,
+        "password": password
+    };
+    var xmlText = obj2XML(signupReq, "account", "http://t3.com/2018/project-page");
+
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function (ev) {
+        if (this.readyState == 4 && this.status == 200) {
+            if (this.responseText == "true") {
+                showSignupResponseMessage("Đăng ký thành công");
+            } else {
+                showSignupResponseMessage("Tài khoản đã tồn tại");
+            }
+        }
+    };
+    xhr.open("POST", "/api/signup");
+    xhr.setRequestHeader("Content-Type","application/xml");
+    xhr.send(xmlText);
+}
 
 function onLoginRequestSubmit(e) {
     var username = document.getElementById("login-username");
@@ -301,6 +336,15 @@ function onLoginRequestSubmit(e) {
     xhr.open("POST", "/api/login", true);
     xhr.setRequestHeader("Content-Type", "application/xml");
     xhr.send(xmlText);
+}
+
+function showSignupResponseMessage(msg) {
+    var msgBox = document.getElementById("signup-msg");
+    msgBox.className = "message-box animated";
+    if (msgBox.childNodes.length > 0) {
+        msgBox.childNodes[0].remove();
+    }
+    msgBox.appendChild(document.createTextNode(msg));
 }
 
 function showLoginResponseMessage(msg) {

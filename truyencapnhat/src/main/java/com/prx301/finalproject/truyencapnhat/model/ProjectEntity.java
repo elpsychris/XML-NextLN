@@ -30,7 +30,8 @@ import java.util.Set;
         "updateVols",
         "projectLastUpdate",
         "projectTotalUpdate",
-        "projectLink"
+        "projectLink",
+        "bookmarkEntityList"
 })
 @Entity
 @Table(name = "Project", schema = "dbo", catalog = "NU_DB")

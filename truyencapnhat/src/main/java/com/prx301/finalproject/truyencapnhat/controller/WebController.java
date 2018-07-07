@@ -27,7 +27,9 @@ public class WebController {
     @GetMapping(value = "/")
     public String getIndexPage(ModelMap model, HttpSession session) {
         String latestUpdateList = updateService.getLatestUpdatesByXML();
+        String mostViewList = projectService.getMostViewByXML();
         String xsl = ComUtils.getStreamFromFile("latest_item.xsl");
+        String mostviewXsl = ComUtils.getStreamFromFile("most_view.xsl");
 
         AuthTicket ticket = null;
         if (ticket == null) {
@@ -37,10 +39,12 @@ public class WebController {
 
         int role = accountService.checkRole(ticket);
         boolean isAdmin = role == AccountService.LOGIN_AS_ADMIN;
-        boolean isUser = role > 0;
+        boolean isUser = role >= 0;
 
         model.addAttribute("updateList", latestUpdateList);
+        model.addAttribute("projectList", mostViewList);
         model.addAttribute("style", xsl);
+        model.addAttribute("mostViewStyle", mostviewXsl);
         model.addAttribute("isAdmin", isAdmin);
         model.addAttribute("isUser", isUser);
 
@@ -58,7 +62,7 @@ public class WebController {
 
         int role = accountService.checkRole(ticket);
         boolean isAdmin = role == AccountService.LOGIN_AS_ADMIN;
-        boolean isUser = role > 0;
+        boolean isUser = role >= 0;
 
 
         model.addAttribute("updateList", latestUpdateList);

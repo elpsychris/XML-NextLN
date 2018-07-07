@@ -22,24 +22,36 @@ removeClassFromClassGroup = function (kw, className) {
 function XML2Obj(xmlString) {
 
 }
-function obj2XML(obj, name) {
-    var xmlText = createStartTag(name);
+function obj2XML(obj, name, ns) {
+    var xmlText = createStartTag(name, ns, true);
     for (prop in obj) {
-        xmlText += createStartTag(prop) + obj[prop] + createEndTag(prop);
+        xmlText += createStartTag(prop, ns, false) + obj[prop] + createEndTag(prop, ns);
     }
-    xmlText += createEndTag(name);
+    xmlText += createEndTag(name, ns);
     return xmlText;
 }
 
-function createEndTag(tagName) {
+function createEndTag(tagName, ns) {
+    var prefix = "p";
+    if (ns != null) {
+        tagName = prefix + ":" + tagName;
+    }
     return "</" + tagName + ">";
 }
 
-function createStartTag(tagName) {
-    return "<" + tagName + ">";
+function createStartTag(tagName, ns, isFirst) {
+    var prefix = "p";
+    var nsDeclare = "";
+    if (ns != null){
+        tagName = prefix + ":" + tagName;
+        if (isFirst) {
+            nsDeclare = nsDeclare + " xmlns:p='" + ns + "'"
+        }
+    }
+    return "<" + tagName + nsDeclare + ">";
 }
 
-function renderPagination(e, pageNo, total, size) {
+function renderPagination(e, pageNo, total, size, subId) {
     if (e.tagName == null) {
         e = document.getElementById(e);
     }
@@ -70,15 +82,15 @@ function renderPagination(e, pageNo, total, size) {
             endNo = startNo + 3;
         }
 
-        for (var i = endNo - 3; i <= endNo; i++) {
+        for (var i = startNo; i <= endNo; i++) {
             var pageLink = document.createElement("a");
             pageLink.appendChild(document.createTextNode(i));
             (function() {
                 var num = i;
                 if (num != pageNo) {
                     pageLink.addEventListener("click", function() {
-                        showCache(parseInt(num));
-                        renderPagination(e, parseInt(num), total, size);
+                        showCache(parseInt(num), subId);
+                        renderPagination(e, parseInt(num), total, size, subId);
                     });
                 }
             })();
@@ -99,7 +111,7 @@ function renderPagination(e, pageNo, total, size) {
             for (var i = endNo - 3; i <= endNo; i++) {
                 tobeload.push(i);
             }
-            onLoadCache(tobeload);
+            onLoadCache(tobeload, false, subId);
         }, 1000)
     }
 }

@@ -2,18 +2,7 @@
                 xmlns:p="http://t3.com/2018/project-page">
     <xsl:output method="html" indent="yes"/>
     <xsl:template match="/">
-        <div class="card-panel-horz">
-            <div class="panel-header">Mới nhất</div>
-            <div class="panel-content">
-                <xsl:apply-templates/>
-            </div>
-            <div class="pagination hasNext hasPrev">
-                <a href="#" class="page cur">1</a>
-                <a href="#" class="page">2</a>
-                <a href="#" class="page">3</a>
-                <a href="#" class="page next">4</a>
-            </div>
-        </div>
+        <xsl:apply-templates/>
     </xsl:template>
     <xsl:template match="p:updates">
         <xsl:for-each select="p:update">
@@ -27,11 +16,14 @@
             <xsl:variable name="chap-full" select="normalize-space(substring-after($chap-name,':'))"/>
 
             <xsl:element name="a">
-                <xsl:attribute name="href"><xsl:value-of select="concat('project-detail?name=',.//p:project/p:id)"/></xsl:attribute>
+                <xsl:attribute name="href">
+                    <xsl:value-of select="concat('project-detail?name=',.//p:project/p:id)"/>
+                </xsl:attribute>
                 <div class="content-card card-2">
                     <div class="title">
                         <div class="divider-1">
-                            <xsl:variable name="isSpecialVol" select="boolean($vol-number='' or $vol-full='' or $vol-name='Ngoại chương' or string-length($vol-name) > 12)"/>
+                            <xsl:variable name="isSpecialVol"
+                                          select="boolean($vol-number='' or $vol-full='' or $vol-name='Ngoại chương' or string-length($vol-name) > 12)"/>
                             <xsl:choose>
                                 <xsl:when test="$isSpecialVol">
                                     <div class="divider-mono">Đặc biệt</div>

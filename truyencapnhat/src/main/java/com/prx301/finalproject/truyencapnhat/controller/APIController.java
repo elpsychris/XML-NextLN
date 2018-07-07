@@ -2,11 +2,13 @@ package com.prx301.finalproject.truyencapnhat.controller;
 
 import com.prx301.finalproject.truyencapnhat.model.AccountEntity;
 import com.prx301.finalproject.truyencapnhat.model.LatestUpdates;
+import com.prx301.finalproject.truyencapnhat.model.MostViewProjects;
 import com.prx301.finalproject.truyencapnhat.model.PageUpdates;
 import com.prx301.finalproject.truyencapnhat.model.web.model.AuthTicket;
 import com.prx301.finalproject.truyencapnhat.model.web.model.LoginRequest;
 import com.prx301.finalproject.truyencapnhat.service.web.AccountService;
 import com.prx301.finalproject.truyencapnhat.service.web.BookmarkService;
+import com.prx301.finalproject.truyencapnhat.service.web.ProjectService;
 import com.prx301.finalproject.truyencapnhat.service.web.UpdateService;
 import org.springframework.http.MediaType;
 import org.springframework.ui.ModelMap;
@@ -19,12 +21,14 @@ import javax.servlet.http.HttpSession;
 public class APIController {
     private AccountService accountService = null;
     private UpdateService updateService = null;
+    private ProjectService projectService = null;
     private BookmarkService bookmarkService = null;
 
-    public APIController(AccountService accountService, UpdateService updateService, BookmarkService bookmarkService) {
+    public APIController(AccountService accountService, UpdateService updateService, BookmarkService bookmarkService, ProjectService projectService) {
         this.accountService = accountService;
         this.updateService = updateService;
         this.bookmarkService = bookmarkService;
+        this.projectService = projectService;
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.POST, consumes = MediaType.APPLICATION_XML_VALUE, produces = MediaType.APPLICATION_XML_VALUE)
@@ -32,9 +36,9 @@ public class APIController {
         return accountService.checkLogin(loginRequest, session);
     }
 
-    @PostMapping(value = "/signup", consumes = MediaType.APPLICATION_XML_VALUE)
-    public String signup(AccountEntity signupReq) {
-        return "failed";
+    @RequestMapping(value = "/signup", method = RequestMethod.POST, consumes = MediaType.APPLICATION_XML_VALUE)
+    public boolean signup(@RequestBody AccountEntity signupReq) {
+        return accountService.signupAccount(signupReq);
     }
 
     @RequestMapping(value = "/logout/{tokenId}", method = RequestMethod.GET)
@@ -54,6 +58,11 @@ public class APIController {
     @RequestMapping(value = "/updates/latest/{page-no}", method = RequestMethod.GET, produces = MediaType.APPLICATION_XML_VALUE)
     public LatestUpdates getLatestUpdate(@PathVariable("page-no") int pageNo) {
         return updateService.getLatestUpdateEntities(pageNo);
+    }
+
+    @RequestMapping(value = "/projects/mostview/{page-no}", method = RequestMethod.GET, produces = MediaType.APPLICATION_XML_VALUE)
+    public MostViewProjects getMostView(@PathVariable("page-no") int pageNo) {
+        return projectService.getMostViewProjectEntities(pageNo);
     }
 
     @RequestMapping(value = "/bookmark/{project-id}", method = RequestMethod.POST)

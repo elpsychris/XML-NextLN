@@ -11,5 +11,5 @@ public interface ProjectRepo extends JpaRepository<ProjectEntity, Integer> {
     List<ProjectEntity> findAll();
     ProjectEntity findByProjectId(int id);
     ProjectEntity findByProjectName(String name);
-
+    List<ProjectEntity> findTop5ByOrderByProjectViewDesc();
 }

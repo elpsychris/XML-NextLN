@@ -1,13 +1,24 @@
 package com.prx301.finalproject.truyencapnhat.model;
 
 import javax.persistence.*;
+import javax.xml.bind.annotation.*;
 import java.util.List;
 import java.util.Objects;
 
+@XmlAccessorType(XmlAccessType.FIELD)
 @Entity
 @Table(name = "Account", schema = "dbo", catalog = "NU_DB")
+@XmlType(name = "AccountEntity", propOrder = {
+        "username",
+        "password",
+        "isAdmin",
+        "bookmarkEntityList"
+})
+@XmlRootElement(name = "account")
 public class AccountEntity  {
+    @XmlElement(name = "username")
     private String username;
+    @XmlElement(name = "password")
     private String password;
     private Boolean isAdmin = false;
     private List<BookmarkEntity> bookmarkEntityList;

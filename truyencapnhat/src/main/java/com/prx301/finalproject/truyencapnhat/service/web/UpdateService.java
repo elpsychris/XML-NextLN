@@ -1,8 +1,7 @@
 package com.prx301.finalproject.truyencapnhat.service.web;
 
-import com.prx301.finalproject.truyencapnhat.model.PageUpdates;
-import com.prx301.finalproject.truyencapnhat.model.UpdateEntity;
-import com.prx301.finalproject.truyencapnhat.model.LatestUpdates;
+import com.prx301.finalproject.truyencapnhat.model.*;
+import com.prx301.finalproject.truyencapnhat.repository.ProjectRepo;
 import com.prx301.finalproject.truyencapnhat.repository.UpdateRepo;
 import com.prx301.finalproject.truyencapnhat.utils.JAXBUtils;
 import com.prx301.finalproject.truyencapnhat.utils.Logger;
@@ -30,7 +29,7 @@ public class UpdateService {
         this.updateRepo = updateRepo;
     }
 
-//    public List<UpdateEntity> getLatestUpdates(int pageNo, int pageSize) {
+    //    public List<UpdateEntity> getLatestUpdates(int pageNo, int pageSize) {
 //        return volRepo.getUpdatePage(pageNo, pageSize);
 //    }
 //
@@ -58,7 +57,7 @@ public class UpdateService {
     }
 
     public LatestUpdates getLatestUpdateEntities(int pageNo) {
-        PageRequest pageRequest = PageRequest.of(pageNo, DEFAULT_PAGE_SIZE, Sort.by(Sort.Order.desc("updateDate")));
+        PageRequest pageRequest = PageRequest.of(pageNo, 5, Sort.by(Sort.Order.desc("updateDate")));
         List<UpdateEntity> latestList = updateRepo.findAll(pageRequest).getContent();
         return new LatestUpdates(latestList);
     }

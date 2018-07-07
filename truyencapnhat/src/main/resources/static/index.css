@@ -680,6 +680,7 @@ a {
     position: relative;
     transition: all ease .3s;
     padding-bottom: 100px;
+    min-height: 300px;
 }
 
 .search-info {
@@ -1644,6 +1645,6 @@ ul.config:before {
     display: none;
 }
 
-#xsl {
+#xsl, .xsl {
     display: none;
 }
