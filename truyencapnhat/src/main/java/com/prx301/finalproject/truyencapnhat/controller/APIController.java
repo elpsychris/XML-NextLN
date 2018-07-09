@@ -36,7 +36,7 @@ public class APIController {
     }
 
     @RequestMapping(value = "/signup", method = RequestMethod.POST, consumes = MediaType.APPLICATION_XML_VALUE)
-    public boolean signup(@RequestBody AccountEntity signupReq) {
+    public String signup(@RequestBody AccountEntity signupReq) {
         return accountService.signupAccount(signupReq);
     }
 
@@ -120,4 +120,7 @@ public class APIController {
         }
         return null;
     }
+
+    @RequestMapping(value = "/recommend/{project-id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_XML_VALUE)
+    public 
 }

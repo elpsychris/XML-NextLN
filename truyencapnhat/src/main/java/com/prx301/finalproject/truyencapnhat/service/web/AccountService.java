@@ -86,7 +86,14 @@ public class AccountService {
         return accountRepo.findByUsername(loginRequest.getUsername());
     }
 
-    public boolean signupAccount(AccountEntity accountEntity) {
-        return accountRepo.save(accountEntity) != null;
+    public String signupAccount(AccountEntity accountEntity) {
+        String result = "";
+        AccountEntity existUsername = accountRepo.findByUsername(accountEntity.getUsername());
+        if (existUsername != null) {
+            result = "Tên tài khoản đã tồn tại";
+        } else {
+            accountRepo.save(accountEntity);
+        }
+        return result;
     }
 }

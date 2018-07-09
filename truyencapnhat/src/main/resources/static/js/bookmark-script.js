@@ -3,10 +3,10 @@ var projectBookList = [];
 var checkoutBookList = [];
 var isSetBookmark = false;
 
-if (bookmarkList == null) {
-    bookmarkList = getSavedList();
-    checkoutBookList = getSavedCheckoutList();
-}
+
+bookmarkList = getSavedList();
+checkoutBookList = getSavedCheckoutList();
+
 
 setBookmarkStatus();
 
@@ -30,12 +30,7 @@ function onBookmarkItemClick() {
 
 function loadProjectInfo() {
     getProjectObject(null);
-    if (bookmarkList != null && bookmarkList.length == 0) {
-        getBookmarkInfo();
-        return;
-    }
-    var temp = convertToItem();
-    showBookmarkItem(temp);
+    getBookmarkInfo();
 }
 
 function convertToItem() {
@@ -87,6 +82,7 @@ function showBookmarkItem(checkout) {
         for (var i = 0; i < checkout.length; i++) {
             var item = checkout[i]["e"];
             if (item != null) {
+                item.classList.add("checked-out");
                 bookmarkPanel.appendChild(item);
             }
         }

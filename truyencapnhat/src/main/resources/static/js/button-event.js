@@ -350,10 +350,10 @@ function onSignupRequestSubmit(e) {
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function (ev) {
         if (this.readyState == 4 && this.status == 200) {
-            if (this.responseText == "true") {
+            if (this.responseText == "") {
                 showSignupResponseMessage("Đăng ký thành công");
             } else {
-                showSignupResponseMessage("Tài khoản đã tồn tại");
+                showSignupResponseMessage(this.responseText);
             }
         }
     };

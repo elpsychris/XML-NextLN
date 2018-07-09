@@ -97,24 +97,7 @@
                                 <div class="logout-menu" onclick="onLogout(this)"></div>
                             </div>
                             <div class="bookmark-list">
-                                <div class="item card-1">
-                                    <div class="thumb">
-                                    </div>
-                                    <div class="info">
-                                        <span class="info-name">Re:Zero kara Hajimeru</span>
-                                        <span class="info-chapter">13</span>
-                                        <span class="info-view">50</span>
-                                    </div>
-                                </div>
-                                <div class="item card-1">
-                                    <div class="thumb">
-                                    </div>
-                                    <div class="info">
-                                        <span class="info-name">Re:Zero kara Hajimeru</span>
-                                        <span class="info-chapter">13</span>
-                                        <span class="info-view">50</span>
-                                    </div>
-                                </div>
+
                             </div>
                         </c:otherwise>
                     </c:choose>

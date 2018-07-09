@@ -1896,3 +1896,7 @@ ul.config:before {
 .bookmark-info {
     padding: 5px;
 }
+
+.checked-out .info {
+    color: grey!important;
+}

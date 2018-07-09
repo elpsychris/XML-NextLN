@@ -26,8 +26,6 @@ public class AccountEntity  {
     private List<BookmarkEntity> bookmarkEntityList;
 
     @Id
-    @GeneratedValue(generator="system-uuid")
-    @GenericGenerator(name="system-uuid", strategy = "uuid")
     @Column(name = "username")
     public String getUsername() {
         return username;
