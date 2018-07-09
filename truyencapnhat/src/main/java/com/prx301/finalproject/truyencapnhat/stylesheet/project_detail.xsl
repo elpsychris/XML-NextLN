@@ -12,17 +12,28 @@
                 <div class="project-cover-item">
                     <img class="card-2">
                         <xsl:attribute name="src">
-                            <xsl:value-of select="//p:volume-cover"/>
+                            <xsl:choose>
+                                <xsl:when test="//p:volume-cover">
+                                    <xsl:value-of select="//p:volume-cover"/>
+                                </xsl:when>
+                                <xsl:otherwise>
+                                    nocover.jpg
+                                </xsl:otherwise>
+                            </xsl:choose>
                         </xsl:attribute>
                     </img>
                     <div class="bookmark-overlay">
-                        <div class="project-name"><xsl:value-of select="//p:project/p:name"/></div>
+                        <div class="project-name">
+                            <xsl:value-of select="//p:project/p:name"/>
+                        </div>
                         <div class="bookmark-btn" onclick="bookmarkIt(this, false)">
-                            <xsl:attribute name="id">book-project-<xsl:value-of select="//p:project/p:id"/></xsl:attribute>
+                            <xsl:attribute name="id">book-project-<xsl:value-of select="//p:project/p:id"/>
+                            </xsl:attribute>
                             Bookmark
                         </div>
                         <div class="bookmarked-btn" onclick="bookmarkIt(this, true)">
-                            <xsl:attribute name="id">unbook-project-<xsl:value-of select="//p:project/p:id"/></xsl:attribute>
+                            <xsl:attribute name="id">unbook-project-<xsl:value-of select="//p:project/p:id"/>
+                            </xsl:attribute>
                             Đã Bookmark
                         </div>
                     </div>
@@ -109,16 +120,16 @@
                                     Đang cập nhật
                                 </xsl:otherwise>
                             </xsl:choose>
-                            <script>
-                                renderAlter();
-                            </script>
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-
+        <script>
+            renderAlter();
+        </script>
     </xsl:template>
 
 </xsl:stylesheet>

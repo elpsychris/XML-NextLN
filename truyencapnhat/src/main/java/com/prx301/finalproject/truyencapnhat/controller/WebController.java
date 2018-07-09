@@ -2,6 +2,7 @@ package com.prx301.finalproject.truyencapnhat.controller;
 
 import com.prx301.finalproject.truyencapnhat.model.GenreEntity;
 import com.prx301.finalproject.truyencapnhat.model.ProjectEntity;
+import com.prx301.finalproject.truyencapnhat.model.SearchProjects;
 import com.prx301.finalproject.truyencapnhat.model.web.model.AuthTicket;
 import com.prx301.finalproject.truyencapnhat.service.web.AccountService;
 import com.prx301.finalproject.truyencapnhat.service.web.GenreService;
@@ -125,6 +126,8 @@ public class WebController {
             ticket = new AuthTicket(token);
         }
 
+        SearchProjects recommend = projectService.getRecommendList(id);
+
         int role = accountService.checkRole(ticket);
         boolean isAdmin = role == AccountService.LOGIN_AS_ADMIN;
         boolean isUser = role >= 0;
@@ -135,6 +138,7 @@ public class WebController {
         String xslChap = ComUtils.getResourceXSL("tabl_chap.xsl");
         ProjectEntity project = projectService.getProjectById(id);
 
+        model.addAttribute("recommend", recommend);
         model.addAttribute("sXML", xml);
         model.addAttribute("sXSLChap", xslChap);
         model.addAttribute("sXSL", xsl);

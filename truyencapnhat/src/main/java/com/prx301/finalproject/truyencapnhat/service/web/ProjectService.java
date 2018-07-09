@@ -1,9 +1,12 @@
 package com.prx301.finalproject.truyencapnhat.service.web;
 
+import com.prx301.finalproject.truyencapnhat.model.GenreEntity;
 import com.prx301.finalproject.truyencapnhat.model.MostViewProjects;
 import com.prx301.finalproject.truyencapnhat.model.ProjectEntity;
 import com.prx301.finalproject.truyencapnhat.model.SearchProjects;
+import com.prx301.finalproject.truyencapnhat.repository.GenreRepo;
 import com.prx301.finalproject.truyencapnhat.repository.ProjectRepo;
+import com.prx301.finalproject.truyencapnhat.utils.ComUtils;
 import com.prx301.finalproject.truyencapnhat.utils.JAXBUtils;
 import com.prx301.finalproject.truyencapnhat.utils.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,19 +19,22 @@ import javax.persistence.StoredProcedureQuery;
 import javax.xml.bind.JAXBException;
 import javax.xml.transform.stream.StreamResult;
 import java.io.StringWriter;
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
 public class ProjectService {
     private ProjectRepo projectRepo;
+    private GenreRepo genreRepo;
 
     @Autowired
     private EntityManager em;
 
     private final int DEFAULT_PAGE_SIZE = 20;
 
-    public ProjectService(ProjectRepo projectRepo) {
+    public ProjectService(ProjectRepo projectRepo, GenreRepo genreRepo) {
         this.projectRepo = projectRepo;
+        this.genreRepo = genreRepo;
     }
 
     public List<ProjectEntity> getAllProjects() {
@@ -78,6 +84,21 @@ public class ProjectService {
         int total = (int) searchQuery.getOutputParameterValue("Total");
 
         return new SearchProjects(total, resultList);
+    }
+
+    public SearchProjects getRecommendList(int projectId) {
+        List<ProjectEntity> recommendList = new ArrayList<>();
+        ProjectEntity curProject = projectRepo.findByProjectId(projectId);
+
+        int count = 0;
+        for (GenreEntity genre : curProject.getGenres()) {
+            List<ProjectEntity> projectSameGenre = genre.getTemp();
+            ProjectEntity chooseProject = ComUtils.pickRandom(projectSameGenre);
+            recommendList.add(chooseProject);
+            count++;
+        }
+
+        return new SearchProjects(count, recommendList);
     }
 
 }

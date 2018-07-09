@@ -8,32 +8,37 @@
         <xsl:apply-templates select="p:updates"/>
     </xsl:template>
     <xsl:template match="p:updates">
-        <xsl:for-each select="p:update">
-            <div class="row-card">
-                <div class="col">
-                    <xsl:value-of select="p:update-volume/p:volume-name"/>
+        <xsl:if test="p:update">
+            <xsl:for-each select="p:update">
+                <div class="row-card">
+                    <div class="col">
+                        <xsl:value-of select="p:update-volume/p:volume-name"/>
+                    </div>
+                    <div class="col">
+                        <xsl:value-of select="p:chapter-date"/>
+                    </div>
+                    <div class="col">
+                        <xsl:element name="a">
+                            <xsl:attribute name="href">
+                                <xsl:value-of select="p:update-group/p:group-link"/>
+                            </xsl:attribute>
+                            <xsl:value-of select="p:update-group/p:group-name"/>
+                        </xsl:element>
+                    </div>
+                    <div class="col">
+                        <xsl:element name="a">
+                            <xsl:attribute name="href">
+                                <xsl:value-of select="p:update-link"/>
+                            </xsl:attribute>
+                            <xsl:value-of select="p:chapter-name"/>
+                        </xsl:element>
+                    </div>
                 </div>
-                <div class="col">
-                    <xsl:value-of select="p:chapter-date"/>
-                </div>
-                <div class="col">
-                    <xsl:element name="a">
-                        <xsl:attribute name="href">
-                            <xsl:value-of select="p:update-group/p:group-link"/>
-                        </xsl:attribute>
-                        <xsl:value-of select="p:update-group/p:group-name"/>
-                    </xsl:element>
-                </div>
-                <div class="col">
-                    <xsl:element name="a">
-                        <xsl:attribute name="href">
-                            <xsl:value-of select="p:update-link"/>
-                        </xsl:attribute>
-                        <xsl:value-of select="p:chapter-name"/>
-                    </xsl:element>
-                </div>
-            </div>
-        </xsl:for-each>
+            </xsl:for-each>
+        </xsl:if>
+        <xsl:if test="not(p:update)">
+                Đang cập nhật
+        </xsl:if>
     </xsl:template>
 
 </xsl:stylesheet>

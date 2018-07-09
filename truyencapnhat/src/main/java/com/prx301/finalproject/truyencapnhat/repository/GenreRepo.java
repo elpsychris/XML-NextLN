@@ -8,4 +8,5 @@ import java.util.List;
 
 public interface GenreRepo extends JpaRepository<GenreEntity, String> {
    public GenreEntity findFirstByGenreId(String genreId);
+   public List<GenreEntity> findGenreEntitiesByGenreId(String genreId);
 }

@@ -401,4 +401,12 @@ public class ComUtils {
         return curObj;
     }
 
+    public static<T> T pickRandom (List<T> list) {
+        Random random = new Random();
+
+        int bound = list.size();
+        int result = random.nextInt(bound);
+        return list.get(result);
+    }
+
 }

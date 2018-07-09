@@ -90,6 +90,9 @@ public class UpdateService {
                 .setParameter("PageSize", size)
                 .setParameter("ProjectID", projectId);
         List<UpdateEntity> result = findUpdatesByProject.getResultList();
+        if (result.size() == 0) {
+            return new PageUpdates(result, 0);
+        }
         int total = (int) findUpdatesByProject.getOutputParameterValue("Total");
         return new PageUpdates(result, total);
     }

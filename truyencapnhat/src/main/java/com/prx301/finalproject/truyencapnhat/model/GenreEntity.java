@@ -4,14 +4,11 @@ package com.prx301.finalproject.truyencapnhat.model;
 import com.prx301.finalproject.truyencapnhat.utils.LowerCaseAdapter;
 
 import javax.persistence.*;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-import java.util.HashSet;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
-import java.util.Set;
 
 @Entity
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -27,7 +24,10 @@ public class GenreEntity {
     private String genreId;
     private String genreName;
 
-    private Set<ProjectEntity> projects = new HashSet<>();
+    private List<ProjectEntity> projects = new ArrayList<>();
+
+    @XmlTransient
+    private List<ProjectEntity> temp = new ArrayList<>();
 
     @Id
     @Column(name = "genre_id")
@@ -49,12 +49,22 @@ public class GenreEntity {
     }
 
     @ManyToMany(mappedBy = "genres", fetch = FetchType.EAGER)
-    public Set<ProjectEntity> getProjects() {
+    public List<ProjectEntity> getProjects() {
         return projects;
     }
 
-    public void setProjects(Set<ProjectEntity> projects) {
+    public void setProjects(List<ProjectEntity> projects) {
 //        this.projects = projects;
+        this.temp = projects;
+    }
+
+    @Transient
+    public List<ProjectEntity> getTemp() {
+        return temp;
+    }
+
+    public void setTemp(List<ProjectEntity> temp) {
+        this.temp = temp;
     }
 
     @Override

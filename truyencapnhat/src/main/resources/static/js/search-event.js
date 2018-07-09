@@ -47,6 +47,7 @@ function onSearchBarTyping(e) {
     curKeyword = keyword;
     totalPage = 0;
     cur = 0;
+    getProjectObject(null);
     if (resultTable != null) {
         searchDetail(keyword);
         return;
@@ -61,18 +62,21 @@ function onSearchBarTyping(e) {
 
             for (var i = 0; i < result.length; i++) {
                 var project = result[i];
-                var newResult = document.createElement("li");
-                newResult.appendChild(document.createTextNode(project["name"]));
-                newResult.addEventListener("click", function () {
-                    isResultClicked = true;
-                });
+                if (project["name"].trim() != "") {
+                    var newResult = document.createElement("li");
+                    newResult.appendChild(document.createTextNode(project["name"]));
+                    newResult.addEventListener("click", function () {
+                        isResultClicked = true;
+                    });
 
-                var link = document.createElement("a");
-                link.className = "result";
-                link.setAttribute("href", "/project-detail?name=" + project["id"]);
-                link.appendChild(newResult);
+                    var link = document.createElement("a");
+                    link.className = "result";
+                    link.setAttribute("href", "/project-detail?name=" + project["id"]);
+                    link.appendChild(newResult);
 
-                dropdownList.appendChild(link);
+                    dropdownList.appendChild(link);
+                }
+
             }
         }
 

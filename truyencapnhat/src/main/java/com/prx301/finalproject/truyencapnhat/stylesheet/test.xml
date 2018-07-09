@@ -1,79 +1,1227 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<bookmark-list xmlns:p="http://t3.com/2018/project-page">
-    <bookmarks>
-        <bookmark>
-            <p:id>13</p:id>
-            <p:project>
-                <p:id>25</p:id>
-                <p:name>Although I Am Only Level 1, but with This Unique Skill, I Am the Strongest</p:name>
-                <p:alter-name>Mặc Dù Tôi Chỉ Ở Level 1, nhưng với Kĩ Năng Đặc Biệt Này, Nên Tôi Là Người Mạnh
-                    Nhất.;レベル１だけどユニークスキルで最強です;Although I Am Only Level 1, but with This Unique Skill, I Am the
-                    Strongest;Dù chỉ là level 1, nhưng tôi là người mạnh nhất;ALTHOUGH I AM ONLY LEVEL 1, BUT WITH THIS
-                    UNIQUE SKILL, I AM THE STRONGEST
-                </p:alter-name>
-                <p:author>Miki Nazuna ( 三木なずな );Miki Nazuna 三木なずな</p:author>
-                <p:illustrator>Subachi ( すばち );Subachi すばち</p:illustrator>
-                <p:synopsis>Satou Ryouta đã chết khi làm việc quá sức tại một công ty đen đã được chuyển sinh sang thế
-                    giới khác. Mặc dù Ryouta sống nhưng cậu đang bị một gánh nặng làm phiền đó là cấp độ của cậu ở thế
-                    giới khác kẹt ở cấp 1 .Dù cậu không thể tăng cấp, cậu sở hữu kỹ năng độc nhất có thể tạo ra vật phẩm
-                    gian lận không tồn tại trong thế giới từ quái vật .Cậu hiểu biết về thanh chỉ số và nâng tối đa
-                    chúng nhờ sự trợ giúp từ khả năng của vật phẩm. Cậu thu nhập một số vũ khí và vật phẩm chỉ có thể sử
-                    dụng bởi bản thân ,dù cậu chỉ cấp 1 nhưng cậu sở hữu vũ khí mạnh nhất.
-                </p:synopsis>
-                <p:hash>296704324</p:hash>
-                <p:view>18605</p:view>
-                <p:point>5.0</p:point>
-                <p:genres>
-                    <p:genre>
-                        <p:genre-id>mystery</p:genre-id>
-                    </p:genre>
-                    <p:genre>
-                        <p:genre-id>action</p:genre-id>
-                    </p:genre>
-                    <p:genre>
-                        <p:genre-id>adventure</p:genre-id>
-                    </p:genre>
-                    <p:genre>
-                        <p:genre-id>comedy</p:genre-id>
-                    </p:genre>
-                    <p:genre>
-                        <p:genre-id>fantasy</p:genre-id>
-                    </p:genre>
-                    <p:genre>
-                        <p:genre-id>ecchi</p:genre-id>
-                    </p:genre>
-                    <p:genre>
-                        <p:genre-id>harem</p:genre-id>
-                    </p:genre>
-                    <p:genre>
-                        <p:genre-id>romance</p:genre-id>
-                    </p:genre>
-                    <p:genre>
-                        <p:genre-id>slice of life</p:genre-id>
-                    </p:genre>
-                    <p:genre>
-                        <p:genre-id>supernatural</p:genre-id>
-                    </p:genre>
-                    <p:genre>
-                        <p:genre-id>web novel</p:genre-id>
-                    </p:genre>
-                    <p:genre>
-                        <p:genre-id>isekai</p:genre-id>
-                    </p:genre>
-                </p:genres>
-                <p:last_update>05/07/2018 15:43</p:last_update>
-                <p:total_update>44</p:total_update>
-                <p:link>
-                    https://ln.hako.re/truyen/1400-although-i-am-only-level-1-but-with-this-unique-skill-i-am-the-strongest;https://ln.hako.re/truyen/1943-although-i-am-only-level-1-but-with-this-unique-skill-i-am-the-strongest;https://ln.hako.re/truyen/2791-although-i-am-only-level-1-but-with-this-unique-skill-i-am-the-strongest
-                </p:link>
-            </p:project>
-            <p:accountEntity>
-                <p:username>ass</p:username>
-                <p:password>123</p:password>
-                <p:isAdmin>false</p:isAdmin>
-            </p:accountEntity>
-            <p:checkout>true</p:checkout>
-            <p:last_check>08/07/2018 21:30</p:last_check>
-        </bookmark>
-    </bookmarks>
-</bookmark-list>
+<p:projects xmlns:p='http://t3.com/2018/project-page'>
+    <p:project>
+        <p:id>505</p:id>
+        <p:name>Mondaiji-tachi ga Isekai Kara Kuru Sou Desu yo?</p:name>
+        <p:alter-name>Trẻ hư từ thế giới khác tới đó sao?</p:alter-name>
+        <p:author>Tatsunoko Tarou</p:author>
+        <p:illustrator>Amano Yuu</p:illustrator>
+        <p:synopsis>Trẻ hư tới thế giới khác quậy phá tưng bừng.Đây là bản dịch lậu, đề nghị không sử dụng với mục đích
+            thương mại dưới mọi hình thức. Đồng thời không reup trên bất cứ trang nào khác ngoài Hako
+        </p:synopsis>
+        <p:hash>-1676440765</p:hash>
+        <p:view>522517</p:view>
+        <p:point>5.0</p:point>
+        <p:genres>action|adventure|fantasy|comedy|super power|romance</p:genres>
+        <p:last_update>09/07/2018 01:10</p:last_update>
+        <p:total_update>163</p:total_update>
+        <p:link>https://ln.hako.re/truyen/146-mondaiji-tachi-ga-isekai-kara-kuru-soudesu-yo</p:link>
+    </p:project>
+    <p:project>
+        <p:id>412</p:id>
+        <p:name>Isekai shihai no sukiruteika ~zero kara hajimeru dorei harem~</p:name>
+        <p:alter-name>異世界支配のスキルテイカー　～　ゼロから始める奴隷ハーレム　～,Cuộc chinh phục thế giới của người lấy kĩ năng~gầy dựng dàn hậu
+            cung toàn nô lệ nơi thế giới khác
+        </p:alter-name>
+        <p:author>Yusura Kankitsu</p:author>
+        <p:illustrator>Hagane Tsurugi</p:illustrator>
+        <p:synopsis>Konoe Yuuto là một võ sĩ thiên tài bị triệu hồi tới một thế giới khác nơi mà buôn bán nô lệ là hợp
+            pháp. Ở nơi đó, dùng kĩ năng cheat Chiếm đoạt kĩ năng, cậu cướp lấy khả năng từ quái vật cậu đánh bại, và
+            bắt đầu xây dựng một harem nô lệ trong khi hy vọng sống một cuộc đời vô lo nghĩ khi tuổi già.
+        </p:synopsis>
+        <p:hash>20551510</p:hash>
+        <p:view>360786</p:view>
+        <p:point>5.0</p:point>
+        <p:genres>action|fantasy|harem|ecchi|shounen|adventure|comedy|super power|web novel</p:genres>
+        <p:last_update>09/07/2018 00:43</p:last_update>
+        <p:total_update>160</p:total_update>
+        <p:link>https://ln.hako.re/truyen/243-isekai-shihai-no-sukiruteika-zero-kara-hajimeru-dorei-harem</p:link>
+    </p:project>
+    <p:project>
+        <p:id>479</p:id>
+        <p:name></p:name>
+    </p:project>
+    <p:project>
+        <p:id>298</p:id>
+        <p:name>CHARGING MAGIC WITH A SMILE</p:name>
+        <p:alter-name>Egao de maryoku chāji mugen no maryoku de isekai saisei; 笑顔で魔力チャージ～無限の魔力で異世界再生; CMS; Nạp ma lực
+            bằng nụ cười của em;Egao de maryoku chāji mugen no maryoku de isekai saisei;Charging Magic with a Smile
+        </p:alter-name>
+        <p:author>Miki Nazuna - 三木なずな</p:author>
+        <p:illustrator>Akira Ueda - 植田 亮</p:illustrator>
+        <p:synopsis>Thế giới hiện tại đã quay trở lại thời kỳ đồ đá hoang tàn sau khi cuộc chiến giữa Anh Hùng và Ác
+            Thần kết thúc. Nữ Thần cai quản thế giới không thể trực tiếp nhúng tay vào việc của người dân thế giới nên
+            ngài đã triệu hồi hai người từ Trái đất đến để nhờ họ phục hồi lại thế giới này. Liệu họ có thành công trong
+            việc đó không ?Hiện tại WN ở nhật đã ra FULL 168 CHAP CHÍNH VÀ 4 CHAP NGOẠI TRUYỆN.Còn bản ENG thì đã ra
+            được HƠN 135 CHAP. Với tiến độ đều đặn 1 tuần 1 chap.Mình hiện tại đang SOLO và sẽ cố gắng trans nhanh nhất
+            có thể để đuổi kịp bản ENG. Hiện tại mình cũng đang tìm thêm người trans cùng mình. Mình có thể edit nên bạn
+            nào muốn làm chỉ việc trans thôi là ổn rồi.;Tôi được triệu hồi đến một thế giới đổ nát và nhận được khả năng
+            có thể tạo ra mọi thứ. Nếu tôi không có nhà để ở, tôi sẽ xây một ngôi nhà. Nếu mọi người tụ họp ở nhà tôi,
+            tôi sẽ xây một thị trấn. Và nếu thị trấn bị quái vật tấn công, tôi sẽ tạo ra vũ khí mạnh nhất và đẩy lùi
+            chúng. Với việc có thể nạp ma lực vô hạn, tôi sẽ xây dựng lại thế giới này theo cách của mình.
+        </p:synopsis>
+        <p:hash>-1505136899</p:hash>
+        <p:view>91876</p:view>
+        <p:point>5.0</p:point>
+        <p:genres>action|adventure|comedy|fantasy|harem|isekai|romance|shounen|slice of life|super power|web novel
+        </p:genres>
+        <p:last_update>09/07/2018 00:25</p:last_update>
+        <p:total_update>53</p:total_update>
+        <p:link>
+            https://ln.hako.re/truyen/2818-charging-magic-with-a-smile;https://ln.hako.re/truyen/986-charging-magic-with-a-smile
+        </p:link>
+    </p:project>
+    <p:project>
+        <p:id>479</p:id>
+        <p:name>Living in this World with Cut & Paste</p:name>
+        <p:alter-name>Living in this World with Cut & Paste</p:alter-name>
+        <p:author>Sakuya</p:author>
+        <p:illustrator>PiNe</p:illustrator>
+        <p:synopsis>Một thế giới nơi mà Thần sẽ ban cho những Kỹ năng (skills) cho những ai đến tuổi trưởng thành. Nhân
+            vật chính, được ban cho hai kỹ năng, sử dụng chúng và trở thành sự tồn tại được gọi là anh hùng.....Team:
+            Lẩu cá (lẩu này không ăn được :)))Trans:Maxmalefic9x (chủ tọa) (Cá trình (chịch) điện :)))) (h là Trans +
+            Edit)Shacks (mới tuyển) (Cá mập) (lặn do thi cử)Cá Bống (Mới tuyển)Editor:SoullessPuppet (nó lặn từ tháng
+            9/2017 cmnr, tội thanh niên cb thi ĐH)BlackSlime (Cá bảy màu) (lặn do có việc, cuối tháng 7 - 2018 trồi lên)
+        </p:synopsis>
+        <p:hash>122869048</p:hash>
+        <p:view>318813</p:view>
+        <p:point>5.0</p:point>
+        <p:genres>action|adventure|fantasy|harem|romance|slice of life|web novel|super power</p:genres>
+        <p:last_update>09/07/2018 01:06</p:last_update>
+        <p:total_update>107</p:total_update>
+        <p:link>https://ln.hako.re/truyen/799-living-in-this-world-with-cut-paste</p:link>
+    </p:project>
+    <p:project>
+        <p:id>477</p:id>
+        <p:name>Legendary Moonlight Sculptor</p:name>
+        <p:alter-name>Nhà điêu khắc ánh trăng huyền thoại;;Legendary Moonlight Sculptor</p:alter-name>
+        <p:author>Nam Hi-sung</p:author>
+        <p:illustrator>:(</p:illustrator>
+        <p:synopsis>Legendary Moonlight Sculptor – Con đường Đế Vương là câu chuyện về kẻ bị thế giới ruồng bỏ, kẻ là nô
+            lệ cho đồng tiền, và đồng thời cũng là Thần Chiến Tranh huyền thoại của trò chơi MMORPG nổi tiếng Lục Địa
+            Phép Thuật. Trước khi quyết định nghỉ game để đi làm, chút nỗ lực bán acc để kiếm chút tiền còn lại tạo ra
+            một điều không tưởng với cậu. Qua một chuỗi các sự kiện tình cờ, nhân vật huyền thoại của cậu được đấu lên
+            tới 3,1 tỉ won (2,7 triệu $). Vui mừng chưa hết thì cậu đã sớm bị lũ chủ nợ cho vay nặng lãi tới xâu xé.
+            Nhận ra được khả năng kiếm tiền từ game, cậu vực dậy và dấn thân vào một thời đại mới mở của game, dẫn đầu
+            bởi trò chơi thực tế ảo Royal Road – Con đường đế vương. Legendary Moonlight Sculptor là huyền thoại về Lee
+            Hyun trên con đường trở thành vị hoàng đế vĩ đại, tất cả chỉ nhờ vào tình yêu thương gia đình, sự khao khát
+            giàu sang, một tinh thần gan góc và thân thể tôi luyện không ngừng. Mộ bộ truyện cực kỳ cuốn hút từ đầu chí
+            cuối, kịch tính, nảy lửa và sục sôi.
+        </p:synopsis>
+        <p:hash>1881696493</p:hash>
+        <p:view>311023</p:view>
+        <p:point>5.0</p:point>
+        <p:genres>science fiction|mystery|action|adventure|comedy|fantasy|school life|psychological|romance|drama|web
+            novel|seinen|supernatural|shounen
+        </p:genres>
+        <p:last_update>09/07/2018 01:14</p:last_update>
+        <p:total_update>519</p:total_update>
+        <p:link>
+            https://ln.hako.re/truyen/2606-legendary-moonlight-sculptor;https://ln.hako.re/truyen/212-legendary-moonlight-sculptor
+        </p:link>
+    </p:project>
+    <p:project>
+        <p:id>313</p:id>
+        <p:name>Date A Live</p:name>
+        <p:alter-name></p:alter-name>
+        <p:author>Tachibana Koushi</p:author>
+        <p:illustrator>Tsunako</p:illustrator>
+        <p:synopsis>Xoay quanh học sinh nam tên Itsuka Shidou, người đã gặp một cô gái tinh linh đến từ một thế giới đã
+            bị phá hủy, người đã gây nên nhiều cơn chấn động thời không. Và cậu phải ngăn chặn cô gái bằng cách hẹn hò
+            với cô ta.(Tl;dr: Chuyện về 1 chàng trai tán gái để cứu thế giới)
+        </p:synopsis>
+        <p:hash>2086446359</p:hash>
+        <p:view>270890</p:view>
+        <p:point>5.0</p:point>
+        <p:genres>comedy|harem|school life|science fiction|romance|action|ecchi|fantasy</p:genres>
+        <p:last_update>09/07/2018 00:24</p:last_update>
+        <p:total_update>139</p:total_update>
+        <p:link>https://ln.hako.re/truyen/60-date-a-live</p:link>
+    </p:project>
+    <p:project>
+        <p:id>507</p:id>
+        <p:name>Monogatari Series</p:name>
+        <p:alter-name>Yêu ma kì truyện</p:alter-name>
+        <p:author>NisiOisiN</p:author>
+        <p:illustrator>VOFAN</p:illustrator>
+        <p:synopsis>Một câu chuyện rùng rợn diễn ra tại một thị trấn nhỏ u ám ở Nhật Bản vào đầu thế kỉ 21…. Những điều
+            kì lạ, những thứ quái dị diễn ra xung quanh chàng trai có tên Araragi Koyomi, học sinh trường tư thục
+            Naoetsu, và những cô gái anh gặp. Câu chuyện bắt đầu khi Araragi gặp và cứu giúp một ma cà rồng đang thoi
+            thóp rồi trở thành một-thứ-gần-giống-ma-cà-rồng. Từ đó, hàng chục ngàn loài yêu ma liên tục xuất hiện, gieo
+            rắc tai ương, cả trị trấn bao trùm một bầu không khí ảm đảm. Araragi mang trong mình một trọng trách nặng
+            nề, đó là giải cứu những cô gái bị yêu quái đeo đuổi và tạo dựng một harem cho mình…. Ngay khi bạn chưa kịp
+            nhận ra, câu chuyện đã bắt đầu.... Khi bạn tưởng rằng đã kết thúc, nó vẫn tiếp tục....
+        </p:synopsis>
+        <p:hash>606509742</p:hash>
+        <p:view>125682</p:view>
+        <p:point>5.0</p:point>
+        <p:genres>comedy|drama|harem|school life|supernatural|romance</p:genres>
+        <p:last_update>09/07/2018 01:10</p:last_update>
+        <p:total_update>169</p:total_update>
+        <p:link>https://ln.hako.re/truyen/23-monogatari-series</p:link>
+    </p:project>
+    <p:project>
+        <p:id>288</p:id>
+        <p:name>Boku wa Isekai de Fuyo Mahou to Shoukan Mahou wo Tenbin ni Kakeru</p:name>
+        <p:alter-name>ぼくは異世界で付与魔法と召喚魔法を天秤にかける;Fuyo Mahou;Boku wa Isekai de Fuyo Mahou to Shoukan Mahou wo Tenbin ni
+            Kakeru
+        </p:alter-name>
+        <p:author>Yokotsuka Tsukasa ( 横塚 司 )</p:author>
+        <p:illustrator>Manyako ( マニャ子 )</p:illustrator>
+        <p:synopsis>Vào một ngày nọ, một sự cố đã xảy ra trong một khu vực trường học tư nhân khiến toàn bộ ngôi trường
+            dịch chuyển đến một thế giới hoàn toàn khác. Tôi, Gaya Kazuhisa, là học sinh năm nhất của một trường cao
+            trung, đã bị bắt nạt trong một khoảng thời gian dài. Và để giết những kẻ đã bắt nạt tôi, tôi đã đào một cái
+            bẫy, nhưng không ngờ là tôi đã vô tình giết chết một con quái vật. Sau thời khắc đó, tôi đã tiến hóa trờ
+            thành một thực thể hy hữu có thể đối đầu với bọn quái vật. Cũng vào ngày hôm đó, tôi đã cứu một nữ sinh năm
+            3 của một trường quốc trung tên là Shimozono Aris khỏi lũ Orc ở trong khu rừng nọ . Trong lúc cùng Aris đánh
+            bại lũ Orc và lên cấp sau đó, tôi bị buộc phải đứng giữa hai lựa chọn. Liệu tôi nên chọn ma thuật triệu hồi,
+            thứ sẽ giúp tôi có khả năng sống sót ngay cả khi chiến đấu một mình? Hay tôi nên chọn loại ma thuật hỗ trợ,
+            thứ sẽ giúp ích rất nhiều khi cùng nhau chiến đấu với kẻ thù.;Vào một ngày nọ, một sự cố đã xảy ra trong khu
+            vực trường học tư nhân khiến toàn bộ ngôi trường dịch chuyển đến thế giới khác. Tôi, Gaya Kazuhisa, là học
+            sinh năm nhất của trường cao trung, đã bị bắt nạt trong một khoảng thời gian dài. Và để giết những kẻ bắt
+            nạt, tôi đã đào một cái bẫy, nhưng rốt cuộc lại hốt nhầm một con quái vật. Sau thời khắc đó, tôi đã tiến hóa
+            trờ thành một thực thể hy hữu có thể đối đầu với bọn quái vật.Cũng vào ngày hôm đó, tôi đã cứu một nữ sinh
+            năm 3 của trường sơ trung tên là Shimozono Aris khỏi lũ Orc ở trong khu rừng nọ. Trong lúc cùng Arisu đánh
+            bại lũ Orc và lên cấp sau đó, tôi bị buộc phải đứng giữa hai lựa chọn. Liệu tôi nên chọn ma thuật triệu hồi,
+            thứ sẽ giúp tôi có khả năng sống sót khi đơn độc chiến đấu hay ma thuật hỗ trợ, sức mạnh dùng để cùng đồng
+            đội đánh bại kẻ thù?;Vào một ngày nọ, một sự cố đã xảy ra trong khu vực trường học tư nhân khiến toàn bộ
+            ngôi trường dịch chuyển đến thế giới khác. Tôi, Gaya Kazuhisa, là học sinh năm nhất của trường cao trung, đã
+            bị bắt nạt trong một khoảng thời gian dài. Và để giết những kẻ bắt nạt, tôi đã đào một cái bẫy, nhưng rốt
+            cuộc lại hốt nhầm một con quái vật. Sau thời khắc đó, tôi đã tiến hóa trờ thành một thực thể hy hữu có thể
+            đối đầu với bọn quái vật.Cũng vào ngày hôm đó, tôi đã cứu một nữ sinh năm 3 của trường sơ trung tên là
+            Shimozono Aris khỏi lũ Orc ở trong khu rừng nọ. Trong lúc cùng Aris đánh bại lũ Orc và lên cấp sau đó, tôi
+            bị buộc phải đứng giữa hai lựa chọn. Liệu tôi nên chọn ma thuật triệu hồi, thứ sẽ giúp tôi có khả năng sống
+            sót khi đơn độc chiến đấu hay ma thuật hỗ trợ, sức mạnh dùng để cùng đồng đội đánh bại kẻ thù?
+        </p:synopsis>
+        <p:hash>344243631</p:hash>
+        <p:view>117546</p:view>
+        <p:point>5.0</p:point>
+        <p:genres>adventure|action|drama|ecchi|fantasy|harem|school life|supernatural|mature|romance|tragedy|shounen
+        </p:genres>
+        <p:last_update>09/07/2018 00:25</p:last_update>
+        <p:total_update>229</p:total_update>
+        <p:link>
+            https://ln.hako.re/truyen/260-boku-wa-isekai-de-fuyo-mahou-to-shoukan-mahou-wo-tenbin-ni-kakeru;https://ln.hako.re/truyen/330-boku-wa-isekai-de-fuyo-mahou-to-shoukan-mahou-wo-tenbin-ni-kakeru;https://ln.hako.re/truyen/1228-boku-wa-isekai-de-fuyo-mahou-to-shoukan-mahou-wo-tenbin-ni-kakeru
+        </p:link>
+    </p:project>
+    <p:project>
+        <p:id>492</p:id>
+        <p:name>Manga wo Yomeru Ore ga Sekai Saikyou</p:name>
+        <p:alter-name>マンガを読めるおれが世界最強; I am a world&#039;s strongest, because I can read a MANGA; Tôi mạnh nhất thế giới
+            bởi vì tôi có thể đọc được manga...
+        </p:alter-name>
+        <p:author>Nazuna Miki</p:author>
+        <p:illustrator>Wataame</p:illustrator>
+        <p:synopsis>Thế giới mà tôi vừa chuyển sinh cho phép sử dụng phép thuật sau khi đọc Grimoire. Không thể tin
+            được, Grimoire là manga. Người thế giới này cần khoảng 1 năm để đọc 1 Grimoire. Nhưng với cá nhân tôi, là
+            Manga thì chỉ cần chưa đầy 1 giờ. Giải thích và hiểu toàn bộ Grimoires và tôi, đứa trẻ 6 tuổi đã trở thành
+            đại pháp sư mạnh nhất thế giới. Chào mừng cậu nhóc 6 tuổi bắt đầu 1 cuộc sống vô tư.
+        </p:synopsis>
+        <p:hash>-1513480817</p:hash>
+        <p:view>113823</p:view>
+        <p:point>5.0</p:point>
+        <p:genres>adventure|comedy|fantasy|romance|slice of life|harem</p:genres>
+        <p:last_update>09/07/2018 01:08</p:last_update>
+        <p:total_update>49</p:total_update>
+        <p:link>https://ln.hako.re/truyen/428-manga-wo-yomeru-ore-ga-sekai-saikyou</p:link>
+    </p:project>
+    <p:project>
+        <p:id>444</p:id>
+        <p:name>Kenja no Deshi wo Nanoru Kenja</p:name>
+        <p:alter-name>賢者の弟子を名乗る賢者; 현자의 제자를 자칭하는 현자</p:alter-name>
+        <p:author>Ryuusen Hirosugu</p:author>
+        <p:illustrator>Fuzichoco</p:illustrator>
+        <p:synopsis>Sakimori Kagami role-play một nhân vật tên 「Dunbalf」 vốn là một triệu hồi sư được trọng vọng và cũng
+            là một trong Cửu Đại Hiền Nhân trong VRMMO-RPG 【Arch Earth Online】. Trong lúc đang chơi cậu vô tình ngủ quên
+            và khi tỉnh dậy phát hiện ra thế giới ảo đã hóa thành hiện thực. Tuy nhiên, vị hiền nhân đã không còn là vị
+            hiền nhân như lúc trước . Và hơn hết là từ 1 thanh niên cao to lực lưỡng cậu lại biến thành 1 cô gái . Hình
+            tượng cũ bị sụp đổ , cậu sẽ đối phó với tình hình éo le này như thế nào ?????????
+        </p:synopsis>
+        <p:hash>-531419970</p:hash>
+        <p:view>111884</p:view>
+        <p:point>5.0</p:point>
+        <p:genres>adventure|fantasy|action|comedy|gender bender|psychological|shoujo|isekai</p:genres>
+        <p:last_update>09/07/2018 00:54</p:last_update>
+        <p:total_update>31</p:total_update>
+        <p:link>https://ln.hako.re/truyen/184-kenja-no-deshi-wo-nanoru-kenja</p:link>
+    </p:project>
+    <p:project>
+        <p:id>400</p:id>
+        <p:name>Isekai de miryoku cheat o tsukatte dorei harem o tsukutte mita</p:name>
+        <p:alter-name>I made a slave harem using a charm cheat in a different world</p:alter-name>
+        <p:author>Oishi Nagai</p:author>
+        <p:illustrator>Mone Tei</p:illustrator>
+        <p:synopsis>Miura Ryuta được triệu hồi đến thế giới khác và nhận cheat Quyến rũ Tuyệt đối.Dựa vào sức mạnh tình
+            dục và trí óc, công cuộc chinh phục thế giới của anh bắt đầu
+        </p:synopsis>
+        <p:hash>819340304</p:hash>
+        <p:view>111013</p:view>
+        <p:point>5.0</p:point>
+        <p:genres>adult|adventure|ecchi|fantasy|harem|mature|isekai</p:genres>
+        <p:last_update>09/07/2018 00:41</p:last_update>
+        <p:total_update>35</p:total_update>
+        <p:link>https://ln.hako.re/truyen/1214-isekai-de-miryoku-chito-o-tsukatte-dorei-haremu-o-tsukutte-mita</p:link>
+    </p:project>
+    <p:project>
+        <p:id>276</p:id>
+        <p:name>Attouteki gacha unde Isekai wo nariagaru !</p:name>
+        <p:alter-name>圧倒的ガチャ運で異世界を成り上がる！; I Rose Suddenly in The Alternate World By Overwhelming Gacha With Luck!
+        </p:alter-name>
+        <p:author>Kennoji</p:author>
+        <p:illustrator>Yamcha</p:illustrator>
+        <p:synopsis> Anh main chuyển sinh sang thế giới khác có gacha.Tuy nhiên sau khi chuyển sinh đã xảy ra biến
+            cố Chỉ số [ May mắn ] bình thường max là 99  nhưng của anh main lên tơi 999999__Đợt gacha đâu tiên thì lại
+            trúng ngay món vũ khi cấp huyền thoại mạnh nhất「 Ngôi nhà này đã trúng bằng gacha 」 「con pet này là rồng ?
+            Mà có gì đó sai sai 」  
+        </p:synopsis>
+        <p:hash>204057427</p:hash>
+        <p:view>253265</p:view>
+        <p:point>5.0</p:point>
+        <p:genres>adventure|comedy|fantasy|harem|isekai|web novel</p:genres>
+        <p:last_update>09/07/2018 00:20</p:last_update>
+        <p:total_update>81</p:total_update>
+        <p:link>https://ln.hako.re/truyen/499-attouteki-gacha-unde-isekai-wo-nariagaru</p:link>
+    </p:project>
+    <p:project>
+        <p:id>427</p:id>
+        <p:name>Kaette Kita Motoyuusha</p:name>
+        <p:alter-name>帰ってきた元勇者; Return of the Former Hero; Sự trở về của cựu anh hùng</p:alter-name>
+        <p:author>Nishi</p:author>
+        <p:illustrator>Komeshiro Kasu</p:illustrator>
+        <p:synopsis>Khi xưa, một anh hùng được triệu hồi từ thế giới khác để tiêu diệt Quỉ vương. Sau khi cuộc chiến kéo
+            dài 3 năm chấm dứt, vị anh hùng được tán tụng đã tiêu diệt quỉ vương. Sau đó cậu bị ép buộc trục xuất về lại
+            trái đất sau khi bị xua đuổi.Tha cho tôi đi!Người elf, rồi còn thú nhân, người lùn và quỉ tộc.Tôi muốn thành
+            lập hậu cung nơi thế giới tôi đã cứu chớ!Giấc mơ tôi sẽ không thành sự thật ở trái đất, nơi ma thuật không
+            tồn tại.Vì thế, vị anh hùng sẽ tự mình quay lại.Không hề có lỗi đến nỗi bị dẫn độ về trái đất, vị anh hùng
+            sẽ xây dựng hậu cung cho cậu ở nơi thế giới khác.
+        </p:synopsis>
+        <p:hash>1290374957</p:hash>
+        <p:view>215646</p:view>
+        <p:point>5.0</p:point>
+        <p:genres>action|adventure|ecchi|fantasy|harem|romance|comedy|super power|web novel</p:genres>
+        <p:last_update>09/07/2018 00:46</p:last_update>
+        <p:total_update>115</p:total_update>
+        <p:link>https://ln.hako.re/truyen/326-kaette-kita-motoyuusha</p:link>
+    </p:project>
+    <p:project>
+        <p:id>411</p:id>
+        <p:name>Isekai Sagishi no Consulting</p:name>
+        <p:alter-name>異世界詐欺師のなんちゃって経営術; Thuật kinh doanh của kẻ lừa đảo ở thế giới khác</p:alter-name>
+        <p:author>Miyaji Takumi (宮地拓海)</p:author>
+        <p:illustrator>Fal Maro (ファルまろ)</p:illustrator>
+        <p:synopsis>Ooba Yashiro là một tay lừa đảo khét tiếng ở Nhật Bản.Sau khi cuộc sống bất hạnh của mình kết thúc
+            ngay vào ngày sinh nhật lần thứ 36, cậu đã tái sinh đến thế giới khác với ngoại hình trẻ lại về tuổi 16.Tại
+            All Bloom, "thành phố không thể nói dối", nơi những kẻ nói dối sẽ bị biến thành ếch bởi "thần tinh linh"
+            Alvi — một người ghét nói dối, Yashiro đã sử dụng kinh nghiệm của một kẻ lừa đảo để tiến thân.Đây là một câu
+            chuyện kể về nhân vật chính tái sinh đến thế giới khác, dùng "kiến thức thời hiện đại" và "tài biện luận"
+            làm vũ khí để cứu một mỹ nhân ngực to, phục sinh quán ăn nghèo nàn và cải thiện hoàn cảnh sinh hoạt của quận
+            tàn tạ nhất.
+        </p:synopsis>
+        <p:hash>-1657905316</p:hash>
+        <p:view>215158</p:view>
+        <p:point>5.0</p:point>
+        <p:genres>comedy|isekai|web novel|romance|slice of life</p:genres>
+        <p:last_update>09/07/2018 00:43</p:last_update>
+        <p:total_update>148</p:total_update>
+        <p:link>https://ln.hako.re/truyen/1316-isekai-sagishi-no-consulting</p:link>
+    </p:project>
+    <p:project>
+        <p:id>429</p:id>
+        <p:name>Kaifuku Jutsushi no Yarinaoshi ~ Sokushi Mahou to Skill Copy no Choetsu Heal</p:name>
+        <p:alter-name>The Redo of a Healing Magician ~ Transcendental Healing of Instant Death Magic and Skill
+            Copying;Khởi Đầu Lại Của Một Trị Liệu Sư - Hồi Phục Siêu Cấp, Tử Thuật và Kỹ Năng Sao Chép ( The Redo of a
+            Healing Magician ~ Transcendental Healing of Instant Death Magic and Skill Copying );Kaifuku Jutsushi no
+            Yarinaoshi ~ Sokushi Mahou to Skill Copy no Choetsu Heal
+        </p:alter-name>
+        <p:author>TSUKIYO RUI ( 月夜　涙（るい）);Tsukiyo Rui ( 月夜　涙（るい）)</p:author>
+        <p:illustrator>Shiokonbu</p:illustrator>
+        <p:synopsis>- Sử dụng ma thuật hồi phục lên cái thế giới thối nát này, tôi sẽ bắt đầu lại lần nữa.‘Trị liệu sư
+            không thể chiến đấu một mình.’ Kearu, kẻ bị bó buộc vào cái điều mà ai cũng biết này, bị lợi dụng hết lần
+            này đến lần khác bởi những kẻ hắn gọi là đồng đội.Nhưng một ngày, hắn đã nhận ra một thứ còn cao hơn cả ma
+            thuật hồi phục, và thấy rằng trị liệu sư là nghề mạnh nhất. Tuy nhiên khi mà hắn nhận ra tiềm năng của nghề
+            đó, hắn đã bị tướt đoạt mọi thứ. Do đó hắn đã sử dụng ma thuật hồi phục lên thế giới để quay lại 4 năm về
+            trước, và quyết định sẽ làm lại mọi thứ.Đây là giai thoại anh hùng của một trị liệu sư đã trở thành kẻ mạnh
+            nhất bằng việc sử dụng kinh nghiệm từ kiếp trước và ma thuật hồi phục của mình.;Chán về thể loại Isekai main
+            bá, trở thành Hero, lập Harem rồi săn Quỷ Vương ??? Thế thì xem bộ này để đổi gió nhé. Cũng là Isekai nhưng
+            Anti Hero, main phế, bị ức hiếp, bị lũ bạn cho uống thuốc độc, bốc lộc, làm mất trí nhớ. Sau này hồi phục
+            trí nhớ cày nát tụi Hero.
+        </p:synopsis>
+        <p:hash>-1966976133</p:hash>
+        <p:view>184366</p:view>
+        <p:point>5.0</p:point>
+        <p:genres>harem|drama|action|adventure|ecchi|fantasy|isekai|mature|psychological|tragedy|gender
+            bender|romance|shounen|web novel
+        </p:genres>
+        <p:last_update>09/07/2018 00:51</p:last_update>
+        <p:total_update>118</p:total_update>
+        <p:link>
+            https://ln.hako.re/truyen/2634-kaifuku-jutsushi-no-yarinaoshi-sokushi-mahou-to-skill-copy-no-choetsu-heal;https://ln.hako.re/truyen/1396-kaifuku-jutsushi-no-yarinaoshi-sokushi-mahou-to-skill-copy-no-choetsu-heal
+        </p:link>
+    </p:project>
+    <p:project>
+        <p:id>356</p:id>
+        <p:name>Hataraku Maou-sama</p:name>
+        <p:alter-name>Quỷ vương đi làm</p:alter-name>
+        <p:author>Wagahara Satoshi</p:author>
+        <p:illustrator>Oniku</p:illustrator>
+        <p:synopsis>Cốt truyện xoay quanh chúa quỷ Satan sau khi thất thủ trong việc chiếm toàn thế giới của mình đã rút
+            đến một thế giới khác thông qua cổng chuyển dịch mà trường hợp này là đến Nhật Bản. Nhưng tại thế giới này
+            chúa quỷ lại thấy rằng không thể sử dụng phép thuật một cách tự nhiên mà phải rất hạn chế và để hòa nhập với
+            thế giới này Satan đã làm việc bán thời gian chờ thời điểm để quay trở về. Những người đánh bại chúa quỷ
+            cũng theo đến thế giới này để chắc chắn rằng chúa quỷ sẽ không trở lại nhưng cũng mất luôn phép thuật nên dù
+            tìm thấy được Satan thì cũng chẳng làm gì được nhau vì thế cuộc sống cứ thế tiếp tục, theo thời gian mọi
+            người bắt đầu hiểu nhau hơn và các nhân vật mới bắt đầu xuất hiện và nảy sinh nhiều tình huống hài hước.
+        </p:synopsis>
+        <p:hash>529306788</p:hash>
+        <p:view>169215</p:view>
+        <p:point>5.0</p:point>
+        <p:genres>action|comedy|fantasy|slice of life|supernatural|romance</p:genres>
+        <p:last_update>09/07/2018 00:30</p:last_update>
+        <p:total_update>64</p:total_update>
+        <p:link>https://ln.hako.re/truyen/204-hataraku-maou-sama</p:link>
+    </p:project>
+    <p:project>
+        <p:id>512</p:id>
+        <p:name>My entire class was summoned to another world except for me</p:name>
+        <p:alter-name></p:alter-name>
+        <p:author>sazanterasu</p:author>
+        <p:illustrator></p:illustrator>
+        <p:synopsis>Một vị thần từ thế giới khác đột ngột xuất hiện và buộc mọi người trong lớp phải chuyển đên thế giới
+            của ông ta, ngoại trừ tôi, Kamiya Yato  Vì ngồi trong góc lớp, ma pháp trận đã không thể kéo tôi theo, bù
+            lại tôi lại có kĩ năng mới. Sau cả năm trời rắc rối với cảnh sát và báo chí, cuối cùng tôi cũng kết thúc năm
+            nhất cao trung của mình.
+        </p:synopsis>
+        <p:hash>371230171</p:hash>
+        <p:view>160524</p:view>
+        <p:point>5.0</p:point>
+        <p:genres>harem|supernatural|action|fantasy|comedy|slice of life|romance</p:genres>
+        <p:last_update>09/07/2018 01:11</p:last_update>
+        <p:total_update>77</p:total_update>
+        <p:link>https://ln.hako.re/truyen/1207-my-entire-class-was-summoned-to-another-world-except-for-me</p:link>
+    </p:project>
+    <p:project>
+        <p:id>376</p:id>
+        <p:name>Hyouketsu Kyoukai no Eden</p:name>
+        <p:alter-name></p:alter-name>
+        <p:author>Sazane Kei</p:author>
+        <p:illustrator>Kasukabe Akira</p:illustrator>
+        <p:synopsis>Có hai thế giới, một thế giới có tên là Uế ca địa đàng chi viên (Garden of corrupted song) do những
+            con quái vật được gọi chung là Yuugenshu thống trị, và một thế giới thứ hai, nơi duy nhất mà con người có
+            thể sống được – lục địa trôi dạt “Orbie Clar” trôi dạt trên không trung. Đứng đầu Orbie Clar là nữ hoàng và
+            năm nữ tư tế, đồ đệ của bà. Họ có nhiệm vụ xây dựng kết giới ngăn không cho Yuugenshu xâm chiếm lục địa. Ba
+            năm trước, trong khi thi hành nhiệm vụ thì chàng trai Sheltis đã biến mất khỏi lục địa, toàn bộ những thông
+            tin về anh đều đã được xóa sạch. Ba năm sau, cô bạn thanh mai trúc mã Yumi đã trở thành một trong năm nữ tư
+            tế, nhưng cô vẫn chưa chọn được cho mình một Sennenshi để bảo vệ bản thân do vẫn không quên lời hứa của
+            Sheltis: “tớ sẽ trở lại để bảo vệ cậu”. Một năm sau khi mất tích, Sheltis đã trở về lục địa trôi dạt. Câu
+            chuyện bắt đầu từ đây.
+        </p:synopsis>
+        <p:hash>14320245</p:hash>
+        <p:view>156868</p:view>
+        <p:point>5.0</p:point>
+        <p:genres>action|drama|fantasy|romance|harem|school life</p:genres>
+        <p:last_update>09/07/2018 00:34</p:last_update>
+        <p:total_update>52</p:total_update>
+        <p:link>https://ln.hako.re/truyen/77-hyouketsu-kyoukai-no-eden</p:link>
+    </p:project>
+    <p:project>
+        <p:id>346</p:id>
+        <p:name>Gun-ota ga Mahou Sekai ni Tensei Shitara ( WebNovel)</p:name>
+        <p:alter-name>軍オタが魔法世界に転生したら、現代兵器で軍隊ハーレムを作っちゃいました！？</p:alter-name>
+        <p:author>Meikyo Shisui</p:author>
+        <p:illustrator>Suzuri</p:illustrator>
+        <p:synopsis>Vào một đêm lạnh lẽo, Hotta Youta vừa mới xong việc, đang trên đường về nhà thì bị giết chết. Cứ ngỡ
+            mình đã chết, nhưng khi cậu tỉnh dậy, thì thấy mình đang được bế lên bởi một người con gái với đôi …. tai
+            thỏ? Thể loại: Tái sinh, Súng đạn với cả Harem. Là câu chuyện kết hợp giữa súng và phép thuật,Hotta Youta đã
+            được cho một cuộc sống mới…và không kém phần kịch tính!
+        </p:synopsis>
+        <p:hash>1017717387</p:hash>
+        <p:view>145134</p:view>
+        <p:point>5.0</p:point>
+        <p:genres>fantasy|harem</p:genres>
+        <p:last_update>09/07/2018 00:29</p:last_update>
+        <p:total_update>134</p:total_update>
+        <p:link>https://ln.hako.re/truyen/199-gun-ota-ga-mahou-sekai-ni-tensei-shitara-webnovel</p:link>
+    </p:project>
+    <p:project>
+        <p:id>417</p:id>
+        <p:name>Isekai wa Smartphone to Tomo ni</p:name>
+        <p:alter-name>異世界はスマートフォンとともに。, In a Different World with a Smartphone, Ở thế giới khác với 1 cái điện thoại
+            thông minh; Trong dị giới với 1 con S7 edge
+        </p:alter-name>
+        <p:author>Fuyuhara Batora</p:author>
+        <p:illustrator>Usatsuka Eiji</p:illustrator>
+        <p:synopsis>Nội dung kể về một anh main giống như bao anh main khác khi đang trên đường về nhà lại bị… sét đánh
+            lăn đùng ra chết :v
+        </p:synopsis>
+        <p:hash>-1261433733</p:hash>
+        <p:view>140557</p:view>
+        <p:point>5.0</p:point>
+        <p:genres>adventure|comedy|fantasy|harem|romance</p:genres>
+        <p:last_update>09/07/2018 00:44</p:last_update>
+        <p:total_update>12</p:total_update>
+        <p:link>https://ln.hako.re/truyen/276-isekai-wa-smartphone-to-tomo-ni</p:link>
+    </p:project>
+    <p:project>
+        <p:id>419</p:id>
+        <p:name>Isekai Yururi Kikou ~Raising Children While Being an Adventurer~</p:name>
+        <p:alter-name>異世界ゆるり紀行 ～子育てしながら冒険者します～</p:alter-name>
+        <p:author>水無月 静琉</p:author>
+        <p:illustrator></p:illustrator>
+        <p:synopsis>"Tôi vô cùng xin lỗi."Một vị thần bỗng nhiên nằm úp mặt và quỳ lạy trước Kayano Takum. Có vẻ như cậu
+            ấy bị giết  do sai lầm của ông thần này . Hơn nữa, cậu không thể được tái sinh tại nơi mình sống lần nữa.
+            Tuy nhiên, cậu ấy lại có thể chuyển sinh tới một thế giới khác? Vậy thì ,quất luôn đi, làm ơn. Vậy mà ông ấy
+            lạ tiếp tục mắc sai lầm và dịch chuyển tôi đến một khu rừng nguy hiểm. Nghiêm túc đấy? Cái gì đang xảy ra
+            vậy? Bên cạnh đó, có vài đứa trẻ ở đây. Tôi không thể để mặc chúng ở đây, tôi sẽ chăm sóc chúng.
+        </p:synopsis>
+        <p:hash>1778535545</p:hash>
+        <p:view>140050</p:view>
+        <p:point>5.0</p:point>
+        <p:genres>action|adventure|comedy|fantasy|slice of life</p:genres>
+        <p:last_update>09/07/2018 00:44</p:last_update>
+        <p:total_update>92</p:total_update>
+        <p:link>https://ln.hako.re/truyen/896-isekai-yururi-kikou-raising-children-while-being-an-adventurer</p:link>
+    </p:project>
+    <p:project>
+        <p:id>466</p:id>
+        <p:name>Kuma Kuma Kuma Bear</p:name>
+        <p:alter-name>Bé Gấu mặc bộ đồ Gấu trông giống Gấu và tính tình khá Gấu; くま クマ 熊 ベアー;くま　クマ　熊　ベアー;Kuma Kuma Kuma
+            Bear
+        </p:alter-name>
+        <p:author>Kuma na no;Kumanano</p:author>
+        <p:illustrator>029</p:illustrator>
+        <p:synopsis>Yuna, một cô bé 15 tuổi, đang chơi tựa game VRMMO đầu tiên trên thế giới.Cô bé đã kiếm được hàng tỉ
+            yên nhờ chơi cổ phiếu.Hiện tại, cô bé tự giam mình trong nhà để chơi game mỗi ngày mà không thèm đến
+            trường.Hôm nay, một bản Update lớn vừa được cập nhật, và cô bé đã nhận được một bộ đồ hiếm không thể giao
+            dịch. Một bộ đồ với ngoại hình của gấu, thứ mà khiến cô bé quá mức xấu hổ để mặc, cho dù là ở trong game.Hơn
+            nữa, sau khi trả lời một bản khảo sát về Update mới, cô bé thấy mình đang đứng giữa một khu rừng xa lạ trong
+            bộ đồ gấu.Đây là đâu?Một cái Email từ Chúa?Thế giới khác?Nếu cô bé mặc bộ đồ Gấu, cô bé sẽ mạnh như cheat.
+            Nhưng nếu cởi nó ra, cô bé sẽ chỉ là một cô nhóc bình thường.Cuộc phiêu lưu của Yuna bắt đầu như thế đó. Cô
+            bé sẽ làm bất cứ thứ gì mà cô bé muốn.;Yuna, một cô gái 15 tuổi bắt đầu chơi trò chơi định dạng VRMMO đầu
+            tiên trên thế giới.Cô đã nhận được hàng tỷ Yên từ tiền cổ phiếu, và quyết định "đóng đô" luôn trong nhà,
+            không đi học đến trường nữa.Hôm nay, một bản cập nhật lớn đã tới tay người chơi. Cô ấy nhận được bộ trang
+            phục Gấu quý hiếm, không-thể-chuyển-giao-cho-người-khác.Nhưng bộ đồ ấy làm cô quá mắc cỡ, đến nỗi cô cũng
+            không dám mặc nó trong game.Hơn thế nữa, khi trả lời khảo sát về bản cập nhật cũng như tình hình khởi động
+            lại game, cô nhận ra mình đã xuất hiện ở một thế giới khác trong bộ trang phục gấu.Đây là đâu ? Một lá thư
+            từ Thần ư ? Một thế giới khác sao ?Nếu cô mặc bộ đồ Gấu vào, cô sẽ là 1 cheater; và nếu cởi nó ra, cô chỉ là
+            một cô gái bình thường mà thôi. Và cô sẽ làm bất kỳ những gì mình muốn theo ý của cô. Cuộc hành trình mới
+            của Yuna đã bắt đầu như vậy đấy.
+        </p:synopsis>
+        <p:hash>2099519593</p:hash>
+        <p:view>108891</p:view>
+        <p:point>5.0</p:point>
+        <p:genres>action|adventure|comedy|fantasy|shoujo|slice of life|isekai</p:genres>
+        <p:last_update>09/07/2018 01:04</p:last_update>
+        <p:total_update>189</p:total_update>
+        <p:link>https://ln.hako.re/truyen/523-kuma-kuma-kuma-bear;https://ln.hako.re/truyen/1879-kuma-kuma-kuma-bear
+        </p:link>
+    </p:project>
+    <p:project>
+        <p:id>283</p:id>
+        <p:name>Boku no Bungeibu ni Bitch ga Iru Nante Arienai</p:name>
+        <p:alter-name>僕の文芸部にビッチがいるなんてありえない</p:alter-name>
+        <p:author>Akafuku Yamato</p:author>
+        <p:illustrator>Asakura Hayate</p:illustrator>
+        <p:synopsis>Con gái ngoài đời thực chỉ là một đám bitch—. Tin tưởng như vậy, cậu học sinh cao trung Ikuno
+            Kousuke đã dùng phòng của câu lạc bộ văn học để làm thiên đường tận hưởng những hoạt động otaku của mình.
+            Tuy nhiên, vào một ngày kia, cậu nhận được câu nói “Nếu cứ tiếp tục như thế này, câu lạc bộ văn học sẽ phải
+            bị loại bỏ” từ trợ lý của chủ tịch hội học sinh, thiếu nữ xinh đẹp tóc đen (thực chất là bitch thanh lịch)
+            Shinonome Ibuki. Để tránh việc đó xảy ra, cậu phải giúp hội học sinh tư vấn cho học sinh cùng Ibuki. Và
+            người đầu tiên đến xin tư vấn chính là thiếu nữ xinh đẹp tóc vàng, ngực to, chia đôi việc được yêu mến với
+            Ibuki – Aizawa Manaha. Tuy được đồn là đã hẹn hò với biết bao nhiêu chàng trai, nhưng thật ra thì cô ấy chả
+            có kinh nghiệm yêu đương gì cả, cho nên cô ấy muốn nhờ Kousuke đóng giả làm bạn trai...!?
+        </p:synopsis>
+        <p:hash>-258892810</p:hash>
+        <p:view>108306</p:view>
+        <p:point>5.0</p:point>
+        <p:genres>comedy|ecchi|school life|harem</p:genres>
+        <p:last_update>09/07/2018 00:23</p:last_update>
+        <p:total_update>52</p:total_update>
+        <p:link>https://ln.hako.re/truyen/152-boku-no-bungeibu-ni-bitch-ga-iru-nante-arienai</p:link>
+    </p:project>
+    <p:project>
+        <p:id>365</p:id>
+        <p:name>Hikaru ga Chikyuu ni Itakoro......</p:name>
+        <p:alter-name>Khi Hikaru còn trên Địa Cầu......</p:alter-name>
+        <p:author>Mizuki Nomura</p:author>
+        <p:illustrator>Miho Takeoka</p:illustrator>
+        <p:synopsis>Câu chuyện bắt đầu bằng cái chết đột ngột của Hikaru Mikado, hoàng tử của Học viện Heian. Linh hồn
+            của Hikaru đã tìm cách bắt chuyện với Akagi Koremitsu, cậu học sinh mới được truyền tụng là côn đồ đầy tai
+            tiếng và là nam sinh duy nhất của Học viện đến tham dự tang lễ của mình, và nhờ Akagi hoàn thành giùm ước
+            nguyện dang dở của mình với vị hôn thê Aoi Saotome.
+        </p:synopsis>
+        <p:hash>435119485</p:hash>
+        <p:view>107950</p:view>
+        <p:point>5.0</p:point>
+        <p:genres>drama|harem|mystery|school life|slice of life|supernatural|romance</p:genres>
+        <p:last_update>09/07/2018 00:33</p:last_update>
+        <p:total_update>97</p:total_update>
+        <p:link>https://ln.hako.re/truyen/124-hikaru-ga-chikyuu-ni-itakoro</p:link>
+    </p:project>
+    <p:project>
+        <p:id>363</p:id>
+        <p:name>High School DxD</p:name>
+        <p:alter-name>ハイスクールD×D, Haisukūru Di Di</p:alter-name>
+        <p:author>Ichiei Ishibumi</p:author>
+        <p:illustrator>Miyama-Zero</p:illustrator>
+        <p:synopsis>I, Hyoudou Issei, am a 2nd Year High school student and my age is equal to the number of years I
+            haven’t had a girlfriend. And, someone like me got a girlfriend! I’m sorry buddies, I will walk the path of
+            becoming an adult before you guys! – That’s how it was supposed to be, but why did I get killed by my
+            girlfriend!?I still haven’t done anything yet! Are there no Gods in this World!?And, the person who saved me
+            is the most beautiful girl in my school, Rias Gremory-senpai. I learned the shocking truth from her who
+            isn’t a God but a Devil. “You have reincarnated as a Devil! Work for me!”Lured by Senpai’s breasts and
+            treats, my life as a reincarnated Devil began.So the “Academy×Love Comedy×Battle Fantasy” starts here with
+            just aggressive and worldly desires!
+        </p:synopsis>
+        <p:hash>700340724</p:hash>
+        <p:view>98405</p:view>
+        <p:point>5.0</p:point>
+        <p:genres>action|comedy|ecchi|fantasy|harem|school life|supernatural|romance</p:genres>
+        <p:last_update>09/07/2018 00:33</p:last_update>
+        <p:total_update>55</p:total_update>
+        <p:link>https://ln.hako.re/truyen/140-high-school-dxd</p:link>
+    </p:project>
+    <p:project>
+        <p:id>331</p:id>
+        <p:name>Ero Manga Sensei: Imouto to Akazu no Ma</p:name>
+        <p:alter-name>エロマンガ先生 妹と開かずの間</p:alter-name>
+        <p:author>Tsukasa Fushimi</p:author>
+        <p:illustrator>Hiro Kanzaki</p:illustrator>
+        <p:synopsis>Câu 'chuyện tình anh em' lần này xoay quanh Masamune Izumi, một học sinh cấp ba đồng thời là tác giả
+            light novel. Em gái cậu, Sagiri là một cô bé sống biệt lập cả năm trời không ra khỏi nhà. Cậu buộc phải mang
+            cơm nước đến phòng mình mỗi ngày, cho dù trong lòng rất muốn cô bé ra khỏi phòng vì cả hai chỉ còn mỗi mình
+            nhau. Họa sĩ vẽ tranh minh họa cho light novel của Masamune có bút danh "Eromanga Sensei", chuyên vẽ những
+            bức cực nóng cực hot, đồng thời cũng rất đáng tin cậy. Masamune chưa từng gặp họa sĩ của mình nhưng đoán đó
+            là một ông otaku dâm đãng biến thái. Nhưng sự thật, Eromanga-sensei chính là em gái cậu. Đã loạn lại càng
+            thêm loạn, một tác giả nổi tiếng khác cũng nhảy vào làm đối thủ!
+        </p:synopsis>
+        <p:hash>-333165480</p:hash>
+        <p:view>96094</p:view>
+        <p:point>5.0</p:point>
+        <p:genres>comedy|drama|ecchi|romance</p:genres>
+        <p:last_update>09/07/2018 00:27</p:last_update>
+        <p:total_update>51</p:total_update>
+        <p:link>https://ln.hako.re/truyen/123-ero-manga-sensei-imouto-to-akazu-no-ma</p:link>
+    </p:project>
+    <p:project>
+        <p:id>73</p:id>
+        <p:name>Aa! Megami-sama!: First End</p:name>
+        <p:alter-name>English: Oh My Goddess! First End, Synonyms: Shousetsu-ban Aa! Megami-sama!: Shoshuu, Japanese:
+            小説版 ああっ女神さまっ 初終－First End－,
+        </p:alter-name>
+        <p:publish-date></p:publish-date>
+        <p:author>Touma, Yumi</p:author>
+        <p:illustrator>Matsubara, Hidenori</p:illustrator>
+        <p:hash>-58716971</p:hash>
+        <p:view>605</p:view>
+        <p:point>7.0</p:point>
+        <p:genres>comedy|fantasy|romance</p:genres>
+        <p:last_update>09/07/2018 00:09</p:last_update>
+        <p:total_update>0</p:total_update>
+        <p:link>https://myanimelist.net/manga/4603/Aa_Megami-sama__First_End</p:link>
+    </p:project>
+    <p:project>
+        <p:id>72</p:id>
+        <p:name>Aa Yuusha, Kimi no Kurushimu Kao ga Mitainda</p:name>
+        <p:alter-name>Japanese: ああ勇者、君の苦しむ顔が見たいんだ,</p:alter-name>
+        <p:publish-date></p:publish-date>
+        <p:author>Narita, Imomushi</p:author>
+        <p:illustrator>Yuusha Aiueon</p:illustrator>
+        <p:hash>404990463</p:hash>
+        <p:view>73</p:view>
+        <p:point>5.0</p:point>
+        <p:genres>fantasy</p:genres>
+        <p:last_update>09/07/2018 00:09</p:last_update>
+        <p:total_update>0</p:total_update>
+        <p:link>https://myanimelist.net/manga/92519/Aa_Yuusha_Kimi_no_Kurushimu_Kao_ga_Mitainda</p:link>
+    </p:project>
+    <p:project>
+        <p:id>74</p:id>
+        <p:name>Aakuma Detekuuru: Chikashitsu no Akuma</p:name>
+        <p:alter-name>Synonyms: Akuma Detekuru: Chikashitsu no Akuma, Japanese: アークマ・デテクール 地下室の悪魔,</p:alter-name>
+        <p:publish-date></p:publish-date>
+        <p:author>Achi, Tarou</p:author>
+        <p:illustrator>Mutou, Kurihito</p:illustrator>
+        <p:hash>181797212</p:hash>
+        <p:view>20</p:view>
+        <p:point>5.0</p:point>
+        <p:genres>comedy|romance|supernatural</p:genres>
+        <p:last_update>09/07/2018 00:09</p:last_update>
+        <p:total_update>0</p:total_update>
+        <p:link>https://myanimelist.net/manga/80987/Aakuma_Detekuuru__Chikashitsu_no_Akuma</p:link>
+    </p:project>
+    <p:project>
+        <p:id>467</p:id>
+        <p:name>Kumo Desu Ga Nani Ka</p:name>
+        <p:alter-name></p:alter-name>
+        <p:author>Baba Okina</p:author>
+        <p:illustrator>Tsukasa Kiryu</p:illustrator>
+        <p:synopsis>Trích lời tác giả: tất cả nội dung của truyện là dòng suy nghĩ của nhân vật, thế nên nếu có sự hiểu
+            nhầm gì đó thì đó là lỗi nhân vật, không phải lỗi tác giả" - Hay lỗi của trans. Câu chuyện kể về một bé nhện
+            dễ thương bị lạc vào trong một dungeon cấp cao và phải liều mạng để bảo vệ tính mạng và sự trong sạch(lol)
+            của mình khỏi lũ quái vật ở đó.
+        </p:synopsis>
+        <p:hash>417230045</p:hash>
+        <p:view>1656518</p:view>
+        <p:point>5.0</p:point>
+        <p:genres>adventure|comedy|gender bender|shoujo ai|fantasy</p:genres>
+        <p:last_update>09/07/2018 00:59</p:last_update>
+        <p:total_update>558</p:total_update>
+        <p:link>https://ln.hako.re/truyen/259-kumo-desu-ga-nani-ka</p:link>
+    </p:project>
+    <p:project>
+        <p:id>315</p:id>
+        <p:name>Death March kara Hajimaru Isekai Kyusoukyoku</p:name>
+        <p:alter-name>デスマーチからはじまる異世界狂想曲; Death Marching to the Parallel World Rhapsody; Desumachi</p:alter-name>
+        <p:author>AINANA Hiro</p:author>
+        <p:illustrator>shiri</p:illustrator>
+        <p:synopsis>Suzuki, một lập trình viên trưởng thành, đang làm việc và ngủ thức dậy đột nhiên chú ý rằng cậu bị
+            ném vào thế giới khác khi đang mặc một bộ quần áo bình thường ở cấp độ 1. Cậu đạt được cấp độ cao và kho báu
+            sau khi sử dụng phép thuật-sẵn-có-3 lần, Mưa Thiên Thạch, chỉ với một lần và lên cấp thánh . Sau đó việc cậu
+            dự định làm ở thế giới khác là một “chuyến du hành tham thú ngắm cảnh”? Gặp gỡ ba cô gái người thú, chị em
+            gái tóc tím và đen xinh đẹp và một cô gái yêu tinh tóc vàng kì dị cùng với rất nhiều người trên chuyến du
+            hành của cậu sau này xuất hiện và gia nhập dàn harem. Dù phải chiến đấu với ma quái và chúa quỉ, đây vẫn là
+            câu chuyện viễn tưởng ấm áp xúc động.
+        </p:synopsis>
+        <p:hash>-504980965</p:hash>
+        <p:view>1112372</p:view>
+        <p:point>5.0</p:point>
+        <p:genres>adventure|comedy|fantasy|harem|romance|ecchi|slice of life|web novel</p:genres>
+        <p:last_update>09/07/2018 00:24</p:last_update>
+        <p:total_update>438</p:total_update>
+        <p:link>https://ln.hako.re/truyen/219-death-march-kara-hajimaru-isekai-kyusoukyoku</p:link>
+    </p:project>
+    <p:project>
+        <p:id>511</p:id>
+        <p:name>Mushoku Tensei - Isekai Ittara Honki Dasu</p:name>
+        <p:alter-name>Vô chức chuyển sinh</p:alter-name>
+        <p:author>Rifujin na Magonote</p:author>
+        <p:illustrator>Shirotaka</p:illustrator>
+        <p:synopsis>Một otaku vô công rồi nghề 34 tuổi bị đuổi ra khỏi nhà bởi chính gia đình của mình. Nhận ra cuộc đời
+            của bản thân đã lâm vào ngõ cụt cũng như là sự rác rưởi, vô dụng của bản thân; anh ta ước rằng phải chi bản
+            thân khi xưa vượt qua được giai đoạn đen tối của cuộc đời thì bây giờ có lẽ mọi chuyện đã khác. Đúng vào
+            khoảnh khắc hối tiếc đó, anh thấy 1 chiếc xe tải chạy với vận tốc lớn đang lao đến 3 học sinh trung học gần
+            đó. Gom tất cả sức lực còn lại, anh ta cứu được 3 học sinh kia tuy nhiên lại phải bỏ mạng của chính bản thân
+            mình dưới bánh chiếc xe tải đó. Khi mở mắt ra, anh nhận ra rằng mình đã được đầu thai ở thế giới của gươm
+            giáo và phép thuật song hành tồn tại dưới cái tên Rudeus Greyrat. Dưới hình hài mới ở một thế giới mới,
+            Rudeus tự khẳng định với bản thân " Lần này mình sẽ thực sự sống đến tận cùng cuộc sống này mà không hề tiếc
+            nuối". Và như thế, cuộc hành trình của anh bắt đầu.
+        </p:synopsis>
+        <p:hash>-1737855340</p:hash>
+        <p:view>1076202</p:view>
+        <p:point>5.0</p:point>
+        <p:genres>action|adventure|fantasy|harem</p:genres>
+        <p:last_update>09/07/2018 01:11</p:last_update>
+        <p:total_update>205</p:total_update>
+        <p:link>https://ln.hako.re/truyen/139-mushoku-tensei-isekai-ittara-honki-dasu</p:link>
+    </p:project>
+    <p:project>
+        <p:id>457</p:id>
+        <p:name>Konjiki no Word Master</p:name>
+        <p:alter-name>Konjiki no Word Master: Yuusha Yonin ni Makikomareta Unique Cheat, The Unique Cheat of The Man
+            Dragged in By The Four Heroes; Ăn một chữ, trả 1 loli, mua 3 thùng phi mang đi mà đựng.
+        </p:alter-name>
+        <p:author>Tomoto Sui</p:author>
+        <p:illustrator>Sumaki Shungo</p:illustrator>
+        <p:synopsis>Hiiro Okamura, học sinh trung học, một con mọt sách tham ăn và luôn cô độc, nhận ra mình được triệu
+            hồi đến 1 thế giới khác cùng với 1 nhóm 4 người bạn cùng lớp. Sau đó, Bốn người kia phát hiện ra mình có
+            danh hiệu "Hero", còn danh hiệu của Hiiro lại là "Innocent Bystander" (Người qua đường vô tội). Hiiro bắt
+            đầu cuộc hành trình của mình với một phép thuật đặc biệt - Word Magic với khả năng biến những từ tiếng Nhật
+            cậu viết ra trên không khí thành sự thật *Tóm tắt CỰC NGẮN : Main cực bá, biết dùng đầu (thay vì chiến đấu
+            bằng niềm tin), ngầu, loli everywhere và main đi đến đâu loli đổ gục đến đấy. Hết
+        </p:synopsis>
+        <p:hash>487637847</p:hash>
+        <p:view>696972</p:view>
+        <p:point>5.0</p:point>
+        <p:genres>action|fantasy|harem</p:genres>
+        <p:last_update>09/07/2018 00:57</p:last_update>
+        <p:total_update>221</p:total_update>
+        <p:link>https://ln.hako.re/truyen/214-konjiki-no-word-master</p:link>
+    </p:project>
+    <p:project>
+        <p:id>479</p:id>
+        <p:name>Living in this World with Cut &amp; Paste</p:name>
+        <p:alter-name>Living in this World with Cut &amp; Paste</p:alter-name>
+        <p:author>Sakuya</p:author>
+        <p:illustrator>PiNe</p:illustrator>
+        <p:synopsis>Một thế giới nơi mà Thần sẽ ban cho những Kỹ năng (skills) cho những ai đến tuổi trưởng thành. Nhân
+            vật chính, được ban cho hai kỹ năng, sử dụng chúng và trở thành sự tồn tại được gọi là anh hùng.....Team:
+            Lẩu cá (lẩu này không ăn được :)))Trans:Maxmalefic9x (chủ tọa) (Cá trình (chịch) điện :)))) (h là Trans +
+            Edit)Shacks (mới tuyển) (Cá mập) (lặn do thi cử)Cá Bống (Mới tuyển)Editor:SoullessPuppet (nó lặn từ tháng
+            9/2017 cmnr, tội thanh niên cb thi ĐH)BlackSlime (Cá bảy màu) (lặn do có việc, cuối tháng 7 - 2018 trồi lên)
+        </p:synopsis>
+        <p:hash>122869048</p:hash>
+        <p:view>318813</p:view>
+        <p:point>5.0</p:point>
+        <p:genres>action|adventure|fantasy|harem|romance|slice of life|web novel|super power</p:genres>
+        <p:last_update>09/07/2018 01:06</p:last_update>
+        <p:total_update>107</p:total_update>
+        <p:link>https://ln.hako.re/truyen/799-living-in-this-world-with-cut-paste</p:link>
+    </p:project>
+    <p:project>
+        <p:id>495</p:id>
+        <p:name>Maou no Ore ga Dorei Elf wo Yome ni Shitan daga, dou mederebaii?</p:name>
+        <p:alter-name>I, the Demon Lord, Took a Slave Elf as my Wife, but how do I Love Her?</p:alter-name>
+        <p:author>Teshima Fuminori</p:author>
+        <p:illustrator>COMTA</p:illustrator>
+        <p:synopsis>Zagan là một pháp sư tà ác đáng sợ, cậu tàn ác và những lời nói của cậu sắc như dao. Vào một buổi
+            sáng, khi cậu tiêu diệt những kẻ cả gan dám xâm phạm lãnh thổ của cậu trong khi cậu đang đi nghiên cứu. Cậu
+            đã mua một cô Elf tóc trắng trong một buổi đấu giá, đó là Nephie, một nàng Elf với vẻ đẹp tựa thiên thần.
+            Yêu ngay từ cái nhìn đầu tiên, cậu đã dùng cả tài sản để mua cô ấy, nhưng vì kỹ năng giao tiếp dở tệ, nên
+            cậu không biết phải làm sao để giao tiếp với cô. Và thế là câu chuyện về một pháp sư vụng về không biết bày
+            tỏ tình yêu và một nàng nô lệ yêu say đắm chủ nhân của mình nhưng lại không biết phải làm gì bắt đầu
+        </p:synopsis>
+        <p:hash>1753882237</p:hash>
+        <p:view>95565</p:view>
+        <p:point>5.0</p:point>
+        <p:genres>comedy|fantasy|romance|supernatural</p:genres>
+        <p:last_update>09/07/2018 01:09</p:last_update>
+        <p:total_update>38</p:total_update>
+        <p:link>https://ln.hako.re/truyen/2025-maou-no-ore-ga-dorei-elf-wo-yome-ni-shitan-daga-dou-mederebaii</p:link>
+    </p:project>
+    <p:project>
+        <p:id>309</p:id>
+        <p:name>Damegami to Issho ni Isekai Musou</p:name>
+        <p:alter-name>Taberu Dake de Level Up!; Level Up Just By Eating; 食べるだけでレベルアップ！</p:alter-name>
+        <p:author>Kt60</p:author>
+        <p:illustrator>Chiri; ちり</p:illustrator>
+        <p:synopsis>- Tóm tắt của tác giả:Nhân vật chính của chúng ta được triệu hồi tới thế giới khác.Ban đầu, cậu ta
+            là một thất bại với kĩ năng đập trứng bằng 1 tay. Tuy nhiên, cậu ta có 1 kĩ năng giúp cậu có thể kiếm điểm
+            kinh nghiệm chỉ với việc ăn...- Tóm tắt WN:Cô nữ thần vô dụng Laura chỉ có điểm tốt là bộ ngực khủng của cô
+            taVà chàng trai Kehma được triệu hồi tới thế giới khácCó được kĩ năng cheat có thể hấp thụ những gì mà cậu
+            ăn, cậu ta hưởng thụ cuộc sống của mình ở thế giới khác ăn những món ăn ngon và chơi đùa với cô nữ thần dễ
+            xử lí Laura. Novel có tag R-15 người đọc cân nhắc trước khi đọc. 
+        </p:synopsis>
+        <p:hash>-2073578638</p:hash>
+        <p:view>93749</p:view>
+        <p:point>5.0</p:point>
+        <p:genres>action|comedy|ecchi|fantasy|harem|isekai|romance|slice of life</p:genres>
+        <p:last_update>09/07/2018 00:24</p:last_update>
+        <p:total_update>50</p:total_update>
+        <p:link>https://ln.hako.re/truyen/1476-damegami-to-issho-ni-isekai-musou</p:link>
+    </p:project>
+    <p:project>
+        <p:id>513</p:id>
+        <p:name>My House is a Magic Power Spot~ Just by Living there I Become the Strongest in the World</p:name>
+        <p:alter-name>俺の家が魔力スポットだった件～住んでいるだけで世界最強～ (Oreno Uchiga Maryoku Spot datta Ken~ Sundeiru dakede
+            Sekaisaikyou~)
+        </p:alter-name>
+        <p:author>あまうい白一 (Amauishiroichi)</p:author>
+        <p:illustrator>鍋島 テツヒロ (Nabeshima Tetsuhiro)</p:illustrator>
+        <p:synopsis>Sống vô tư tại nhà của mình chính là con đường ngắn nhất để mạnh nhất—-Nhà tôi là 1 điểm tích tụ sức
+            mạnh ma thuật lớn nhất, và thế là tôi lẫn căn nhà đã bị triệu hồi đến thế giới khác bởi 1 vài người muốn
+            chiếm nó.Tuy nhiên, vì tôi đã sống ở đây rất nhiều năm rồi nên cơ thể tôi, có vẻ là, đang tràn đầy ma lực
+            một cách bất thường. Và vì vài chuyện không ngờ, những người triệu hồi tôi đến đã bỏ chạy.Nhưng cho dù có
+            thế, vẫn có vài kẻ đang nhen nhóm muốn chiếm đoạt sức mạnh ma thuật rò rỉ từ căn nhà. Tôi sẽ không bao giờ
+            giao căn nhà này cho chúng đâu! Tôi sẽ sử dụng thứ sức mạnh này theo cách mà tôi muốn mà thôi!
+        </p:synopsis>
+        <p:hash>685398739</p:hash>
+        <p:view>92073</p:view>
+        <p:point>5.0</p:point>
+        <p:genres>action|comedy|fantasy|harem|romance|slice of life|web novel</p:genres>
+        <p:last_update>09/07/2018 01:11</p:last_update>
+        <p:total_update>60</p:total_update>
+        <p:link>
+            https://ln.hako.re/truyen/1638-my-house-is-a-magic-power-spot-just-by-living-there-i-become-the-strongest-in-the-world
+        </p:link>
+    </p:project>
+    <p:project>
+        <p:id>475</p:id>
+        <p:name>Kyuuketsu Hime wa Barairo no Yume o Miru</p:name>
+        <p:alter-name>吸血姫は薔薇色の夢をみる; Vampire Princess Rose Colored Dream; Vampire Princess Sees a Rose-Colored Dream;
+            Princess wa Barairo no Yume wo Miru
+        </p:alter-name>
+        <p:author>Sasaki Ichiro</p:author>
+        <p:illustrator>MARIMO</p:illustrator>
+        <p:synopsis>Một thanh niên bị thông tới chết , lại tỉnh lại trong hình dạng nhân vật là cô công chúa ma cà rồng
+            trong game tên là “Eternal Horizon Online” mà bác ấy chơi .Một bé shota (thực ra đã hơn 20 tuổi) có cuộc
+            sống éo le như bao main khác, đã được đầu thai sang thế giới khác sau khi gặp tai nạn, với cơ thể thuộc về
+            một bé loli vampire, nhân vật trong game mà cậu chơi ở thế giới trước. Câu chuyện kể về cuộc phiêu lưu của
+            cậu và đồng bọn, xin được phép bắt đầu ~~
+        </p:synopsis>
+        <p:hash>1527768392</p:hash>
+        <p:view>81210</p:view>
+        <p:point>5.0</p:point>
+        <p:genres>fantasy|action|adventure|gender bender|shoujo|slice of life|tragedy|romance</p:genres>
+        <p:last_update>09/07/2018 01:01</p:last_update>
+        <p:total_update>61</p:total_update>
+        <p:link>https://ln.hako.re/truyen/192-kyuuketsu-hime-wa-barairo-no-yume-o-miru</p:link>
+    </p:project>
+    <p:project>
+        <p:id>295</p:id>
+        <p:name>Byousoku 5 Centimeter</p:name>
+        <p:alter-name>5 centimet một giây</p:alter-name>
+        <p:author>Makoto Shinkai</p:author>
+        <p:illustrator>n/a</p:illustrator>
+        <p:synopsis>5 cm/s là vận tốc cánh hoa anh đào rơi, cũng là vận tốc đi bộ trung bình của một người. Tác phẩm là
+            một chuỗi truyện ngắn về hai con người rất đỗi gắn bó, bước đi với tốc độ như nhau, dần dần lại hướng về hai
+            phía ngược nhau. Một tác phẩm xuất sắc về khoảng cách trong tình cảm và một cái kết rất trưởng thành. Cập
+            nhật phiên bản mới ngày 6 tháng 3 năm 2014 kèm link pdf cho các bạn muốn sưu tầm offline:
+            https://drive.google.com/file/d/0BxhE06VPoIXRSVA0QWJBd2NVNlk
+        </p:synopsis>
+        <p:hash>1673841415</p:hash>
+        <p:view>76745</p:view>
+        <p:point>5.0</p:point>
+        <p:genres>drama|slice of life|romance</p:genres>
+        <p:last_update>09/07/2018 00:23</p:last_update>
+        <p:total_update>17</p:total_update>
+        <p:link>https://ln.hako.re/truyen/81-byousoku-5-centimeter</p:link>
+    </p:project>
+    <p:project>
+        <p:id>387</p:id>
+        <p:name>I reincarnated into an otome game as a villainess with only destruction flags...</p:name>
+        <p:alter-name>Otome Game no Hametsu Flag shika nai Akuyaku Reijou ni Tensei shite shimatta...;Otome Game No
+            Hametsu Flag Shika Nai Akuyaku Reijou Ni Tensei Shite Shimatta; Tôi tái sinh thành nhân vật phản diện trong
+            game otome với toàn death flag;I reincarnated into an otome game as a villainess with only destruction
+            flags...;Destruction Flag Otome; Tôi luân hồi vào thế giới otome game làm một nữ phản diện chỉ có toàn death
+            flag...; 乙女ゲームの破滅フラグしかない悪役令嬢に転生してしまった…;I reincarnated into an otome game as a villainess with only
+            destruction flags...
+        </p:alter-name>
+        <p:author>Yamaguchi Satoru (山口悟)</p:author>
+        <p:illustrator>Hidaka Nami (ひだかなみ)</p:illustrator>
+        <p:synopsis>Sau một lần té đập đầu vào đá, Katarina Claes bỗng nhớ ra kí ức kiếp trước của mình. Để rồi nhận ra
+            rằng mình vốn là nữ phản diện tàn độc trong một otome game mình từng chơi trước đây, người có toàn là death
+            flag trên đầu. Vậy cô sẽ làm gì để thoát khỏi chúng, và thoát khỏi chúng rồi cô sẽ làm gì? Một câu chuyện
+            tình cảm lãng mạng hài hước với nhân vật chính nổi tiếng với tên gọi - Bakarina!;Sau một lần té đập đầu vào
+            đá, Katarina Claes nhớ lại kiếp trước của mình. Cô là một nữ sinh vừa qua đời vì tai nạn giao thông, và giờ
+            cô đã hồi sinh với thân phận là con gái của một Công tước, đồng thời là nữ phản diện trong game otome
+            Fortune Lover, được định sẵn là có nhiều death flag trên đầu. Liệu cô có thể an toàn né hết death flag và
+            sống vui vẻ hạnh phúc không?Một bộ truyện fantasy tình cảm hài hước với nhân vật chính Katarina - thánh né
+            flag và thính :);Một ngày nọ sau khi bị đập đầu thật mạnh đến chảy máu phải khâu lại thì main của chúng ta
+            chợt nhớ lại kí ức kiếp trước của mình. Và rồi cô nhận ra mình đã luân hồi vào thế giới Otome game (Otoge)
+            Fortune Lovers với vai trò là nữ phản diện chính chỉ có toàn death flag!!! Liệu chuyện gì sẽ xảy ra với cô
+            ấy từ nay trở đi?? Hãy đọc để tìm hiểu thêm
+        </p:synopsis>
+        <p:hash>-939861920</p:hash>
+        <p:view>70582</p:view>
+        <p:point>5.0</p:point>
+        <p:genres>comedy|harem|school life|shoujo ai|slice of life|isekai|romance|fantasy|shoujo</p:genres>
+        <p:last_update>09/07/2018 00:39</p:last_update>
+        <p:total_update>67</p:total_update>
+        <p:link>
+            https://ln.hako.re/truyen/1838-otome-game-no-hametsu-flag-shika-nai-akuyaku-reijou-ni-tensei-shite-shimatta;https://ln.hako.re/truyen/2487-i-reincarnated-into-an-otome-game-as-a-villainess-with-only-destruction-flags;https://ln.hako.re/truyen/446-i-reincarnated-into-an-otome-game-as-a-villainess-with-only-destruction-flags
+        </p:link>
+    </p:project>
+    <p:project>
+        <p:id>320</p:id>
+        <p:name>Don’t Tell Me This Is the True History of the Three Kingdoms!</p:name>
+        <p:alter-name>請別告訴我這是三國正史 ！; 请别告诉我这是三国正史 !; Đừng nói với tôi đây là lịch sử thật sự của Tam Quốc !
+        </p:alter-name>
+        <p:author>黑礁商会房东</p:author>
+        <p:illustrator>Various</p:illustrator>
+        <p:synopsis>Tôi đột nhiên có một chiếc quạt lông, và đến một thời đại của Tam Quốc mà tôi hoàn toàn không biết
+            về. Gì? Bình đẳng giới? Con gái có thể gia nhập quân đội? Cô,cô và cô tại sao tất các cô đều là nữ
+            nhân !? Một câu chuyện thú vị mở ra trong một thời gian xa lạ quen thuộc nhưng ngược lại, cũng có. Nhưng có
+            lẽ đây là Tam Quốc, Tam Quốc thật sự!
+        </p:synopsis>
+        <p:hash>1156860828</p:hash>
+        <p:view>62176</p:view>
+        <p:point>5.0</p:point>
+        <p:genres>action|adventure|comedy|drama|harem|romance</p:genres>
+        <p:last_update>09/07/2018 00:27</p:last_update>
+        <p:total_update>321</p:total_update>
+        <p:link>https://ln.hako.re/truyen/707-dont-tell-me-this-is-the-true-history-of-the-three-kingdoms</p:link>
+    </p:project>
+    <p:project>
+        <p:id>446</p:id>
+        <p:name>Kenshi o Mezashite Nyūgaku Shitanoni Mahō Tekisei 9999 Nandesukedo!</p:name>
+        <p:alter-name>剣士を目指して入学したのに魔法適性9999なんですけど！？; I applied as a swordsman, but my magic aptitude is 9999?!
+        </p:alter-name>
+        <p:author>年中麦茶太郎</p:author>
+        <p:illustrator>りいちゅ</p:illustrator>
+        <p:synopsis>Laura, một cô bé được giáo dục đặc biệt để trở thành một kiếm sĩ từ người cha mạo hiểm giả hạng A
+            của mình, nhập học tại Trường Mạo hiểm giả ở Kinh đô Hoàng gia vào năm 9 tuổi.Laura, trong lòng đầy sự mong
+            đợi, nghĩ rằng 「Hi vọng mình sẽ có được nhiều người bạn kiếm sĩ.」Vào ngày khai trường, chỉ số năng lực kiếm
+            thuật của Laura được đo là 「107」.Giữa các học sinh bình thường với chỉ số năng lực kiếm thuật chỉ 「50-60」 ,
+            Laura chắc chắn là một thiên tài kiếm thuật.Nhưng, chỉ số năng lực phép thuật của cô được đo sau đó lại là
+            「9999」.Laura choáng váng, khi cô còn chưa biết chuyện gì đang xảy ra thì cô đã bị chuyển đến Khoa Phép
+            thuật.「Mình muốn được vào Khoa Chiến binh desu!」Trái với ý muốn của Laura, với sự siêu thiên tài của mình,
+            cô lập tức trở nên mạnh hơn cả giáo viên chủ nhiệm của mình.
+        </p:synopsis>
+        <p:hash>1144908268</p:hash>
+        <p:view>60002</p:view>
+        <p:point>5.0</p:point>
+        <p:genres>action|fantasy|school life|shoujo ai|slice of life|comedy|supernatural|super power|shounen|web novel
+        </p:genres>
+        <p:last_update>09/07/2018 00:55</p:last_update>
+        <p:total_update>69</p:total_update>
+        <p:link>https://ln.hako.re/truyen/332-kenshi-o-mezashite-nyugaku-shitanoni-maho-tekisei-9999-nandesukedo
+        </p:link>
+    </p:project>
+    <p:project>
+        <p:id>329</p:id>
+        <p:name>Eiyuu no Musume to Shite Umarekawatta Eiyuu wa Futatabi Eiyuu o Mezasu</p:name>
+        <p:alter-name>Tái sinh thành con gái anh hùng để rồi làm anh hùng thêm lần nữa;英雄の娘として生まれ変わった英雄は再び英雄を目指す; Reborn
+            as the Hero’s Daughter! Time to Become the Hero Once More!;Eiyuu no Musume to Shite Umarekawatta Eiyuu wa
+            Futatabi Eiyuu o Mezasu (WN)
+        </p:alter-name>
+        <p:author>Kaburagi Haruka</p:author>
+        <p:illustrator>Akita, Hika</p:illustrator>
+        <p:synopsis>Raid, một trong sáu người hùng đã một mình chiến đấu với Ma Thần và bỏ mạng.Sau khi chạm mặt một vị
+            thần(kinh) thì anh tỉnh lại, và chợt nhận ra mình đã được tái sinh một đứa bé sơ sinh.Chẳng những vậy, đó
+            còn là con gái của đồng đội cũ của anh nữa.Và rồi, để tìm lại sức mạnh vốn có, Raid/Nicole đã phải đương đầu
+            với bao thử thách cam go và giành lấy lý tưởng mình nhắm tới.;Một trong sáu anh hùng được người đời ca tụng,
+            Raid, một mình chống lại Quỷ, và đã tử trận.Sau khi gặp một vị thần đáng ngờ cậu tỉnh lại và nhận ra cậu đã
+            được sinh ra một lần nữa trong thân xác một đứa trẻ sơ sinh.Hơn nữa lại còn là con gái một người đồng đội cũ
+            của cậu.Để có thể khôi phục được sức mạnh vốn có của cậu, Raid/Nicole phải dấn thân vào một cuộc sống khó
+            khăn để đạt tới mục tiêu mà cậu nhắm tới.
+        </p:synopsis>
+        <p:hash>-2078910834</p:hash>
+        <p:view>41511</p:view>
+        <p:point>5.0</p:point>
+        <p:genres>adventure|fantasy|gender bender|school life|shoujo ai|slice of life</p:genres>
+        <p:last_update>09/07/2018 00:30</p:last_update>
+        <p:total_update>59</p:total_update>
+        <p:link>
+            https://ln.hako.re/truyen/2596-eiyuu-no-musume-to-shite-umarekawatta-eiyuu-wa-futatabi-eiyuu-o-mezasu;https://ln.hako.re/truyen/2504-eiyuu-no-musume-to-shite-umarekawatta-eiyuu-wa-futatabi-eiyuu-o-mezasu-wn
+        </p:link>
+    </p:project>
+    <p:project>
+        <p:id>290</p:id>
+        <p:name>Botsuraku Youtei Nanode, Kajishokunin wo Mezasu</p:name>
+        <p:alter-name>Expecting to Fall into Ruin, I Aim to Become a Blacksmith; 没落予定なので、鍛治職人を目指す;Expecting To Fall Into
+            Ruin I Aim To Become A Blacksmith - 没落予定なので、鍛治職人を目指す;Botsuraku Youtei Nanode, Kajishokunin wo Mezasu
+        </p:alter-name>
+        <p:author>CK</p:author>
+        <p:illustrator>Kawaku</p:illustrator>
+        <p:synopsis>Sau vụ tai nạn chết đi, nhân vật chính chúng ta tái sinh lại trong một gia đình quý tộc, và rồi anh
+            nhận ra mình là một nhân vật trong một trò chơi mà trước đó mình đã từng chơi, và thân xác anh đang nắm giữ
+            có tên là Kururi Helan.Không biết vì lí do gì mà nhân vật Kururi hòa chung với những nhân vật phản diện và
+            phải đón nhận cái kết đầy khốn khổ cho mình.Để có thể thoát khỏi khốn cảnh của mình, anh tìm cho mình một
+            nghề nghiệp. Và bây giờ mục tiêu của anh là trở thành một thợ rèn với kỹ năng vốn có của mình.;Sau vụ tai
+            nạn chết đi, nhân vật chính chúng ta tái sinh lại trong một gia đình quý tộc, và rồi anh nhận ra mình là một
+            nhân vật trong một trò chơi mà trước đó mình đã từng chơi, và thân xác anh đang nắm giữ có tên là Kururi
+            Helan.Không biết vì lí do gì mà nhân vật Kururi hòa chung với những nhân vật phản diện và phải đón nhận cái
+            kết đầy khốn khổ cho mình.Để có thể thoát khỏi khốn cảnh của mình, anh tìm cho mình một nghề nghiệp. Và bây
+            giờ mục tiêu của anh là trở thành một thợ rèn với kỹ năng vốn có của mình.  
+        </p:synopsis>
+        <p:hash>-1914720314</p:hash>
+        <p:view>39541</p:view>
+        <p:point>5.0</p:point>
+        <p:genres>comedy|fantasy|romance|school life|shounen|slice of life|action|adventure|drama|isekai</p:genres>
+        <p:last_update>09/07/2018 00:25</p:last_update>
+        <p:total_update>73</p:total_update>
+        <p:link>
+            https://ln.hako.re/truyen/886-botsuraku-youtei-nanode-kajishokunin-wo-mezasu;https://ln.hako.re/truyen/1937-botsuraku-youtei-nanode-kajishokunin-wo-mezasu
+        </p:link>
+    </p:project>
+    <p:project>
+        <p:id>414</p:id>
+        <p:name>Isekai Ten-i de Megami-sama Kara Shuukufuku wo! ~Ie, Temochi no Inou ga Aru no de Kekkou Desu~</p:name>
+        <p:alter-name>Blessing from the Goddess and Transfer to Another World! ~No Thanks, I Already Have Special
+            Ability~; 異世界転移で女神様から祝福を！　～いえ、手持ちの異能があるので結構です～; Phúc lành từ nữ thần và dịch chuyển đến thế giới khác!
+            ~Không cảm ơn, tôi đã có năng lực đặc biệt rồi~
+        </p:alter-name>
+        <p:author>Kooda</p:author>
+        <p:illustrator></p:illustrator>
+        <p:synopsis>Main vs cả trường bị triệu hồi , main với 1 cô gái đc ban skill đặc biệt thay vì phúc lành của nữ
+            thần, vì tưởng main và ẻm vô dụng nên hoàng gia đuổi đi, và chuyến phiêu lưu vòng quanh thế giới của main và
+            ẻm bắt đầu.
+        </p:synopsis>
+        <p:hash>677132735</p:hash>
+        <p:view>33259</p:view>
+        <p:point>5.0</p:point>
+        <p:genres>action|adventure|fantasy|harem|romance|supernatural|web novel</p:genres>
+        <p:last_update>09/07/2018 00:44</p:last_update>
+        <p:total_update>14</p:total_update>
+        <p:link>
+            https://ln.hako.re/truyen/1623-isekai-ten-i-de-megami-sama-kara-shuukufuku-wo-ie-temochi-no-inou-ga-aru-no-de-kekkou-desu
+        </p:link>
+    </p:project>
+    <p:project>
+        <p:id>28</p:id>
+        <p:name>10-nengoshi no Hiki-NEET wo Yamete Gaishutsu shitara</p:name>
+        <p:alter-name>Synonyms: When I was going out from my house to stop become a Recluse-NEET after 10 years I was
+            transported to another world, Japanese: 10年ごしの引きニートを辞めて外出したら, ;When I was going out from my house to stop
+            become a Hiki-NEET after 10 years I was transported to another world; 10年ごしの引きニートを辞めて外出したら自宅ごと異世界に転移してた; Khi
+            tôi rời khỏi nhà để ngưng trở thành một tên Hiki-NEET sau 10 năm, tôi đã bị dịch chuyển sang thế giới
+            khác;10 nen goshi no HikiNiito o Yamete Gaishutsushitara Jitaku goto Isekai ni Ten’ishiteta
+        </p:alter-name>
+        <p:publish-date></p:publish-date>
+        <p:author>Benio;Bandou Tarou</p:author>
+        <p:illustrator>Bandou, Tarou;Benio</p:illustrator>
+        <p:synopsis>Houjou Yuuji, 30 tuổi, thất nghiệp, là một hikiomori trong suốt 10 năm, quyết định đi ra khỏi nhà.
+            Tuy nhiên, bên ngoài đó là một thế giới khác cùng với những sinh vật kì lạ mà cậu chưa từng biết đến.Bằng
+            một cách nào đó, điện, nước và internet trong ngôi nhà vẫn sử dụng được. Cùng với cô chó Kotarou, cậu quyết
+            định sống luôn ở đây.Một ngày, khi đang khám phá khu rừng gần nhà, cậu tìm thấy một cô gái tên Alice và trở
+            thành người trông nom cho cô.
+        </p:synopsis>
+        <p:hash>-812858886</p:hash>
+        <p:view>31864</p:view>
+        <p:point>5.0</p:point>
+        <p:genres>comedy|fantasy|adventure|action|slice of life|romance|web novel|isekai|super power</p:genres>
+        <p:last_update>09/07/2018 00:20</p:last_update>
+        <p:total_update>67</p:total_update>
+        <p:link>
+            https://myanimelist.net/manga/97872/10-nengoshi_no_Hiki-NEET_wo_Yamete_Gaishutsu_shitara;https://ln.hako.re/truyen/759-10-nen-goshi-no-hikiniito-o-yamete-gaishutsushitara-jitaku-goto-isekai-ni-tenishiteta
+        </p:link>
+    </p:project>
+    <p:project>
+        <p:id>406</p:id>
+        <p:name>Isekai Meikyuu no Saishinbu wo Mezasou</p:name>
+        <p:alter-name></p:alter-name>
+        <p:author>Tarisa Warinai</p:author>
+        <p:illustrator>Ukai Saki</p:illustrator>
+        <p:synopsis>Một chàng trai thành phố bất ngờ tỉnh lại trong một hành lang tối tăm mà không hiểu chuyện gì đang
+            xảy ra. Đột nhiên bị vướng vào cuộc chiến trong mê cung tăm tối. Chiến đấu và kết bạn những con người "không
+            bình thường". Để đi đến điểm tận cùng của mê cung để biến điều ước của mình thành hiện thực cậu phải đánh
+            đổi cảm xúc của chính mình để sử dụng những「Trạng Thái」và 「Kỹ Năng」. Điều gì sẽ chờ cậu ở điểm kết thúc?
+        </p:synopsis>
+        <p:hash>-1708522005</p:hash>
+        <p:view>30323</p:view>
+        <p:point>5.0</p:point>
+        <p:genres>action|fantasy</p:genres>
+        <p:last_update>09/07/2018 00:42</p:last_update>
+        <p:total_update>9</p:total_update>
+        <p:link>https://ln.hako.re/truyen/264-isekai-meikyuu-no-saishinbu-wo-mezasou</p:link>
+    </p:project>
+    <p:project>
+        <p:id>380</p:id>
+        <p:name>I Became a Living Cheat</p:name>
+        <p:alter-name>Riaru de reberu age shitara hobo chītona jinsei ni natta;Riaru de reberu age shitara hobo chītona
+            jinsei ni natta;I Became a Living Cheat
+        </p:alter-name>
+        <p:author>Miki Nizuna</p:author>
+        <p:illustrator>Miki Nizuna</p:illustrator>
+        <p:synopsis>Nếu nó có thể "lên cấp", không có vấn đề gì, tôi vẫn có thể thực hiện những công việc nhàm chán
+            này mãi mãi --Natsuno Taiyou. Tài năng duy nhất của cậu là khả năng ''cày game'' , nó đã đột nhiên trở nên
+            hữu ích trong cuộc sống thực ? Những kĩ năng, chỉ số trong game đã được đưa vào đời thực bởi 1 nàng
+            tiên thần bí,nó cho phép Taiyo áp dụng nó vô cuộc sống thực, Ngay lập tức, cậu đã cố gắng để nâng cao trình
+            độ của mình bằng cách thực hiện công việc đơn điệu( lên lv), và mọi việc đã thay đổi khi độ quyến rũ của cậu
+            bắt đầu tụt về con số 0! --- Tuy nhiên, lúc đầu mức độ quyến rũ của cậu là 0 điểm, nhưng không biết vì
+            sao đã được nâng lên một con số vô lý là "65535"! Taiyo đề ra mục tiêu của mình là đạt đến cấp độ 100. Hơn
+            nữa cậu cũng muốn tận hưởng trọn vẹn cuộc sống harem với những 7 vị hôn thê xinh đẹp.
+        </p:synopsis>
+        <p:hash>-819088435</p:hash>
+        <p:view>22817</p:view>
+        <p:point>5.0</p:point>
+        <p:genres>action|adventure|comedy|ecchi|harem|school life|supernatural|romance</p:genres>
+        <p:last_update>09/07/2018 00:39</p:last_update>
+        <p:total_update>14</p:total_update>
+        <p:link>
+            https://ln.hako.re/truyen/328-i-became-a-living-cheat;https://ln.hako.re/truyen/1866-i-became-a-living-cheat
+        </p:link>
+    </p:project>
+    <p:project>
+        <p:id>267</p:id>
+        <p:name>Ame no Hi no Iris</p:name>
+        <p:alter-name>Diên Vĩ trong những ngày mưa, , 雨の日のアイリス,</p:alter-name>
+        <p:author>Takeshi Matsuyama</p:author>
+        <p:illustrator>Hirasato</p:illustrator>
+        <p:synopsis>Robot, con người, cảm xúc. Diên Vĩ trong những ngày mưa.</p:synopsis>
+        <p:hash>1149051662</p:hash>
+        <p:view>21883</p:view>
+        <p:point>5.0</p:point>
+        <p:genres>drama|science fiction|slice of life|tragedy|romance|psychological</p:genres>
+        <p:last_update>09/07/2018 00:20</p:last_update>
+        <p:total_update>44</p:total_update>
+        <p:link>https://ln.hako.re/truyen/119-iris-trong-nhung-ngay-mua</p:link>
+    </p:project>
+    <p:project>
+        <p:id>325</p:id>
+        <p:name>Dungeon ni Deai wo Motomeru no wa Machigatteiru Darou ka</p:name>
+        <p:alter-name>;Is It Wrong That I Want to Meet You in a Dungeon;Dungeon ni Deai wo Motomeru noha Machigatteiru
+            darouka
+        </p:alter-name>
+        <p:author>Fujino Omori</p:author>
+        <p:illustrator>Suzuhito Yasuda</p:illustrator>
+        <p:synopsis>Thành phố mê cung, Orario—— đây là một thành phố lớn cùng một mê cung vĩ đại nằm bên dưới (thường
+            được gọi là "Dungeon"). Phấn khích vì những thứ mới lạ, danh vọng, tiền tài hay chỉ đơn giản để tìm kiếm sự
+            lãng mạn với cô gái dễ thương nào đó. Bên trong thành phố này, nơi mà những giấc mơ và khát vọng luôn chờ
+            đợi, một cậu bé đã gặp một nữ thần "bé nhỏ". "Được rồi, Bell, hãy đi với tôi! Tôi sẽ thực hiện buổi lễ cho
+            cậu!" "Vâng! Tôi muốn trở nên mạnh mẽ hơn!" Sau khi được trao những cái ấn ký lạnh lẽo lên vai như tất cả
+            các khác, cậu bé loài người này đã được xác định để trở thành một Thám hiểm gia, và một nữ thần mà thậm chí
+            không có tín đồ, đã có một cuộc gặp gỡ đầy định mệnh. Cuộc hành trình của cậu bé này như được viết bởi các
+            nữ thần, —— ——;Thành phố mê cung, Orario, đây là một thành phố lớn cùng một mê cung vĩ đại nằm bên dưới
+            (thường được gọi là "Dungeon"). Phấn khích vì những thứ mới lạ, danh vọng, tiền tài hay chỉ đơn giản để tìm
+            kiếm sự lãng mạn với cô gái dễ thương nào đó. Bên trong thành phố này, nơi mà những giấc mơ và khát vọng
+            luôn chờ đợi, một cậu bé đã gặp một nữ thần "bé nhỏ". "Được rồi, Bell, hãy đi với tôi! Tôi sẽ thực hiện buổi
+            lễ cho cậu!" "Vâng! Tôi muốn trở nên mạnh mẽ hơn!" Sau khi được trao những cái ấn ký lạnh lẽo lên vai như
+            tất cả các khác, cậu bé loài người này đã được xác định để trở thành một Thám hiểm gia, và một nữ thần mà
+            thậm chí không có tín đồ, đã có một cuộc gặp gỡ đầy định mệnh. Cuộc hành trình của cậu bé này như được viết
+            bởi các nữ thần.
+        </p:synopsis>
+        <p:hash>361239793</p:hash>
+        <p:view>19995</p:view>
+        <p:point>5.0</p:point>
+        <p:genres>action|adventure|comedy|fantasy|harem|romance</p:genres>
+        <p:last_update>09/07/2018 00:30</p:last_update>
+        <p:total_update>28</p:total_update>
+        <p:link>
+            https://ln.hako.re/truyen/209-dungeon-ni-deai-wo-motomeru-no-wa-machigatteiru-darou-ka;https://ln.hako.re/truyen/1081-dungeon-ni-deai-wo-motomeru-noha-machigatteiru-darouka
+        </p:link>
+    </p:project>
+    <p:project>
+        <p:id>366</p:id>
+        <p:name>HIMEKISHI GA CLASSMATE</p:name>
+        <p:alter-name>;;Himekishi ga classmate</p:alter-name>
+        <p:author>Ekz;EKZ</p:author>
+        <p:illustrator>;Yoshizawa Megane</p:illustrator>
+        <p:synopsis>Một nam sinh cao trung không có bạn bè như Odamori Tooru đã được chuyển sinh tới một thế giới giả
+            tưởng sau một tai nạn trên chuyến xe bus trong chuyến dã ngoại của trường . Thiên chức cậu được nhận là "Nô
+            lệ sư", một khả năng cho phép cậu thao túng tâm trí người khác và biến họ thành nô lệ của mình. Tooru ngay
+            lập tức sử dụng sức mạnh này để nô lệ hoá các cô gái. Tuy nhiên, một mĩ nhân cùng lớp với cậu cũng được
+            chuyển sinh, Himeno Kỉika - một "Kị sĩ công chúa" - đã xuất hiện trước mặt cậu.Và dần dần cậu đã thu thập
+            được nhiều nô lệ khác nhau;Odamori Tooru là một chàng trai học cao học cô độc, cậu không hề có một ai để gọi
+            là bạn cả.Trong một chuyến xe dã ngoại của trường cậu bất ngờ gặp tai nạn và được tái sinh ở một thế giới
+            khác.Thiên chức cậu có được ở đó cho cậu khả năng điều khiển người khác, một thiên chức như gian lận, thiên
+            chức của cậu được gọi là "Nô lệ sư". Bằng sức mạnh đó cậu đã biến các cô gái trẻ thành nữ nô của mình. Tuy
+            nhiên một trong những bạn học cùng lớp của cậu, Himeno Kirika một Bishoujo cũng đến từ thế giới của cậu đã
+            có được một thiên chức danh giá là Kị sỹ công chúa, cô đã đại diện cho phe của công lý và chính nghĩa và
+            xuất hiện trước mặt cậu --??!? 「Nếu đã vậy mình sẽ thu thập : Bạn học cũ, Thám hiểm gia, Elves , Demons và
+            Các công chúa rồi biến họ thành thành một phần trong dàn harem nữ nô của mình!」 (Đây là truyện R18 nên mong
+            các bạn cân nhắc trước khi đọc);Odamori Tooru là một chàng trai học cao học cô độc, cậu không hề có một ai
+            để gọi là bạn cả.Trong một chuyến xe dã ngoại của trường cậu bất ngờ gặp tai nạn và được tái sinh ở một thế
+            giới khác.Thiên chức cậu có được ở đó cho cậu khả năng điều khiển người khác, một thiên chức như gian lận,
+            thiên chức của cậu được gọi là "Nô lệ sư". Bằng sức mạnh đó cậu đã biến các cô gái trẻ thành nữ nô của mình.
+            Tuy nhiên một trong những bạn học cùng lớp của cậu, Himeno Kirika một Bishoujo cũng đến từ thế giới của cậu
+            đã có được một thiên chức danh giá là Kị sỹ công chúa, cô đã đại diện cho phe của công lý và chính nghĩa và
+            xuất hiện trước mặt cậu —-??!?  「Nếu đã vậy mình sẽ thu thập : Bạn học cũ, Thám hiểm gia, Elves , Demons và
+            Các công chúa rồi biến họ thành thành một phần trong dàn harem nữ nô của mình!」
+        </p:synopsis>
+        <p:hash>1222559116</p:hash>
+        <p:view>18350</p:view>
+        <p:point>5.0</p:point>
+        <p:genres>action|adventure|ecchi|fantasy|harem|isekai|mature|romance</p:genres>
+        <p:last_update>09/07/2018 00:38</p:last_update>
+        <p:total_update>24</p:total_update>
+        <p:link>
+            https://ln.hako.re/truyen/1868-himekishi-ga-classmate;https://ln.hako.re/truyen/629-himekishi-ga-classmate18;https://ln.hako.re/truyen/631-himekishi-ga-classmate
+        </p:link>
+    </p:project>
+    <p:project>
+        <p:id>337</p:id>
+        <p:name>Furoba Megami</p:name>
+        <p:alter-name>風呂場女神; The Bathroom Goddess; Nữ thần phòng tắm</p:alter-name>
+        <p:author>Kogoe Soh 小声 奏</p:author>
+        <p:illustrator>miogrobin</p:illustrator>
+        <p:synopsis>“Cái quái gì đây? Một tên nhìn trộm ư?”“Cho tôi xin một cốc nước được không?”Thoạt nhìn, đoạn
+            đối thoại này hoàn toàn không hề liên quan đến nhau, cuộc gặp mặt giữa một nữ nhân viên văn phòng người
+            Nhật, Tamano Izumi, và người mà về sau được biết tới là vị Vua mạnh mẽ và vĩ đạt nhất Vương quốc Thần thánh
+            Yohk’Zai, Huuron.Một lần, khi Izumi đang ngâm mình trong nước, cánh cửa sổ phòng tắm của cô đã đột nhiên kết
+            nối tới một thế bí ẩn khác. Sau đó, lần lượt những con người kì lạ xuất hiện từ bên kia chiếc cửa sổ và trao
+            đổi với cô một thứ gì đó. Trước khi kịp nhận ra, cô đã gây ảnh hưởng mạnh mẽ tới thế giới này
+        </p:synopsis>
+        <p:hash>-1999130492</p:hash>
+        <p:view>3959</p:view>
+        <p:point>5.0</p:point>
+        <p:genres>adventure|comedy|fantasy|web novel</p:genres>
+        <p:last_update>09/07/2018 00:28</p:last_update>
+        <p:total_update>3</p:total_update>
+        <p:link>https://ln.hako.re/truyen/1505-furoba-megami</p:link>
+    </p:project>
+    <p:project>
+        <p:id>172</p:id>
+        <p:name>Akaki Tsuki no Meguru Koro</p:name>
+        <p:alter-name>Synonyms: Akaki Tsuki no Mawaru Koro, When the Red Moon Turns Around, Japanese: 赤き月の廻るころ,
+        </p:alter-name>
+        <p:publish-date></p:publish-date>
+        <p:author>Nagi, Kasumi</p:author>
+        <p:illustrator>Kigawa, Arata</p:illustrator>
+        <p:hash>-995070</p:hash>
+        <p:view>318</p:view>
+        <p:point>7.0</p:point>
+        <p:genres>mystery|fantasy|romance|supernatural</p:genres>
+        <p:last_update>09/07/2018 00:13</p:last_update>
+        <p:total_update>0</p:total_update>
+        <p:link>https://myanimelist.net/manga/56465/Akaki_Tsuki_no_Meguru_Koro</p:link>
+    </p:project>
+</p:projects>

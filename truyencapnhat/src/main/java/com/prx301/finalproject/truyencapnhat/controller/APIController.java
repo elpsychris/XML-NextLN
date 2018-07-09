@@ -122,5 +122,7 @@ public class APIController {
     }
 
     @RequestMapping(value = "/recommend/{project-id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_XML_VALUE)
-    public 
+    public SearchProjects getRecommend(@PathVariable("project-id") int projectId, HttpSession session) {
+        return projectService.getRecommendList(projectId);
+    }
 }

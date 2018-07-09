@@ -189,7 +189,29 @@
             </div>
 
             <div class="tab-content">
-                <h1>This is tab3</h1>
+                <div class="search-result">
+                    <div class="card-panel-horz">
+                        <div class="panel-header">Đề xuất</div>
+                        <div class="panel-content table">
+                            <div class="headers" id="result-header">
+                                <div class="header">
+                                    Tên
+                                </div>
+                                <div class="header">
+                                    Tác giả
+                                </div>
+                                <div class="header">
+                                    Lượt view
+                                </div>
+                                <div class="header">
+                                    Số cập nhật
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
         <div class="recommend">
