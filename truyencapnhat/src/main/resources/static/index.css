@@ -296,6 +296,10 @@ a {
     font-size: .8em;
 }
 
+.panel-content .time::after {
+    
+}
+
 .panel-content .followers {
     position: relative;
     width: 100%;

@@ -1,5 +1,6 @@
 package com.prx301.finalproject.truyencapnhat.controller;
 
+import com.prx301.finalproject.truyencapnhat.model.AccountEntity;
 import com.prx301.finalproject.truyencapnhat.model.GenreEntity;
 import com.prx301.finalproject.truyencapnhat.model.ProjectEntity;
 import com.prx301.finalproject.truyencapnhat.model.SearchProjects;
@@ -41,12 +42,15 @@ public class WebController {
         String mostViewList = projectService.getMostViewByXML();
         String xsl = ComUtils.getResourceXSL("latest_item.xsl");
         String mostviewXsl = ComUtils.getResourceXSL("most_view.xsl");
-
+        AccountEntity accountEntity = null;
 
         AuthTicket ticket = null;
         if (ticket == null) {
             String token = (String) session.getAttribute(AccountService.TOKEN_KEY);
             ticket = new AuthTicket(token);
+            if (token != null) {
+                accountEntity = accountService.getAccount(token);
+            }
         }
 
         int role = accountService.checkRole(ticket);
@@ -59,6 +63,8 @@ public class WebController {
         model.addAttribute("mostViewStyle", mostviewXsl);
         model.addAttribute("isAdmin", isAdmin);
         model.addAttribute("isUser", isUser);
+
+        model.addAttribute("user", accountEntity);
 
         return "index";
     }
@@ -93,11 +99,18 @@ public class WebController {
 
         String xsl = ComUtils.getResourceXSL("latest_item.xsl");
         String mostviewXsl = ComUtils.getResourceXSL("most_view.xsl");
+        String token = "";
+        AccountEntity accountEntity = null;
 
         if (ticket == null) {
-            String token = (String) session.getAttribute(AccountService.TOKEN_KEY);
+            token = (String) session.getAttribute(AccountService.TOKEN_KEY);
             ticket = new AuthTicket(token);
+
+            if (token != null) {
+                accountEntity = accountService.getAccount(token);
+            }
         }
+
 
         int role = accountService.checkRole(ticket);
         boolean isAdmin = role == AccountService.LOGIN_AS_ADMIN;
@@ -112,6 +125,7 @@ public class WebController {
 
         model.addAttribute("isAdmin", isAdmin);
         model.addAttribute("isUser", isUser);
+        model.addAttribute("user", accountEntity);
 
         return "index";
     }
@@ -121,9 +135,13 @@ public class WebController {
 //        ProjectEntity projectEntity = projectService.getProjectById(id);
 
         AuthTicket ticket = null;
+        AccountEntity accountEntity = null;
         if (ticket == null) {
             String token = (String) session.getAttribute(AccountService.TOKEN_KEY);
             ticket = new AuthTicket(token);
+            if (token != null) {
+                accountEntity = accountService.getAccount(token);
+            }
         }
 
         SearchProjects recommend = projectService.getRecommendList(id);
@@ -145,6 +163,7 @@ public class WebController {
         model.addAttribute("project", project);
         model.addAttribute("isAdmin", isAdmin);
         model.addAttribute("isUser", isUser);
+        model.addAttribute("user", accountEntity);
 
         return "project";
     }

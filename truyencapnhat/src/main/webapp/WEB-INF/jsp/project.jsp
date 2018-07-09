@@ -56,7 +56,7 @@
                 <div class="profile-text">
                     <div class="avatar-sect">
                         <img src="ava.jpg"/>
-                        <div class="name-sect"><span>anonymous</span></div>
+                        <div class="name-sect"><span>${user.username}</span></div>
                     </div>
                     <c:choose>
                         <c:when test="${not isAdmin}">
