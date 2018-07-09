@@ -98,6 +98,34 @@ public class SpiderService {
         }
     }
 
+    public String pauseCrawling(String name) {
+        ConfigComp configComp = configMap.get(name);
+        CrawlerAgent runningAgent = runningCrawler.get(name);
+        if (configComp == null) {
+            return NO_AGENT_FOUND;
+        } else {
+            if (runningAgent == null) {
+                return AGENT_ALREADY_STOPPED;
+            }
+            runningAgent.pause();
+            return "";
+        }
+    }
+
+    public String resumeCrawling(String name) {
+        ConfigComp configComp = configMap.get(name);
+        CrawlerAgent runningAgent = runningCrawler.get(name);
+        if (configComp == null) {
+            return NO_AGENT_FOUND;
+        } else {
+            if (runningAgent == null) {
+                return AGENT_ALREADY_STOPPED;
+            }
+            runningAgent.resume();
+            return "";
+        }
+    }
+
     public String startCrawling(String name) {
         // Read website for crawling from XML config gile
         ConfigComp configComp = configMap.get(name);
@@ -116,11 +144,18 @@ public class SpiderService {
         }
     }
 
+    public void undeployResource(String name) {
+        runningCrawler.remove(name);
+    }
+
     public String getStateReport() {
         AgentStateReport agentStateReport = new AgentStateReport();
         for (Map.Entry<String, CrawlerAgent> agent : runningCrawler.entrySet()) {
             CrawlerAgent crawlerAgent = agent.getValue();
             agentStateReport.addAgentReport(new AgentState(agent.getKey(), crawlerAgent.getAgentStatus()));
+            if (crawlerAgent.getAgentStatus() == CrawlerAgent.STOPPED) {
+                undeployResource(agent.getKey());
+            }
         }
 
         StringWriter stringWriter = new StringWriter();

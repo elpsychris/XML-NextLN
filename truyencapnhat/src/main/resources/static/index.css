@@ -972,6 +972,16 @@ input[type=checkbox] {
     top: 20px
 }
 
+.crawler-config.stopping:before {
+    content: "Saving...";
+    background: #2b91c5;
+    color: white;
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 20px
+}
+
 .crawler-config.paused:before {
     content: "Paused";
     background: #2b91c5;

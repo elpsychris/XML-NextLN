@@ -21,7 +21,10 @@
         <input class="search-bar" type="search" placeholder="Nhập tên truyện cần tìm">
     </div>
 </div>
-
+<div class="bread-crumb">
+    <a href="/" class="main">Trang chủ</a>
+    <a>Tìm kiếm</a>
+</div>
 
 <div class="banner-empty"></div>
 
@@ -34,5 +37,8 @@
 </div>
 
 </body>
-
+<script type="text/javascript" src="/js/project-transform.js"></script>
+<script type="text/javascript" src="/js/scroll-event.js"></script>
+<script type="text/javascript" src="/js/search-event.js"></script>
+<script type="text/javascript" src="/js/load-index-event.js"></script>
 </html>

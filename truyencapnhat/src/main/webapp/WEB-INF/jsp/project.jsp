@@ -158,18 +158,7 @@
                             </div>
                         </div>
                         <div class="row-card">
-                            <div class="col">
-                                Tập 2
-                            </div>
-                            <div class="col">
-                                11:30 AM 20 Th5 2018
-                            </div>
-                            <div class="col">
-                                <a href="#">Sonako</a>
-                            </div>
-                            <div class="col">
-                                <a href="#">Chương 2</a>
-                            </div>
+                            Đang cập nhật
                         </div>
                     </div>
                 </div>
@@ -185,7 +174,7 @@
                 </div>
             </div>
             <div class="tab-content">
-                <h1>This is tab2</h1>
+                <h1>Đang cập nhật</h1>
             </div>
 
             <div class="tab-content">
@@ -207,7 +196,16 @@
                                     Số cập nhật
                                 </div>
                             </div>
-
+                            <c:forEach items="${recommend.projectEntities}" var="project">
+                                <div class="row-card">
+                                    <div class="col project-name">
+                                        <a href="/project-detail?name=${project.projectId}">${project.projectName}</a>
+                                    </div>
+                                    <div class="col">${project.projectAuthor}</div>
+                                    <div class="col">${project.projectView}</div>
+                                    <div class="col">${project.projectTotalUpdate}</div>
+                                </div>
+                            </c:forEach>
                         </div>
                     </div>
                 </div>

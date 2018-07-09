@@ -71,6 +71,45 @@ function onActCrawler(e, name) {
         };
 
         xhttp.open("GET", "/crawl/stop/" + name, true);
+    } else if (act == "pause") {
+        xhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                lockCrawlAct[name] = false;
+                var msg = this.responseText;
+                if (msg !== "") {
+                    showErr(msg);
+                } else {
+                    var pauseBtn = document.getElementsByClassName("pause")[0];
+                    pauseBtn.classList.remove("pause");
+                    pauseBtn.classList.add("resume");
+
+                    pauseBtn.innerHTML = "";
+                    pauseBtn.appendChild(document.createTextNode("Resume"));
+                }
+            }
+        };
+
+        xhttp.open("GET", "/crawl/pause/" + name, true);
+    }else if (act == "resume") {
+        xhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                lockCrawlAct[name] = false;
+                var msg = this.responseText;
+                if (msg !== "") {
+                    showErr(msg);
+                } else {
+                    var pauseBtn = document.getElementsByClassName("resume")[0];
+                    pauseBtn.classList.remove("resume");
+                    pauseBtn.classList.add("pause");
+
+                    pauseBtn.innerHTML = "";
+                    pauseBtn.appendChild(document.createTextNode("Pause"));
+
+                }
+            }
+        };
+
+        xhttp.open("GET", "/crawl/resume/" + name, true);
     }
     xhttp.send();
 }
@@ -78,7 +117,7 @@ function onActCrawler(e, name) {
 function changeButtonSet(e, name) {
     if (e.classList.contains("run")) {
         var parent = e.parentElement;
-        newBtn = document.createElement("div");
+        var newBtn = document.createElement("div");
 
         newBtn.className = "action-btn stop";
         newBtn.appendChild(document.createTextNode("Stop"));
@@ -88,6 +127,8 @@ function changeButtonSet(e, name) {
         e.className = "action-btn pause";
         e.childNodes[0].remove();
         e.appendChild(document.createTextNode("Pause"));
+        e.addEventListener("click", onActCrawler);
+        e.pE = e;
 
         parent.appendChild(newBtn);
 

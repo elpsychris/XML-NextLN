@@ -56,6 +56,38 @@ public class CrawlerActionController {
         return spiderService.stopCrawling(crawlerName);
     }
 
+    @GetMapping(value = "/pause/{crawlerName}", produces = MediaType.APPLICATION_XML_VALUE)
+    public String pauseCrawler(@PathVariable("crawlerName") String crawlerName, HttpSession session) {
+        boolean isAuth = false;
+        if (session != null) {
+            String token = (String) session.getAttribute(AccountService.TOKEN_KEY);
+            AuthTicket ticket = new AuthTicket(token);
+            isAuth = accountService.checkRole(ticket) == AccountService.LOGIN_AS_ADMIN;
+        }
+
+        if (!isAuth) {
+            return "Permission denied";
+        }
+
+        return spiderService.pauseCrawling(crawlerName);
+    }
+
+    @GetMapping(value = "/resume/{crawlerName}", produces = MediaType.APPLICATION_XML_VALUE)
+    public String resumeCrawler(@PathVariable("crawlerName") String crawlerName, HttpSession session) {
+        boolean isAuth = false;
+        if (session != null) {
+            String token = (String) session.getAttribute(AccountService.TOKEN_KEY);
+            AuthTicket ticket = new AuthTicket(token);
+            isAuth = accountService.checkRole(ticket) == AccountService.LOGIN_AS_ADMIN;
+        }
+
+        if (!isAuth) {
+            return "Permission denied";
+        }
+
+        return spiderService.resumeCrawling(crawlerName);
+    }
+
     @GetMapping(value = "/report", produces = MediaType.APPLICATION_XML_VALUE)
     public String getCrawlerReport(HttpSession session) {
         boolean isAuth = false;

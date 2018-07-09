@@ -33,6 +33,9 @@ function startAgentUpdateReportWorker() {
                     case "0":
                         status = "paused";
                         break;
+                    case "-1":
+                        status = "stopping";
+                        break;
                     case "1":
                         if (targetBtnSet != null) {
                             for (var i = 0; i < targetBtnSet.children.length; i++) {

@@ -1,5 +1,6 @@
 package com.prx301.finalproject.truyencapnhat.model.crawler.model;
 
+import com.prx301.finalproject.truyencapnhat.controller.CrawlerActionController;
 import com.prx301.finalproject.truyencapnhat.model.ProjectEntity;
 import com.prx301.finalproject.truyencapnhat.model.Projects;
 import com.prx301.finalproject.truyencapnhat.model.UpdateEntity;
@@ -38,11 +39,12 @@ public class CrawlerAgent implements Runnable {
     private ProjectRepo projectRepo = null;
     private VolRepo volRepo = null;
 
+
     private TrAXUtils trAXUtils = new TrAXUtils();
 
     private volatile int agentStatus = STOPPED;
 
-    public CrawlerAgent(ConfigComp config, ProjectRepo projectRepo, UpdateRepo updateRepo, VolRepo volRepo) {
+    public CrawlerAgent(ConfigComp config, ProjectRepo projectRepo, UpdateRepo updateRepo, VolRepo volRepocontroller) {
         this.configComponent = config;
         this.projectRepo = projectRepo;
         this.updateRepo = updateRepo;
