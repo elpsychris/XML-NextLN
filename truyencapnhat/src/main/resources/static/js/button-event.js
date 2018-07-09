@@ -6,6 +6,13 @@ var isUserWindowFocus = false;
 var curToken = null;
 var lockCrawlAct = {};
 
+function onGenreCheck(e) {
+    var checkGenre = e.getElementsByClassName("check-genre")[0];
+    if (checkGenre != null) {
+        checkGenre.checked = !checkGenre.checked;
+        onChangeFilter(checkGenre);
+    }
+}
 
 function onActCrawler(e, name) {
     if (e.className == null) {
@@ -114,6 +121,12 @@ function openSignupProject(e) {
     showUserWindow('signup');
 }
 
+function openProfileProject(e) {
+    isUserWindowOn = true;
+    isProfileWindow = true;
+    showUserWindow("profile");
+}
+
 function openSignup(e) {
     e.className = "signup focus";
 
@@ -149,12 +162,10 @@ function onLogout(e) {
     xhr.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             window.location = "/";
+            clearBookmarkSaved();
         }
     };
     var logoutUrl = "/api/logout";
-    if (curToken != null) {
-        logoutUrl += "/" + curToken;
-    }
     xhr.open("GET", logoutUrl, true);
     xhr.send();
 }
@@ -311,6 +322,7 @@ if (document.getElementById('user-window') != null) {
 var reloadIndex = function () {
     if (this.readyState == 4 && this.status == 200) {
         document.body.innerHTML = this.responseText;
+        setBookmarkStatus();
     }
 };
 
@@ -375,7 +387,7 @@ function onLoginRequestSubmit(e) {
             } else {
                 var reXHR = new XMLHttpRequest();
                 reXHR.onreadystatechange = reloadIndex;
-                reXHR.open("POST", "/", true);
+                reXHR.open("GET", window.location.href.replace("http://localhost:8080",""), true);
                 reXHR.setRequestHeader("Content-Type", "application/xml");
                 reXHR.send(oDOM);
                 curToken = token;

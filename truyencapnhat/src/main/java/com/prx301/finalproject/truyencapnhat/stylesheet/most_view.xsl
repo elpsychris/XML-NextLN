@@ -1,5 +1,5 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-                xmlns:p="http://t3.com/2018/project-page">
+                xmlns:p="http://t3.com/2018/project-page" xmlns:c="http://www.w3.org/1999/XSL/Transform">
     <xsl:output method="html" indent="yes"/>
     <xsl:template match="/">
         <xsl:apply-templates/>
@@ -14,7 +14,14 @@
                     <div class="title">
                         <div class="divider-2">
                             <div class="divider-head">
-                                <xsl:value-of select="p:name"/>
+                                <xsl:choose>
+                                    <xsl:when test="string-length(p:name)>60">
+                                        <xsl:value-of select="concat(substring(p:name,0, 60),'...')"/>
+                                    </xsl:when>
+                                    <xsl:otherwise>
+                                        <xsl:value-of select="p:name"/>
+                                    </xsl:otherwise>
+                                </xsl:choose>
                             </div>
                         </div>
                     </div>

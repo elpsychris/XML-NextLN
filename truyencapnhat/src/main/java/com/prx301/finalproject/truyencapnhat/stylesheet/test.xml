@@ -1,522 +1,79 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<p:result xmlns:p="http://t3.com/2018/project-page">
-    <p:total>12</p:total>
-    <p:projects>
-        <p:project>
-            <p:id>20</p:id>
-            <p:name>Akuma Koujo ~ Yurui Akuma no Monogatari ~</p:name>
-            <p:alter-name>悪魔公女　〜ゆるいアクマの物語〜; Ác Ma Công Nương ~ Câu chuyện về một ác ma vô tư lự ~; Demon Girl ~Tale of a
-                Lax Demon~
-            </p:alter-name>
-            <p:author>Haru no Hi</p:author>
-            <p:illustrator></p:illustrator>
-            <p:synopsis>Ác Ma mơ thấy một giấc mộng sống trong kiếp người rồi lại tái sinh làm một đứa trẻ loài người,
-                vậy cô ấy là người hay Ác ma?Cốt truyện thú vị, vẻ đẹp của nữ chính (sau khi tái sinh) được miêu tả như
-                sau:　"Ai mà cho cô ấy mặc đồ bình thường thì đúng là báng bổ chúa trời"　"Vào buổi tiệc trà đó, cô ấy đã
-                gặp được một thiên thần. Một thiên thần với mái tóc lấp lánh tựa hoàng kim và một vẻ đẹp không nên tồn
-                tại ở một con người"Là Ác ma nhưng lại được con người tôn sùng như một thiên thần, vẻ ngoài như thiên
-                thần nhưng hành xử không cố kị như một Ác Ma. Nhẹ nhàng nhưng cũng ẩn chứa ý nghĩa của riêng mình với
-                một giọng văn vừa hài hước vừa lôi cuốn, câu chuyện bắt đầu khá chậm rãi nhưng cao trào thì luôn thôi
-                thúc ta tiếp tục.
-            </p:synopsis>
-            <p:hash>-2028875716</p:hash>
-            <p:view>48201</p:view>
-            <p:point>5.0</p:point>
-            <p:genres>
-                <p:genre>
-                    <p:genre-id>action</p:genre-id>
-                </p:genre>
-                <p:genre>
-                    <p:genre-id>adventure</p:genre-id>
-                </p:genre>
-                <p:genre>
-                    <p:genre-id>comedy</p:genre-id>
-                </p:genre>
-                <p:genre>
-                    <p:genre-id>fantasy</p:genre-id>
-                </p:genre>
-                <p:genre>
-                    <p:genre-id>horror</p:genre-id>
-                </p:genre>
-                <p:genre>
-                    <p:genre-id>shoujo</p:genre-id>
-                </p:genre>
-                <p:genre>
-                    <p:genre-id>slice of life</p:genre-id>
-                </p:genre>
-                <p:genre>
-                    <p:genre-id>romance</p:genre-id>
-                </p:genre>
-            </p:genres>
-            <p:last_update>
-                <nanos>453000000</nanos>
-            </p:last_update>
-            <p:total_update>120</p:total_update>
-            <p:link>https://ln.hako.re/truyen/934-akuma-koujo-yurui-akuma-no-monogatari</p:link>
-        </p:project>
-        <p:project>
-            <p:id>28</p:id>
-            <p:name>Ane ga Ore ni Koishite Yandere Kashi ta Youda</p:name>
-            <p:alter-name>姉が俺に恋してヤンデレ化したようだ; Chị tôi thành người yêu của tôi, và biến thành một Yandere; My Elder Sister
-                Fell in Love With Me and Transformed Into a Yandere
-            </p:alter-name>
-            <p:author>Takino Maron</p:author>
-            <p:illustrator></p:illustrator>
-            <p:synopsis>Ông em cứu con chị khỏi bị thằng cha dượng hiếp. Rồi con chị cuồng nó biến thành Yandere
-                luôn.(Yandere là công lý :v)( Đừng quên bỏ lại một like và comment nha các đồng dâm. )
-            </p:synopsis>
-            <p:hash>-588010688</p:hash>
-            <p:view>40337</p:view>
-            <p:point>5.0</p:point>
-            <p:genres>
-                <p:genre>
-                    <p:genre-id>adult</p:genre-id>
-                </p:genre>
-                <p:genre>
-                    <p:genre-id>ecchi</p:genre-id>
-                </p:genre>
-                <p:genre>
-                    <p:genre-id>harem</p:genre-id>
-                </p:genre>
-                <p:genre>
-                    <p:genre-id>mature</p:genre-id>
-                </p:genre>
-                <p:genre>
-                    <p:genre-id>romance</p:genre-id>
-                </p:genre>
-                <p:genre>
-                    <p:genre-id>school life</p:genre-id>
-                </p:genre>
-            </p:genres>
-            <p:last_update>
-                <nanos>890000000</nanos>
-            </p:last_update>
-            <p:total_update>7</p:total_update>
-            <p:link>https://ln.hako.re/truyen/966-chi-toi-thanh-nguoi-yeu-cua-toi-va-thanh-mot-yandere</p:link>
-        </p:project>
-        <p:project>
-            <p:id>59</p:id>
-            <p:name>Cheat na Kaineko no Okage de Rakuraku Level Up</p:name>
-            <p:alter-name>Cat-Cheat; Cheat na Kaineko; Chiito na Kaineko no Okage de Rakuraku Reberuappu; I Level Up
-                Easily Thanks to My Cat with Cheat Powers; チートな飼い猫のおかげで楽々レベルアップ; 托开挂家猫的福轻松升级吧
-            </p:alter-name>
-            <p:author>Morita Kisetsu</p:author>
-            <p:illustrator>Farumaro</p:illustrator>
-            <p:synopsis>Bởi vì sai lầm của nữ thần, thay vì tôi con mèo nhà tôi được chuyển sinh như một nhân vật mạnh
-                nhất. Hơn nữa, em ấy có thể nói và thậm chí có kiến thức của thế giới khác.Misha với sức mạnh như
-                ‘Cheat’  sử dụng một ma thuật biến đổi, và biến đổi thành một beastkin (Nekomimi). Cùng với thiếu nữ
-                nekomimi ( thỉnh thoảng em ấy trong dạng mèo ), đây là câu chuyện nhàn nhã và thư giãn của chúng tôi ở
-                thế giới khác.
-            </p:synopsis>
-            <p:hash>1115213335</p:hash>
-            <p:view>20946</p:view>
-            <p:point>5.0</p:point>
-            <p:genres>
-                <p:genre>
-                    <p:genre-id>action</p:genre-id>
-                </p:genre>
-                <p:genre>
-                    <p:genre-id>adventure</p:genre-id>
-                </p:genre>
-                <p:genre>
-                    <p:genre-id>ecchi</p:genre-id>
-                </p:genre>
-                <p:genre>
-                    <p:genre-id>romance</p:genre-id>
-                </p:genre>
-            </p:genres>
-            <p:last_update>
-                <nanos>210000000</nanos>
-            </p:last_update>
-            <p:total_update>19</p:total_update>
-            <p:link>https://ln.hako.re/truyen/495-cheat-na-kaineko-no-okage-de-rakuraku-level-up</p:link>
-        </p:project>
-        <p:project>
-            <p:id>64</p:id>
-            <p:name>Commushou no Ore ga, Koushou Skill ni Zenfurishite Tenseishita Kekka</p:name>
-            <p:alter-name></p:alter-name>
-            <p:author>Touwa Akatsuki</p:author>
-            <p:illustrator>Mitsuki Yano</p:illustrator>
-            <p:synopsis>Morioka Hiroto người bị mắc hội chứng rối loạn giao tiếp và cũng là người chơi hàng đầu của một
-                tựa game MMORPG[ Eternal Magia] đã sống khép kín trong 3 năm để dành phần lớn thời gian của mình để chơi
-                game. Nhưng một ngày vì để cứu người bạn thuở nhỏ của mình khỏi nguy hiểm anh đã chết. Một nữ thần đã để
-                ý tới anh ta và chuyển anh ta vào thế giới [ Eternal Magia]. Sau khi được hồi sinh bởi nữ thần cùng với
-                kiến thức của mình, anh sẽ chứng minh sự hữu ích của kỹ năng {Đàm phán} mà anh đã học max cấp
-            </p:synopsis>
-            <p:hash>764705914</p:hash>
-            <p:view>19248</p:view>
-            <p:point>5.0</p:point>
-            <p:genres>
-                <p:genre>
-                    <p:genre-id>action</p:genre-id>
-                </p:genre>
-                <p:genre>
-                    <p:genre-id>adventure</p:genre-id>
-                </p:genre>
-                <p:genre>
-                    <p:genre-id>comedy</p:genre-id>
-                </p:genre>
-                <p:genre>
-                    <p:genre-id>fantasy</p:genre-id>
-                </p:genre>
-                <p:genre>
-                    <p:genre-id>harem</p:genre-id>
-                </p:genre>
-                <p:genre>
-                    <p:genre-id>mature</p:genre-id>
-                </p:genre>
-                <p:genre>
-                    <p:genre-id>romance</p:genre-id>
-                </p:genre>
-                <p:genre>
-                    <p:genre-id>ecchi</p:genre-id>
-                </p:genre>
-            </p:genres>
-            <p:last_update>
-                <nanos>813000000</nanos>
-            </p:last_update>
-            <p:total_update>4</p:total_update>
-            <p:link>https://ln.hako.re/truyen/1011-commushou-no-ore-ga-koushou-skill-ni-zenfurishite-tenseishita-kekka
-            </p:link>
-        </p:project>
-        <p:project>
-            <p:id>21</p:id>
-            <p:name>Akuyaku Reijo Ni Koi Wo Shite</p:name>
-            <p:alter-name>Falling in Love with the Villainess; 悪役令嬢に恋をして;Falling In Love With the Villainess;
-                悪役令嬢に恋をして;Akuyaku Reijo Ni Koi Wo Shite;Falling in Love with the Villainess; 悪役令嬢に恋をして;Akuyaku Reijo Ni
-                Koi Wo Shite
-            </p:alter-name>
-            <p:author>Tsukino Ayato</p:author>
-            <p:illustrator>N/A</p:illustrator>
-            <p:synopsis>Khi lấy lại được ý thức, cậu đã sẵn ở trong thế giới khác. Không hề gặp gỡ nào với Thần linh,
-                cũng không được ban tặng bất cứ thứ gì, đây chỉ là một lần chuyển sinh bất ngờ xảy ra. Không còn có đủ
-                thời gian để tìm hiểu tình hình xung quanh, ngay lúc bắt đầu cậu đã phải ở trong tình cảnh sống hoặc
-                chết để rồi sau này được thuê làm tôi tớ cho người thừa kế một gia tộc cao quý.Dần dần, cậu khám phá ra
-                được sự thật đáng kinh ngạc về thế giới mới này và thề sẽ sống chết đấu tranh hết mình để bảo vệ những
-                người quan trọng với cậu. Dù cho có phải đối mặt với khó khăn nào đi nữa.;Khi tỉnh lại cậu đã ở một thế
-                giới khác. Không gặp Thượng đế, không cheat skills, chỉ là đột ngột tái sinh. Chẳng có thời gian để tìm
-                hiểu mọi thứ, câu gặp rắc rối chết người ngay từ đầu và rồi bằng cách nào đó được thuê làm người hầu cho
-                một tên nhóc tự phụ đến từ một gia đình quý tộc.Từ lúc này, cậu sẽ khám phá ra sự thật đáng kinh ngạc về
-                thế giới mới này và thề sẽ chống lại nó bằng tất cả sức mạnh của mình để bảo vệ những người quan trọng
-                với câu. Dù cho cậu có phải liều mạng đi chăng nữa.
-            </p:synopsis>
-            <p:hash>-306843502</p:hash>
-            <p:view>17704</p:view>
-            <p:point>5.0</p:point>
-            <p:genres>
-                <p:genre>
-                    <p:genre-id>tragedy</p:genre-id>
-                </p:genre>
-                <p:genre>
-                    <p:genre-id>action</p:genre-id>
-                </p:genre>
-                <p:genre>
-                    <p:genre-id>drama</p:genre-id>
-                </p:genre>
-                <p:genre>
-                    <p:genre-id>fantasy</p:genre-id>
-                </p:genre>
-                <p:genre>
-                    <p:genre-id>mature</p:genre-id>
-                </p:genre>
-                <p:genre>
-                    <p:genre-id>psychological</p:genre-id>
-                </p:genre>
-                <p:genre>
-                    <p:genre-id>romance</p:genre-id>
-                </p:genre>
-                <p:genre>
-                    <p:genre-id>slice of life</p:genre-id>
-                </p:genre>
-                <p:genre>
-                    <p:genre-id>supernatural</p:genre-id>
-                </p:genre>
-                <p:genre>
-                    <p:genre-id>web novel</p:genre-id>
-                </p:genre>
-                <p:genre>
-                    <p:genre-id>super power</p:genre-id>
-                </p:genre>
-            </p:genres>
-            <p:last_update>
-                <nanos>123000000</nanos>
-            </p:last_update>
-            <p:total_update>24</p:total_update>
-            <p:link>
-                https://ln.hako.re/truyen/1074-akuyaku-reijo-ni-koi-wo-shite;https://ln.hako.re/truyen/2666-akuyaku-reijo-ni-koi-wo-shite;https://ln.hako.re/truyen/2217-akuyaku-reijo-ni-koi-wo-shite
-            </p:link>
-        </p:project>
-        <p:project>
-            <p:id>54</p:id>
-            <p:name>Buta Koushaku ni Tensei shita kara, Kondo wa Kimi ni Suki to Iitai</p:name>
-            <p:alter-name>豚公爵に転生したから、今度は君に好きと言いたい; Because I’ve Been Reincarnated as the Piggy Duke, This Time I Will
-                Say I Like You
-            </p:alter-name>
-            <p:author>Guruguru Ma</p:author>
-            <p:illustrator>Nauribon</p:illustrator>
-            <p:synopsis>Có một nhân vật bị ghét bỏ trong bộ Anime nổi tiếng【 Shuya &amp;amp; Những cô gái】.Con thứ 3 của
-                một gia đình Công Tước, hay còn được biết đến với cái tên Công Tước Heo, Slow Denning.Lý do tại sao hắn
-                ta lại bị ghét như vậy? Tất cả là do cái bản tính khinh thường người khác, khoe khoang vị thế, béo ú, và
-                như một con Orc của hắn. Một tương lai đầy bi thảm đang chờ đợi hắn ở phía trước, đó là việc bị trục
-                xuất ra khỏi chính đất nước của mình. Và còn bất hạnh hơn nữa khi mà cô gái hắn thầm thương trộm nhớ
-                cũng đã bị cướp đi mất.Mà từ nãy đến giờ có ai thắc mắc tại sao tôi lại kể mấy thứ này không?Đó là bởi
-                vì tôi đã được chuyển sinh thành tên Công Tước Heo này!Nhưng khác ở chỗ tôi sẽ biến nhân vật này trở
-                thành tâm điểm nổi tiếng nhất trong bộ Anime này và còn là số một trên toàn thế giới!
-            </p:synopsis>
-            <p:hash>-1710905989</p:hash>
-            <p:view>16997</p:view>
-            <p:point>5.0</p:point>
-            <p:genres>
-                <p:genre>
-                    <p:genre-id>adventure</p:genre-id>
-                </p:genre>
-                <p:genre>
-                    <p:genre-id>comedy</p:genre-id>
-                </p:genre>
-                <p:genre>
-                    <p:genre-id>fantasy</p:genre-id>
-                </p:genre>
-                <p:genre>
-                    <p:genre-id>romance</p:genre-id>
-                </p:genre>
-                <p:genre>
-                    <p:genre-id>school life</p:genre-id>
-                </p:genre>
-            </p:genres>
-            <p:last_update>
-                <nanos>380000000</nanos>
-            </p:last_update>
-            <p:total_update>9</p:total_update>
-            <p:link>https://ln.hako.re/truyen/2234-buta-koushaku-ni-tensei-shita-kara-kondo-wa-kimi-ni-suki-to-iitai
-            </p:link>
-        </p:project>
-        <p:project>
-            <p:id>45</p:id>
-            <p:name>Boku no Meikko wa Yandere deshita( 僕 の 姪 っ っ し た)</p:name>
-            <p:alter-name>Cháu gái tôi là Yandere</p:alter-name>
-            <p:author>ミ ス タ ー で い / Mr. Dei</p:author>
-            <p:illustrator></p:illustrator>
-            <p:synopsis>Lần đầu tiên gặp các cháu ruột của mình (ae lolicon dau????)  Tất cả điều là những đứa trẻ dễ
-                thương, nhưng chỉ có cô ấy... Main ta được giao nhiệm vụ phải chăm sóc những đứa trẻ trong vòng một tuần
-                khi các chị gái đi đến tokyo Cuộc sống của cậu hoàn toàn bị đảo lộn khi bị bao quanh 5 cô bé xinh đẹp,
-                bao gồm một đứa trẻ hành động như người vợ mới cưới Tags: yandere, harem, loli, incest (nghi bị rape),
-                pedo, R-15
-            </p:synopsis>
-            <p:hash>1212467930</p:hash>
-            <p:view>16426</p:view>
-            <p:point>5.0</p:point>
-            <p:genres>
-                <p:genre>
-                    <p:genre-id>harem</p:genre-id>
-                </p:genre>
-                <p:genre>
-                    <p:genre-id>incest</p:genre-id>
-                </p:genre>
-                <p:genre>
-                    <p:genre-id>web novel</p:genre-id>
-                </p:genre>
-            </p:genres>
-            <p:last_update>
-                <nanos>733000000</nanos>
-            </p:last_update>
-            <p:total_update>20</p:total_update>
-            <p:link>https://ln.hako.re/truyen/1541-boku-no-meikko-wa-yandere-deshita</p:link>
-        </p:project>
-        <p:project>
-            <p:id>4</p:id>
-            <p:name>1000 nin no Homunkurusu no Shoujo tachi ni Kakomarete Isekai Kenkoku</p:name>
-            <p:alter-name>Thành lập một quốc gia ở thế giới khác vì để bảo vệ 1000 cô gái Humunculus;Thành lập một quốc
-                gia ở thế giới khác vì để bảo vệ 1000 cô gái Humunculus;1000 nin no Homunkurusu no Shoujo tachi ni
-                Kakomarete Isekai Kenkoku
-            </p:alter-name>
-            <p:author>Hatsue Renge</p:author>
-            <p:illustrator></p:illustrator>
-            <p:synopsis>Bị triệu hồi bởi nghi thức hồi sinh ác thần ở thế giới khác, một học sinh cấp 2 bình thường
-                Furutera isshi vì 1000 cô gái Humunculus sẽ được hiến tế. Khi nghe những hành động tàn nhẫn của những
-                con người đã gây ra cho họ như một công cụ, cậu quyết định thành lập một quốc gia cho Humunculus
-            </p:synopsis>
-            <p:hash>-495365097</p:hash>
-            <p:view>15650</p:view>
-            <p:point>5.0</p:point>
-            <p:genres>
-                <p:genre>
-                    <p:genre-id>adventure</p:genre-id>
-                </p:genre>
-                <p:genre>
-                    <p:genre-id>fantasy</p:genre-id>
-                </p:genre>
-                <p:genre>
-                    <p:genre-id>harem</p:genre-id>
-                </p:genre>
-                <p:genre>
-                    <p:genre-id>web novel</p:genre-id>
-                </p:genre>
-            </p:genres>
-            <p:last_update>
-                <nanos>807000000</nanos>
-            </p:last_update>
-            <p:total_update>20</p:total_update>
-            <p:link>
-                https://ln.hako.re/truyen/1820-1000-nin-no-homunkurusu-no-shoujo-tachi-ni-kakomarete-isekai-kenkoku
-            </p:link>
-        </p:project>
-        <p:project>
-            <p:id>62</p:id>
-            <p:name>CHUUKO DEMO KOI GA SHITAI!</p:name>
-            <p:alter-name>Even a &amp;#039;used goods&amp;#039; wants to experience love; 中古でも恋がしたい!;Cuồng dâm sinh
-                hoang tưởng vẫn muốn hưởng tình yêu;Chuunibyou Demo Koi ga Shitai!
-            </p:alter-name>
-            <p:author>Noritake Tao;Torako</p:author>
-            <p:illustrator>ReDrop;Nozomi Ousaka</p:illustrator>
-            <p:synopsis>Aramiya Seiichi là 1 học sinh cao trung bình thường,một otaku thích eroge đã từ bỏ niềm tin vào
-                gái 3D vì một sự cố.Một ngày,sau khi cậu vừa mua một đống đồ mới sau khi phát hiện nhân vật eroge hoàn
-                hảo hóa ra là "hàng đã qua sử dụng",cậu gặp một cô gái nhìn có vẻ lẳng lơ sắp bị cưỡng bức bởi một nhóm
-                "đầu trâu mặt ngựa".Tình cờ cậu đã cứu cô ấy.Hôm sau,khi đến lớp,cậu mới biết đó là bạn cùng lớp
-                cậu,Ayame,một cô gái hư hỏng lẳng lơ có đủ lời đồn về cô-nhất là việc cô ấy là "hàng đã qua sử dụng".Và
-                dường như cô ấy đang cố thay đổi thành người con gái lí tưởng của cậu để cậu đổ cô.;Chuunibyou demo Koi
-                ga Shitai! (中二病でも恋がしたい!), còn được viết tắt là Chū-2, là một light novel của Nhật Bản được viết bởi
-                Torako và được minh họa bởi Nozomi Ousaka. Được phát hành bởi nhà xuất bản Kyoto Animation. Tác phẩm đã
-                chiến thắng được giải danh dự trong cuộc thi Kyoto Animation Award năm 2010, dẫn đến việc công ty gánh
-                vác lấy trách nhiệm xuất bản và cho ra mắt hai quyển vào năm 2011.
-            </p:synopsis>
-            <p:hash>1489217075</p:hash>
-            <p:view>15119</p:view>
-            <p:point>5.0</p:point>
-            <p:genres>
-                <p:genre>
-                    <p:genre-id>action</p:genre-id>
-                </p:genre>
-                <p:genre>
-                    <p:genre-id>comedy</p:genre-id>
-                </p:genre>
-                <p:genre>
-                    <p:genre-id>drama</p:genre-id>
-                </p:genre>
-                <p:genre>
-                    <p:genre-id>ecchi</p:genre-id>
-                </p:genre>
-                <p:genre>
-                    <p:genre-id>harem</p:genre-id>
-                </p:genre>
-                <p:genre>
-                    <p:genre-id>romance</p:genre-id>
-                </p:genre>
-                <p:genre>
-                    <p:genre-id>school life</p:genre-id>
-                </p:genre>
-            </p:genres>
-            <p:last_update>
-                <nanos>443000000</nanos>
-            </p:last_update>
-            <p:total_update>32</p:total_update>
-            <p:link>
-                https://ln.hako.re/truyen/2100-chuuko-demo-koi-ga-shitai;https://ln.hako.re/truyen/110-chuunibyou-demo-koi-ga-shitai
-            </p:link>
-        </p:project>
-        <p:project>
-            <p:id>46</p:id>
-            <p:name>Boku to Kimi dake ni Seiya wa Konai</p:name>
-            <p:alter-name>僕と君だけに聖夜は来ない; Giáng Sinh chỉ có tớ và cậu sẽ không đến; You’ll not give me Christmas
-            </p:alter-name>
-            <p:author>Fujimiya Kazuki (藤宮カズキ)</p:author>
-            <p:illustrator>Fal Maro (ファルまろ)</p:illustrator>
-            <p:synopsis>Đêm 24 tháng 12. Nam sinh cấp ba Riichi đã có thể ràng buộc với đối tượng tình đơn phương của
-                mình, Natsumi. Tuy nhiên, niềm vui chưa kéo dài được bao lâu thì cô ấy đã từ giã cuộc sống ngay trước
-                mặt cậu, và khi nhận ra thì cậu đã quay trở lại hai ngày trước. Riichi biết rằng thời gian đã bị quay
-                ngược lại bởi cụm từ kích hoạt là “Tớ thích cậu”. Cậu định né tránh lời thổ lộ của cô gái mà mình thích
-                nhất, nhưng dù vùng vẫy thế nào, cô ấy vẫn thổ lộ và chết đi. Cứ thế, Ichiri bị mắc kẹt trong Đêm Giáng
-                Sinh được thổ lộ tình cảm, không ngừng trải qua bi kịch. Liệu cậu có thể nắm giữ được tương tai của
-                mình?
-            </p:synopsis>
-            <p:hash>1683824593</p:hash>
-            <p:view>6016</p:view>
-            <p:point>5.0</p:point>
-            <p:genres>
-                <p:genre>
-                    <p:genre-id>drama</p:genre-id>
-                </p:genre>
-                <p:genre>
-                    <p:genre-id>psychological</p:genre-id>
-                </p:genre>
-                <p:genre>
-                    <p:genre-id>romance</p:genre-id>
-                </p:genre>
-                <p:genre>
-                    <p:genre-id>school life</p:genre-id>
-                </p:genre>
-                <p:genre>
-                    <p:genre-id>science fiction</p:genre-id>
-                </p:genre>
-            </p:genres>
-            <p:last_update>
-                <nanos>343000000</nanos>
-            </p:last_update>
-            <p:total_update>3</p:total_update>
-            <p:link>https://ln.hako.re/truyen/2530-boku-to-kimi-dake-ni-seiya-wa-konai</p:link>
-        </p:project>
-        <p:project>
-            <p:id>50</p:id>
-            <p:name>Boukensha ni Naritai to Miyako ni Deteitta Musume ga S Rank ni Natteta</p:name>
-            <p:alter-name>My Daughter Grew Up to &amp;quot;Rank S&amp;quot; Adventurer.; My Daughter who Left for the
-                Capital to Become an Adventurer Reached S Rank; 冒険者になりたいと都に出て行った娘がＳランクになってた
-            </p:alter-name>
-            <p:author>Mojikakiya</p:author>
-            <p:illustrator>toi8</p:illustrator>
-            <p:synopsis>Sau khi mất chân từ khi còn là một mạo hiểm giả tập sự, anh ta trở về quê nhà ở nông thôn để
-                nghỉ ngơi. Làm nhiều công việc như hái thảo dược, tiêu diệt ma thú và thú hoang dã, và giúp đỡ dân làng
-                việc đồng áng, thật khó để gọi nhân vật chính của chúng ta là một du hành giả hay một tên chạy vặt tháo
-                vát. Làm những công việc đó trong một thời gian cho đến khi anh ta 30 tuổi.Một ngày nọ khi đang tìm thảo
-                được xung núi, anh ta tìm ra một đứa trẻ bị bỏ rơi. Lương tâm không cho phép bỏ nó lại, anh đưa nó về
-                nhà nuôi cho đến khi chạm mốc 40 tuổi.Lúc bấy giờ đứa con gái đã trưởng thành của anh ta cũng muốn trở
-                thành một mạo hiểm giả, có lẽ từ lúc lớn lên và dõi theo cha của mình.Mặc dù bố của cô chỉ muốn dạy kiếm
-                cho cô khi còn trẻ để tự vệ, nhưng tài năng của cô khá là ấn tượng. Nghĩ tới việc tốt hơn là không nên
-                để cô ấy mặc kẹt trong vùng đất này đến hết phần đời còn lại, nhân vật chính của chúng ta đưa cô tới một
-                guild mạo hiểm giả trong thủ phủ.Con gái của anh chính thức trở thành một mạo hiểm giả.5 năm thấm thoát
-                trôi qua, nhân vật chính, giờ đang ở trong cái tuổi 40, giờ vẫn đang làm công việc của một mạo hiểm giả
-                danh nghĩa ở vùng quê. Tuy nhiên con gái của anh thì đã một mạo hiểm giả hạng S nhưng vẫn chưa trở về
-                nhà một lần..."Khi nào mình mới được gặp bố đây...!?'
-            </p:synopsis>
-            <p:hash>-555540905</p:hash>
-            <p:view>5242</p:view>
-            <p:point>5.0</p:point>
-            <p:genres>
-                <p:genre>
-                    <p:genre-id>comedy</p:genre-id>
-                </p:genre>
-                <p:genre>
-                    <p:genre-id>fantasy</p:genre-id>
-                </p:genre>
-            </p:genres>
-            <p:last_update>
-                <nanos>567000000</nanos>
-            </p:last_update>
-            <p:total_update>2</p:total_update>
-            <p:link>
-                https://ln.hako.re/truyen/2573-boukensha-ni-naritai-to-miyako-ni-deteitta-musume-ga-s-rank-ni-natteta
-            </p:link>
-        </p:project>
-        <p:project>
-            <p:id>74</p:id>
-            <p:name>Bungaku Shoujo to Koisuru Episode</p:name>
-            <p:alter-name>Synonyms: Bungaku Shoujo to Koisuru Souwashuu, Japanese: “文学少女”と恋する挿話集【エピソード】,</p:alter-name>
-            <p:author>Nomura, Mizuki</p:author>
-            <p:illustrator>Takeoka, Miho</p:illustrator>
-            <p:hash>-84055513</p:hash>
-            <p:view>181</p:view>
-            <p:point>7.0</p:point>
-            <p:genres>
-                <p:genre>
-                    <p:genre-id>mystery</p:genre-id>
-                </p:genre>
-                <p:genre>
-                    <p:genre-id>drama</p:genre-id>
-                </p:genre>
-            </p:genres>
-            <p:last_update>
-                <nanos>950000000</nanos>
-            </p:last_update>
-            <p:total_update>0</p:total_update>
-            <p:link>https://myanimelist.net/manga/67349/Bungaku_Shoujo_to_Koisuru_Episode</p:link>
-        </p:project>
-    </p:projects>
-</p:result>
+<bookmark-list xmlns:p="http://t3.com/2018/project-page">
+    <bookmarks>
+        <bookmark>
+            <p:id>13</p:id>
+            <p:project>
+                <p:id>25</p:id>
+                <p:name>Although I Am Only Level 1, but with This Unique Skill, I Am the Strongest</p:name>
+                <p:alter-name>Mặc Dù Tôi Chỉ Ở Level 1, nhưng với Kĩ Năng Đặc Biệt Này, Nên Tôi Là Người Mạnh
+                    Nhất.;レベル１だけどユニークスキルで最強です;Although I Am Only Level 1, but with This Unique Skill, I Am the
+                    Strongest;Dù chỉ là level 1, nhưng tôi là người mạnh nhất;ALTHOUGH I AM ONLY LEVEL 1, BUT WITH THIS
+                    UNIQUE SKILL, I AM THE STRONGEST
+                </p:alter-name>
+                <p:author>Miki Nazuna ( 三木なずな );Miki Nazuna 三木なずな</p:author>
+                <p:illustrator>Subachi ( すばち );Subachi すばち</p:illustrator>
+                <p:synopsis>Satou Ryouta đã chết khi làm việc quá sức tại một công ty đen đã được chuyển sinh sang thế
+                    giới khác. Mặc dù Ryouta sống nhưng cậu đang bị một gánh nặng làm phiền đó là cấp độ của cậu ở thế
+                    giới khác kẹt ở cấp 1 .Dù cậu không thể tăng cấp, cậu sở hữu kỹ năng độc nhất có thể tạo ra vật phẩm
+                    gian lận không tồn tại trong thế giới từ quái vật .Cậu hiểu biết về thanh chỉ số và nâng tối đa
+                    chúng nhờ sự trợ giúp từ khả năng của vật phẩm. Cậu thu nhập một số vũ khí và vật phẩm chỉ có thể sử
+                    dụng bởi bản thân ,dù cậu chỉ cấp 1 nhưng cậu sở hữu vũ khí mạnh nhất.
+                </p:synopsis>
+                <p:hash>296704324</p:hash>
+                <p:view>18605</p:view>
+                <p:point>5.0</p:point>
+                <p:genres>
+                    <p:genre>
+                        <p:genre-id>mystery</p:genre-id>
+                    </p:genre>
+                    <p:genre>
+                        <p:genre-id>action</p:genre-id>
+                    </p:genre>
+                    <p:genre>
+                        <p:genre-id>adventure</p:genre-id>
+                    </p:genre>
+                    <p:genre>
+                        <p:genre-id>comedy</p:genre-id>
+                    </p:genre>
+                    <p:genre>
+                        <p:genre-id>fantasy</p:genre-id>
+                    </p:genre>
+                    <p:genre>
+                        <p:genre-id>ecchi</p:genre-id>
+                    </p:genre>
+                    <p:genre>
+                        <p:genre-id>harem</p:genre-id>
+                    </p:genre>
+                    <p:genre>
+                        <p:genre-id>romance</p:genre-id>
+                    </p:genre>
+                    <p:genre>
+                        <p:genre-id>slice of life</p:genre-id>
+                    </p:genre>
+                    <p:genre>
+                        <p:genre-id>supernatural</p:genre-id>
+                    </p:genre>
+                    <p:genre>
+                        <p:genre-id>web novel</p:genre-id>
+                    </p:genre>
+                    <p:genre>
+                        <p:genre-id>isekai</p:genre-id>
+                    </p:genre>
+                </p:genres>
+                <p:last_update>05/07/2018 15:43</p:last_update>
+                <p:total_update>44</p:total_update>
+                <p:link>
+                    https://ln.hako.re/truyen/1400-although-i-am-only-level-1-but-with-this-unique-skill-i-am-the-strongest;https://ln.hako.re/truyen/1943-although-i-am-only-level-1-but-with-this-unique-skill-i-am-the-strongest;https://ln.hako.re/truyen/2791-although-i-am-only-level-1-but-with-this-unique-skill-i-am-the-strongest
+                </p:link>
+            </p:project>
+            <p:accountEntity>
+                <p:username>ass</p:username>
+                <p:password>123</p:password>
+                <p:isAdmin>false</p:isAdmin>
+            </p:accountEntity>
+            <p:checkout>true</p:checkout>
+            <p:last_check>08/07/2018 21:30</p:last_check>
+        </bookmark>
+    </bookmarks>
+</bookmark-list>

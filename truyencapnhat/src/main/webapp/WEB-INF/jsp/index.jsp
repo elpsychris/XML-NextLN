@@ -70,26 +70,7 @@
                                 <div class="bookmark-menu">Bookmark</div>
                                 <div class="logout-menu" onclick="onLogout(this)"></div>
                             </div>
-                            <div class="bookmark-list">
-                                <div class="item card-1">
-                                    <div class="thumb">
-                                    </div>
-                                    <div class="info">
-                                        <span class="info-name">Re:Zero kara Hajimeru</span>
-                                        <span class="info-chapter">13</span>
-                                        <span class="info-view">50</span>
-                                    </div>
-                                </div>
-                                <div class="item card-1">
-                                    <div class="thumb">
-                                    </div>
-                                    <div class="info">
-                                        <span class="info-name">Re:Zero kara Hajimeru</span>
-                                        <span class="info-chapter">13</span>
-                                        <span class="info-view">50</span>
-                                    </div>
-                                </div>
-                            </div>
+                            <div id="bookmark-list" class="bookmark-list"></div>
                         </c:when>
                         <c:otherwise>
                             <div class="menu-sect">
@@ -180,6 +161,7 @@
 <script type="text/javascript" src="./js/scroll-event.js"></script>
 <script type="text/javascript" src="./js/search-event.js"></script>
 <script type="text/javascript" src="./js/load-index-event.js"></script>
+<script type="text/javascript" src="./js/bookmark-script.js"></script>
 
 </body>
 

@@ -373,7 +373,7 @@ public class ComUtils {
                     && field.get(newObj) != null) {
                 String newString = (String) field.get(newObj);
                 String oldString = (String) field.get(curObj);
-                if (!oldString.contains(newString)) {
+                if (!oldString.contains(newString) && !newString.trim().isEmpty()) {
                     oldString += ";" + newString.trim();
                     field.set(curObj, oldString);
                 }

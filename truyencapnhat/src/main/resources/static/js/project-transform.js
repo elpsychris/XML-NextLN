@@ -9,12 +9,6 @@ function findProjectObjectInChild(node, curProject, foundStartTag) {
         return node.childNodes[0].textContent;
     }
     if (foundStartTag) {
-        if (nodeName == "name" && projectPool != null) {
-            if (projectPool[node.textContent] != null) {
-                curProject = null;
-                return false;
-            }
-        }
         if (nodeName == "genres") {
             curProject[nodeName] = "";
             if (node.childNodes[0] != null && node.childNodes[0].childNodes[0] == null) {
@@ -93,7 +87,7 @@ function getProjectObject(node) {
             (function (isFound, ii) {
                     var sample = {};
                     var newProject = findProjectObjectInChild(node.childNodes[ii], sample, isFound);
-                    if (newProject != null && newProject["name"] != null && projectPool[newProject["name"]] == null) {
+                    if (newProject != null && newProject["name"] != null) {
                         projectPool[newProject["name"]] = newProject;
                     }
                 }(isFound, i)

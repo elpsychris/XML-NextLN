@@ -2,6 +2,7 @@ package com.prx301.finalproject.truyencapnhat.controller;
 
 import com.prx301.finalproject.truyencapnhat.model.*;
 import com.prx301.finalproject.truyencapnhat.model.web.model.AuthTicket;
+import com.prx301.finalproject.truyencapnhat.model.web.model.BookmarkList;
 import com.prx301.finalproject.truyencapnhat.model.web.model.LoginRequest;
 import com.prx301.finalproject.truyencapnhat.service.web.AccountService;
 import com.prx301.finalproject.truyencapnhat.service.web.BookmarkService;
@@ -12,6 +13,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpSession;
+import java.util.List;
 
 @RestController
 @RequestMapping("/api")
@@ -38,13 +40,12 @@ public class APIController {
         return accountService.signupAccount(signupReq);
     }
 
-    @RequestMapping(value = "/logout/{tokenId}", method = RequestMethod.GET)
-    public void logout(HttpSession session, @PathVariable("tokenId") String token, ModelMap modelMap) {
-        if (token == null || token.isEmpty()) {
-            token = (String) session.getAttribute(AccountService.TOKEN_KEY);
-        }
+    @RequestMapping(value = "/logout", method = RequestMethod.GET)
+    public void logout(HttpSession session, ModelMap modelMap) {
+        String token = (String) session.getAttribute(AccountService.TOKEN_KEY);
         AuthTicket authTicket = new AuthTicket(token);
-        accountService.logout(authTicket);
+
+        accountService.logout(authTicket, session);
     }
 
     @RequestMapping(value = "/updates/{project-id}/{page-no}", produces = MediaType.APPLICATION_XML_VALUE)
@@ -72,8 +73,20 @@ public class APIController {
         return projectService.searchProjectLikeName(keyword, pageNo);
     }
 
-    @RequestMapping(value = "/bookmark/{project-id}", method = RequestMethod.POST)
-    public boolean bookmarkProject(@PathVariable("project-id") int projectId, HttpSession session) {
+    @RequestMapping(value = "/bookmark", method = RequestMethod.GET, produces = MediaType.APPLICATION_XML_VALUE)
+    public BookmarkList getBookmarkList(HttpSession session) {
+        String token = (String) session.getAttribute(AccountService.TOKEN_KEY);
+        AuthTicket authTicket = new AuthTicket(token);
+
+        int result = accountService.checkRole(authTicket);
+        if (result == AccountService.LOGIN_AS_USER) {
+            return bookmarkService.getBookmarkList(token);
+        }
+        return null;
+    }
+
+    @RequestMapping(value = "/bookmark/{project-id}", method = RequestMethod.POST, produces = MediaType.APPLICATION_XML_VALUE)
+    public BookmarkList bookmarkProject(@PathVariable("project-id") int projectId, HttpSession session) {
         String token = (String) session.getAttribute(AccountService.TOKEN_KEY);
         AuthTicket authTicket = new AuthTicket(token);
 
@@ -81,6 +94,30 @@ public class APIController {
         if (result == AccountService.LOGIN_AS_USER) {
             return bookmarkService.bookmarkProject(token, projectId);
         }
-        return false;
+        return null;
+    }
+
+    @RequestMapping(value = "/bookmark/checkout/{project-id}", method = RequestMethod.POST, produces = MediaType.APPLICATION_XML_VALUE)
+    public BookmarkList checkoutProject(@PathVariable("project-id") int projectId, HttpSession session) {
+        String token = (String) session.getAttribute(AccountService.TOKEN_KEY);
+        AuthTicket authTicket = new AuthTicket(token);
+
+        int result = accountService.checkRole(authTicket);
+        if (result == AccountService.LOGIN_AS_USER) {
+            return bookmarkService.checkoutBookmark(token, projectId);
+        }
+        return null;
+    }
+
+    @RequestMapping(value = "/unbookmark/{project-id}", method = RequestMethod.DELETE, produces = MediaType.APPLICATION_XML_VALUE)
+    public BookmarkList unbookmarkProject(@PathVariable("project-id") int projectId, HttpSession session) {
+        String token = (String) session.getAttribute(AccountService.TOKEN_KEY);
+        AuthTicket authTicket = new AuthTicket(token);
+
+        int result = accountService.checkRole(authTicket);
+        if (result == AccountService.LOGIN_AS_USER) {
+            return bookmarkService.unbookmarkProject(token, projectId);
+        }
+        return null;
     }
 }

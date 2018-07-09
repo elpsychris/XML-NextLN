@@ -16,7 +16,8 @@
                     <page-uri>/truyen/</page-uri>
                     <filter-patterns>
                         <pattern>&lt;article class=&quot;listall-item clear&quot;&gt;[\S\s]+&lt;/div&gt;[\s]+&lt;/div&gt;[\s]+&lt;/article&gt;</pattern>
-                        <pattern>&lt;div class=&quot;reg-part clear&quot; style=&quot;padding-bottom: 20px&quot;&gt;[\S\s]+&lt;/section&gt;[\s]{2,}&lt;/div&gt;[\s]+&lt;/div&gt;[\s]+&lt;/div&gt;</pattern>
+                        <pattern>&lt;section class=&quot;fantrans-section&quot;&gt;[\s\S]+&lt;/span&gt;[\s]*&lt;/div&gt;[\s]*&lt;/main&gt;[\s]*&lt;/div&gt;[\s]*&lt;/section&gt;</pattern>
+                        <pattern>&lt;section class=&quot;ln_chapters-volume basic-section mobile-view clear&quot;&gt;[\S\s]+&lt;\/main&gt;[\s]*&lt;/div&gt;[\s]*&lt;/section&gt;</pattern>
                     </filter-patterns>
                 </filter>
             </clean-filters>

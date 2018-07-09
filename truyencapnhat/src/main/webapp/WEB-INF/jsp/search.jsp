@@ -35,7 +35,7 @@
                     <input type="password" id="login-password" name="password" placeholder="Mật khẩu"/>
                 </div>
                 <div class="btn-action" onclick="onLoginRequestSubmit(this)">Đăng nhập</div>
-                <span>Chưa có tài khoản?</span>
+                <span class="onclick-span" onclick="openSignupProject(this)">Chưa có tài khoản?</span>
             </div>
             <div id="signup-panel" class="signup-content animated">
                 <div class="login-text">
@@ -54,7 +54,7 @@
                     <input type="password" id="signup-confirm" placeholder="Xác nhận mật khẩu" pattern="[\w]{0,30}"/>
                 </div>
                 <div class="btn-action" onclick="onSignupRequestSubmit(this)">Đăng ký</div>
-                <span>Tôi đã có tài khoản!</span>
+                <span class="onclick-span" onclick="openLoginProject(this)">Tôi đã có tài khoản!</span>
             </div>
         </c:when>
         <c:otherwise>
@@ -127,7 +127,7 @@
     <div id="logo"></div>
     <div class="nav-item-center">
         <input class="search-bar" type="search" placeholder="Nhập tên truyện cần tìm" oninput="onSearchBarTyping(this)"
-               onfocus="onSearchBarFocus(this)" onblur="onSearchBarBlur(this)">
+               onfocus="onSearchBarFocus(this)" onblur="onSearchBarBlur(this)" value="${keyword}">
         <ul class="dropdown card-2" id="result-drop">
         </ul>
     </div>
@@ -160,8 +160,8 @@
     <div class="search-section genre">
         <div class="section-name">Thể loại</div>
         <c:forEach var="genre" items="${genres}">
-            <div class="section-item container">
-                <input type="checkbox"/>
+            <div class="section-item container" onclick="onGenreCheck(this)">
+                <input type="checkbox" class="check-genre" id="${genre.genreId}"/>
                 <span class="cus-checkbox"></span>
                 <span>${genre.genreId}</span>
             </div>
@@ -174,7 +174,7 @@
     </div>
 
     <div class="search-section update-frequency">
-        <div class="section-name">Độ thường xuyên</div>
+        <div class="section-name">Lượt view</div>
         <input class="update-frequency" type="number" placeholder="Lớn hơn (lần/tuần)"/>
     </div>
 </div>
@@ -196,8 +196,12 @@
                 <div class="header">
                     Lượt view
                 </div>
+                <div class="header">
+                    Số cập nhật
+                </div>
             </div>
             <span id="no-result" style="display: none">Không tìm thấy kết quả nào</span>
+            <span id="more-result" onclick="findMore(this)">Tải thêm</span>
         </div>
     </div>
 </div>
@@ -209,7 +213,9 @@
 <script type="text/javascript" src="./js/scroll-event.js"></script>
 <script type="text/javascript" src="./js/search-event.js"></script>
 <script type="text/javascript" src="./js/load-index-event.js"></script>
-
+<script>
+    searchDetail("${keyword}");
+</script>
 </body>
 
 </html>

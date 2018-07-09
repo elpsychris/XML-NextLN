@@ -1,5 +1,7 @@
 package com.prx301.finalproject.truyencapnhat.model;
 
+import org.hibernate.annotations.GenericGenerator;
+
 import javax.persistence.*;
 import javax.xml.bind.annotation.*;
 import java.util.List;
@@ -24,6 +26,8 @@ public class AccountEntity  {
     private List<BookmarkEntity> bookmarkEntityList;
 
     @Id
+    @GeneratedValue(generator="system-uuid")
+    @GenericGenerator(name="system-uuid", strategy = "uuid")
     @Column(name = "username")
     public String getUsername() {
         return username;
@@ -53,13 +57,13 @@ public class AccountEntity  {
         isAdmin = admin;
     }
 
-    @OneToMany(cascade = CascadeType.MERGE, mappedBy = "projectEntity")
+    @OneToMany(cascade = CascadeType.MERGE, mappedBy = "accountEntity")
     public List<BookmarkEntity> getBookmarkEntityList() {
         return bookmarkEntityList;
     }
 
     public void setBookmarkEntityList(List<BookmarkEntity> bookmarkEntityList) {
-        this.bookmarkEntityList = bookmarkEntityList;
+//        this.bookmarkEntityList = bookmarkEntityList;
     }
 
     @Override

@@ -53,13 +53,14 @@ public class AccountService {
         return LOGIN_AS_USER;
     }
 
-    public boolean logout(AuthTicket ticket) {
+    public boolean logout(AuthTicket ticket, HttpSession session) {
         if (ticket == null) {
             return false;
         }
-        if (checkRole(ticket) > 0) {
+        if (checkRole(ticket) >= 0) {
             String token = ticket.getToken();
             tokenMap.remove(token);
+            session.removeAttribute(AccountService.TOKEN_KEY);
             return true;
         }
         return false;

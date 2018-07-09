@@ -271,7 +271,7 @@ public class ProjectEntity {
     }
 
     public void setBookmarkEntityList(List<BookmarkEntity> bookmarkEntityList) {
-        this.bookmarkEntityList = bookmarkEntityList;
+//        this.bookmarkEntityList = bookmarkEntityList;
     }
 
     public int countUpdate() {

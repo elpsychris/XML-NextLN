@@ -64,25 +64,8 @@
                                 <div class="bookmark-menu">Bookmark</div>
                                 <div class="logout-menu" onclick="onLogout(this)"></div>
                             </div>
-                            <div class="bookmark-list">
-                                <div class="item card-1">
-                                    <div class="thumb">
-                                    </div>
-                                    <div class="info">
-                                        <span class="info-name">Re:Zero kara Hajimeru</span>
-                                        <span class="info-chapter">13</span>
-                                        <span class="info-view">50</span>
-                                    </div>
-                                </div>
-                                <div class="item card-1">
-                                    <div class="thumb">
-                                    </div>
-                                    <div class="info">
-                                        <span class="info-name">Re:Zero kara Hajimeru</span>
-                                        <span class="info-chapter">13</span>
-                                        <span class="info-view">50</span>
-                                    </div>
-                                </div>
+                            <div id="bookmark-list" class="bookmark-list">
+
                             </div>
                         </c:when>
                         <c:otherwise>
@@ -117,9 +100,15 @@
         </c:otherwise>
     </c:choose>
 </div>
-<div id="burgerBtn" class="burger-menu card-2" onclick="openLoginProject(this)">
+<c:choose>
+    <c:when test="${not isUser}">
+        <div id="burgerBtn" class="burger-menu card-2" onclick="openLoginProject(this)"></div>
+    </c:when>
+    <c:otherwise>
+        <div id="burgerBtn" class="burger-menu card-2" onclick="openProfileProject(this)"></div>
+    </c:otherwise>
+</c:choose>
 
-</div>
 <div class="header-bar">
     <div class="crumb-bar">
             <span>
@@ -237,5 +226,5 @@
 <script type="text/javascript" src="./js/detail-scroll.js"></script>
 <script type="text/javascript" src="./js/load-event.js"></script>
 <script type="text/javascript" src="./js/search-event.js"></script>
-
+<script type="text/javascript" src="./js/bookmark-script.js"></script>
 </html>

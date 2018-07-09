@@ -1,1240 +1,578 @@
-<project-page xmlns:t="http://t3.com/2018/xml" xmlns="http://t3.com/2018/project-page">
-<next-page/>
-<projects>
-<project>
-<id>https://myanimelist.net/manga/55215/Utsuro_no_Hako_to_Zero_no_Maria</id>
-<name>Utsuro no Hako to Zero no Maria</name>
-<alter-name/>
-<author>Mikage, Eiji</author>
-<illustrator>Tetsuo</illustrator>
-<genres>
-<genre>
-<genre-id>Action</genre-id>
-</genre>
-<genre>
-<genre-id>Mystery</genre-id>
-</genre>
-<genre>
-<genre-id>Drama</genre-id>
-</genre>
-<genre>
-<genre-id>Horror</genre-id>
-</genre>
-<genre>
-<genre-id>Romance</genre-id>
-</genre>
-<genre>
-<genre-id>School</genre-id>
-</genre>
-<genre>
-<genre-id>Supernatural</genre-id>
-</genre>
-<genre>
-<genre-id>Psychological</genre-id>
-</genre>
-<genre>
-<genre-id>Thriller</genre-id>
-</genre>
-</genres>
-<view> 60,836</view>
-<point>8.96</point>
-<link>https://myanimelist.net/manga/55215/Utsuro_no_Hako_to_Zero_no_Maria</link>
-<updates/>
-</project>
-<project>
-<id>https://myanimelist.net/manga/14893/Monogatari_Series__First_Season</id>
-<name>Monogatari Series: First Season</name>
-<alter-name/>
-<author>Nisio, Isin</author>
-<illustrator>VOFAN</illustrator>
-<genres>
-<genre>
-<genre-id>Action</genre-id>
-</genre>
-<genre>
-<genre-id>Comedy</genre-id>
-</genre>
-<genre>
-<genre-id>Mystery</genre-id>
-</genre>
-<genre>
-<genre-id>Romance</genre-id>
-</genre>
-<genre>
-<genre-id>Vampire</genre-id>
-</genre>
-<genre>
-<genre-id>Supernatural</genre-id>
-</genre>
-</genres>
-<view> 22,246</view>
-<point>8.92</point>
-<link>https://myanimelist.net/manga/14893/Monogatari_Series__First_Season</link>
-<updates/>
-</project>
-<project>
-<id>https://myanimelist.net/manga/40171/Yahari_Ore_no_Seishun_Love_Comedy_wa_Machigatteiru</id>
-<name>Yahari Ore no Seishun Love Comedy wa Machigatteiru.</name>
-<alter-name/>
-<author>Watari, Wataru</author>
-<illustrator>Ponkan 8</illustrator>
-<genres>
-<genre>
-<genre-id>Comedy</genre-id>
-</genre>
-<genre>
-<genre-id>Romance</genre-id>
-</genre>
-<genre>
-<genre-id>School</genre-id>
-</genre>
-</genres>
-<view> 26,604</view>
-<point>8.92</point>
-<link>https://myanimelist.net/manga/40171/Yahari_Ore_no_Seishun_Love_Comedy_wa_Machigatteiru</link>
-<updates/>
-</project>
-<project>
-<id>https://myanimelist.net/manga/9115/Ookami_to_Koushinryou</id>
-<name>Ookami to Koushinryou</name>
-<alter-name/>
-<author>Hasekura, Isuna</author>
-<illustrator>Ayakura, Juu</illustrator>
-<genres>
-<genre>
-<genre-id>Adventure</genre-id>
-</genre>
-<genre>
-<genre-id>Drama</genre-id>
-</genre>
-<genre>
-<genre-id>Fantasy</genre-id>
-</genre>
-<genre>
-<genre-id>Historical</genre-id>
-</genre>
-<genre>
-<genre-id>Romance</genre-id>
-</genre>
-<genre>
-<genre-id>Supernatural</genre-id>
-</genre>
-</genres>
-<view> 31,527</view>
-<point>8.89</point>
-<link>https://myanimelist.net/manga/9115/Ookami_to_Koushinryou</link>
-<updates/>
-</project>
-<project>
-<id>https://myanimelist.net/manga/6978/Ginga_Eiyuu_Densetsu</id>
-<name>Ginga Eiyuu Densetsu</name>
-<alter-name/>
-<author>Tanaka, Yoshiki</author>
-<illustrator>Kato, Naoyuki</illustrator>
-<genres>
-<genre>
-<genre-id>Action</genre-id>
-</genre>
-<genre>
-<genre-id>Adventure</genre-id>
-</genre>
-<genre>
-<genre-id>Drama</genre-id>
-</genre>
-<genre>
-<genre-id>Sci-Fi</genre-id>
-</genre>
-<genre>
-<genre-id>Space</genre-id>
-</genre>
-<genre>
-<genre-id>Military</genre-id>
-</genre>
-</genres>
-<view> 2,330</view>
-<point>8.81</point>
-<link>https://myanimelist.net/manga/6978/Ginga_Eiyuu_Densetsu</link>
-<updates/>
-</project>
-<project>
-<id>https://myanimelist.net/manga/23751/Monogatari_Series__Second_Season</id>
-<name>Monogatari Series: Second Season</name>
-<alter-name/>
-<author>Nisio, Isin</author>
-<illustrator>VOFAN</illustrator>
-<genres>
-<genre>
-<genre-id>Comedy</genre-id>
-</genre>
-<genre>
-<genre-id>Mystery</genre-id>
-</genre>
-<genre>
-<genre-id>Drama</genre-id>
-</genre>
-<genre>
-<genre-id>Vampire</genre-id>
-</genre>
-<genre>
-<genre-id>Supernatural</genre-id>
-</genre>
-</genres>
-<view> 7,338</view>
-<point>8.78</point>
-<link>https://myanimelist.net/manga/23751/Monogatari_Series__Second_Season</link>
-<updates/>
-</project>
-<project>
-<id>https://myanimelist.net/manga/81211/Shuumatsu_Nani_Shitemasu_ka_Isogashii_desu_ka_Sukutte_Moratte_Ii_desu_ka</id>
-<name>Shuumatsu Nani Shitemasu ka? Isogashii desu ka? Sukutte Moratte Ii desu ka?</name>
-<alter-name/>
-<author>Kareno, Akira</author>
-<illustrator>ue</illustrator>
-<genres>
-<genre>
-<genre-id>Drama</genre-id>
-</genre>
-<genre>
-<genre-id>Fantasy</genre-id>
-</genre>
-<genre>
-<genre-id>Romance</genre-id>
-</genre>
-<genre>
-<genre-id>Sci-Fi</genre-id>
-</genre>
-</genres>
-<view> 8,200</view>
-<point>8.78</point>
-<link>https://myanimelist.net/manga/81211/Shuumatsu_Nani_Shitemasu_ka_Isogashii_desu_ka_Sukutte_Moratte_Ii_desu_ka</link>
-<updates/>
-</project>
-<project>
-<id>https://myanimelist.net/manga/44227/Monogatari_Series__Final_Season</id>
-<name>Monogatari Series: Final Season</name>
-<alter-name/>
-<author>Nisio, Isin</author>
-<illustrator>VOFAN</illustrator>
-<genres>
-<genre>
-<genre-id>Comedy</genre-id>
-</genre>
-<genre>
-<genre-id>Mystery</genre-id>
-</genre>
-<genre>
-<genre-id>Vampire</genre-id>
-</genre>
-<genre>
-<genre-id>Supernatural</genre-id>
-</genre>
-</genres>
-<view> 5,748</view>
-<point>8.77</point>
-<link>https://myanimelist.net/manga/44227/Monogatari_Series__Final_Season</link>
-<updates/>
-</project>
-<project>
-<id>https://myanimelist.net/manga/399/Kino_no_Tabi__The_Beautiful_World</id>
-<name>Kino no Tabi: The Beautiful World</name>
-<alter-name/>
-<author>Sigsawa, Keiichi</author>
-<illustrator>Kuroboshi, Kouhaku</illustrator>
-<genres>
-<genre>
-<genre-id>Adventure</genre-id>
-</genre>
-<genre>
-<genre-id>Mystery</genre-id>
-</genre>
-<genre>
-<genre-id>Drama</genre-id>
-</genre>
-<genre>
-<genre-id>Fantasy</genre-id>
-</genre>
-<genre>
-<genre-id>Sci-Fi</genre-id>
-</genre>
-<genre>
-<genre-id>Psychological</genre-id>
-</genre>
-</genres>
-<view> 8,345</view>
-<point>8.76</point>
-<link>https://myanimelist.net/manga/399/Kino_no_Tabi__The_Beautiful_World</link>
-<updates/>
-</project>
-<project>
-<id>https://myanimelist.net/manga/9726/Zaregoto_Series</id>
-<name>Zaregoto Series</name>
-<alter-name/>
-<author>Nisio, Isin</author>
-<illustrator>Take</illustrator>
-<genres>
-<genre>
-<genre-id>Action</genre-id>
-</genre>
-<genre>
-<genre-id>Mystery</genre-id>
-</genre>
-<genre>
-<genre-id>Drama</genre-id>
-</genre>
-<genre>
-<genre-id>Supernatural</genre-id>
-</genre>
-</genres>
-<view> 8,300</view>
-<point>8.71</point>
-<link>https://myanimelist.net/manga/9726/Zaregoto_Series</link>
-<updates/>
-</project>
-<project>
-<id>https://myanimelist.net/manga/24875/Shinyaku_Toaru_Majutsu_no_Index</id>
-<name>Shinyaku Toaru Majutsu no Index</name>
-<alter-name/>
-<author>Kamachi, Kazuma</author>
-<illustrator>Haimura, Kiyotaka</illustrator>
-<genres>
-<genre>
-<genre-id>Action</genre-id>
-</genre>
-<genre>
-<genre-id>Comedy</genre-id>
-</genre>
-<genre>
-<genre-id>Fantasy</genre-id>
-</genre>
-<genre>
-<genre-id>Magic</genre-id>
-</genre>
-<genre>
-<genre-id>Sci-Fi</genre-id>
-</genre>
-<genre>
-<genre-id>Super Power</genre-id>
-</genre>
-<genre>
-<genre-id>Supernatural</genre-id>
-</genre>
-</genres>
-<view> 6,845</view>
-<point>8.70</point>
-<link>https://myanimelist.net/manga/24875/Shinyaku_Toaru_Majutsu_no_Index</link>
-<updates/>
-</project>
-<project>
-<id>https://myanimelist.net/manga/74697/Re_Zero_kara_Hajimeru_Isekai_Seikatsu</id>
-<name>Re:Zero kara Hajimeru Isekai Seikatsu</name>
-<alter-name/>
-<author>Nagatsuki, Tappei</author>
-<illustrator>Ootsuka, Shinichirou</illustrator>
-<genres>
-<genre>
-<genre-id>Action</genre-id>
-</genre>
-<genre>
-<genre-id>Drama</genre-id>
-</genre>
-<genre>
-<genre-id>Fantasy</genre-id>
-</genre>
-</genres>
-<view> 21,141</view>
-<point>8.70</point>
-<link>https://myanimelist.net/manga/74697/Re_Zero_kara_Hajimeru_Isekai_Seikatsu</link>
-<updates/>
-</project>
-<project>
-<id>https://myanimelist.net/manga/108495/NieR_Automata</id>
-<name>NieR:Automata</name>
-<alter-name/>
-<author>Eishima, Jun</author>
-<illustrator/>
-<genres>
-<genre>
-<genre-id>Action</genre-id>
-</genre>
-<genre>
-<genre-id>Fantasy</genre-id>
-</genre>
-<genre>
-<genre-id>Sci-Fi</genre-id>
-</genre>
-</genres>
-<view> 1,978</view>
-<point>8.70</point>
-<link>https://myanimelist.net/manga/108495/NieR_Automata</link>
-<updates/>
-</project>
-<project>
-<id>https://myanimelist.net/manga/35513/Koten-bu_Series</id>
-<name>Koten-bu Series</name>
-<alter-name/>
-<author>Yonezawa, Honobu</author>
-<illustrator/>
-<genres>
-<genre>
-<genre-id>Adventure</genre-id>
-</genre>
-<genre>
-<genre-id>Mystery</genre-id>
-</genre>
-<genre>
-<genre-id>School</genre-id>
-</genre>
-</genres>
-<view> 5,983</view>
-<point>8.68</point>
-<link>https://myanimelist.net/manga/35513/Koten-bu_Series</link>
-<updates/>
-</project>
-<project>
-<id>https://myanimelist.net/manga/39859/Steins_Gate</id>
-<name>Steins;Gate</name>
-<alter-name/>
-<author>Sakai, Kyuuta</author>
-<illustrator>Miwa, Kiyomune</illustrator>
-<genres>
-<genre>
-<genre-id>Sci-Fi</genre-id>
-</genre>
-<genre>
-<genre-id>Thriller</genre-id>
-</genre>
-</genres>
-<view> 2,574</view>
-<point>8.68</point>
-<link>https://myanimelist.net/manga/39859/Steins_Gate</link>
-<updates/>
-</project>
-<project>
-<id>https://myanimelist.net/manga/48399/No_Game_No_Life</id>
-<name>No Game No Life</name>
-<alter-name/>
-<author>Kamiya, Yuu</author>
-<illustrator/>
-<genres>
-<genre>
-<genre-id>Comedy</genre-id>
-</genre>
-<genre>
-<genre-id>Ecchi</genre-id>
-</genre>
-<genre>
-<genre-id>Fantasy</genre-id>
-</genre>
-<genre>
-<genre-id>Supernatural</genre-id>
-</genre>
-</genres>
-<view> 28,014</view>
-<point>8.68</point>
-<link>https://myanimelist.net/manga/48399/No_Game_No_Life</link>
-<updates/>
-</project>
-<project>
-<id>https://myanimelist.net/manga/79993/Umineko_no_Naku_Koro_ni_Chiru</id>
-<name>Umineko no Naku Koro ni Chiru</name>
-<alter-name/>
-<author>Ryukishi07</author>
-<illustrator>Tomohi</illustrator>
-<genres>
-<genre>
-<genre-id>Mystery</genre-id>
-</genre>
-<genre>
-<genre-id>Fantasy</genre-id>
-</genre>
-<genre>
-<genre-id>Horror</genre-id>
-</genre>
-<genre>
-<genre-id>Supernatural</genre-id>
-</genre>
-<genre>
-<genre-id>Psychological</genre-id>
-</genre>
-<genre>
-<genre-id>Thriller</genre-id>
-</genre>
-</genres>
-<view> 1,216</view>
-<point>8.68</point>
-<link>https://myanimelist.net/manga/79993/Umineko_no_Naku_Koro_ni_Chiru</link>
-<updates/>
-</project>
-<project>
-<id>https://myanimelist.net/manga/70261/Mushoku_Tensei__Isekai_Ittara_Honki_Dasu</id>
-<name>Mushoku Tensei: Isekai Ittara Honki Dasu</name>
-<alter-name/>
-<author>Rifujin na Magonote</author>
-<illustrator>Sirotaka</illustrator>
-<genres>
-<genre>
-<genre-id>Fantasy</genre-id>
-</genre>
-</genres>
-<view> 16,521</view>
-<point>8.67</point>
-<link>https://myanimelist.net/manga/70261/Mushoku_Tensei__Isekai_Ittara_Honki_Dasu</link>
-<updates/>
-</project>
-<project>
-<id>https://myanimelist.net/manga/1342/Baccano</id>
-<name>Baccano!</name>
-<alter-name/>
-<author>Narita, Ryohgo</author>
-<illustrator>Enami, Katsumi</illustrator>
-<genres>
-<genre>
-<genre-id>Action</genre-id>
-</genre>
-<genre>
-<genre-id>Mystery</genre-id>
-</genre>
-<genre>
-<genre-id>Fantasy</genre-id>
-</genre>
-</genres>
-<view> 9,445</view>
-<point>8.66</point>
-<link>https://myanimelist.net/manga/1342/Baccano</link>
-<updates/>
-</project>
-<project>
-<id>https://myanimelist.net/manga/3649/Fate_Zero</id>
-<name>Fate/Zero</name>
-<alter-name/>
-<author>Takeuchi, Takashi</author>
-<illustrator>Urobuchi, Gen</illustrator>
-<genres>
-<genre>
-<genre-id>Action</genre-id>
-</genre>
-<genre>
-<genre-id>Fantasy</genre-id>
-</genre>
-<genre>
-<genre-id>Supernatural</genre-id>
-</genre>
-</genres>
-<view> 14,929</view>
-<point>8.66</point>
-<link>https://myanimelist.net/manga/3649/Fate_Zero</link>
-<updates/>
-</project>
-<project>
-<id>https://myanimelist.net/manga/98930/Violet_Evergarden</id>
-<name>Violet Evergarden</name>
-<alter-name/>
-<author>Akatsuki, Kana</author>
-<illustrator>Takase, Akiko</illustrator>
-<genres>
-<genre>
-<genre-id>Drama</genre-id>
-</genre>
-<genre>
-<genre-id>Fantasy</genre-id>
-</genre>
-</genres>
-<view> 6,300</view>
-<point>8.65</point>
-<link>https://myanimelist.net/manga/98930/Violet_Evergarden</link>
-<updates/>
-</project>
-<project>
-<id>https://myanimelist.net/manga/3083/Suzumiya_Haruhi_Series</id>
-<name>Suzumiya Haruhi Series</name>
-<alter-name/>
-<author>Tanigawa, Nagaru</author>
-<illustrator>Itou, Noizi</illustrator>
-<genres>
-<genre>
-<genre-id>Comedy</genre-id>
-</genre>
-<genre>
-<genre-id>Drama</genre-id>
-</genre>
-<genre>
-<genre-id>School</genre-id>
-</genre>
-<genre>
-<genre-id>Sci-Fi</genre-id>
-</genre>
-<genre>
-<genre-id>Supernatural</genre-id>
-</genre>
-</genres>
-<view> 23,086</view>
-<point>8.64</point>
-<link>https://myanimelist.net/manga/3083/Suzumiya_Haruhi_Series</link>
-<updates/>
-</project>
-<project>
-<id>https://myanimelist.net/manga/81669/Overlord</id>
-<name>Overlord</name>
-<alter-name/>
-<author>Maruyama, Kugane</author>
-<illustrator>so-bin</illustrator>
-<genres>
-<genre>
-<genre-id>Action</genre-id>
-</genre>
-<genre>
-<genre-id>Fantasy</genre-id>
-</genre>
-<genre>
-<genre-id>Game</genre-id>
-</genre>
-<genre>
-<genre-id>Magic</genre-id>
-</genre>
-<genre>
-<genre-id>Supernatural</genre-id>
-</genre>
-</genres>
-<view> 18,571</view>
-<point>8.64</point>
-<link>https://myanimelist.net/manga/81669/Overlord</link>
-<updates/>
-</project>
-<project>
-<id>https://myanimelist.net/manga/3807/Juuni_Kokuki</id>
-<name>Juuni Kokuki</name>
-<alter-name/>
-<author>Ono, Fuyumi</author>
-<illustrator>Yamada, Akihiro</illustrator>
-<genres>
-<genre>
-<genre-id>Fantasy</genre-id>
-</genre>
-</genres>
-<view> 4,209</view>
-<point>8.63</point>
-<link>https://myanimelist.net/manga/3807/Juuni_Kokuki</link>
-<updates/>
-</project>
-<project>
-<id>https://myanimelist.net/manga/26728/No6</id>
-<name>No.6</name>
-<alter-name/>
-<author>Asano, Atsuko</author>
-<illustrator/>
-<genres>
-<genre>
-<genre-id>Action</genre-id>
-</genre>
-<genre>
-<genre-id>Mystery</genre-id>
-</genre>
-<genre>
-<genre-id>Sci-Fi</genre-id>
-</genre>
-</genres>
-<view> 12,256</view>
-<point>8.61</point>
-<link>https://myanimelist.net/manga/26728/No6</link>
-<updates/>
-</project>
-<project>
-<id>https://myanimelist.net/manga/87953/Akatsuki_no_Yona</id>
-<name>Akatsuki no Yona</name>
-<alter-name/>
-<author>Kusanagi, Mizuho</author>
-<illustrator>Fujitani, Touko</illustrator>
-<genres>
-<genre>
-<genre-id>Adventure</genre-id>
-</genre>
-<genre>
-<genre-id>Historical</genre-id>
-</genre>
-<genre>
-<genre-id>Romance</genre-id>
-</genre>
-<genre>
-<genre-id>Shoujo</genre-id>
-</genre>
-</genres>
-<view> 4,639</view>
-<point>8.59</point>
-<link>https://myanimelist.net/manga/87953/Akatsuki_no_Yona</link>
-<updates/>
-</project>
-<project>
-<id>https://myanimelist.net/manga/66517/Umineko_no_Naku_Koro_ni</id>
-<name>Umineko no Naku Koro ni</name>
-<alter-name/>
-<author>Ryukishi07</author>
-<illustrator>Tomohi</illustrator>
-<genres>
-<genre>
-<genre-id>Mystery</genre-id>
-</genre>
-<genre>
-<genre-id>Fantasy</genre-id>
-</genre>
-<genre>
-<genre-id>Horror</genre-id>
-</genre>
-<genre>
-<genre-id>Supernatural</genre-id>
-</genre>
-<genre>
-<genre-id>Psychological</genre-id>
-</genre>
-<genre>
-<genre-id>Thriller</genre-id>
-</genre>
-</genres>
-<view> 2,402</view>
-<point>8.57</point>
-<link>https://myanimelist.net/manga/66517/Umineko_no_Naku_Koro_ni</link>
-<updates/>
-</project>
-<project>
-<id>https://myanimelist.net/manga/89357/Youkoso_Jitsuryoku_Shijou_Shugi_no_Kyoushitsu_e</id>
-<name>Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e</name>
-<alter-name/>
-<author>Tomose, Shunsaku</author>
-<illustrator>Kinugasa, Shougo</illustrator>
-<genres>
-<genre>
-<genre-id>Comedy</genre-id>
-</genre>
-<genre>
-<genre-id>Romance</genre-id>
-</genre>
-<genre>
-<genre-id>School</genre-id>
-</genre>
-</genres>
-<view> 6,278</view>
-<point>8.56</point>
-<link>https://myanimelist.net/manga/89357/Youkoso_Jitsuryoku_Shijou_Shugi_no_Kyoushitsu_e</link>
-<updates/>
-</project>
-<project>
-<id>https://myanimelist.net/manga/99821/Shinsetsu_Ookami_to_Koushinryou__Ookami_to_Youhishi</id>
-<name>Shinsetsu Ookami to Koushinryou: Ookami to Youhishi</name>
-<alter-name/>
-<author>Hasekura, Isuna</author>
-<illustrator>Ayakura, Juu</illustrator>
-<genres>
-<genre>
-<genre-id>Fantasy</genre-id>
-</genre>
-</genres>
-<view> 1,884</view>
-<point>8.55</point>
-<link>https://myanimelist.net/manga/99821/Shinsetsu_Ookami_to_Koushinryou__Ookami_to_Youhishi</link>
-<updates/>
-</project>
-<project>
-<id>https://myanimelist.net/manga/104039/86</id>
-<name>86</name>
-<alter-name/>
-<author>Shirabi</author>
-<illustrator>Asato, Asato</illustrator>
-<genres>
-<genre>
-<genre-id>Drama</genre-id>
-</genre>
-<genre>
-<genre-id>Sci-Fi</genre-id>
-</genre>
-</genres>
-<view> 1,241</view>
-<point>8.55</point>
-<link>https://myanimelist.net/manga/104039/86</link>
-<updates/>
-</project>
-<project>
-<id>https://myanimelist.net/manga/108177/Monogatari_Series__Monster_Season</id>
-<name>Monogatari Series: Monster Season</name>
-<alter-name/>
-<author>Nisio, Isin</author>
-<illustrator>VOFAN</illustrator>
-<genres>
-<genre>
-<genre-id>Comedy</genre-id>
-</genre>
-<genre>
-<genre-id>Mystery</genre-id>
-</genre>
-<genre>
-<genre-id>Vampire</genre-id>
-</genre>
-<genre>
-<genre-id>Supernatural</genre-id>
-</genre>
-</genres>
-<view> 1,017</view>
-<point>8.55</point>
-<link>https://myanimelist.net/manga/108177/Monogatari_Series__Monster_Season</link>
-<updates/>
-</project>
-<project>
-<id>https://myanimelist.net/manga/45885/No6_Beyond</id>
-<name>No.6 Beyond</name>
-<alter-name/>
-<author>Asano, Atsuko</author>
-<illustrator/>
-<genres>
-<genre>
-<genre-id>Action</genre-id>
-</genre>
-<genre>
-<genre-id>Mystery</genre-id>
-</genre>
-<genre>
-<genre-id>Drama</genre-id>
-</genre>
-<genre>
-<genre-id>Sci-Fi</genre-id>
-</genre>
-<genre>
-<genre-id>Josei</genre-id>
-</genre>
-</genres>
-<view> 2,496</view>
-<point>8.54</point>
-<link>https://myanimelist.net/manga/45885/No6_Beyond</link>
-<updates/>
-</project>
-<project>
-<id>https://myanimelist.net/manga/90810/Nogi_Wakaba_wa_Yuusha_de_Aru</id>
-<name>Nogi Wakaba wa Yuusha de Aru</name>
-<alter-name/>
-<author>BUNBUN</author>
-<illustrator>Takahiro</illustrator>
-<genres>
-<genre>
-<genre-id>Fantasy</genre-id>
-</genre>
-<genre>
-<genre-id>Magic</genre-id>
-</genre>
-</genres>
-<view> 908</view>
-<point>8.52</point>
-<link>https://myanimelist.net/manga/90810/Nogi_Wakaba_wa_Yuusha_de_Aru</link>
-<updates/>
-</project>
-<project>
-<id>https://myanimelist.net/manga/95243/Re_Zero_kara_Hajimeru_Isekai_Seikatsu_Ex</id>
-<name>Re:Zero kara Hajimeru Isekai Seikatsu Ex</name>
-<alter-name/>
-<author>Nagatsuki, Tappei</author>
-<illustrator>Ootsuka, Shinichirou</illustrator>
-<genres>
-<genre>
-<genre-id>Fantasy</genre-id>
-</genre>
-</genres>
-<view> 1,802</view>
-<point>8.52</point>
-<link>https://myanimelist.net/manga/95243/Re_Zero_kara_Hajimeru_Isekai_Seikatsu_Ex</link>
-<updates/>
-</project>
-<project>
-<id>https://myanimelist.net/manga/16816/Durarara</id>
-<name>Durarara!!</name>
-<alter-name/>
-<author>Narita, Ryohgo</author>
-<illustrator>Yasuda, Suzuhito</illustrator>
-<genres>
-<genre>
-<genre-id>Action</genre-id>
-</genre>
-<genre>
-<genre-id>Drama</genre-id>
-</genre>
-<genre>
-<genre-id>Romance</genre-id>
-</genre>
-<genre>
-<genre-id>Supernatural</genre-id>
-</genre>
-</genres>
-<view> 16,489</view>
-<point>8.51</point>
-<link>https://myanimelist.net/manga/16816/Durarara</link>
-<updates/>
-</project>
-<project>
-<id>https://myanimelist.net/manga/12854/Toaru_Majutsu_no_Index</id>
-<name>Toaru Majutsu no Index</name>
-<alter-name/>
-<author>Kamachi, Kazuma</author>
-<illustrator>Haimura, Kiyotaka</illustrator>
-<genres>
-<genre>
-<genre-id>Action</genre-id>
-</genre>
-<genre>
-<genre-id>Comedy</genre-id>
-</genre>
-<genre>
-<genre-id>Fantasy</genre-id>
-</genre>
-<genre>
-<genre-id>Magic</genre-id>
-</genre>
-<genre>
-<genre-id>Sci-Fi</genre-id>
-</genre>
-<genre>
-<genre-id>Super Power</genre-id>
-</genre>
-<genre>
-<genre-id>Supernatural</genre-id>
-</genre>
-</genres>
-<view> 15,167</view>
-<point>8.50</point>
-<link>https://myanimelist.net/manga/12854/Toaru_Majutsu_no_Index</link>
-<updates/>
-</project>
-<project>
-<id>https://myanimelist.net/manga/60553/Kono_Subarashii_Sekai_ni_Shukufuku_wo</id>
-<name>Kono Subarashii Sekai ni Shukufuku wo!</name>
-<alter-name/>
-<author>Mishima, Kurone</author>
-<illustrator>Akatsuki, Natsume</illustrator>
-<genres>
-<genre>
-<genre-id>Adventure</genre-id>
-</genre>
-<genre>
-<genre-id>Comedy</genre-id>
-</genre>
-<genre>
-<genre-id>Fantasy</genre-id>
-</genre>
-<genre>
-<genre-id>Supernatural</genre-id>
-</genre>
-</genres>
-<view> 14,658</view>
-<point>8.50</point>
-<link>https://myanimelist.net/manga/60553/Kono_Subarashii_Sekai_ni_Shukufuku_wo</link>
-<updates/>
-</project>
-<project>
-<id>https://myanimelist.net/manga/76567/Mitou_Shoukan___Blood_Sign</id>
-<name>Mitou Shoukan://Blood Sign</name>
-<alter-name/>
-<author>Kamachi, Kazuma</author>
-<illustrator>Ikawa, Waki</illustrator>
-<genres>
-<genre>
-<genre-id>Comedy</genre-id>
-</genre>
-<genre>
-<genre-id>Fantasy</genre-id>
-</genre>
-<genre>
-<genre-id>Magic</genre-id>
-</genre>
-<genre>
-<genre-id>Supernatural</genre-id>
-</genre>
-</genres>
-<view> 1,533</view>
-<point>8.50</point>
-<link>https://myanimelist.net/manga/76567/Mitou_Shoukan___Blood_Sign</link>
-<updates/>
-</project>
-<project>
-<id>https://myanimelist.net/manga/97643/Shuumatsu_Nani_Shitemasu_ka_Mou_Ichido_dake_Aemasu_ka</id>
-<name>Shuumatsu Nani Shitemasu ka? Mou Ichido dake, Aemasu ka?</name>
-<alter-name/>
-<author>Kareno, Akira</author>
-<illustrator>ue</illustrator>
-<genres>
-<genre>
-<genre-id>Drama</genre-id>
-</genre>
-<genre>
-<genre-id>Fantasy</genre-id>
-</genre>
-</genres>
-<view> 1,877</view>
-<point>8.49</point>
-<link>https://myanimelist.net/manga/97643/Shuumatsu_Nani_Shitemasu_ka_Mou_Ichido_dake_Aemasu_ka</link>
-<updates/>
-</project>
-<project>
-<id>https://myanimelist.net/manga/88930/Youjo_Senki</id>
-<name>Youjo Senki</name>
-<alter-name/>
-<author>Shinotsuki, Shinobu</author>
-<illustrator>Zen, Carlo</illustrator>
-<genres>
-<genre>
-<genre-id>Magic</genre-id>
-</genre>
-<genre>
-<genre-id>Military</genre-id>
-</genre>
-</genres>
-<view> 5,744</view>
-<point>8.47</point>
-<link>https://myanimelist.net/manga/88930/Youjo_Senki</link>
-<updates/>
-</project>
-<project>
-<id>https://myanimelist.net/manga/45855/Mondaiji-tachi_ga_Isekai_kara_Kuru_Sou_desu_yo</id>
-<name>Mondaiji-tachi ga Isekai kara Kuru Sou desu yo?</name>
-<alter-name/>
-<author>Tatsunoko, Tarou</author>
-<illustrator>Amano, Yuu</illustrator>
-<genres>
-<genre>
-<genre-id>Action</genre-id>
-</genre>
-<genre>
-<genre-id>Comedy</genre-id>
-</genre>
-<genre>
-<genre-id>Fantasy</genre-id>
-</genre>
-<genre>
-<genre-id>Supernatural</genre-id>
-</genre>
-</genres>
-<view> 8,467</view>
-<point>8.46</point>
-<link>https://myanimelist.net/manga/45855/Mondaiji-tachi_ga_Isekai_kara_Kuru_Sou_desu_yo</link>
-<updates/>
-</project>
-<project>
-<id>https://myanimelist.net/manga/56385/Natsume_Yuujinchou</id>
-<name>Natsume Yuujinchou</name>
-<alter-name/>
-<author>Midorikawa, Yuki</author>
-<illustrator>Murai, Sadayuki</illustrator>
-<genres>
-<genre>
-<genre-id>Shoujo</genre-id>
-</genre>
-<genre>
-<genre-id>Supernatural</genre-id>
-</genre>
-</genres>
-<view> 1,007</view>
-<point>8.46</point>
-<link>https://myanimelist.net/manga/56385/Natsume_Yuujinchou</link>
-<updates/>
-</project>
-<project>
-<id>https://myanimelist.net/manga/7458/Death_Note_Another_Note__Los_Angeles_BB_Renzoku_Satsujin_Jiken</id>
-<name>Death Note Another Note: Los Angeles BB Renzoku Satsujin Jiken</name>
-<alter-name/>
-<author>Obata, Takeshi</author>
-<illustrator>Nisio, Isin</illustrator>
-<genres>
-<genre>
-<genre-id>Mystery</genre-id>
-</genre>
-</genres>
-<view> 21,250</view>
-<point>8.45</point>
-<link>https://myanimelist.net/manga/7458/Death_Note_Another_Note__Los_Angeles_BB_Renzoku_Satsujin_Jiken</link>
-<updates/>
-</project>
-<project>
-<id>https://myanimelist.net/manga/4658/Fullmetal_Alchemist</id>
-<name>Fullmetal Alchemist</name>
-<alter-name/>
-<author>Arakawa, Hiromu</author>
-<illustrator>Inoue, Makoto</illustrator>
-<genres>
-<genre>
-<genre-id>Action</genre-id>
-</genre>
-<genre>
-<genre-id>Adventure</genre-id>
-</genre>
-<genre>
-<genre-id>Comedy</genre-id>
-</genre>
-<genre>
-<genre-id>Mystery</genre-id>
-</genre>
-<genre>
-<genre-id>Drama</genre-id>
-</genre>
-<genre>
-<genre-id>Historical</genre-id>
-</genre>
-<genre>
-<genre-id>Shounen</genre-id>
-</genre>
-<genre>
-<genre-id>Supernatural</genre-id>
-</genre>
-<genre>
-<genre-id>Psychological</genre-id>
-</genre>
-</genres>
-<view> 7,159</view>
-<point>8.44</point>
-<link>https://myanimelist.net/manga/4658/Fullmetal_Alchemist</link>
-<updates/>
-</project>
-<project>
-<id>https://myanimelist.net/manga/98380/Bungou_Stray_Dogs</id>
-<name>Bungou Stray Dogs</name>
-<alter-name/>
-<author>Asagiri, Kafka</author>
-<illustrator>Harukawa35</illustrator>
-<genres>
-<genre>
-<genre-id>Mystery</genre-id>
-</genre>
-<genre>
-<genre-id>Supernatural</genre-id>
-</genre>
-</genres>
-<view> 1,874</view>
-<point>8.43</point>
-<link>https://myanimelist.net/manga/98380/Bungou_Stray_Dogs</link>
-<updates/>
-</project>
-<project>
-<id>https://myanimelist.net/manga/99815/Saihate_no_Paladin</id>
-<name>Saihate no Paladin</name>
-<alter-name/>
-<author>Rin, Kususaga</author>
-<illustrator>Yanagino, Kanata</illustrator>
-<genres>
-<genre>
-<genre-id>Adventure</genre-id>
-</genre>
-<genre>
-<genre-id>Fantasy</genre-id>
-</genre>
-</genres>
-<view> 764</view>
-<point>8.43</point>
-<link>https://myanimelist.net/manga/99815/Saihate_no_Paladin</link>
-<updates/>
-</project>
-<project>
-<id>https://myanimelist.net/manga/90531/Naruto_Shinden_Series</id>
-<name>Naruto Shinden Series</name>
-<alter-name/>
-<author>Kishimoto, Masashi</author>
-<illustrator>Yano, Takashi</illustrator>
-<genres>
-<genre>
-<genre-id>Action</genre-id>
-</genre>
-<genre>
-<genre-id>Adventure</genre-id>
-</genre>
-<genre>
-<genre-id>Martial Arts</genre-id>
-</genre>
-<genre>
-<genre-id>Shounen</genre-id>
-</genre>
-<genre>
-<genre-id>Super Power</genre-id>
-</genre>
-</genres>
-<view> 2,457</view>
-<point>8.42</point>
-<link>https://myanimelist.net/manga/90531/Naruto_Shinden_Series</link>
-<updates/>
-</project>
-<project>
-<id>https://myanimelist.net/manga/7149/Toradora</id>
-<name>Toradora!</name>
-<alter-name/>
-<author>Takemiya, Yuyuko</author>
-<illustrator>Yasu</illustrator>
-<genres>
-<genre>
-<genre-id>Comedy</genre-id>
-</genre>
-<genre>
-<genre-id>Romance</genre-id>
-</genre>
-<genre>
-<genre-id>School</genre-id>
-</genre>
-<genre>
-<genre-id>Slice of Life</genre-id>
-</genre>
-</genres>
-<view> 13,953</view>
-<point>8.41</point>
-<link>https://myanimelist.net/manga/7149/Toradora</link>
-<updates/>
-</project>
-<project>
-<id>https://myanimelist.net/manga/43921/Sword_Art_Online__Progressive</id>
-<name>Sword Art Online: Progressive</name>
-<alter-name/>
-<author>Kawahara, Reki</author>
-<illustrator>abec</illustrator>
-<genres>
-<genre>
-<genre-id>Action</genre-id>
-</genre>
-<genre>
-<genre-id>Adventure</genre-id>
-</genre>
-<genre>
-<genre-id>Fantasy</genre-id>
-</genre>
-<genre>
-<genre-id>Game</genre-id>
-</genre>
-<genre>
-<genre-id>Romance</genre-id>
-</genre>
-<genre>
-<genre-id>Sci-Fi</genre-id>
-</genre>
-</genres>
-<view> 10,364</view>
-<point>8.41</point>
-<link>https://myanimelist.net/manga/43921/Sword_Art_Online__Progressive</link>
-<updates/>
-</project>
-<project>
-<id>https://myanimelist.net/manga/24464/Kyoukaisenjou_no_Horizon</id>
-<name>Kyoukaisenjou no Horizon</name>
-<alter-name/>
-<author>Kawakami, Minoru</author>
-<illustrator>Satoyasu</illustrator>
-<genres>
-<genre>
-<genre-id>Action</genre-id>
-</genre>
-<genre>
-<genre-id>Comedy</genre-id>
-</genre>
-<genre>
-<genre-id>Fantasy</genre-id>
-</genre>
-<genre>
-<genre-id>School</genre-id>
-</genre>
-<genre>
-<genre-id>Sci-Fi</genre-id>
-</genre>
-</genres>
-<view> 2,595</view>
-<point>8.40</point>
-<link>https://myanimelist.net/manga/24464/Kyoukaisenjou_no_Horizon</link>
-<updates/>
-</project>
-</projects>
-</project-page>
+<p:projects xmlns:p='http://t3.com/2018/project-page'>
+    <p:project>
+        <p:id>47</p:id>
+        <p:name>Boku wa Isekai de Fuyo Mahou to Shoukan Mahou wo Tenbin ni Kakeru</p:name>
+        <p:alter-name>ぼくは異世界で付与魔法と召喚魔法を天秤にかける;Fuyo Mahou;Boku wa Isekai de Fuyo Mahou to Shoukan Mahou wo Tenbin ni
+            Kakeru
+        </p:alter-name>
+        <p:author>Yokotsuka Tsukasa ( 横塚 司 )</p:author>
+        <p:illustrator>Manyako ( マニャ子 )</p:illustrator>
+        <p:synopsis>Vào một ngày nọ, một sự cố đã xảy ra trong một khu vực trường học tư nhân khiến toàn bộ ngôi trường
+            dịch chuyển đến một thế giới hoàn toàn khác. Tôi, Gaya Kazuhisa, là học sinh năm nhất của một trường cao
+            trung, đã bị bắt nạt trong một khoảng thời gian dài. Và để giết những kẻ đã bắt nạt tôi, tôi đã đào một cái
+            bẫy, nhưng không ngờ là tôi đã vô tình giết chết một con quái vật. Sau thời khắc đó, tôi đã tiến hóa trờ
+            thành một thực thể hy hữu có thể đối đầu với bọn quái vật. Cũng vào ngày hôm đó, tôi đã cứu một nữ sinh năm
+            3 của một trường quốc trung tên là Shimozono Aris khỏi lũ Orc ở trong khu rừng nọ . Trong lúc cùng Aris đánh
+            bại lũ Orc và lên cấp sau đó, tôi bị buộc phải đứng giữa hai lựa chọn. Liệu tôi nên chọn ma thuật triệu hồi,
+            thứ sẽ giúp tôi có khả năng sống sót ngay cả khi chiến đấu một mình? Hay tôi nên chọn loại ma thuật hỗ trợ,
+            thứ sẽ giúp ích rất nhiều khi cùng nhau chiến đấu với kẻ thù.;Vào một ngày nọ, một sự cố đã xảy ra trong khu
+            vực trường học tư nhân khiến toàn bộ ngôi trường dịch chuyển đến thế giới khác. Tôi, Gaya Kazuhisa, là học
+            sinh năm nhất của trường cao trung, đã bị bắt nạt trong một khoảng thời gian dài. Và để giết những kẻ bắt
+            nạt, tôi đã đào một cái bẫy, nhưng rốt cuộc lại hốt nhầm một con quái vật. Sau thời khắc đó, tôi đã tiến hóa
+            trờ thành một thực thể hy hữu có thể đối đầu với bọn quái vật.Cũng vào ngày hôm đó, tôi đã cứu một nữ sinh
+            năm 3 của trường sơ trung tên là Shimozono Aris khỏi lũ Orc ở trong khu rừng nọ. Trong lúc cùng Arisu đánh
+            bại lũ Orc và lên cấp sau đó, tôi bị buộc phải đứng giữa hai lựa chọn. Liệu tôi nên chọn ma thuật triệu hồi,
+            thứ sẽ giúp tôi có khả năng sống sót khi đơn độc chiến đấu hay ma thuật hỗ trợ, sức mạnh dùng để cùng đồng
+            đội đánh bại kẻ thù?;Vào một ngày nọ, một sự cố đã xảy ra trong khu vực trường học tư nhân khiến toàn bộ
+            ngôi trường dịch chuyển đến thế giới khác. Tôi, Gaya Kazuhisa, là học sinh năm nhất của trường cao trung, đã
+            bị bắt nạt trong một khoảng thời gian dài. Và để giết những kẻ bắt nạt, tôi đã đào một cái bẫy, nhưng rốt
+            cuộc lại hốt nhầm một con quái vật. Sau thời khắc đó, tôi đã tiến hóa trờ thành một thực thể hy hữu có thể
+            đối đầu với bọn quái vật.Cũng vào ngày hôm đó, tôi đã cứu một nữ sinh năm 3 của trường sơ trung tên là
+            Shimozono Aris khỏi lũ Orc ở trong khu rừng nọ. Trong lúc cùng Aris đánh bại lũ Orc và lên cấp sau đó, tôi
+            bị buộc phải đứng giữa hai lựa chọn. Liệu tôi nên chọn ma thuật triệu hồi, thứ sẽ giúp tôi có khả năng sống
+            sót khi đơn độc chiến đấu hay ma thuật hỗ trợ, sức mạnh dùng để cùng đồng đội đánh bại kẻ thù?
+        </p:synopsis>
+        <p:hash>344240190</p:hash>
+        <p:view>115155</p:view>
+        <p:point>5.0</p:point>
+        <p:genres>action|adventure|drama|ecchi|fantasy|harem|shounen|school life|supernatural|romance|mature|tragedy
+        </p:genres>
+        <p:last_update>05/07/2018 15:46</p:last_update>
+        <p:total_update>225</p:total_update>
+        <p:link>
+            https://ln.hako.re/truyen/260-boku-wa-isekai-de-fuyo-mahou-to-shoukan-mahou-wo-tenbin-ni-kakeru;https://ln.hako.re/truyen/330-boku-wa-isekai-de-fuyo-mahou-to-shoukan-mahou-wo-tenbin-ni-kakeru;https://ln.hako.re/truyen/1228-boku-wa-isekai-de-fuyo-mahou-to-shoukan-mahou-wo-tenbin-ni-kakeru
+        </p:link>
+    </p:project>
+    <p:project>
+        <p:id>43</p:id>
+        <p:name>Boku no Bungeibu ni Bitch ga Iru Nante Arienai</p:name>
+        <p:alter-name>僕の文芸部にビッチがいるなんてありえない</p:alter-name>
+        <p:author>Akafuku Yamato</p:author>
+        <p:illustrator>Asakura Hayate</p:illustrator>
+        <p:synopsis>Con gái ngoài đời thực chỉ là một đám bitch—. Tin tưởng như vậy, cậu học sinh cao trung Ikuno
+            Kousuke đã dùng phòng của câu lạc bộ văn học để làm thiên đường tận hưởng những hoạt động otaku của mình.
+            Tuy nhiên, vào một ngày kia, cậu nhận được câu nói “Nếu cứ tiếp tục như thế này, câu lạc bộ văn học sẽ phải
+            bị loại bỏ” từ trợ lý của chủ tịch hội học sinh, thiếu nữ xinh đẹp tóc đen (thực chất là bitch thanh lịch)
+            Shinonome Ibuki. Để tránh việc đó xảy ra, cậu phải giúp hội học sinh tư vấn cho học sinh cùng Ibuki. Và
+            người đầu tiên đến xin tư vấn chính là thiếu nữ xinh đẹp tóc vàng, ngực to, chia đôi việc được yêu mến với
+            Ibuki – Aizawa Manaha. Tuy được đồn là đã hẹn hò với biết bao nhiêu chàng trai, nhưng thật ra thì cô ấy chả
+            có kinh nghiệm yêu đương gì cả, cho nên cô ấy muốn nhờ Kousuke đóng giả làm bạn trai...!?
+        </p:synopsis>
+        <p:hash>-258901273</p:hash>
+        <p:view>108033</p:view>
+        <p:point>5.0</p:point>
+        <p:genres>comedy|ecchi|school life|harem</p:genres>
+        <p:last_update>05/07/2018 15:45</p:last_update>
+        <p:total_update>52</p:total_update>
+        <p:link>https://ln.hako.re/truyen/152-boku-no-bungeibu-ni-bitch-ga-iru-nante-arienai</p:link>
+    </p:project>
+    <p:project>
+        <p:id>48</p:id>
+        <p:name>Boku wa Tomodachi ga Sukunai</p:name>
+        <p:alter-name>Tôi không có nhiều bạn</p:alter-name>
+        <p:author>Hirasaka Yomi</p:author>
+        <p:illustrator>Buriki</p:illustrator>
+        <p:synopsis>Hasegawa Kodaka vừa mới chuyển đến Học viện Thánh Chronica nhưng bị mọi người xa lánh vì vẻ ngoài
+            giống dân giang hồ của mình. Một ngày nọ cậu bắt gặp cô bạn cùng lớp xinh đẹp nhưng khó gần Mikaduki Yozora
+            đang nói chuyện một mình một cách vui vẻ. “Cậu có thể nhìn thấy ma sao?” “ Tớ đang nói chuyện với bạn mình
+            mà. Người bạn vô hình của tớ!” (Cô ta thật hết thuốc chữa)… Kodaka và Yozora bắt đầu bàn luận làm thể nào để
+            có thể kết bạn, và Yozora quyết định lập ra một CLB quái dị và lôi cổ Kodaka vào. Và rồi các "cô gái dễ
+            thương" quái đản khác lần lượt gia nhập CLB. Cùng nhau họ chơi galgame, đi bơi, đóng kịch. Liệu nhân vật
+            chính của chúng ta rốt cuộc có tìm được những người bạn đích thực của mình? Và đó là khởi đầu của một câu
+            chuyện tình cảm hài hước đầy bi kịch của tuổi trẻ!
+        </p:synopsis>
+        <p:hash>1708603123</p:hash>
+        <p:view>85756</p:view>
+        <p:point>5.0</p:point>
+        <p:genres>comedy|harem|school life|romance</p:genres>
+        <p:last_update>05/07/2018 15:46</p:last_update>
+        <p:total_update>110</p:total_update>
+        <p:link>https://ln.hako.re/truyen/24-boku-wa-tomodachi-ga-sukunai</p:link>
+    </p:project>
+    <p:project>
+        <p:id>33</p:id>
+        <p:name>Ashita, Boku wa Shinu. Kimi wa Ikikaeru</p:name>
+        <p:alter-name>Tomorrow, I will die . You will revive. Mai anh chết em tái sinh</p:alter-name>
+        <p:author>Fuji Maru</p:author>
+        <p:illustrator>H2SO4</p:illustrator>
+        <p:synopsis>Một anh giai do trời sinh mặt mũi dữ tợn mà bị người đời gọi là lưu manh. Cho tới ngày anh chàng
+            được chứng kiến tận mắt cái chết của một cô gái. Bị dụ dỗ ,anh quyết định dùng "một nửa tuổi thọ của mình"
+            để cứu lấy cô. Và câu chuyện của chúng ta là chuỗi ngày anh phải sống chung với "hậu quả" của phút giây nông
+            nổi đó
+        </p:synopsis>
+        <p:hash>1273380613</p:hash>
+        <p:view>63331</p:view>
+        <p:point>5.0</p:point>
+        <p:genres>comedy|drama|supernatural|romance</p:genres>
+        <p:last_update>05/07/2018 15:43</p:last_update>
+        <p:total_update>27</p:total_update>
+        <p:link>https://ln.hako.re/truyen/156-ashita-boku-wa-shinu-kimi-wa-ikikaeru</p:link>
+    </p:project>
+    <p:project>
+        <p:id>44</p:id>
+        <p:name>Boku No Heya Ga Danjon no Kyoukeisho Ni Natte Shimatta Kudan</p:name>
+        <p:alter-name>Phòng tôi trở thành khu nghỉ ngơi trong dungeon mất rồi</p:alter-name>
+        <p:author>東国不動</p:author>
+        <p:illustrator>東国不動</p:illustrator>
+        <p:synopsis>Một căn hộ 2LDK nằm ở Tokyo mà giá cho thuê lại chỉ có 30000yen/tháng. Vì không cưỡng lại được mị
+            lực của căn hộ giá rẻ ấy nên tôi đã vội vã ký hợp đồng thuê ngay tức thì. Nhưng mà đúng là tiền nào của nấy
+            thật. Tuy cái nhà này không bị ma ám nhưng ở trong thì lại có Slime với Goblin... thậm chí là một nữ hiệp sĩ
+            nữa chứ! Lạy hồn, tôi chỉ muốn sống bình yên thôi. Ấy vậy mà một nữ hiệp sĩ, một nữ pháp sư và cả một tên
+            đạo tặc lại cứ thi nhau ra vào căn nhà thân yêu của tôi.
+        </p:synopsis>
+        <p:hash>-403428463</p:hash>
+        <p:view>54200</p:view>
+        <p:point>5.0</p:point>
+        <p:genres>adventure|harem|isekai|super power|supernatural|web novel</p:genres>
+        <p:last_update>05/07/2018 15:45</p:last_update>
+        <p:total_update>29</p:total_update>
+        <p:link>https://ln.hako.re/truyen/1016-boku-no-heya-ga-danjon-no-kyoukeisho-ni-natte-shimatta-kudan</p:link>
+    </p:project>
+    <p:project>
+        <p:id>49</p:id>
+        <p:name>Botsuraku Youtei Nanode, Kajishokunin wo Mezasu</p:name>
+        <p:alter-name>Expecting to Fall into Ruin, I Aim to Become a Blacksmith; 没落予定なので、鍛治職人を目指す;Expecting To Fall Into
+            Ruin I Aim To Become A Blacksmith - 没落予定なので、鍛治職人を目指す;Botsuraku Youtei Nanode, Kajishokunin wo Mezasu
+        </p:alter-name>
+        <p:author>CK</p:author>
+        <p:illustrator>Kawaku</p:illustrator>
+        <p:synopsis>Sau vụ tai nạn chết đi, nhân vật chính chúng ta tái sinh lại trong một gia đình quý tộc, và rồi anh
+            nhận ra mình là một nhân vật trong một trò chơi mà trước đó mình đã từng chơi, và thân xác anh đang nắm giữ
+            có tên là Kururi Helan.Không biết vì lí do gì mà nhân vật Kururi hòa chung với những nhân vật phản diện và
+            phải đón nhận cái kết đầy khốn khổ cho mình.Để có thể thoát khỏi khốn cảnh của mình, anh tìm cho mình một
+            nghề nghiệp. Và bây giờ mục tiêu của anh là trở thành một thợ rèn với kỹ năng vốn có của mình.;Sau vụ tai
+            nạn chết đi, nhân vật chính chúng ta tái sinh lại trong một gia đình quý tộc, và rồi anh nhận ra mình là một
+            nhân vật trong một trò chơi mà trước đó mình đã từng chơi, và thân xác anh đang nắm giữ có tên là Kururi
+            Helan.Không biết vì lí do gì mà nhân vật Kururi hòa chung với những nhân vật phản diện và phải đón nhận cái
+            kết đầy khốn khổ cho mình.Để có thể thoát khỏi khốn cảnh của mình, anh tìm cho mình một nghề nghiệp. Và bây
+            giờ mục tiêu của anh là trở thành một thợ rèn với kỹ năng vốn có của mình.  
+        </p:synopsis>
+        <p:hash>-1914722887</p:hash>
+        <p:view>39139</p:view>
+        <p:point>5.0</p:point>
+        <p:genres>comedy|fantasy|romance|school life|shounen|slice of life|action|adventure|drama|isekai</p:genres>
+        <p:last_update>05/07/2018 15:46</p:last_update>
+        <p:total_update>73</p:total_update>
+        <p:link>
+            https://ln.hako.re/truyen/886-botsuraku-youtei-nanode-kajishokunin-wo-mezasu;https://ln.hako.re/truyen/1937-botsuraku-youtei-nanode-kajishokunin-wo-mezasu
+        </p:link>
+    </p:project>
+    <p:project>
+        <p:id>45</p:id>
+        <p:name>Boku no Meikko wa Yandere deshita( 僕 の 姪 っ っ し た)</p:name>
+        <p:alter-name>Cháu gái tôi là Yandere</p:alter-name>
+        <p:author>ミ ス タ ー で い / Mr. Dei</p:author>
+        <p:illustrator></p:illustrator>
+        <p:synopsis>Lần đầu tiên gặp các cháu ruột của mình (ae lolicon dau????)  Tất cả điều là những đứa trẻ dễ
+            thương, nhưng chỉ có cô ấy... Main ta được giao nhiệm vụ phải chăm sóc những đứa trẻ trong vòng một tuần khi
+            các chị gái đi đến tokyo Cuộc sống của cậu hoàn toàn bị đảo lộn khi bị bao quanh 5 cô bé xinh đẹp, bao gồm
+            một đứa trẻ hành động như người vợ mới cưới Tags: yandere, harem, loli, incest (nghi bị rape), pedo, R-15
+        </p:synopsis>
+        <p:hash>1212467930</p:hash>
+        <p:view>16426</p:view>
+        <p:point>5.0</p:point>
+        <p:genres>harem|incest|web novel</p:genres>
+        <p:last_update>05/07/2018 15:45</p:last_update>
+        <p:total_update>20</p:total_update>
+        <p:link>https://ln.hako.re/truyen/1541-boku-no-meikko-wa-yandere-deshita</p:link>
+    </p:project>
+    <p:project>
+        <p:id>46</p:id>
+        <p:name>Boku to Kimi dake ni Seiya wa Konai</p:name>
+        <p:alter-name>僕と君だけに聖夜は来ない; Giáng Sinh chỉ có tớ và cậu sẽ không đến; You’ll not give me Christmas
+        </p:alter-name>
+        <p:author>Fujimiya Kazuki (藤宮カズキ)</p:author>
+        <p:illustrator>Fal Maro (ファルまろ)</p:illustrator>
+        <p:synopsis>Đêm 24 tháng 12. Nam sinh cấp ba Riichi đã có thể ràng buộc với đối tượng tình đơn phương của mình,
+            Natsumi. Tuy nhiên, niềm vui chưa kéo dài được bao lâu thì cô ấy đã từ giã cuộc sống ngay trước mặt cậu, và
+            khi nhận ra thì cậu đã quay trở lại hai ngày trước. Riichi biết rằng thời gian đã bị quay ngược lại bởi cụm
+            từ kích hoạt là “Tớ thích cậu”. Cậu định né tránh lời thổ lộ của cô gái mà mình thích nhất, nhưng dù vùng
+            vẫy thế nào, cô ấy vẫn thổ lộ và chết đi. Cứ thế, Ichiri bị mắc kẹt trong Đêm Giáng Sinh được thổ lộ tình
+            cảm, không ngừng trải qua bi kịch. Liệu cậu có thể nắm giữ được tương tai của mình?
+        </p:synopsis>
+        <p:hash>1683824593</p:hash>
+        <p:view>6016</p:view>
+        <p:point>5.0</p:point>
+        <p:genres>drama|psychological|romance|school life|science fiction</p:genres>
+        <p:last_update>05/07/2018 15:45</p:last_update>
+        <p:total_update>3</p:total_update>
+        <p:link>https://ln.hako.re/truyen/2530-boku-to-kimi-dake-ni-seiya-wa-konai</p:link>
+    </p:project>
+    <p:project>
+        <p:id>50</p:id>
+        <p:name>Boukensha ni Naritai to Miyako ni Deteitta Musume ga S Rank ni Natteta</p:name>
+        <p:alter-name>My Daughter Grew Up to &quot;Rank S&quot; Adventurer.; My Daughter who Left for the Capital to
+            Become an Adventurer Reached S Rank; 冒険者になりたいと都に出て行った娘がＳランクになってた
+        </p:alter-name>
+        <p:author>Mojikakiya</p:author>
+        <p:illustrator>toi8</p:illustrator>
+        <p:synopsis>Sau khi mất chân từ khi còn là một mạo hiểm giả tập sự, anh ta trở về quê nhà ở nông thôn để nghỉ
+            ngơi. Làm nhiều công việc như hái thảo dược, tiêu diệt ma thú và thú hoang dã, và giúp đỡ dân làng việc đồng
+            áng, thật khó để gọi nhân vật chính của chúng ta là một du hành giả hay một tên chạy vặt tháo vát. Làm những
+            công việc đó trong một thời gian cho đến khi anh ta 30 tuổi.Một ngày nọ khi đang tìm thảo được xung núi, anh
+            ta tìm ra một đứa trẻ bị bỏ rơi. Lương tâm không cho phép bỏ nó lại, anh đưa nó về nhà nuôi cho đến khi chạm
+            mốc 40 tuổi.Lúc bấy giờ đứa con gái đã trưởng thành của anh ta cũng muốn trở thành một mạo hiểm giả, có lẽ
+            từ lúc lớn lên và dõi theo cha của mình.Mặc dù bố của cô chỉ muốn dạy kiếm cho cô khi còn trẻ để tự vệ,
+            nhưng tài năng của cô khá là ấn tượng. Nghĩ tới việc tốt hơn là không nên để cô ấy mặc kẹt trong vùng đất
+            này đến hết phần đời còn lại, nhân vật chính của chúng ta đưa cô tới một guild mạo hiểm giả trong thủ
+            phủ.Con gái của anh chính thức trở thành một mạo hiểm giả.5 năm thấm thoát trôi qua, nhân vật chính, giờ
+            đang ở trong cái tuổi 40, giờ vẫn đang làm công việc của một mạo hiểm giả danh nghĩa ở vùng quê. Tuy nhiên
+            con gái của anh thì đã một mạo hiểm giả hạng S nhưng vẫn chưa trở về nhà một lần..."Khi nào mình mới được
+            gặp bố đây...!?'
+        </p:synopsis>
+        <p:hash>-555540905</p:hash>
+        <p:view>5242</p:view>
+        <p:point>5.0</p:point>
+        <p:genres>comedy|fantasy</p:genres>
+        <p:last_update>05/07/2018 15:46</p:last_update>
+        <p:total_update>2</p:total_update>
+        <p:link>https://ln.hako.re/truyen/2573-boukensha-ni-naritai-to-miyako-ni-deteitta-musume-ga-s-rank-ni-natteta
+        </p:link>
+    </p:project>
+    <p:project>
+        <p:id>7</p:id>
+        <p:name>3 Minutes Boy Meets Girl</p:name>
+        <p:alter-name>3 phút gặp nhau của những đôi trai gái</p:alter-name>
+        <p:author>Nhiều tác giả</p:author>
+        <p:illustrator>kyo; On; Reika; Won; Sadoru Chiba; Shirabi; Shiromiso; Subachi</p:illustrator>
+        <p:synopsis>3 Minutes Boy Meets Girl là một tuyển tập truyện ngắn của các tác giả làm việc tại Famitsu Bunko. Có
+            19 chương và là 19 truyện ngắn từ 19 tác giả khác nhau. Thể loại chung chính là lãng mạn. Truyện được xuất
+            bản vào ngày 30 tháng 7 năm 2011
+        </p:synopsis>
+        <p:hash>924996034</p:hash>
+        <p:view>1451</p:view>
+        <p:point>5.0</p:point>
+        <p:genres>romance|school life|slice of life</p:genres>
+        <p:last_update>05/07/2018 15:43</p:last_update>
+        <p:total_update>10</p:total_update>
+        <p:link>https://ln.hako.re/truyen/2840-3-minutes-boy-meets-girl</p:link>
+    </p:project>
+    <p:project>
+        <p:id>55</p:id>
+        <p:name>Byousoku 5 Centimeter</p:name>
+        <p:alter-name>5 centimet một giây</p:alter-name>
+        <p:author>Makoto Shinkai</p:author>
+        <p:illustrator>n/a</p:illustrator>
+        <p:synopsis>5 cm/s là vận tốc cánh hoa anh đào rơi, cũng là vận tốc đi bộ trung bình của một người. Tác phẩm là
+            một chuỗi truyện ngắn về hai con người rất đỗi gắn bó, bước đi với tốc độ như nhau, dần dần lại hướng về hai
+            phía ngược nhau. Một tác phẩm xuất sắc về khoảng cách trong tình cảm và một cái kết rất trưởng thành. Cập
+            nhật phiên bản mới ngày 6 tháng 3 năm 2014 kèm link pdf cho các bạn muốn sưu tầm offline:
+            https://drive.google.com/file/d/0BxhE06VPoIXRSVA0QWJBd2NVNlk
+        </p:synopsis>
+        <p:hash>1673840485</p:hash>
+        <p:view>76715</p:view>
+        <p:point>5.0</p:point>
+        <p:genres>drama|slice of life|romance</p:genres>
+        <p:last_update>05/07/2018 15:46</p:last_update>
+        <p:total_update>17</p:total_update>
+        <p:link>https://ln.hako.re/truyen/81-byousoku-5-centimeter</p:link>
+    </p:project>
+    <p:project>
+        <p:id>1</p:id>
+        <p:name>(Um, Sorry) I’ve Been Reincarnated!</p:name>
+        <p:alter-name>Tensei shichatta yo; 「転生しちゃったよ（いや、ごめん）」; (Ừm, Xin lỗi) Tôi vô tình đầu thai.;Tensei shichatta yo;
+            「転生しちゃったよ（いや、ごめん）」; (Ừm, Xin lỗi) Tôi vô tình đầu thai.;(Um, Sorry) I’ve Been Reincarnated!
+        </p:alter-name>
+        <p:author>ヘッドホン侍 (Heddohon samurai?)</p:author>
+        <p:illustrator></p:illustrator>
+        <p:synopsis>Vẫn là câu chuyện tái sinh ở thế giới khác. Lần này nguyên nhân là cứu bạn và chấn thương sọ não vì
+            cái bình hoa của thượng đế. Được chọn giữa biến mất và tái sinh, câu trả lời là tái sinh và yêu cầu duy nhất
+            là được giữ lại kí ức. Dù sau đó vẫn được thượng đế buff nhiệt tình.  Tái sinh ở thế giới khác? - tất nhiên
+            là có phép thuật rồi - và ở đó khi phát hiện ra vòng tròn ma pháp thực ra lại là các kí tự [Kanji] . Anh
+            main nhà ta LIỆU CÓ xây dựng 1 harem từ bé và mang bộ mặt cực kì khả ái khi được những người phụ n... mà như
+            thế là đủ rồi.
+        </p:synopsis>
+        <p:hash>647698674</p:hash>
+        <p:view>22705</p:view>
+        <p:point>5.0</p:point>
+        <p:genres>adventure|fantasy|school life|shounen</p:genres>
+        <p:last_update>05/07/2018 15:43</p:last_update>
+        <p:total_update>12</p:total_update>
+        <p:link>https://ln.hako.re/truyen/468-um-sorry-ive-been-reincarnated</p:link>
+    </p:project>
+    <p:project>
+        <p:id>13</p:id>
+        <p:name>Absolute Duo</p:name>
+        <p:alter-name>アブソリュート・デュオ;</p:alter-name>
+        <p:author>Hiiragi★Takumi</p:author>
+        <p:illustrator>Asaba Yuu</p:illustrator>
+        <p:synopsis>《Blaze》 là một loại vũ khí được tạo ra từ sức mạnh ý chí của con người. Tôi, Kokonoe là một trong số
+            những người có năng lực được cho là trong 1000 người mới có 1 người sở hữu nó vì thế mà tôi quyết định gia
+            nhập Học Viện Kouryou để tạo ra 《Blaze》 của chính bản thân mình. Nhưng chẳng biết vì lí do gì 《Blaze》 của
+            tôi không có hình dạng như một vũ khí mà lại là 《Tấm Khiên》- “Thật là mỉa mai”. Với tôi, kẻ không thể bảo vệ
+            ai cả, lại nhận được 《Tấm Khiên》, biểu tượng của sự bảo vệ.
+        </p:synopsis>
+        <p:hash>-2003158122</p:hash>
+        <p:view>21422</p:view>
+        <p:point>5.0</p:point>
+        <p:genres>action|fantasy|romance|ecchi|harem|school life|supernatural</p:genres>
+        <p:last_update>05/07/2018 15:43</p:last_update>
+        <p:total_update>15</p:total_update>
+        <p:link>https://ln.hako.re/truyen/170-absolute-duo</p:link>
+    </p:project>
+    <p:project>
+        <p:id>25</p:id>
+        <p:name>Although I Am Only Level 1, but with This Unique Skill, I Am the Strongest</p:name>
+        <p:alter-name>Mặc Dù Tôi Chỉ Ở Level 1, nhưng với Kĩ Năng Đặc Biệt Này, Nên Tôi Là Người Mạnh
+            Nhất.;レベル１だけどユニークスキルで最強です;Although I Am Only Level 1, but with This Unique Skill, I Am the Strongest;Dù chỉ
+            là level 1, nhưng tôi là người mạnh nhất;ALTHOUGH I AM ONLY LEVEL 1, BUT WITH THIS UNIQUE SKILL, I AM THE
+            STRONGEST
+        </p:alter-name>
+        <p:author>Miki Nazuna ( 三木なずな );Miki Nazuna 三木なずな</p:author>
+        <p:illustrator>Subachi ( すばち );Subachi すばち</p:illustrator>
+        <p:synopsis>Satou Ryouta đã chết khi làm việc quá sức tại một công ty đen đã được chuyển sinh sang thế giới
+            khác. Mặc dù Ryouta sống nhưng cậu đang bị một gánh nặng làm phiền đó là cấp độ của cậu ở thế giới khác kẹt
+            ở cấp 1 .Dù cậu không thể tăng cấp, cậu sở hữu kỹ năng độc nhất có thể tạo ra vật phẩm gian lận không tồn
+            tại trong thế giới từ quái vật .Cậu hiểu biết về thanh chỉ số và nâng tối đa chúng nhờ sự trợ giúp từ khả
+            năng của vật phẩm. Cậu thu nhập một số vũ khí và vật phẩm chỉ có thể sử dụng bởi bản thân ,dù cậu chỉ cấp 1
+            nhưng cậu sở hữu vũ khí mạnh nhất.
+        </p:synopsis>
+        <p:hash>296704324</p:hash>
+        <p:view>18605</p:view>
+        <p:point>5.0</p:point>
+        <p:genres>fantasy|action|adventure|comedy|harem|mystery|romance|slice of life|supernatural|web
+            novel|isekai|ecchi
+        </p:genres>
+        <p:last_update>05/07/2018 15:43</p:last_update>
+        <p:total_update>44</p:total_update>
+        <p:link>
+            https://ln.hako.re/truyen/1400-although-i-am-only-level-1-but-with-this-unique-skill-i-am-the-strongest;https://ln.hako.re/truyen/1943-although-i-am-only-level-1-but-with-this-unique-skill-i-am-the-strongest;https://ln.hako.re/truyen/2791-although-i-am-only-level-1-but-with-this-unique-skill-i-am-the-strongest
+        </p:link>
+    </p:project>
+    <p:project>
+        <p:id>54</p:id>
+        <p:name>Buta Koushaku ni Tensei shita kara, Kondo wa Kimi ni Suki to Iitai</p:name>
+        <p:alter-name>豚公爵に転生したから、今度は君に好きと言いたい; Because I’ve Been Reincarnated as the Piggy Duke, This Time I Will Say I
+            Like You
+        </p:alter-name>
+        <p:author>Guruguru Ma</p:author>
+        <p:illustrator>Nauribon</p:illustrator>
+        <p:synopsis>Có một nhân vật bị ghét bỏ trong bộ Anime nổi tiếng【 Shuya &amp; Những cô gái】.Con thứ 3 của một gia
+            đình Công Tước, hay còn được biết đến với cái tên Công Tước Heo, Slow Denning.Lý do tại sao hắn ta lại bị
+            ghét như vậy? Tất cả là do cái bản tính khinh thường người khác, khoe khoang vị thế, béo ú, và như một con
+            Orc của hắn. Một tương lai đầy bi thảm đang chờ đợi hắn ở phía trước, đó là việc bị trục xuất ra khỏi chính
+            đất nước của mình. Và còn bất hạnh hơn nữa khi mà cô gái hắn thầm thương trộm nhớ cũng đã bị cướp đi mất.Mà
+            từ nãy đến giờ có ai thắc mắc tại sao tôi lại kể mấy thứ này không?Đó là bởi vì tôi đã được chuyển sinh
+            thành tên Công Tước Heo này!Nhưng khác ở chỗ tôi sẽ biến nhân vật này trở thành tâm điểm nổi tiếng nhất
+            trong bộ Anime này và còn là số một trên toàn thế giới!
+        </p:synopsis>
+        <p:hash>-1710905989</p:hash>
+        <p:view>16997</p:view>
+        <p:point>5.0</p:point>
+        <p:genres>adventure|comedy|fantasy|romance|school life</p:genres>
+        <p:last_update>05/07/2018 15:46</p:last_update>
+        <p:total_update>9</p:total_update>
+        <p:link>https://ln.hako.re/truyen/2234-buta-koushaku-ni-tensei-shita-kara-kondo-wa-kimi-ni-suki-to-iitai
+        </p:link>
+    </p:project>
+    <p:project>
+        <p:id>52</p:id>
+        <p:name>Bu ni Mi wo Sasagete Hyaku to Yonen. Elf de Yarinaosu Musha Shugyou</p:name>
+        <p:alter-name>Dedicated Himself into Martial Art for Over 100 Years. Restarting Martial Art Pilgrimage as an
+            Elf; 武に身を捧げて百と余年。エルフでやり直す武者修行; Hiến Mình Cho Võ Học Hơn Trăm Năm. Tái Khởi Hành Con Đường Võ Thuật Như Một
+            Elf;武に身を捧げて百と余年。エルフでやり直す武者修行; Dedicated Himself into Martial Art for Over 100 Years. Restarting Martial Art
+            Pilgrimage as an Elf; Hiến dâng bản thân anh ta cho võ thuật trong hơn một trăm năm. Bắt đầu lại kiếp sống
+            võ thuật như một elf;Bu ni Mi wo Sasagete Hyaku to Yonen. Elf de Yarinaosu Musha Shugyou;Bu Ni Mi; She
+            Trained in Martial Arts for Over a Century. Martial Arts Training Corrected by an Elf;
+            武に身を捧げて百と余年。エルフでやり直す武者修行; ;Bu ni Mi wo Sasagete Hyaku to Yonen. Elf de Yarinaosu Musha Shugyou;Dedicated
+            Himself into Martial Art for Over 100 Years. Restarting Martial Art Pilgrimage as an Elf;
+            武に身を捧げて百と余年。エルフでやり直す武者修行;Bu ni Mi wo Sasagete Hyaku to Yonen. Elf de Yarinaosu Musha Shugyou
+        </p:alter-name>
+        <p:author>Akashi Kakkaku;Kakkaku Akashi</p:author>
+        <p:illustrator>Bun150;bun150</p:illustrator>
+        <p:synopsis>Slava là một lão già. Trên bờ vực của cái chết, ông chỉ hối tiếc hai điều; Chưa hoàn thiện được Võ
+            Thuật được truyền lại bởi Sư Phụ, và bỏ lại cô con gái nuôi của mình, cũng là đệ tử, Elf tên Alma, một mình.
+            Hai di nguyện cuối cùng của ông là muốn Alma học được những bí thuật của võ đường, và rằng cô sẽ tìm được
+            tình yêu, có một gia đình hạnh phục thay cho ông.Nhưng Slava đã được tái sinh thành một Elf, và cả cái tên
+            cũng vậy! Khi được thông báo rằng ông được đặt tên theo tên Sư Phụ duy nhất của "Alma-sama", có vẻ như thời
+            gian đã trôi qua và con gái nuôi của ông đã trở thành một người rất vĩ đại!;Slava là một người đàn ông lớn
+            tuổi. Trên bờ vực của cái chết, ông chỉ nuối tiếc hai điều; chưa thể hoàn toàn thông thạo võ thuật được sư
+            phụ truyền cho, và bỏ lại con gái nuôi của mình, đồng thời cũng là học trò, Alma, một elf, một mình.Hai mong
+            ước trước khi sang thế giới bên kia của ông với Alma là cô hãy lấy cuộn ẩn thư của trường phái và học lấy bí
+            mật của nó, và là cô nên yêu, có một gia đình, và hãy trở nên hạnh phúc thay cho phần của ông.Nhưng Slava
+            lại được tái sinh thành một Elf, và với cùng một cái tên. Ông được bảo rằng tên của mình được đặt theo vị sư
+            phụ duy nhất của "Alma-sama", nó có vẻ như đã một khoảng thời gian trôi qua và cô con cái nuôi của ông đã
+            trở thành một người vô cùng quan trọng!;Bản dịch Light NovelSlava là một người đàn ông lớn tuổi. Đứng trước
+            cái chết cận kề, ông chỉ có hai điều hối tiếc; chưa thể luyện được đến mức lô hỏa thuần thanh các kỹ năng võ
+            thuật được truyền lại từ sư phụ và bỏ lại con gái nuôi cũng như đồ đệ Alma một mình. Hai ước nguyện cuối
+            cùng của ông trước lúc mất dành cho con gái mình là muốn cô ấy lấy bí quyết của trường và tìm hiểu các bí ẩn
+            trong nó, ông cũng mong rằng cô sẽ tìm được tình yêu của đời mình, sẽ gây dựng gia đình và được hạnh
+            phúc.Nhưng Slava lại được tái sinh làm một cậu bé Elf có cùng tên họ với ông ! Ông được bảo rằng tên của
+            mình được đặt theo sư phụ duy nhất của "Alma-sama"; có vẻ như một quãng thời gian đã trôi qua kể từ khi ông
+            mất và con gái nuôi của ông đã trở thành một người rất quan trọng!;Bản dịch Web novel bên SnKSlava là một
+            người đàn ông lớn tuổi. Đứng trước cái chết cận kề, ông chỉ có hai điều hối tiếc; chưa thể luyện được đến
+            mức lô hỏa thuần thanh các kỹ năng võ thuật được truyền lại từ sư phụ và bỏ lại con gái nuôi cũng như đồ đệ
+            Alma một mình. Hai ước nguyện cuối cùng của ông trước lúc mất dành cho con gái mình là muốn cô ấy lấy bí
+            quyết của trường và tìm hiểu các bí ẩn trong nó, ông cũng mong rằng cô sẽ tìm được tình yêu của đời mình, sẽ
+            gây dựng gia đình và được hạnh phúc.Nhưng Slava lại được tái sinh làm một cậu bé Elf có cùng tên họ với
+            ông ! Ông được bảo rằng tên của mình được đặt theo sư phụ duy nhất của "Alma-sama"; có vẻ như một quãng thời
+            gian đã trôi qua kể từ khi ông mất và con gái nuôi của ông đã trở thành một người rất quan trọng!
+        </p:synopsis>
+        <p:hash>683476682</p:hash>
+        <p:view>16125</p:view>
+        <p:point>5.0</p:point>
+        <p:genres>action|adventure|comedy|shounen|drama|romance|fantasy|slice of life|harem|web novel|supernatural|super
+            power|isekai|mature|school life
+        </p:genres>
+        <p:last_update>05/07/2018 15:46</p:last_update>
+        <p:total_update>38</p:total_update>
+        <p:link>
+            https://ln.hako.re/truyen/2060-bu-ni-mi-wo-sasagete-hyaku-to-yonen-elf-de-yarinaosu-musha-shugyou;https://ln.hako.re/truyen/1622-bu-ni-mi-wo-sasagete-hyaku-to-yonen-elf-de-yari-naosu-musha-shugyou;https://ln.hako.re/truyen/1145-bu-ni-mi-wo-sasagete-hyaku-to-yonen-elf-de-yarinaosu-musha-shugyou;https://ln.hako.re/truyen/1163-bu-ni-mi-wo-sasagete-hyaku-to-yonen-elf-de-yarinaosu-musha-shugyou
+        </p:link>
+    </p:project>
+    <p:project>
+        <p:id>42</p:id>
+        <p:name>Black Bullet</p:name>
+        <p:alter-name>ブラック・ブレット</p:alter-name>
+        <p:author>Kanzaki Shiden</p:author>
+        <p:illustrator>Ukai Saki</p:illustrator>
+        <p:synopsis>Trong một tương lai gần nơi mà con người bị đánh bại bởi một loài virut kí sinh trùng mang tên
+            Gastrea. Loài người bị dồn vào một vùng lãnh thổ nhỏ bé và sống trong nỗi tuyệt vọng, liền kề cùng nỗi kinh
+            hoàng. Trong thế giới ngập chìm trong bóng tối này đây— Rentaro, một chàng trai sống gần Tokyo và là 1 "Dân
+            cảnh" — một tổ chức chuyên chiến đấu chống lại Gastrea — được trưng dụng để thực thi những nhiệm vụ đầy nguy
+            hiểm. Đồng đội của cậu là Enju, môt cô gái mang trong mình dòng máu Gastrea. Họ chiến đầu nhờ vào những khả
+            năng đặc biệt của mình cho đến tận một ngày nọ, khi mà họ nhận được một nhiệm vụ đặc biệt từ chính phủ.
+            Nhiệm vụ tối mật này là để ngăn chặn sự hủy diệt Tokyo... Diễn ra trong một tương lai gần, câu chuyện anh
+            hùng đầy kịch tính...khởi đầu ngay lúc này!
+        </p:synopsis>
+        <p:hash>-714326897</p:hash>
+        <p:view>15820</p:view>
+        <p:point>5.0</p:point>
+        <p:genres>action|drama|horror|mystery|science fiction|romance</p:genres>
+        <p:last_update>05/07/2018 15:43</p:last_update>
+        <p:total_update>17</p:total_update>
+        <p:link>https://ln.hako.re/truyen/235-black-bullet</p:link>
+    </p:project>
+    <p:project>
+        <p:id>29</p:id>
+        <p:name>Angel Beats! Track Zero</p:name>
+        <p:alter-name></p:alter-name>
+        <p:author>Jun Maeda</p:author>
+        <p:illustrator>GotoP + Na-Ga (Key)</p:illustrator>
+        <p:synopsis>Light Novel Angel Beats! Track Zero là tập tiểu thuyết khắc họa lại khoảng thời gian Chiến tuyến
+            Chống lại Cái chết (SSS) được thành lập. Nhân vật chính của câu chuyện là Yurippe, Hinata và Tenshi. Đây
+            được xem là prequel (phần trước) của những sự kiện xảy ra trong anime.
+        </p:synopsis>
+        <p:hash>-1109435016</p:hash>
+        <p:view>15581</p:view>
+        <p:point>5.0</p:point>
+        <p:genres>action|adventure|comedy|mystery|supernatural</p:genres>
+        <p:last_update>05/07/2018 15:43</p:last_update>
+        <p:total_update>9</p:total_update>
+        <p:link>https://ln.hako.re/truyen/162-angel-beats-track-zero</p:link>
+    </p:project>
+    <p:project>
+        <p:id>41</p:id>
+        <p:name>Berserker of Gluttony</p:name>
+        <p:alter-name>暴食のベルセルク　～俺だけレベルという概念を突破する～</p:alter-name>
+        <p:author>Ichinoda Ichiri</p:author>
+        <p:illustrator>Fame</p:illustrator>
+        <p:synopsis>Fate, người gác cổng của lâu đài, có một số rắc rối.Đó chính là cơn đói không ngừng từ kĩ năng bẩm
+            sinh của cậu. Cậu nghĩ rằng đó là một kĩ năng vô dụng chỉ làm cậu đói, nhưng trong thực tế lại có một sức
+            mạnh tiềm ẩn.Một ngày, khi Fate giết một tên trộm lẻn vào lâu đài, cậu nhận ra sức mạnh thực sự của nó.Đó
+            chính là kĩ năng ăn linh hồn của thứ mà cậu giết và lấy đi sức mạnh của nó…Và, lần đầu tiên, cơn đói được
+            thoả mãn.Với điều đó, kẻ bị đối xử như rác rưởi dần ngẩng đầu lên.Vượt qua khái niệm của cấp độ, cậu trở
+            thành nỗi kinh hoàng với sức mạnh của mình, và cậu được gọi là….
+        </p:synopsis>
+        <p:hash>-120675266</p:hash>
+        <p:view>12834</p:view>
+        <p:point>5.0</p:point>
+        <p:genres>action|adventure|fantasy|mature|romance|super power|supernatural</p:genres>
+        <p:last_update>05/07/2018 15:43</p:last_update>
+        <p:total_update>5</p:total_update>
+        <p:link>https://ln.hako.re/truyen/2188-berserk-of-gluttony</p:link>
+    </p:project>
+    <p:project>
+        <p:id>51</p:id>
+        <p:name>Breakers</p:name>
+        <p:alter-name>브레이커즈</p:alter-name>
+        <p:author>Chwiryong</p:author>
+        <p:illustrator></p:illustrator>
+        <p:synopsis>Một chàng trai đã bị mắc kẹt vào thế giới Knight Saga, trò chơi đã biến cậu thành một vị hoàng tử
+            của Quỷ giới. Đáng tiếc thay cậu lại trở thành Cửu hoàng tử bất tài chứ không phải là Nhị hoàng tử là nhân
+            vật chính của trò chơi này với khả năng ma thuật mạnh mẽ?! Cậu được bạn cho sức mạnh có thể trừng phạt và
+            chinh phục Anh hùng. Để tồn tại cậu phải thay đổi số mệnh của mình và trở thành một con quỷ thực sự.
+        </p:synopsis>
+        <p:hash>-1169103364</p:hash>
+        <p:view>11198</p:view>
+        <p:point>5.0</p:point>
+        <p:genres>action|adventure|drama|fantasy|harem|mystery|psychological|romance|supernatural</p:genres>
+        <p:last_update>05/07/2018 15:46</p:last_update>
+        <p:total_update>9</p:total_update>
+        <p:link>https://ln.hako.re/truyen/1240-breakers</p:link>
+    </p:project>
+    <p:project>
+        <p:id>53</p:id>
+        <p:name>Bungaku Shoujo</p:name>
+        <p:alter-name>Cô Gái Văn Chương;Synonyms: Book Girl: Apprentice, Literature Girl: An Apprentice, Japanese:
+            “文学少女”見習い, ;Bungaku Shoujo Minarai;English: Book Girl, Synonyms: Literature Girl, Book Girl and the Suicidal
+            Mime, Book Girl and the Famished Spirit, Japanese: “文学少女”シリーズ, ;Bungaku Shoujo Series
+        </p:alter-name>
+        <p:publish-date></p:publish-date>
+        <p:author>Nomura Mizuki;Nomura, Mizuki</p:author>
+        <p:illustrator>Takeoka Miho;Takeoka, Miho</p:illustrator>
+        <p:synopsis>Konoha Inoue, một cậu học sinh trung học cũng như bao học sinh trung học khác – ngoại trừ việc
+            Konoha từng đoạt giải thưởng viết văn xuất sắc vào năm 14 tuổi với thân phận 1 cô gái. Vì một sự việc,
+            Konoha đã tự hứa rằng sẽ không bao giờ viết văn nữa. Lên trung học, tình cờ Konoha gặp Tooko Amano, 1 senpai
+            năm 3 lôi kéo cậu vào câu lạc bộ văn học. Sinh hoạt CLB hằng ngày của cậu là viết ra những tác phẩm để Tooko
+            "thưởng thức".
+        </p:synopsis>
+        <p:hash>1924125434</p:hash>
+        <p:view>10048</p:view>
+        <p:point>8.0</p:point>
+        <p:genres>drama|mystery|school life|romance</p:genres>
+        <p:last_update>05/07/2018 15:46</p:last_update>
+        <p:total_update>14</p:total_update>
+        <p:link>
+            https://ln.hako.re/truyen/14-bungaku-shoujo;https://myanimelist.net/manga/18072/Bungaku_Shoujo_Minarai;https://myanimelist.net/manga/10000/Bungaku_Shoujo_Series
+        </p:link>
+    </p:project>
+    <p:project>
+        <p:id>19</p:id>
+        <p:name>Akugyaku no Black Maria</p:name>
+        <p:alter-name>Atrocious Black Maria; 悪逆のブラックマリア; Black Maria của sự tàn nhẫn</p:alter-name>
+        <p:author>Noshiyuki Noguchi</p:author>
+        <p:illustrator></p:illustrator>
+        <p:synopsis>Mất trí nhớ, sống bảy năm ở thế giới khác. Shizuru là một bác sĩ vào ban ngày và là một tên sát
+            nhân vào ban đêm.Một tổ chức đầy những người đẹp điên rồ, một người phụ nữ mù lãnh đạo tổ chức ấy.Những bông
+            hoa máu nở rộ trong đêm tối.Ở đây không có những người anh hùng tạo nên công lí. Không có những nhà thám
+            hiểm đầy tham vọng.Mà ở đây, chỉ có tội ác và bạo lực chồng chéo lên nhau
+        </p:synopsis>
+        <p:hash>1175977037</p:hash>
+        <p:view>7951</p:view>
+        <p:point>5.0</p:point>
+        <p:genres>comedy|psychological|action|adventure|fantasy|harem|isekai|mystery|romance|supernatural|tragedy
+        </p:genres>
+        <p:last_update>05/07/2018 15:43</p:last_update>
+        <p:total_update>12</p:total_update>
+        <p:link>https://ln.hako.re/truyen/2317-akugyaku-no-black-maria</p:link>
+    </p:project>
+    <p:project>
+        <p:id>39</p:id>
+        <p:name>Because I Reincarnated as a Succubus, I’ll Squeeze Out Milk</p:name>
+        <p:alter-name>Sakyubasu ni tensei shitanode miruku o shiborimasu; サキュバスに転生したのでミルクをしぼります</p:alter-name>
+        <p:author>木野裕喜</p:author>
+        <p:illustrator>雪月佳</p:illustrator>
+        <p:synopsis>Nhiệm vụ của một Succubus là nhấn chìm đàn ông vào dục vọng điên cuồng và cho họ thấy người trong
+            mộng của họ.Chết vì tai nạn, cậu nhóc 17 tuổi Riichi Hourai tái sinh thành một Succubus bởi sự hiểu nhầm từ
+            Văn phòng Hỗ trợ Tái sinh. Để sống, một Succubus phải vắt kiệt tinh hoa của đàn ông và tiêu thụ chúng nhưng
+            Riichi, kẻ vốn là một thằng đàn ông, dứt khoát từ chối và thà chết chứ không làm những hành động đó.Có tồn
+            tại thể loại tinh hoa khác để sống không ?Có đấy! Và thật ngạc nhiên, đó là sữa!!Thế nhưng, ở thế giới kia
+            không có giống loài nào được gọi là bò và cung cấp sữa cho những giống loài khác.Dù cho Văn phòng Hỗ trợ Tái
+            sinh có tặng cậu một con bò cho sữa dưới trường hợp đặc biệt, cậu vẫn phải mạo hiểm nuôi dưỡng con vật, thứ
+            sau này sẽ làm nguồn sống cho cậu trong một thế giới song song và sống sót trong khi chống lại bản năng
+            Succubus của mình.Nói cho cùng, con bò cũng chả phải con vật bình thường gì cho cam.Trái ngược với mong muốn
+            được sống một cuộc sống yên bình, Riichi bị ném vào những cuộc tranh chấp ảnh hưởng đến vận mệnh Thế giới mà
+            không hề hay biết.Dù cho cậu ta và bạn cậu đều chết qua vụ tai nạn, bạn thân cậu lại tái sinh trễ hơn, cả
+            hai người họ đều không ý thức được sự tồn tại của nhau.Liệu Riichi có thể gặp lại bạn thân của mình ?Liệu
+            tình bạn của họ có thể giống như thuở ban đầu ?!Một câu chuyện tình bi hài với hình dạng mới đã bắt đầu. 
+        </p:synopsis>
+        <p:hash>865895373</p:hash>
+        <p:view>6477</p:view>
+        <p:point>5.0</p:point>
+        <p:genres>comedy|ecchi|fantasy|gender bender|romance|web novel</p:genres>
+        <p:last_update>05/07/2018 15:43</p:last_update>
+        <p:total_update>4</p:total_update>
+        <p:link>https://ln.hako.re/truyen/2259-because-i-reincarnated-as-a-succubus-ill-squeeze-out-milk</p:link>
+    </p:project>
+</p:projects>

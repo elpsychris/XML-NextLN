@@ -15,6 +15,17 @@
                             <xsl:value-of select="//p:volume-cover"/>
                         </xsl:attribute>
                     </img>
+                    <div class="bookmark-overlay">
+                        <div class="project-name"><xsl:value-of select="//p:project/p:name"/></div>
+                        <div class="bookmark-btn" onclick="bookmarkIt(this, false)">
+                            <xsl:attribute name="id">book-project-<xsl:value-of select="//p:project/p:id"/></xsl:attribute>
+                            Bookmark
+                        </div>
+                        <div class="bookmarked-btn" onclick="bookmarkIt(this, true)">
+                            <xsl:attribute name="id">unbook-project-<xsl:value-of select="//p:project/p:id"/></xsl:attribute>
+                            Đã Bookmark
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="project-info">

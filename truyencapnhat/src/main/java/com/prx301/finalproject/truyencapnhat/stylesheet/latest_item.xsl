@@ -75,7 +75,14 @@
                             </xsl:attribute>
                         </xsl:element>
                         <div class="overlay-name">
-                            <xsl:value-of select=".//p:project/p:name"/>
+                            <xsl:choose>
+                                <xsl:when test="string-length(.//p:project/p:name)>60">
+                                    <xsl:value-of select="concat(substring(.//p:project/p:name,0, 60),'...')"/>
+                                </xsl:when>
+                                <xsl:otherwise>
+                                    <xsl:value-of select=".//p:project/p:name"/>
+                                </xsl:otherwise>
+                            </xsl:choose>
                         </div>
                     </div>
                     <span class="author">

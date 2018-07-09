@@ -1,6 +1,11 @@
 var isResultClicked = false;
 var resultTable = document.getElementById("result-table");
 var totalPage = 0;
+var cur = 0;
+var filterSet = {};
+var curKeyword = "";
+var moreUpdates = 0;
+var moreViews = 0;
 
 function onSearchBarFocus(e) {
     if (resultTable == null) {
@@ -9,6 +14,20 @@ function onSearchBarFocus(e) {
             dropdownList.style.display = "block";
         }
     }
+}
+
+function onChangeFilter(e) {
+    var filter = e.id;
+    var value = e.checked;
+    if (filter != null) {
+        var exist = filterSet[filter];
+        if (exist == null) {
+            filterSet[filter] = value;
+        } else {
+            filterSet[filter] = value;
+        }
+    }
+    searchDetail(curKeyword);
 }
 
 function onSearchBarBlur(e) {
@@ -25,7 +44,9 @@ function onSearchBarBlur(e) {
 
 function onSearchBarTyping(e) {
     var keyword = e.value.toLowerCase();
+    curKeyword = keyword;
     totalPage = 0;
+    cur = 0;
     if (resultTable != null) {
         searchDetail(keyword);
         return;
@@ -66,7 +87,41 @@ function onSearchBarTyping(e) {
     }
 }
 
+function findMore(e) {
+    if (totalPage === 0) {
+        searchMoreOnline(curKeyword);
+    } else {
+        if (cur + 1 <= totalPage) {
+            cur++;
+            searchMoreOnline(curKeyword, cur);
+        }
+    }
+
+    searchDetail(curKeyword);
+    if (cur + 1 > totalPage) {
+        var showMoreBtn = document.getElementById("more-result");
+        showMoreBtn.style.display = "none";
+    }
+}
+function onDoFilter(project) {
+    if (filterSet == null) {
+        return true;
+    }
+    var curGenre = project["genres"];
+    if (curGenre == null) {
+        return true;
+    }
+    curGenre = curGenre.toLowerCase();
+    for (var filter in filterSet) {
+        if (filterSet[filter] && curGenre.indexOf(filter) == -1) {
+            return false;
+        }
+    }
+    console.log(project["name"], " passed");
+    return true;
+}
 function searchDetail(keyword) {
+    curKeyword = keyword;
     getProjectObject(null);
     if (projectPool != null) {
         if (resultTable != null) {
@@ -79,8 +134,13 @@ function searchDetail(keyword) {
         var result = searchProjectLocal(keyword);
         var count = result.length;
 
-        if (count < 10 && totalPage == 0) {
+        if (cur < 1) {
             searchMoreOnline(keyword);
+        }
+
+        if (count < 10) {
+            result = searchProjectLocal(keyword);
+            count = result.length;
         }
 
         var rsNo = document.getElementById("total-result");
@@ -120,9 +180,19 @@ function searchMoreOnline(keyword, total) {
             }
             if (totalRs != null && totalRs > 0) {
                 totalPage = Math.ceil(totalRs / 20);
+                if (cur == 0) {
+                    cur = 1;
+                }
+
+                if (totalPage > cur) {
+                    var showMoreBtn = document.getElementById("more-result");
+                    showMoreBtn.style.display = "block";
+                    if (cur > 1) {
+                        searchDetail(keyword);
+                    }
+                }
                 getProjectObject(doc);
             }
-            searchDetail(keyword);
         }
     };
 
@@ -184,6 +254,11 @@ function createSearchResultDetail(project) {
     viewCol.appendChild(document.createTextNode(project["view"]));
     newRow.appendChild(viewCol);
 
+    var updatesCol = document.createElement("div");
+    updatesCol.className = colClass;
+    updatesCol.appendChild(document.createTextNode(project["total_update"]));
+    newRow.appendChild(updatesCol);
+
     resultTable.appendChild(newRow);
 }
 
@@ -195,7 +270,7 @@ function searchProjectLocal(keyword) {
     }
 
     for (var projectName in projectPool) {
-        if (projectName.toLowerCase().indexOf(keyword.toLowerCase()) !== -1) {
+        if (projectName.toLowerCase().indexOf(keyword.toLowerCase()) !== -1 && onDoFilter(projectPool[projectName])) {
             result.push(projectPool[projectName]);
         }
     }
