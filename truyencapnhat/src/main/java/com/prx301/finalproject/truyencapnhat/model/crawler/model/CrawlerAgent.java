@@ -44,7 +44,7 @@ public class CrawlerAgent implements Runnable {
 
     private volatile int agentStatus = STOPPED;
 
-    public CrawlerAgent(ConfigComp config, ProjectRepo projectRepo, UpdateRepo updateRepo, VolRepo volRepocontroller) {
+    public CrawlerAgent(ConfigComp config, ProjectRepo projectRepo, UpdateRepo updateRepo, VolRepo volRepo) {
         this.configComponent = config;
         this.projectRepo = projectRepo;
         this.updateRepo = updateRepo;

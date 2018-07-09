@@ -296,8 +296,9 @@ a {
     font-size: .8em;
 }
 
-.panel-content .time::after {
-    
+.panel-content .time::before {
+    content: 'Views';
+    margin-right: 1em;
 }
 
 .panel-content .followers {

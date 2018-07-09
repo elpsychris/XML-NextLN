@@ -89,7 +89,9 @@ public class ProjectService {
     public SearchProjects getRecommendList(int projectId) {
         List<ProjectEntity> recommendList = new ArrayList<>();
         ProjectEntity curProject = projectRepo.findByProjectId(projectId);
-
+        if (curProject != null) {
+            return new SearchProjects(0, new ArrayList<>());
+        }
         int count = 0;
         for (GenreEntity genre : curProject.getGenres()) {
             List<ProjectEntity> projectSameGenre = genre.getTemp();
