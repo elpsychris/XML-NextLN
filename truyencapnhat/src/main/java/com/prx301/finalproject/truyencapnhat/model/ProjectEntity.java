@@ -31,7 +31,8 @@ import java.util.Set;
         "projectLastUpdate",
         "projectTotalUpdate",
         "projectLink",
-        "bookmarkEntityList"
+        "bookmarkEntityList",
+        "projectCover"
 })
 @Entity
 @Table(name = "Project", schema = "dbo", catalog = "NU_DB")
@@ -91,6 +92,8 @@ public class ProjectEntity {
     private Integer projectTotalUpdate;
     @XmlElement(name = "link")
     private String projectLink;
+    @XmlElement(name = "cover")
+    private String projectCover;
     private List<BookmarkEntity> bookmarkEntityList;
 
 
@@ -255,6 +258,16 @@ public class ProjectEntity {
 
     public void setProjectLink(String projectLink) {
         this.projectLink = projectLink;
+    }
+
+    @Basic
+    @Column(name = "project_cover")
+    public String getProjectCover() {
+        return projectCover;
+    }
+
+    public void setProjectCover(String projectCover) {
+        this.projectCover = projectCover;
     }
 
     public void clearUpdateVols() {

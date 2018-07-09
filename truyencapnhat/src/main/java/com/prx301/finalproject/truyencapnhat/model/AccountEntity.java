@@ -1,7 +1,5 @@
 package com.prx301.finalproject.truyencapnhat.model;
 
-import org.hibernate.annotations.GenericGenerator;
-
 import javax.persistence.*;
 import javax.xml.bind.annotation.*;
 import java.util.List;
@@ -14,6 +12,7 @@ import java.util.Objects;
         "username",
         "password",
         "isAdmin",
+        "activity",
         "bookmarkEntityList"
 })
 @XmlRootElement(name = "account")
@@ -23,6 +22,7 @@ public class AccountEntity  {
     @XmlElement(name = "password")
     private String password;
     private Boolean isAdmin = false;
+    private String activity;
     private List<BookmarkEntity> bookmarkEntityList;
 
     @Id
@@ -53,6 +53,16 @@ public class AccountEntity  {
 
     public void setAdmin(Boolean admin) {
         isAdmin = admin;
+    }
+
+    @Basic
+    @Column(name = "activity")
+    public String getActivity() {
+        return activity;
+    }
+
+    public void setActivity(String activity) {
+        this.activity = activity;
     }
 
     @OneToMany(cascade = CascadeType.MERGE, mappedBy = "accountEntity")

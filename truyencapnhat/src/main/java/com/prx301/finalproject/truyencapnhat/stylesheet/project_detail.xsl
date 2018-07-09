@@ -37,6 +37,18 @@
                             Đã Bookmark
                         </div>
                     </div>
+                    <div class="rating-overlay">
+                        <select id="rating">
+                            <xsl:attribute name="onchange">
+                                onRatingChange(this,'<xsl:value-of select="//p:project/p:id"/>')
+                            </xsl:attribute>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
                 </div>
             </div>
             <div class="project-info">

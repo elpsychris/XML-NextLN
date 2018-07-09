@@ -13,7 +13,7 @@ public class TrAXUtils {
 
 
     public DOMResult transform(StreamSource from, StreamSource xsl, MyURIResolver uriResolver) throws IOException, InterruptedException {
-        if (factory.getURIResolver() == null) {
+        if (factory.getURIResolver() == null && uriResolver != null) {
             factory.setURIResolver(uriResolver);
         }
         DOMResult rsDOM = new DOMResult();

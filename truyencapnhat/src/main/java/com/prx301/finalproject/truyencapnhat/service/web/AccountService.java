@@ -82,6 +82,9 @@ public class AccountService {
     }
 
     public AccountEntity getAccount(String token) {
+        if (token == null) {
+            return null;
+        }
         LoginRequest loginRequest = tokenMap.get(token);
         return accountRepo.findByUsername(loginRequest.getUsername());
     }

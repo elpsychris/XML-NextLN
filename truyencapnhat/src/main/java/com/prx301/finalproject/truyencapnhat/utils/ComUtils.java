@@ -1,9 +1,13 @@
 package com.prx301.finalproject.truyencapnhat.utils;
 
 import com.prx301.finalproject.truyencapnhat.model.ProjectEntity;
+import com.prx301.finalproject.truyencapnhat.model.crawler.model.ActivityLog;
 import com.prx301.finalproject.truyencapnhat.model.crawler.model.CrawlerConfig;
+import com.prx301.finalproject.truyencapnhat.model.crawler.model.ProjectActivity;
 
 import javax.xml.bind.JAXBException;
+import javax.xml.transform.dom.DOMResult;
+import javax.xml.transform.stream.StreamSource;
 import java.io.*;
 import java.lang.reflect.Field;
 import java.net.URL;
@@ -26,6 +30,7 @@ public class ComUtils {
     private final static SimpleDateFormat timeFormatter = new SimpleDateFormat("ddMMyyyy:hhmmssSSS");
     private final static SimpleDateFormat dateFormatter = new SimpleDateFormat("ddMMyyyy");
     private final static Logger logger = Logger.getLogger();
+    private final static TrAXUtils traxUtils = new TrAXUtils();
 
     private static Map<String, String> cacheMap = new HashMap<>();
 
@@ -366,47 +371,92 @@ public class ComUtils {
             // Add to current if null
             if (field.get(curObj) == null && field.get(newObj) != null) {
                 field.set(curObj, field.get(newObj));
-            }
-
-            // Append to current if String
-            if (aClass.getSimpleName().equals(String.class.getSimpleName())
-                    && field.get(newObj) != null) {
-                String newString = (String) field.get(newObj);
-                String oldString = (String) field.get(curObj);
-                if (!oldString.contains(newString) && !newString.trim().isEmpty()) {
-                    oldString += ";" + newString.trim();
-                    field.set(curObj, oldString);
+            } else {
+                // Append to current if String
+                if (aClass.getSimpleName().equals(String.class.getSimpleName())
+                        && field.get(newObj) != null) {
+                    String newString = (String) field.get(newObj);
+                    String oldString = (String) field.get(curObj);
+                    if (!oldString.toLowerCase().contains(newString.toLowerCase()) && !newString.trim().isEmpty()) {
+                        if (oldString.length() > 0) {
+                            oldString += ";" + newString.trim();
+                        } else {
+                            oldString = newString.trim();
+                        }
+                        field.set(curObj, oldString);
+                    }
                 }
-            }
 
-            if (aClass.getSimpleName().equals(Double.class.getSimpleName())
-                    && field.get(newObj) != null && field.get(curObj) != null) {
-                Double newVal = (Double) field.get(newObj);
-                Double curVal = (Double) field.get(curObj);
-                if (newVal > 1.5 * curVal) {
+                if (aClass.getSimpleName().equals(Double.class.getSimpleName())
+                        && field.get(newObj) != null && field.get(curObj) != null) {
+                    Double newVal = (Double) field.get(newObj);
+                    Double curVal = (Double) field.get(curObj);
+                    if (newVal > 1.5 * curVal) {
+                        field.set(curObj, (newVal + curVal) / 2);
+                    } else {
+                        field.set(curObj, newVal);
+                    }
+                }
+
+                if (aClass.getSimpleName().equals(Integer.class.getSimpleName())
+                        && field.get(newObj) != null && field.get(curObj) != null) {
+                    Integer newVal = (Integer) field.get(newObj);
+                    Integer curVal = (Integer) field.get(curObj);
+
                     field.set(curObj, (newVal + curVal) / 2);
-                } else {
-                    field.set(curObj, newVal);
                 }
             }
 
-            if (aClass.getSimpleName().equals(Integer.class.getSimpleName())
-                    && field.get(newObj) != null && field.get(curObj) != null) {
-                Integer newVal = (Integer) field.get(newObj);
-                Integer curVal = (Integer) field.get(curObj);
 
-                field.set(curObj, (newVal + curVal) / 2);
-            }
         }
         return curObj;
     }
 
-    public static<T> T pickRandom (List<T> list) {
+    public static <T> T pickRandom(List<T> list) {
         Random random = new Random();
 
         int bound = list.size();
         int result = random.nextInt(bound);
         return list.get(result);
+    }
+
+    public static double calcEuclidDist(ActivityLog per1, ActivityLog per2) {
+        if (per1.getLogList() == null || per2.getLogList() == null) {
+            return 0;
+        }
+        List<ProjectActivity> comActs = new ArrayList<>();
+        for (ProjectActivity act1 : per1.getLogList()) {
+            for (ProjectActivity act2 : per2.getLogList()) {
+                if (act1.getProjectId() == act2.getProjectId()) {
+                    comActs.add(act1);
+                    comActs.add(act2);
+                }
+            }
+        }
+
+        double dist = 0;
+        int i = 0;
+        while (i < comActs.size()) {
+            int rankAct1 = comActs.get(i).getRating();
+            int rankAct2 = comActs.get(i + 1).getRating();
+            dist += Math.pow((rankAct1 - rankAct2), 2);
+            i += 2;
+        }
+
+        return (1 / (1 + dist));
+    }
+
+    public static DOMResult StringToDOMResult(String before, Class target) {
+        InputStream inputStream = new ByteArrayInputStream(before.getBytes());
+        DOMResult result = null;
+        try {
+            result = traxUtils.transform(new StreamSource(inputStream), null, null);
+        } catch (IOException e) {
+            Logger.getLogger().log(Logger.LOG_LEVEL.ERROR, e, ComUtils.class);
+        } catch (InterruptedException e) {
+            Logger.getLogger().log(Logger.LOG_LEVEL.ERROR, e, ComUtils.class);
+        }
+        return result;
     }
 
 }

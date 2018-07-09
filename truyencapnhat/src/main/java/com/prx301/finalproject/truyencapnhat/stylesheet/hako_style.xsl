@@ -66,8 +66,11 @@
                                         select="$projDoc//div[@class='ln_info-item clear']/span[text()='Lượt xem']/../span[@class='ln_info-value col-7']"/>
                             </view>
                             <link>
-                                <xsd:value-of select="$cur_project_link"/>
+                                <xsl:value-of select="$cur_project_link"/>
                             </link>
+                            <cover>
+                                <xsl:value-of select="$projDoc//section[@class='ln_chapters-volume basic-section mobile-view clear'][1]//div[@class='ln_chapters-vol_img col-3 col-3-m col-2-l col-2-xl']/a/img/@src"/>
+                            </cover>
                             <xsl:variable name="group"
                                           select="$projDoc//section[@class='fantrans-section']/div[contains(@class,'value')]/a"/>
                             <xsl:variable name="group-link"

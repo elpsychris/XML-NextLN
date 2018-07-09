@@ -48,10 +48,10 @@
                     <input type="text" id="signup-username" placeholder="Tài khoản" pattern="[A-Za-z0-9]{0,30}"/>
                 </div>
                 <div class="info password">
-                    <input type="password" id="signup-password" placeholder="Mật khẩu" pattern="[\w]{0,30}"/>
+                    <input type="password" id="signup-password" placeholder="Mật khẩu" pattern="[\weightList]{0,30}"/>
                 </div>
                 <div class="info confirm">
-                    <input type="password" id="signup-confirm" placeholder="Xác nhận mật khẩu" pattern="[\w]{0,30}"/>
+                    <input type="password" id="signup-confirm" placeholder="Xác nhận mật khẩu" pattern="[\weightList]{0,30}"/>
                 </div>
                 <div class="btn-action" onclick="onSignupRequestSubmit(this)">Đăng ký</div>
                 <span class="onclick-span" onclick="openLoginProject(this)">Tôi đã có tài khoản!</span>

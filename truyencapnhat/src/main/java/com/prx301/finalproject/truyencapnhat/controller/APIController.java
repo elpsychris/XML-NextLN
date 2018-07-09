@@ -13,7 +13,6 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpSession;
-import java.util.List;
 
 @RestController
 @RequestMapping("/api")
@@ -123,6 +122,16 @@ public class APIController {
 
     @RequestMapping(value = "/recommend/{project-id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_XML_VALUE)
     public SearchProjects getRecommend(@PathVariable("project-id") int projectId, HttpSession session) {
-        return projectService.getRecommendList(projectId);
+        return projectService.getSameGenreList(projectId);
+    }
+
+    @RequestMapping(value = "/rating/{project-id}/{point}", method = RequestMethod.POST)
+    public void rateProject(@PathVariable("project-id") int projectId, @PathVariable("point") int point, HttpSession session) {
+        String token = (String) session.getAttribute(AccountService.TOKEN_KEY);
+
+        AccountEntity accountEntity = accountService.getAccount(token);
+        if (accountEntity != null) {
+            projectService.rateProject(accountEntity, projectId, point);
+        }
     }
 }

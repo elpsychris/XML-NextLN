@@ -10,13 +10,11 @@ import com.prx301.finalproject.truyencapnhat.service.web.GenreService;
 import com.prx301.finalproject.truyencapnhat.service.web.ProjectService;
 import com.prx301.finalproject.truyencapnhat.service.web.UpdateService;
 import com.prx301.finalproject.truyencapnhat.utils.ComUtils;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 
-import javax.servlet.ServletContext;
 import javax.servlet.http.HttpSession;
 import java.util.List;
 import java.util.Map;
@@ -144,7 +142,7 @@ public class WebController {
             }
         }
 
-        SearchProjects recommend = projectService.getRecommendList(id);
+        SearchProjects recommend = projectService.getSameGenreList(id);
 
         int role = accountService.checkRole(ticket);
         boolean isAdmin = role == AccountService.LOGIN_AS_ADMIN;

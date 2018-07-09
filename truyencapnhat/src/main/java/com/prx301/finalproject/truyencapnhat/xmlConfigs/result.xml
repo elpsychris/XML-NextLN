@@ -9,7 +9,10 @@
 
                     <div class="fea-last_update">
                         <div style="display: flex" class="clear">
-                            <span class="fea-l_u-icon"><i class="fa fa-calendar" aria-hidden="true"></i> <div class="none inline-l">Lần cuối</div> </span>
+                            <span class="fea-l_u-icon">
+                                <i class="fa fa-calendar" aria-hidden="true"></i>
+                                <div class="none inline-l">Lần cuối</div>
+                            </span>
                             <span class="fea-l_u-time">
                                 12/04/2017 15:42:32
                             </span>
@@ -17,13 +20,16 @@
                     </div>
                 </div>
                 <h2 class="listall_title animation fade-in-up">
-                    <a href="https://ln.hako.re/truyen/468-um-sorry-ive-been-reincarnated">(Um, Sorry) I’ve Been Reincarnated!</a>
+                    <a href="https://ln.hako.re/truyen/468-um-sorry-ive-been-reincarnated">(Um, Sorry) I’ve Been
+                        Reincarnated!
+                    </a>
                 </h2>
             </div>
 
             <div class="listall_img col-12 col-3-l">
                 <div class="a6-ratio" style="border: 1px solid #f0f0f0;">
-                    <div class="content img-in-ratio" style="background-image: url('https://2.bp.blogspot.com/-ciuJHNqZ2iQ/WO2wOLtgubI/AAAAAAAAKIQ/rG2aYbCj2sg/w220/series_468.jpg')">
+                    <div class="content img-in-ratio"
+                         style="background-image: url('https://2.bp.blogspot.com/-ciuJHNqZ2iQ/WO2wOLtgubI/AAAAAAAAKIQ/rG2aYbCj2sg/w220/series_468.jpg')">
                     </div>
                 </div>
             </div>
@@ -31,7 +37,9 @@
                 <div class="listall-user group-mem">
                     <img width="50px" height="50px" src="img/noava.png"/>
                     <div class="listall-user-title">
-                        <span class="listall-user_name"><a href="https://ln.hako.re/thanh-vien/1463">blueeyekr</a></span>
+                        <span class="listall-user_name">
+                            <a href="https://ln.hako.re/thanh-vien/1463">blueeyekr</a>
+                        </span>
                     </div>
                 </div>
 
@@ -39,191 +47,295 @@
                 <div class="mobile-toggle clear">
                     <header class="inline-block none-l" style="margin-bottom: 15px;">Sơ lược</header>
                     <div class="sect-body none force-block-l">
-                        <div class="listall_summary none force-block-l" style="overflow: hidden; position: relative; margin-bottom: 0">
-                            <p>Vẫn là câu chuyện tái sinh ở thế giới khác. Lần này nguyên nhân là cứu bạn và chấn thương sọ não vì cái bình hoa của thượng đế. Được chọn giữa biến mất và tái sinh, câu trả lời là tái sinh và yêu cầu duy nhất là được giữ lại kí ức. Dù sau đó vẫn được thượng đế buff nhiệt tình. 
-                                Tái sinh ở thế giới khác? - tất nhiên là có phép thuật rồi - và ở đó khi phát hiện ra vòng tròn ma pháp thực ra lại là các kí tự [Kanji] . Anh main nhà ta LIỆU CÓ xây dựng 1 harem từ bé và mang bộ mặt cực kì khả ái khi được những người phụ n... mà như thế là đủ rồi.</p>
+                        <div class="listall_summary none force-block-l"
+                             style="overflow: hidden; position: relative; margin-bottom: 0">
+                            <p>Vẫn là câu chuyện tái sinh ở thế giới khác. Lần này nguyên nhân là cứu bạn và chấn thương
+                                sọ não vì cái bình hoa của thượng đế. Được chọn giữa biến mất và tái sinh, câu trả lời
+                                là tái sinh và yêu cầu duy nhất là được giữ lại kí ức. Dù sau đó vẫn được thượng đế buff
+                                nhiệt tình. 
+                                Tái sinh ở thế giới khác? - tất nhiên là có phép thuật rồi - và ở đó khi phát hiện ra
+                                vòng tròn ma pháp thực ra lại là các kí tự [Kanji] . Anh main nhà ta LIỆU CÓ xây dựng 1
+                                harem từ bé và mang bộ mặt cực kì khả ái khi được những người phụ n... mà như thế là đủ
+                                rồi.
+                            </p>
                             <div class="listall_summary-more" style="width: 100%; position: absolute; bottom: 0; height: 20px; background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(253,253,253,1) 50%, rgba(250,250,250,1) 100%);
 background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(253,253,253,1) 50%,rgba(250,250,250,1) 100%); background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(253,253,253,1) 50%,rgba(250,250,250,1) 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#fafafa',GradientType=0 );"></div>
                         </div>
-                        <a class="see_more" style="cursor: pointer; float: right; font-weight: bold;"><i class="fa fa-angle-double-down" aria-hidden="true"></i> Xem thêm</a>
+                        <a class="see_more" style="cursor: pointer; float: right; font-weight: bold;">
+                            <i class="fa fa-angle-double-down" aria-hidden="true"></i>
+                            Xem thêm
+                        </a>
                     </div>
                 </div>
             </div>
-        </article><section class="fantrans-section">
-        <div class="fantrans-name">Nhóm dịch</div>
-        <div class="fantrans-value"><a href="https://ln.hako.re/nhom-dich/57-jakkupi">JakKupi</a></div>
-    </section>
+        </article>
+        <section class="fantrans-section">
+            <div class="fantrans-name">Nhóm dịch</div>
+            <div class="fantrans-value">
+                <a href="https://ln.hako.re/nhom-dich/57-jakkupi">JakKupi</a>
+            </div>
+        </section>
 
         <section class="ln_info-section basic-section mobile-view">
             <div class="mobile-toggle">
                 <header class="inline-block none-l">Giới thiệu</header>
                 <!--<header class="sect-header none inline-block-l"><span class="sect-title">Giới thiệu</span></header>-->
                 <main class="sect-body none force-block-l clear long-text">
-                    <div class="ln_info-item clear"><span class="ln_info-name col-5">Số từ</span><span class="ln_info-value col-7">11,223</span></div>
-                    <div class="ln_info-item clear"><span class="ln_info-name col-5">Tác giả</span><span class="ln_info-value col-7"><a href="https://ln.hako.re/tac-gia/%E3%83%98%E3%83%83%E3%83%89%E3%83%9B%E3%83%B3%E4%BE%8D+%28Heddohon+samurai%3F%29">ヘッドホン侍 (Heddohon samurai?)</a></span></div>
-                    <div class="ln_info-item clear"><span class="ln_info-name col-5">Tình trạng</span><span class="ln_info-value col-7"><a href="https://ln.hako.re/truyen-tam-ngung">Tạm ngưng</a></span></div>
-                    <div class="ln_info-item clear"><span class="ln_info-name col-5">Thể loại</span><span class="ln_info-value col-7">
-                        <a href="https://ln.hako.re/the-loai/adventure">Adventure</a>, <a href="https://ln.hako.re/the-loai/fantasy">Fantasy</a>, <a href="https://ln.hako.re/the-loai/school-life">School Life</a>, <a href="https://ln.hako.re/the-loai/shounen">Shounen</a>
-                    </span></div>
-                    <div class="ln_info-item clear"><span class="ln_info-name col-5">Lượt xem</span><span class="ln_info-value col-7">22,818</span></div>
-                    <div class="ln_info-item clear"><span class="ln_info-name col-5">Theo dõi</span><span class="ln_info-value col-7">253</span></div>
-                    <div class="ln_info-item clear"><span class="ln_info-name col-5">Bình luận</span><span class="ln_info-value col-7"><a href="https://ln.hako.re/truyen/468-um-sorry-ive-been-reincarnated#series-comments">Xuống dưới</a></span></div>
-                    <div class="ln_info-item clear"><span class="ln_info-name col-5">Tên khác</span><span class="ln_info-value col-7">                        <span style="display: block; margin-bottom: 10px;">Tensei shichatta yo</span>
-                        <span style="display: block; margin-bottom: 10px;">「転生しちゃったよ（いや、ごめん）」</span>
-                        <span style="display: block; margin-bottom: 10px;">(Ừm, Xin lỗi) Tôi vô tình đầu thai.</span>
-                    </span></div>
+                    <div class="ln_info-item clear">
+                        <span class="ln_info-name col-5">Số từ</span>
+                        <span class="ln_info-value col-7">11,223</span>
+                    </div>
+                    <div class="ln_info-item clear">
+                        <span class="ln_info-name col-5">Tác giả</span>
+                        <span class="ln_info-value col-7">
+                            <a href="https://ln.hako.re/tac-gia/%E3%83%98%E3%83%83%E3%83%89%E3%83%9B%E3%83%B3%E4%BE%8D+%28Heddohon+samurai%3F%29">
+                                ヘッドホン侍 (Heddohon samurai?)
+                            </a>
+                        </span>
+                    </div>
+                    <div class="ln_info-item clear">
+                        <span class="ln_info-name col-5">Tình trạng</span>
+                        <span class="ln_info-value col-7">
+                            <a href="https://ln.hako.re/truyen-tam-ngung">Tạm ngưng</a>
+                        </span>
+                    </div>
+                    <div class="ln_info-item clear">
+                        <span class="ln_info-name col-5">Thể loại</span>
+                        <span class="ln_info-value col-7">
+                            <a href="https://ln.hako.re/the-loai/adventure">Adventure</a>, <a
+                                href="https://ln.hako.re/the-loai/fantasy">Fantasy</a>, <a
+                                href="https://ln.hako.re/the-loai/school-life">School Life</a>,
+                            <a href="https://ln.hako.re/the-loai/shounen">Shounen</a>
+                        </span>
+                    </div>
+                    <div class="ln_info-item clear">
+                        <span class="ln_info-name col-5">Lượt xem</span>
+                        <span class="ln_info-value col-7">22,841</span>
+                    </div>
+                    <div class="ln_info-item clear">
+                        <span class="ln_info-name col-5">Theo dõi</span>
+                        <span class="ln_info-value col-7">253</span>
+                    </div>
+                    <div class="ln_info-item clear">
+                        <span class="ln_info-name col-5">Bình luận</span>
+                        <span class="ln_info-value col-7">
+                            <a href="https://ln.hako.re/truyen/468-um-sorry-ive-been-reincarnated#series-comments">Xuống
+                                dưới
+                            </a>
+                        </span>
+                    </div>
+                    <div class="ln_info-item clear">
+                        <span class="ln_info-name col-5">Tên khác</span>
+                        <span class="ln_info-value col-7">
+                            <span style="display: block; margin-bottom: 10px;">Tensei shichatta yo</span>
+                            <span style="display: block; margin-bottom: 10px;">「転生しちゃったよ（いや、ごめん）」</span>
+                            <span style="display: block; margin-bottom: 10px;">(Ừm, Xin lỗi) Tôi vô tình đầu thai.
+                            </span>
+                        </span>
+                    </div>
                 </main>
             </div>
-        </section><section class="ln_chapters-volume basic-section mobile-view clear">
-        <div class="mobile-toggle">
-            <header class="inline-block none-l mobile-toggle_header"><i class="fa fa-clone" aria-hidden="true"></i>Arc 1: Tuổi Thơ sung túc</header>
-            <header id="volume_2087" class="sect-header vol-header none block-l"><span class="sect-title"><a href="https://ln.hako.re/truyen/468-um-sorry-ive-been-reincarnated/t2087-gioi-thieu-nhan-vat">Arc 1: Tuổi Thơ sung túc</a></span></header>
-            <main class="sect-body mobile-toggle_body force-block-l none clear">
-                <div class="ln_chapters-vol_img col-3 col-3-m col-2-l col-2-xl">
-                    <a href="https://ln.hako.re/truyen/468-um-sorry-ive-been-reincarnated/t2087-gioi-thieu-nhan-vat">
-                        <img src="https://3.bp.blogspot.com/-lWxpE-NNnr8/WO29GtfaHAI/AAAAAAAAMO0/eeSTXy_msbg/w220/book_2087.jpg"></img>
-                    </a>
-                    <a style="display: block; float: right; margin: 5px; font-size: 20px;" class="download-icon  disabled " href=""><i class="fa fa-download" aria-hidden="true"></i></a>
-                </div>
-                <div class="ln_chapters-vol_main col-9 col-9-m col-10-l col-10-xl">
-                    <ul class="list-chapters">
+        </section>
+        <section class="ln_chapters-volume basic-section mobile-view clear">
+            <div class="mobile-toggle">
+                <header class="inline-block none-l mobile-toggle_header"><i class="fa fa-clone" aria-hidden="true"></i>
+                    Arc 1: Tuổi Thơ sung túc
+                </header>
+                <header id="volume_2087" class="sect-header vol-header none block-l">
+                    <span class="sect-title">
+                        <a href="https://ln.hako.re/truyen/468-um-sorry-ive-been-reincarnated/t2087-gioi-thieu-nhan-vat">
+                            Arc 1: Tuổi Thơ sung túc
+                        </a>
+                    </span>
+                </header>
+                <main class="sect-body mobile-toggle_body force-block-l none clear">
+                    <div class="ln_chapters-vol_img col-3 col-3-m col-2-l col-2-xl">
+                        <a href="https://ln.hako.re/truyen/468-um-sorry-ive-been-reincarnated/t2087-gioi-thieu-nhan-vat">
+                            <img src="https://3.bp.blogspot.com/-lWxpE-NNnr8/WO29GtfaHAI/AAAAAAAAMO0/eeSTXy_msbg/w220/book_2087.jpg"></img>
+                        </a>
+                        <a style="display: block; float: right; margin: 5px; font-size: 20px;"
+                           class="download-icon  disabled " href="">
+                            <i class="fa fa-download" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                    <div class="ln_chapters-vol_main col-9 col-9-m col-10-l col-10-xl">
+                        <ul class="list-chapters">
 
-                        <li>
-                            <div class="chapter-name">
+                            <li>
+                                <div class="chapter-name">
 
-                                <i class="fa fa-picture-o" aria-hidden="true" title="Có chứa ảnh"></i>
+                                    <i class="fa fa-picture-o" aria-hidden="true" title="Có chứa ảnh"></i>
 
-                                <a href="https://ln.hako.re/truyen/468-um-sorry-ive-been-reincarnated/c15051-gioi-thieu-nhan-vat" title="Giới thiệu nhân vật">Giới thiệu nhân vật</a>
+                                    <a href="https://ln.hako.re/truyen/468-um-sorry-ive-been-reincarnated/c15051-gioi-thieu-nhan-vat"
+                                       title="Giới thiệu nhân vật">Giới thiệu nhân vật
+                                    </a>
 
-                            </div>
-                            <div class="chapter-time">12/04/2017</div>
-                        </li>
+                                </div>
+                                <div class="chapter-time">12/04/2017</div>
+                            </li>
 
-                        <li>
-                            <div class="chapter-name">
-
-
-                                <a href="https://ln.hako.re/truyen/468-um-sorry-ive-been-reincarnated/c15052-chuong-01-mo-dau" title="Chương 01 - Mở đầu">Chương 01 - Mở đầu</a>
-
-                            </div>
-                            <div class="chapter-time">03/03/2017</div>
-                        </li>
-
-                        <li>
-                            <div class="chapter-name">
-
-
-                                <a href="https://ln.hako.re/truyen/468-um-sorry-ive-been-reincarnated/c15053-chuong-02-canh-dong-hoa" title="Chương 02 - Cánh đồng hoa">Chương 02 - Cánh đồng hoa</a>
-
-                            </div>
-                            <div class="chapter-time">01/03/2017</div>
-                        </li>
-
-                        <li>
-                            <div class="chapter-name">
+                            <li>
+                                <div class="chapter-name">
 
 
-                                <a href="https://ln.hako.re/truyen/468-um-sorry-ive-been-reincarnated/c15054-chuong-03-hoi-tiec-mot-chut-nhung-cam-on" title="Chương 03 - Hối tiếc một chút, nhưng cảm ơn!">Chương 03 - Hối tiếc một chút, nhưng cảm ơn!</a>
+                                    <a href="https://ln.hako.re/truyen/468-um-sorry-ive-been-reincarnated/c15052-chuong-01-mo-dau"
+                                       title="Chương 01 - Mở đầu">Chương 01 - Mở đầu
+                                    </a>
 
-                            </div>
-                            <div class="chapter-time">10/03/2017</div>
-                        </li>
+                                </div>
+                                <div class="chapter-time">03/03/2017</div>
+                            </li>
 
-                        <li>
-                            <div class="chapter-name">
-
-
-                                <a href="https://ln.hako.re/truyen/468-um-sorry-ive-been-reincarnated/c15073-chuong-04" title="Chương 04 - Rào cản đầu tiên">Chương 04 - Rào cản đầu tiên</a>
-
-                            </div>
-                            <div class="chapter-time">10/03/2017</div>
-                        </li>
-
-                        <li>
-                            <div class="chapter-name">
+                            <li>
+                                <div class="chapter-name">
 
 
-                                <a href="https://ln.hako.re/truyen/468-um-sorry-ive-been-reincarnated/c15086-chuong-05-toi-tro-lai" title="Chương 05 - Tôi trở lại">Chương 05 - Tôi trở lại</a>
+                                    <a href="https://ln.hako.re/truyen/468-um-sorry-ive-been-reincarnated/c15053-chuong-02-canh-dong-hoa"
+                                       title="Chương 02 - Cánh đồng hoa">Chương 02 - Cánh đồng hoa
+                                    </a>
 
-                            </div>
-                            <div class="chapter-time">04/03/2017</div>
-                        </li>
+                                </div>
+                                <div class="chapter-time">01/03/2017</div>
+                            </li>
 
-                        <li>
-                            <div class="chapter-name">
-
-
-                                <a href="https://ln.hako.re/truyen/468-um-sorry-ive-been-reincarnated/c15132-chuong-06-lam-me-sinh-con" title="Chương 06 - Làm mẹ, Sinh con">Chương 06 - Làm mẹ, Sinh con</a>
-
-                            </div>
-                            <div class="chapter-time">04/03/2017</div>
-                        </li>
-
-                        <li>
-                            <div class="chapter-name">
+                            <li>
+                                <div class="chapter-name">
 
 
-                                <a href="https://ln.hako.re/truyen/468-um-sorry-ive-been-reincarnated/c15149-chuong-07-lan-dau-cho-con-bu" title="Chương 07 - Lần đầu cho con bú">Chương 07 - Lần đầu cho con bú</a>
+                                    <a href="https://ln.hako.re/truyen/468-um-sorry-ive-been-reincarnated/c15054-chuong-03-hoi-tiec-mot-chut-nhung-cam-on"
+                                       title="Chương 03 - Hối tiếc một chút, nhưng cảm ơn!">Chương 03 - Hối tiếc một
+                                        chút, nhưng cảm ơn!
+                                    </a>
 
-                            </div>
-                            <div class="chapter-time">04/03/2017</div>
-                        </li>
+                                </div>
+                                <div class="chapter-time">10/03/2017</div>
+                            </li>
 
-                        <li>
-                            <div class="chapter-name">
-
-
-                                <a href="https://ln.hako.re/truyen/468-um-sorry-ive-been-reincarnated/c15328-chuong-08-toi-se-co-gang-het-suc" title="Chương 08 - Tôi sẽ cố gắng hết sức">Chương 08 - Tôi sẽ cố gắng hết sức</a>
-
-                            </div>
-                            <div class="chapter-time">10/03/2017</div>
-                        </li>
-
-                        <li>
-                            <div class="chapter-name">
-
-                                <i class="fa fa-picture-o" aria-hidden="true" title="Có chứa ảnh"></i>
-
-                                <a href="https://ln.hako.re/truyen/468-um-sorry-ive-been-reincarnated/c15366-chuong-09-neu-ban-muon-hoc-cach-doc-hay-tim-mot-cuon-sach-anh" title="Chương 09 - Nếu bạn muốn học cách đọc, hãy tìm một cuốn sách ảnh!">Chương 09 - Nếu bạn muốn học cách đọc, hãy tìm một cuốn sách ảnh!</a>
-
-                            </div>
-                            <div class="chapter-time">12/04/2017</div>
-                        </li>
-
-                        <li>
-                            <div class="chapter-name">
+                            <li>
+                                <div class="chapter-name">
 
 
-                                <a href="https://ln.hako.re/truyen/468-um-sorry-ive-been-reincarnated/c15545-chuong-10-toi-dan-hieu-nhung-dieu-khac-nhau" title="Chương 10 - Tôi dần hiểu những điều khác nhau.">Chương 10 - Tôi dần hiểu những điều khác nhau.</a>
+                                    <a href="https://ln.hako.re/truyen/468-um-sorry-ive-been-reincarnated/c15073-chuong-04"
+                                       title="Chương 04 - Rào cản đầu tiên">Chương 04 - Rào cản đầu tiên
+                                    </a>
 
-                            </div>
-                            <div class="chapter-time">19/03/2017</div>
-                        </li>
+                                </div>
+                                <div class="chapter-time">10/03/2017</div>
+                            </li>
 
-                        <li>
-                            <div class="chapter-name">
+                            <li>
+                                <div class="chapter-name">
 
 
-                                <a href="https://ln.hako.re/truyen/468-um-sorry-ive-been-reincarnated/c15724-chuong-11-co-ve-cha-that-su-tuyet-voi" title="Chương 11 - Có vẻ Cha thật sự tuyệt vời">Chương 11 - Có vẻ Cha thật sự tuyệt vời</a>
+                                    <a href="https://ln.hako.re/truyen/468-um-sorry-ive-been-reincarnated/c15086-chuong-05-toi-tro-lai"
+                                       title="Chương 05 - Tôi trở lại">Chương 05 - Tôi trở lại
+                                    </a>
 
-                            </div>
-                            <div class="chapter-time">26/03/2017</div>
-                        </li>
-                    </ul>
-                </div>
-            </main>
-        </div>
-    </section>
+                                </div>
+                                <div class="chapter-time">04/03/2017</div>
+                            </li>
+
+                            <li>
+                                <div class="chapter-name">
+
+
+                                    <a href="https://ln.hako.re/truyen/468-um-sorry-ive-been-reincarnated/c15132-chuong-06-lam-me-sinh-con"
+                                       title="Chương 06 - Làm mẹ, Sinh con">Chương 06 - Làm mẹ, Sinh con
+                                    </a>
+
+                                </div>
+                                <div class="chapter-time">04/03/2017</div>
+                            </li>
+
+                            <li>
+                                <div class="chapter-name">
+
+
+                                    <a href="https://ln.hako.re/truyen/468-um-sorry-ive-been-reincarnated/c15149-chuong-07-lan-dau-cho-con-bu"
+                                       title="Chương 07 - Lần đầu cho con bú">Chương 07 - Lần đầu cho con bú
+                                    </a>
+
+                                </div>
+                                <div class="chapter-time">04/03/2017</div>
+                            </li>
+
+                            <li>
+                                <div class="chapter-name">
+
+
+                                    <a href="https://ln.hako.re/truyen/468-um-sorry-ive-been-reincarnated/c15328-chuong-08-toi-se-co-gang-het-suc"
+                                       title="Chương 08 - Tôi sẽ cố gắng hết sức">Chương 08 - Tôi sẽ cố gắng hết sức
+                                    </a>
+
+                                </div>
+                                <div class="chapter-time">10/03/2017</div>
+                            </li>
+
+                            <li>
+                                <div class="chapter-name">
+
+                                    <i class="fa fa-picture-o" aria-hidden="true" title="Có chứa ảnh"></i>
+
+                                    <a href="https://ln.hako.re/truyen/468-um-sorry-ive-been-reincarnated/c15366-chuong-09-neu-ban-muon-hoc-cach-doc-hay-tim-mot-cuon-sach-anh"
+                                       title="Chương 09 - Nếu bạn muốn học cách đọc, hãy tìm một cuốn sách ảnh!">Chương
+                                        09 - Nếu bạn muốn học cách đọc, hãy tìm một cuốn sách ảnh!
+                                    </a>
+
+                                </div>
+                                <div class="chapter-time">12/04/2017</div>
+                            </li>
+
+                            <li>
+                                <div class="chapter-name">
+
+
+                                    <a href="https://ln.hako.re/truyen/468-um-sorry-ive-been-reincarnated/c15545-chuong-10-toi-dan-hieu-nhung-dieu-khac-nhau"
+                                       title="Chương 10 - Tôi dần hiểu những điều khác nhau.">Chương 10 - Tôi dần hiểu
+                                        những điều khác nhau.
+                                    </a>
+
+                                </div>
+                                <div class="chapter-time">19/03/2017</div>
+                            </li>
+
+                            <li>
+                                <div class="chapter-name">
+
+
+                                    <a href="https://ln.hako.re/truyen/468-um-sorry-ive-been-reincarnated/c15724-chuong-11-co-ve-cha-that-su-tuyet-voi"
+                                       title="Chương 11 - Có vẻ Cha thật sự tuyệt vời">Chương 11 - Có vẻ Cha thật sự
+                                        tuyệt vời
+                                    </a>
+
+                                </div>
+                                <div class="chapter-time">26/03/2017</div>
+                            </li>
+                        </ul>
+                    </div>
+                </main>
+            </div>
+        </section>
         <section class="ln_chapters-volume basic-section mobile-view disabled clear">
             <div class="mobile-toggle">
-                <header class="inline-block none-l mobile-toggle_header"><i class="fa fa-clone" aria-hidden="true"></i>Arc 02: Lên đường, Học viện Arc!</header>
-                <header id="volume_2088" class="sect-header vol-header none block-l"><span class="sect-title"><a href="https://ln.hako.re/truyen/468-um-sorry-ive-been-reincarnated/t2088-arc-02-len-duong-hoc-vien-arc">Arc 02: Lên đường, Học viện Arc!</a></span></header>
+                <header class="inline-block none-l mobile-toggle_header"><i class="fa fa-clone" aria-hidden="true"></i>
+                    Arc 02: Lên đường, Học viện Arc!
+                </header>
+                <header id="volume_2088" class="sect-header vol-header none block-l">
+                    <span class="sect-title">
+                        <a href="https://ln.hako.re/truyen/468-um-sorry-ive-been-reincarnated/t2088-arc-02-len-duong-hoc-vien-arc">
+                            Arc 02: Lên đường, Học viện Arc!
+                        </a>
+                    </span>
+                </header>
                 <main class="sect-body mobile-toggle_body force-block-l none clear">
                     <div class="ln_chapters-vol_img col-3 col-3-m col-2-l col-2-xl">
                         <a href="https://ln.hako.re/truyen/468-um-sorry-ive-been-reincarnated/t2088-arc-02-len-duong-hoc-vien-arc">
                             <img src="https://1.bp.blogspot.com/-Kwy0iGqamE0/WO29G1xLKAI/AAAAAAAAMO4/JvlK0t89WUQ/w220/book_2088.jpg"></img>
                         </a>
-                        <a style="display: block; float: right; margin: 5px; font-size: 20px;" class="download-icon  disabled " href=""><i class="fa fa-download" aria-hidden="true"></i></a>
+                        <a style="display: block; float: right; margin: 5px; font-size: 20px;"
+                           class="download-icon  disabled " href="">
+                            <i class="fa fa-download" aria-hidden="true"></i>
+                        </a>
                     </div>
                     <div class="ln_chapters-vol_main col-9 col-9-m col-10-l col-10-xl">
                         <ul class="list-chapters">
@@ -231,5 +343,6 @@ background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(253,253,253
                     </div>
                 </main>
             </div>
-        </section></body>
+        </section>
+    </body>
 </html>
