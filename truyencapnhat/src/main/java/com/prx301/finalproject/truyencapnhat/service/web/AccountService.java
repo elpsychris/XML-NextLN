@@ -86,6 +86,9 @@ public class AccountService {
             return null;
         }
         LoginRequest loginRequest = tokenMap.get(token);
+        if (loginRequest == null) {
+            return null;
+        }
         return accountRepo.findByUsername(loginRequest.getUsername());
     }
 

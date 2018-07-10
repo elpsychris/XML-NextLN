@@ -14,7 +14,7 @@
             <projects>
                 <xsl:for-each select="$listDoc//td/a[@class='hoverinfo_trigger fw-b']">
                     <xsl:variable name="cur_project_link" select="@href"/>
-                    <xsl:variable name="projDoc" select="document(translate(translate(translate(translate(translate($cur_project_link,'°',''),'☆',''),'♪',''),'∧',''),'〇',''))"/>
+                    <xsl:variable name="projDoc" select="document(translate($cur_project_link,'°☆♪∧〇♥',''))"/>
                     <xsl:if test="boolean($projDoc//h1[@class='h1']/span)">
                         <project>
                             <id>
@@ -61,8 +61,11 @@
                                 <xsl:value-of select="normalize-space($projDoc//span[@itemprop='ratingValue']/text())"/>
                             </point>
                             <link>
-                                <xsd:value-of select="$cur_project_link"/>
+                                <xsl:value-of select="$cur_project_link"/>
                             </link>
+                            <cover>
+                                <xsl:value-of select="$projDoc//td//img/@src"/>
+                            </cover>
                             <updates/>
                         </project>
                     </xsl:if>

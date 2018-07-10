@@ -21,15 +21,17 @@ import java.util.List;
 public class UpdateService {
     final int DEFAULT_PAGE_SIZE = 10;
     private UpdateRepo updateRepo = null;
+    private ProjectRepo projectRepo = null;
 
     @Autowired
     EntityManager em = null;
 
-    public UpdateService(UpdateRepo updateRepo) {
+    public UpdateService(UpdateRepo updateRepo, ProjectRepo projectRepo) {
         this.updateRepo = updateRepo;
+        this.projectRepo = projectRepo;
     }
 
-    //    public List<UpdateEntity> getLatestUpdates(int pageNo, int pageSize) {
+//    public List<UpdateEntity> getLatestUpdates(int pageNo, int pageSize) {
 //        return volRepo.getUpdatePage(pageNo, pageSize);
 //    }
 //
@@ -68,6 +70,13 @@ public class UpdateService {
 
     public String getProjectDetail(int projectId) {
         PageUpdates firstPage = getPageUpdate(1, projectId);
+        if (firstPage.getTotal() == 0) {
+            ProjectEntity projectEntity = projectRepo.findByProjectId(projectId);
+            UpdateEntity updateEntity = new UpdateEntity(projectEntity);
+
+            firstPage.getUpdateList().add(updateEntity);
+        }
+
         StringWriter stringWriter = new StringWriter();
         StreamResult streamResult = new StreamResult(stringWriter);
         try {

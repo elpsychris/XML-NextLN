@@ -45,7 +45,8 @@
                     <input type="password" id="signup-password" placeholder="Mật khẩu" pattern="[\weightList]{0,30}"/>
                 </div>
                 <div class="info confirm">
-                    <input type="password" id="signup-confirm" placeholder="Xác nhận mật khẩu" pattern="[\weightList]{0,30}"/>
+                    <input type="password" id="signup-confirm" placeholder="Xác nhận mật khẩu"
+                           pattern="[\weightList]{0,30}"/>
                 </div>
                 <div class="btn-action" onclick="onSignupRequestSubmit(this)">Đăng ký</div>
                 <span class="onclick-span" onclick="openLoginProject(this)">Tôi đã có tài khoản!</span>
@@ -157,9 +158,7 @@
                                 Chương
                             </div>
                         </div>
-                        <div class="row-card">
-                            Đang cập nhật
-                        </div>
+                        Đang cập nhật
                     </div>
                 </div>
 
@@ -182,30 +181,89 @@
                     <div class="card-panel-horz">
                         <div class="panel-header">Đề xuất</div>
                         <div class="panel-content table">
-                            <div class="headers" id="result-header">
-                                <div class="header">
-                                    Tên
-                                </div>
-                                <div class="header">
-                                    Tác giả
-                                </div>
-                                <div class="header">
-                                    Lượt view
-                                </div>
-                                <div class="header">
-                                    Số cập nhật
-                                </div>
-                            </div>
-                            <c:forEach items="${recommend.projectEntities}" var="project">
-                                <div class="row-card">
-                                    <div class="col project-name">
-                                        <a href="/project-detail?name=${project.projectId}">${project.projectName}</a>
-                                    </div>
-                                    <div class="col">${project.projectAuthor}</div>
-                                    <div class="col">${project.projectView}</div>
-                                    <div class="col">${project.projectTotalUpdate}</div>
-                                </div>
-                            </c:forEach>
+                            <c:choose>
+                                <c:when test="${empty recommend}">
+                                    Không có đề xuất nào cho bạn
+                                </c:when>
+                                <c:otherwise>
+                                    <c:forEach var="project" items="${recommend}">
+                                        <a href="project-detail?name=${project.projectId}">
+                                            <div class="content-card card-2">
+                                                <div class="title">
+                                                    <div class="divider-2">
+                                                        <c:choose>
+                                                            <c:when test="${fn:length(project.projectName) < 15}">
+                                                                <div class="divider-head">${project.projectName}</div>
+                                                            </c:when>
+                                                            <c:otherwise>
+                                                                <div class="divider-head">${fn:substring(project.projectName, 0, 15)}...</div>
+                                                            </c:otherwise>
+                                                        </c:choose>
+                                                    </div>
+                                                </div>
+                                                <div class="thumbnail"><img
+                                                        src="${project.projectCover}"></div>
+                                                <span class="author">${project.projectAuthor}</span><span
+                                                    class="time">${project.projectView}</span>
+                                            </div>
+                                        </a>
+                                    </c:forEach>
+                                </c:otherwise>
+                            </c:choose>
+                            <%--<c:forEach items="${recommend.projectEntities}" var="project">--%>
+                            <%--<div class="row-card">--%>
+                            <%--<div class="col project-name">--%>
+                            <%--<a href="/project-detail?name=${project.projectId}">${project.projectName}</a>--%>
+                            <%--</div>--%>
+                            <%--<div class="col">${project.projectAuthor}</div>--%>
+                            <%--<div class="col">${project.projectView}</div>--%>
+                            <%--<div class="col">${project.projectTotalUpdate}</div>--%>
+                            <%--</div>--%>
+                            <%--</c:forEach>--%>
+                        </div>
+                    </div>
+                    <div class="card-panel-horz">
+                        <div class="panel-header">Cùng thể loại</div>
+                        <div class="panel-content table">
+                            <c:choose>
+                                <c:when test="${empty sameGenre}">
+                                    Không tìm thấy project cùng loại
+                                </c:when>
+                                <c:otherwise>
+                                    <c:forEach var="project" items="${sameGenre.projectEntities}">
+                                        <a href="project-detail?name=${project.projectId}">
+                                            <div class="content-card card-2">
+                                                <div class="title">
+                                                    <div class="divider-2">
+                                                        <c:choose>
+                                                            <c:when test="${fn:length(project.projectName) < 15}">
+                                                                <div class="divider-head">${project.projectName}</div>
+                                                            </c:when>
+                                                            <c:otherwise>
+                                                                <div class="divider-head">${fn:substring(project.projectName, 0, 15)}...</div>
+                                                            </c:otherwise>
+                                                        </c:choose>
+                                                    </div>
+                                                </div>
+                                                <div class="thumbnail"><img
+                                                        src="${project.projectCover}"></div>
+                                                <span class="author">${project.projectAuthor}</span><span
+                                                    class="time">${project.projectView}</span>
+                                            </div>
+                                        </a>
+                                    </c:forEach>
+                                </c:otherwise>
+                            </c:choose>
+                            <%--<c:forEach items="${recommend.projectEntities}" var="project">--%>
+                            <%--<div class="row-card">--%>
+                            <%--<div class="col project-name">--%>
+                            <%--<a href="/project-detail?name=${project.projectId}">${project.projectName}</a>--%>
+                            <%--</div>--%>
+                            <%--<div class="col">${project.projectAuthor}</div>--%>
+                            <%--<div class="col">${project.projectView}</div>--%>
+                            <%--<div class="col">${project.projectTotalUpdate}</div>--%>
+                            <%--</div>--%>
+                            <%--</c:forEach>--%>
                         </div>
                     </div>
                 </div>

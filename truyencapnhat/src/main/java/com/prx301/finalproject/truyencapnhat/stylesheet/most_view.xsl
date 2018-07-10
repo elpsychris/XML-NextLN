@@ -28,6 +28,14 @@
                     <div class="thumbnail">
                         <xsl:element name="img">
                             <xsl:attribute name="src">
+                                <xsl:choose>
+                                    <xsl:when test="contains(p:cover,';')">
+                                        <xsl:value-of select="substring-before(p:cover,';')"/>
+                                    </xsl:when>
+                                    <xsl:otherwise>
+                                        <xsl:value-of select="p:cover"/>
+                                    </xsl:otherwise>
+                                </xsl:choose>
                             </xsl:attribute>
                         </xsl:element>
                     </div>

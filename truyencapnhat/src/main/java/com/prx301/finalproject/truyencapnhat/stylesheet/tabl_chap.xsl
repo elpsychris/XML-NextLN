@@ -8,7 +8,7 @@
         <xsl:apply-templates select="p:updates"/>
     </xsl:template>
     <xsl:template match="p:updates">
-        <xsl:if test="p:update">
+        <xsl:if test="p:update/p:chapter-date">
             <xsl:for-each select="p:update">
                 <div class="row-card">
                     <div class="col">
@@ -36,7 +36,7 @@
                 </div>
             </xsl:for-each>
         </xsl:if>
-        <xsl:if test="not(p:update)">
+        <xsl:if test="not(p:update/p:chapter-date)">
                 Đang cập nhật
         </xsl:if>
     </xsl:template>

@@ -13,8 +13,8 @@
                     <img class="card-2">
                         <xsl:attribute name="src">
                             <xsl:choose>
-                                <xsl:when test="//p:volume-cover">
-                                    <xsl:value-of select="//p:volume-cover"/>
+                                <xsl:when test="//p:project/p:cover">
+                                    <xsl:value-of select="//p:project/p:cover"/>
                                 </xsl:when>
                                 <xsl:otherwise>
                                     nocover.jpg
@@ -42,6 +42,7 @@
                             <xsl:attribute name="onchange">
                                 onRatingChange(this,'<xsl:value-of select="//p:project/p:id"/>')
                             </xsl:attribute>
+                            <option value="" selected="" disabled="" hidden=""/>
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>

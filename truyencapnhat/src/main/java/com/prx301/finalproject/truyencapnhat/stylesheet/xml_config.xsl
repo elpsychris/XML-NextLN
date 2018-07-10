@@ -10,6 +10,14 @@
         <xsl:for-each select="p:component">
             <div class="crawler-config card-2 inactive">
                 <xsl:attribute name="id">crawler-config-<xsl:value-of select="p:name"/></xsl:attribute>
+                <div class="report">
+                    <span>
+                        <xsl:attribute name="id">total-update-<xsl:value-of select="p:name"/></xsl:attribute>
+                    </span>
+                    <span>
+                        <xsl:attribute name="id">total-insert-<xsl:value-of select="p:name"/></xsl:attribute>
+                    </span>
+                </div>
                 <div class="crawler-info name">
                     <span>
                         <xsl:value-of select="p:name"/>

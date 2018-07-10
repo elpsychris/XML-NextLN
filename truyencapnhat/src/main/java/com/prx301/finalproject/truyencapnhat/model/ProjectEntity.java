@@ -8,10 +8,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.sql.Date;
 import java.sql.Time;
 import java.sql.Timestamp;
-import java.util.Calendar;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ProjectEntity", propOrder = {
@@ -95,6 +92,10 @@ public class ProjectEntity {
     @XmlElement(name = "cover")
     private String projectCover;
     private List<BookmarkEntity> bookmarkEntityList;
+    @XmlElement(name = "rating")
+    private double projectRating;
+    @XmlElement(name = "users")
+    private int projectUsers;
 
 
     @Id
@@ -287,6 +288,26 @@ public class ProjectEntity {
 //        this.bookmarkEntityList = bookmarkEntityList;
     }
 
+    @Basic
+    @Column(name = "project_rating")
+    public double getProjectRating() {
+        return projectRating;
+    }
+
+    @Basic
+    @Column(name = "project_total_user")
+    public void setProjectRating(double projectRating) {
+        this.projectRating = projectRating;
+    }
+
+    public int getProjectUsers() {
+        return projectUsers;
+    }
+
+    public void setProjectUsers(int projectUsers) {
+        this.projectUsers = projectUsers;
+    }
+
     public int countUpdate() {
         int total = 0;
         if (this.updateVols != null) {
@@ -344,6 +365,8 @@ public class ProjectEntity {
         result = 31 * result + (projectTag != null ? projectTag.hashCode() : 0);
         result = 31 * result + (projectView != null ? projectView.hashCode() : 0);
         result = 31 * result + (projectPoint != null ? projectPoint.hashCode() : 0);
+        result = 31 * result + (projectLink != null ? projectLink.hashCode() : 0);
+        result = 31 * result + (projectCover != null ? projectCover.hashCode() : 0);
 //        result = 31 * result + (projectLastUpdate != null ? projectLastUpdate.hashCode() : 0);
 //        result = 31 * result + (projectTotalUpdate != null ? projectTotalUpdate.hashCode() : 0);
         return result;

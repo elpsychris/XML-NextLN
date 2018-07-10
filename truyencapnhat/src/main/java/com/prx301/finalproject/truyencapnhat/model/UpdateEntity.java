@@ -54,6 +54,11 @@ public class UpdateEntity {
     @XmlElement(name = "update-link")
     private String updateLink;
 
+    public UpdateEntity(){}
+
+    public UpdateEntity(ProjectEntity projectEntity) {
+        this.updateVol = new UpdateVolEntity(projectEntity);
+    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

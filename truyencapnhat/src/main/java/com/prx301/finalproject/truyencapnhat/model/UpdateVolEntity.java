@@ -37,6 +37,12 @@ public class UpdateVolEntity {
     @XmlElement(name = "vol-hash")
     private String volHash;
 
+    public UpdateVolEntity(){}
+
+    public UpdateVolEntity(ProjectEntity project) {
+        this.project = project;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")

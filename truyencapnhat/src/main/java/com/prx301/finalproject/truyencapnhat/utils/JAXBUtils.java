@@ -47,7 +47,9 @@ public class JAXBUtils {
     public static <T> T xmlToObject(DOMResult xml, Schema schema, Class<T>... classes) throws JAXBException {
         JAXBContext context = JAXBContext.newInstance(classes);
         Unmarshaller unmarshaller = context.createUnmarshaller();
-
+        if (xml == null) {
+            return null;
+        }
         if (schema != null) {
             unmarshaller.setSchema(schema);
             unmarshaller.setEventHandler(new MyValidationEventHandler());

@@ -420,6 +420,18 @@ public class ComUtils {
         return list.get(result);
     }
 
+    public static <T> T pickRandom(Set<T> set) {
+        Random random = new Random();
+
+        int bound = set.size();
+        int result = random.nextInt(bound);
+        Iterator iter = set.iterator();
+        for (int i = 0; i < result; i++) {
+            iter.next();
+        }
+        return (T) iter.next();
+    }
+
     public static double calcEuclidDist(ActivityLog per1, ActivityLog per2) {
         if (per1.getLogList() == null || per2.getLogList() == null) {
             return 0;

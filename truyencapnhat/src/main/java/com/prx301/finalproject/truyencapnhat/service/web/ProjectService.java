@@ -108,16 +108,17 @@ public class ProjectService {
     public SearchProjects getSameGenreList(int projectId) {
         List<ProjectEntity> recommendList = new ArrayList<>();
         ProjectEntity curProject = projectRepo.findByProjectId(projectId);
-        if (curProject != null) {
+        if (curProject == null) {
             return new SearchProjects(0, new ArrayList<>());
         }
         int count = 0;
-        for (GenreEntity genre : curProject.getGenres()) {
-            if (count > 5) {
-                break;
-            }
-            List<ProjectEntity> projectSameGenre = genre.getTemp();
+        while (count < 4) {
+            GenreEntity genreEntity = ComUtils.pickRandom(curProject.getGenres());
+            List<ProjectEntity> projectSameGenre = genreEntity.getTemp();
             ProjectEntity chooseProject = ComUtils.pickRandom(projectSameGenre);
+            while (checkProjectExist(chooseProject.getProjectId(), recommendList) != null && projectSameGenre.size() > count) {
+                chooseProject = ComUtils.pickRandom(projectSameGenre);
+            }
             recommendList.add(chooseProject);
             count++;
         }
@@ -163,7 +164,20 @@ public class ProjectService {
         return null;
     }
 
-    public List<ProjectEntity> getProjectRecomList(String username) {
+    private ProjectEntity checkProjectExist(int projectId, List<ProjectEntity> projectList) {
+        for (ProjectEntity project : projectList) {
+            if (project.getProjectId() == projectId) {
+                return project;
+            }
+        }
+        return null;
+    }
+
+    public List<ProjectEntity> getProjectRecomList(AccountEntity accountEntity) {
+        if (accountEntity == null) {
+            return null;
+        }
+        String username = accountEntity.getUsername();
         List<RecommendProject> recommendProjectList = getPeopleRecommendList(username);
         List<ProjectEntity> recomProjects = new ArrayList<>();
 
@@ -205,15 +219,10 @@ public class ProjectService {
             recommendProject.calcFinalScore();
         }
 
-        recommendProjectList.sort(new Comparator<RecommendProject>() {
-            @Override
-            public int compare(RecommendProject o1, RecommendProject o2) {
-                return (int) (o1.getFinalScore() - o2.getFinalScore());
-            }
-        });
+        recommendProjectList.sort((o1, o2) -> (int) (o2.getFinalScore() - o1.getFinalScore()));
 
-        int bound = 5;
-        if (recommendProjectList.size() < 5) {
+        int bound = 4;
+        if (recommendProjectList.size() < 4) {
             bound = recommendProjectList.size();
         }
 
@@ -231,10 +240,10 @@ public class ProjectService {
             }
         }
 
-        results.sort((o1, o2) -> (int) (o1.getSimilarity() - o2.getSimilarity()));
+        results.sort((o1, o2) -> (int) (o2.getSimilarity() - o1.getSimilarity()));
         // Top 5 similar users
-        int bound = 5;
-        if (results.size() < 5) {
+        int bound = 10;
+        if (results.size() < 10) {
             bound = results.size();
         }
 

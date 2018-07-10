@@ -152,7 +152,7 @@ public class SpiderService {
         AgentStateReport agentStateReport = new AgentStateReport();
         for (Map.Entry<String, CrawlerAgent> agent : runningCrawler.entrySet()) {
             CrawlerAgent crawlerAgent = agent.getValue();
-            agentStateReport.addAgentReport(new AgentState(agent.getKey(), crawlerAgent.getAgentStatus()));
+            agentStateReport.addAgentReport(new AgentState(agent.getKey(), crawlerAgent.getAgentStatus(), crawlerAgent.getTotalUpdate(), crawlerAgent.getTotalInsert()));
             if (crawlerAgent.getAgentStatus() == CrawlerAgent.STOPPED) {
                 undeployResource(agent.getKey());
             }

@@ -141,8 +141,8 @@ public class WebController {
                 accountEntity = accountService.getAccount(token);
             }
         }
-
-        SearchProjects recommend = projectService.getSameGenreList(id);
+        List<ProjectEntity> recommendList = projectService.getProjectRecomList(accountEntity);
+        SearchProjects sameGenreList = projectService.getSameGenreList(id);
 
         int role = accountService.checkRole(ticket);
         boolean isAdmin = role == AccountService.LOGIN_AS_ADMIN;
@@ -154,7 +154,14 @@ public class WebController {
         String xslChap = ComUtils.getResourceXSL("tabl_chap.xsl");
         ProjectEntity project = projectService.getProjectById(id);
 
-        model.addAttribute("recommend", recommend);
+        if (recommendList != null && recommendList.size() > 0) {
+            model.addAttribute("recommend", recommendList);
+        }
+
+        if (sameGenreList != null && sameGenreList.getProjectEntities().size() > 0) {
+            model.addAttribute("sameGenre", sameGenreList);
+        }
+
         model.addAttribute("sXML", xml);
         model.addAttribute("sXSLChap", xslChap);
         model.addAttribute("sXSL", xsl);
