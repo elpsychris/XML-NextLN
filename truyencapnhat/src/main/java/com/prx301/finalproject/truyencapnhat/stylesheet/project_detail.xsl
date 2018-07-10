@@ -11,9 +11,9 @@
             <div class="project-cover">
                 <div class="project-cover-item">
                     <div class="rating-info">
-                        <div class="site-rate">3</div>
-                        <div class="our-rate">4</div>
-                        <div class="your-rate animated">?</div>
+                        <span class="rate-label label-they"/><div class="site-rate"><xsl:value-of select="//p:project/p:point"/></div>
+                        <span class="rate-label label-we"/><div class="our-rate"><xsl:value-of select="//p:project/p:rating"/></div>
+                        <span class="rate-label label-you"/><div class="your-rate animated">?</div>
                     </div>
                     <img class="card-2">
                         <xsl:attribute name="src">

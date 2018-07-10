@@ -29,8 +29,8 @@ public class APIController {
         this.projectService = projectService;
     }
 
-    @RequestMapping(value = "/login", method = RequestMethod.POST, consumes = MediaType.APPLICATION_XML_VALUE, produces = MediaType.APPLICATION_XML_VALUE)
-    public AuthTicket login(HttpSession session, @RequestBody LoginRequest loginRequest) {
+    @RequestMapping(value = "/login", method = RequestMethod.POST, consumes = MediaType.APPLICATION_XML_VALUE)
+    public String login(HttpSession session, @RequestBody LoginRequest loginRequest) {
         return accountService.checkLogin(loginRequest, session);
     }
 

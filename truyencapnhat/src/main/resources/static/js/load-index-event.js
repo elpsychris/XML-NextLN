@@ -79,7 +79,6 @@ function onLoadCache(num, isShow, subId) {
                 var xhr = new XMLHttpRequest();
                 xhr.onreadystatechange = function () {
                     if (this.status == 200 && this.readyState == 4) {
-                        console.log("add " + number, subId);
                         var doc = parserDOM.parseFromString(this.responseText, "application/xml");
                         targetCache[number] = doc;
 

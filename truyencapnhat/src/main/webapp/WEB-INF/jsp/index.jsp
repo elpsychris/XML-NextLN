@@ -64,13 +64,18 @@
                         <img src="ava.jpg"/>
                         <div class="name-sect"><span>${user.username}</span></div>
                     </div>
+                </div>
                     <c:choose>
                         <c:when test="${not isAdmin}">
                             <div class="menu-sect">
                                 <div class="bookmark-menu">Bookmark</div>
                                 <div class="logout-menu" onclick="onLogout(this)"></div>
                             </div>
-                            <div id="bookmark-list" class="bookmark-list"></div>
+                            <div class="content-wrapper">
+                                <div id="bookmark-list" class="bookmark-list">
+
+                                </div>
+                            </div>
                         </c:when>
                         <c:otherwise>
                             <div class="menu-sect">
@@ -83,7 +88,6 @@
                         </c:otherwise>
                     </c:choose>
                 </div>
-            </div>
         </c:otherwise>
     </c:choose>
 </div>

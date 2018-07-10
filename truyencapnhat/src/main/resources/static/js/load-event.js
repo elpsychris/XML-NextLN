@@ -77,7 +77,6 @@ function onLoadCache(num, isShow) {
                 var xhr = new XMLHttpRequest();
                 xhr.onreadystatechange = function () {
                     if (this.status == 200 && this.readyState == 4) {
-                        console.log("add " + number);
                         var doc = parserDOM.parseFromString(this.responseText, "application/xml");
                         getProjectObject(doc);
                         cacheDoc[number] = doc;

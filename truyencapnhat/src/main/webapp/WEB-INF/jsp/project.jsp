@@ -59,27 +59,30 @@
                         <img src="ava.jpg"/>
                         <div class="name-sect"><span>${user.username}</span></div>
                     </div>
-                    <c:choose>
-                        <c:when test="${not isAdmin}">
-                            <div class="menu-sect">
-                                <div class="bookmark-menu">Bookmark</div>
-                                <div class="logout-menu" onclick="onLogout(this)"></div>
-                            </div>
+                </div>
+
+                <c:choose>
+                    <c:when test="${not isAdmin}">
+                        <div class="menu-sect">
+                            <div class="bookmark-menu">Bookmark</div>
+                            <div class="logout-menu" onclick="onLogout(this)"></div>
+                        </div>
+                        <div class="content-wrapper">
                             <div id="bookmark-list" class="bookmark-list">
 
                             </div>
-                        </c:when>
-                        <c:otherwise>
-                            <div class="menu-sect">
-                                <div class="bookmark-menu"><a href="/crawler/">Bộ Crawler</a></div>
-                                <div class="logout-menu" onclick="onLogout(this)"></div>
-                            </div>
-                            <div class="bookmark-list">
+                        </div>
+                    </c:when>
+                    <c:otherwise>
+                        <div class="menu-sect">
+                            <div class="bookmark-menu"><a href="/crawler/">Bộ Crawler</a></div>
+                            <div class="logout-menu" onclick="onLogout(this)"></div>
+                        </div>
+                        <div class="bookmark-list">
 
-                            </div>
-                        </c:otherwise>
-                    </c:choose>
-                </div>
+                        </div>
+                    </c:otherwise>
+                </c:choose>
             </div>
         </c:otherwise>
     </c:choose>
@@ -297,7 +300,4 @@
 <script type="text/javascript" src="./js/load-event.js"></script>
 <script type="text/javascript" src="./js/search-event.js"></script>
 <script type="text/javascript" src="./js/bookmark-script.js"></script>
-<script>
-    onLoadScore();
-</script>
 </html>

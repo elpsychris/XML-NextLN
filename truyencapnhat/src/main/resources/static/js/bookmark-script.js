@@ -3,9 +3,10 @@ var projectBookList = [];
 var checkoutBookList = [];
 var isSetBookmark = false;
 
-
 bookmarkList = getSavedList();
 checkoutBookList = getSavedCheckoutList();
+
+
 
 
 setBookmarkStatus();
@@ -102,12 +103,36 @@ function stringToDate(stringDate) {
     return date;
 }
 
+function onMouseOverBookmark() {
+    var bookmarkList = document.getElementById("bookmark-list");
+    var contentWrapper = document.getElementsByClassName("content-wrapper")[0];
+
+    var lowerBound = contentWrapper.clientHeight - bookmarkList.clientHeight;
+    var parentHeight = contentWrapper.clientHeight;
+    var dist = this.getBoundingClientRect().top - contentWrapper.getBoundingClientRect().top;
+
+    if (dist > 0.6 * parentHeight) {
+        var newTop = bookmarkList.offsetTop - (dist - .5 * parentHeight);
+        if (newTop < lowerBound) {
+            newTop = lowerBound;
+        }
+        bookmarkList.style.top = newTop + "px";
+    } else if (dist < .4) {
+        var newTop = bookmarkList.offsetTop + (.5 * parentHeight - dist);
+        if (newTop > 0) {
+            newTop = 0;
+        }
+        bookmarkList.style.top = newTop + "px";
+    }
+}
+
 function createBookmarkItem(project) {
     var itemCardE = document.createElement("div");
     itemCardE.className = "item card-1";
     itemCardE.setAttribute("id", "bookmark-card-" + project["id"]);
 
     itemCardE.addEventListener("click", onBookmarkItemClick.bind(itemCardE), false);
+    itemCardE.addEventListener("mouseover",onMouseOverBookmark.bind(itemCardE));
 
     var thumbE = document.createElement("div");
     thumbE.className = "thumb";
@@ -249,12 +274,12 @@ function bookmarkIt(e, isUnbook) {
             if (this.responseText != null) {
                 var doc = parserDOM.parseFromString(this.responseText, "application/xml");
                 getProjectObject(doc);
-
                 updateBookmarkInfo(doc);
                 updateCheckoutInfo(doc);
 
                 saveList();
                 window.location.reload();
+                addNoti("Thao tác đã lưu", 1);
             }
         }
     };

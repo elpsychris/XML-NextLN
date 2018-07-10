@@ -42,7 +42,7 @@
                     <span class="author">
                         <xsl:value-of select="p:author"/>
                     </span>
-                    <span class="time">
+                    <span class="view">
                         <xsl:value-of select="p:view"/>
                     </span>
                 </div>

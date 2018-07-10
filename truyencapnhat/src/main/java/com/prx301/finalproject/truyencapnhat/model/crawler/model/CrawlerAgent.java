@@ -31,6 +31,7 @@ public class CrawlerAgent implements Runnable {
 
     private int totalUpdate = 0;
     private int totalInsert = 0;
+    private final String SCHEMA_DIR = "src/main/java/com/prx301/finalproject/truyencapnhat/schema/project_page.xsd";
 
     private Date startTime = Calendar.getInstance().getTime();
     private Date endTime = null;
@@ -87,7 +88,7 @@ public class CrawlerAgent implements Runnable {
         }
 
         try {
-            Schema schema = JAXBUtils.getSchema("src/main/java/com/prx301/finalproject/truyencapnhat/schema/project_page.xsd");
+            Schema schema = JAXBUtils.getSchema(SCHEMA_DIR);
             Projects projects = JAXBUtils.<Projects>xmlToObject(this.result, schema, Projects.class);
             if (projects != null) {
                 List<ProjectEntity> projectEntityList = projectRepo.findAll();

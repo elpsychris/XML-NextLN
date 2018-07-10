@@ -14,7 +14,7 @@ import java.util.Map;
 @Service
 public class AccountService {
     private AccountRepo accountRepo = null;
-    private Map<String, LoginRequest> tokenMap = new HashMap<>();
+    private Map<String, AccountEntity> tokenMap = new HashMap<>();
 
     public final static int LOGIN_AS_ADMIN = 1;
     public final static int LOGIN_AS_USER = 0;
@@ -25,7 +25,7 @@ public class AccountService {
         this.accountRepo = accountRepo;
     }
 
-    public AuthTicket renderToken(LoginRequest loginRequest, HttpSession session) {
+    private String renderToken(LoginRequest loginRequest, HttpSession session, AccountEntity user) {
         String newToken = loginRequest.hashCode() + "";
         while (tokenMap.get(newToken) != null) {
             loginRequest.setTime(Calendar.getInstance().getTime().getTime());
@@ -33,8 +33,8 @@ public class AccountService {
         }
 
         session.setAttribute(TOKEN_KEY, newToken);
-        tokenMap.put(newToken, loginRequest);
-        return new AuthTicket(newToken);
+        tokenMap.put(newToken, user);
+        return newToken;
     }
 
     public int checkRole(AuthTicket ticket) {
@@ -42,12 +42,12 @@ public class AccountService {
             return LOGIN_FAILED;
         }
 
-        LoginRequest check = tokenMap.get(ticket.getToken());
+        AccountEntity check = tokenMap.get(ticket.getToken());
         if (check == null) {
             return LOGIN_FAILED;
         }
 
-        if (check.isAdmin()) {
+        if (check.getAdmin()) {
             return LOGIN_AS_ADMIN;
         }
         return LOGIN_AS_USER;
@@ -66,30 +66,26 @@ public class AccountService {
         return false;
     }
 
-    public AuthTicket checkLogin(LoginRequest loginRequest, HttpSession session) {
+    public String checkLogin(LoginRequest loginRequest, HttpSession session) {
         if (loginRequest == null) {
-            return new AuthTicket();
+            return null;
         }
         AccountEntity existUser = accountRepo.findByUsername(loginRequest.getUsername());
         if (existUser != null && existUser.getPassword().equals(loginRequest.getPassword())) {
             if (existUser.getAdmin()) {
                 loginRequest.setAdmin(true);
             }
-            return renderToken(loginRequest, session);
+            return renderToken(loginRequest, session, existUser);
         }
 
-        return new AuthTicket();
+        return null;
     }
 
     public AccountEntity getAccount(String token) {
         if (token == null) {
             return null;
         }
-        LoginRequest loginRequest = tokenMap.get(token);
-        if (loginRequest == null) {
-            return null;
-        }
-        return accountRepo.findByUsername(loginRequest.getUsername());
+        return tokenMap.get(token);
     }
 
     public String signupAccount(AccountEntity accountEntity) {

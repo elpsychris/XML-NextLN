@@ -3,6 +3,9 @@ var isSignupWindow = false;
 var isSigninWindow = false;
 var isProfileWindow = false;
 var isUserWindowFocus = false;
+
+
+var isDocReady = false;
 var curToken = null;
 var lockCrawlAct = {};
 
@@ -198,11 +201,23 @@ function openProfile(e) {
     showUserWindow("profile");
 }
 
+function loadPage(url) {
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function (ev) {
+        if (this.status == 200 && this.readyState == 4) {
+            document.body.innerHTML = this.responseText;
+        }
+    };
+    xhr.open("GET", url);
+    xhr.send();
+}
+
 function onLogout(e) {
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-            window.location = "/";
+            addNoti("Đăng xuất thành công", 1);
+            loadPage(window.location.pathname + window.location.search);
             clearBookmarkSaved();
         }
     };
@@ -363,6 +378,14 @@ if (document.getElementById('user-window') != null) {
 var reloadIndex = function () {
     if (this.readyState == 4 && this.status == 200) {
         document.body.innerHTML = this.responseText;
+        addNoti("Đăng nhập thành công", 1);
+        setBookmarkStatus();
+        if (onLoadScore != null) {
+            onLoadScore();
+        }
+
+        bookmarkList = getSavedList();
+        checkoutBookList = getSavedCheckoutList();
         setBookmarkStatus();
     }
 };
@@ -379,6 +402,9 @@ function onSignupRequestSubmit(e) {
     var confirm = document.getElementById("signup-confirm").value;
     if (password !== confirm) {
         showSignupResponseMessage("Mật khẩu xác nhận không khớp!");
+        return;
+    } else if (password.length < 5) {
+        showSignupResponseMessage("Mật khẩu cần ít nhất 5 ký tự");
         return;
     }
 
@@ -418,20 +444,21 @@ function onLoginRequestSubmit(e) {
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-            var oParser = new DOMParser();
-            var oDOM = oParser.parseFromString(this.responseText, "application/xml");
+            // var oParser = new DOMParser();
+            // var oDOM = oParser.parseFromString(this.responseText, "application/xml");
+            //
+            // var token = oDOM.evaluate("//token/text()", oDOM, null, XPathResult.STRING_TYPE, null).stringValue;
 
-            var token = oDOM.evaluate("//token/text()", oDOM, null, XPathResult.STRING_TYPE, null).stringValue;
-
+            var token = this.responseText;
             if (token === "") {
                 showLoginResponseMessage("Tên tài khoản hoặc mật khẩu sai!");
             } else {
                 var reXHR = new XMLHttpRequest();
                 reXHR.onreadystatechange = reloadIndex;
-                reXHR.open("GET", window.location.href.replace("http://localhost:8080",""), true);
+                reXHR.open("GET", window.location.pathname + window.location.search, true);
                 reXHR.setRequestHeader("Content-Type", "application/xml");
-                reXHR.send(oDOM);
-                curToken = token;
+                reXHR.send();
+                // curToken = token;
             }
         }
     };
@@ -472,9 +499,32 @@ function onRatingChange(e, projectId) {
     xhr.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             onLoadScore();
+            addNoti("Thao tác đã lưu", 1);
         }
     };
 
     xhr.open("POST", "/api/rating/" + projectId + "/" + point);
     xhr.send();
+}
+
+function addNoti(message, type) {
+    if (type == 1) {
+        setTimeout(function () {
+            var newMess = document.createElement("div");
+            newMess.className = "success mess-pin animated bounceInRight";
+
+            var messSpan = document.createElement("span");
+            messSpan.appendChild(document.createTextNode(message));
+            messSpan.className = "mess-content";
+            newMess.appendChild(messSpan);
+
+            document.getElementsByTagName("body")[0].appendChild(newMess);
+            setTimeout(function () {
+                newMess.classList.add("bounceOutRight");
+                setTimeout(function () {
+                    newMess.remove();
+                }, 300)
+            }, 2000);
+        }, 1000);
+    }
 }

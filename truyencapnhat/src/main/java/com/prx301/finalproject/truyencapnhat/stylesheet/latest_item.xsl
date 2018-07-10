@@ -92,9 +92,9 @@
                         <xsl:value-of select="p:chapter-date"/>
                     </span>
                     <div class="followers">
-                        <div class="follower">s</div>
-                        <div class="follower">s</div>
-                        <div class="follower">s</div>
+                        <div class="follower"></div>
+                        <div class="follower"></div>
+                        <div class="follower"></div>
                         <div class="follower">+12</div>
                     </div>
                 </div>

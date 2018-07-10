@@ -22,6 +22,7 @@ import java.util.regex.Pattern;
 public class ComUtils {
     private final static String DEFAULT_CRAWLER_CONFIG_DIR = "src/main/java/com/prx301/finalproject/truyencapnhat/xmlConfigs/crawler_config.xml";
     private final static String DEFAULT_STYLESHEET_DIR = "src/main/java/com/prx301/finalproject/truyencapnhat/stylesheet";
+    private final static String DEFAULT_SCHEMA_DIR = "src/main/java/com/prx301/finalproject/truyencapnhat/schema";
     private final static String USER_AGENT_HEADER = "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.95 Safari/537.11";
     private final static int RETRY_INTERVAL = 20000;
     private final static int TIMEOUT = 6000;
@@ -184,9 +185,7 @@ public class ComUtils {
         Set<String> matchedImg = new HashSet<>();
         while (matcher.find()) {
             String sMatched = matcher.group(0);
-            if (sMatched.contains("No Game No Life")) {
-                System.out.println("find it");
-            }
+
             if (!matchedImg.contains(sMatched)) {
                 rawContent = rawContent.replace(sMatched, sMatched + "</img>");
                 matchedImg.add(sMatched);
@@ -292,6 +291,16 @@ public class ComUtils {
     }
 
     public static String getResourceXSL(String resourceName) {
+        resourceName = DEFAULT_STYLESHEET_DIR + "/" + resourceName;
+        String content = cacheMap.get(resourceName);
+        if (content == null) {
+            content = getStreamFromFile(resourceName);
+        }
+        return content;
+    }
+
+    public static String getResourceXSD(String resourceName) {
+        resourceName = DEFAULT_SCHEMA_DIR + "/" + resourceName;
         String content = cacheMap.get(resourceName);
         if (content == null) {
             content = getStreamFromFile(resourceName);
@@ -300,7 +309,7 @@ public class ComUtils {
     }
 
     private static String getStreamFromFile(String fileName) {
-        File file = new File(DEFAULT_STYLESHEET_DIR + "/" + fileName);
+        File file = new File(fileName);
         InputStream fis = null;
         BufferedReader reader = null;
         String line = null;
@@ -373,19 +382,19 @@ public class ComUtils {
                 field.set(curObj, field.get(newObj));
             } else {
                 // Append to current if String
-                if (aClass.getSimpleName().equals(String.class.getSimpleName())
-                        && field.get(newObj) != null) {
-                    String newString = (String) field.get(newObj);
-                    String oldString = (String) field.get(curObj);
-                    if (!oldString.toLowerCase().contains(newString.toLowerCase()) && !newString.trim().isEmpty()) {
-                        if (oldString.length() > 0) {
-                            oldString += ";" + newString.trim();
-                        } else {
-                            oldString = newString.trim();
-                        }
-                        field.set(curObj, oldString);
-                    }
-                }
+//                if (aClass.getSimpleName().equals(String.class.getSimpleName())
+//                        && field.get(newObj) != null) {
+//                    String newString = (String) field.get(newObj);
+//                    String oldString = (String) field.get(curObj);
+//                    if (!oldString.toLowerCase().contains(newString.toLowerCase()) && !newString.trim().isEmpty()) {
+//                        if (oldString.length() > 0 && oldString.length() < 100) {
+//                            oldString += ";" + newString.trim();
+//                        } else {
+//                            oldString = newString.trim();
+//                        }
+//                        field.set(curObj, oldString);
+//                    }
+//                }
 
                 if (aClass.getSimpleName().equals(Double.class.getSimpleName())
                         && field.get(newObj) != null && field.get(curObj) != null) {

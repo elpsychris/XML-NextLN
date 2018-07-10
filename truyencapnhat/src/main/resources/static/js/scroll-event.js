@@ -35,7 +35,6 @@ window.addEventListener('scroll', function (e) {
         }
     } else {
         if (sideWindow != null) {
-            console.log("side hide");
             sideWindow.classList.remove("fadeInLeft");
             sideWindow.classList.add("fadeOutLeft");
             this.setTimeout(function () {

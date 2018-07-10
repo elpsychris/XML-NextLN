@@ -121,7 +121,6 @@ function onDoFilter(project) {
             return false;
         }
     }
-    console.log(project["name"], " passed");
     return true;
 }
 function searchDetail(keyword) {
@@ -247,9 +246,6 @@ function createSearchResultDetail(project) {
 
     var lastUpdateCol = document.createElement("div");
     lastUpdateCol.className = colClass;
-    var lDate = parseInt(project["last_update"]);
-    var date = new Date(lDate);
-    console.log(date.toLocaleDateString());
     lastUpdateCol.appendChild(document.createTextNode(project["last_update"]));
     newRow.appendChild(lastUpdateCol);
 
