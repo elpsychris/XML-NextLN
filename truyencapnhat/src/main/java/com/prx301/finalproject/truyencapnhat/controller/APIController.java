@@ -40,11 +40,10 @@ public class APIController {
     }
 
     @RequestMapping(value = "/logout", method = RequestMethod.GET)
-    public void logout(HttpSession session, ModelMap modelMap) {
+    public void logout(HttpSession session) {
         String token = (String) session.getAttribute(AccountService.TOKEN_KEY);
-        AuthTicket authTicket = new AuthTicket(token);
 
-        accountService.logout(authTicket, session);
+        accountService.logout(token, session);
     }
 
     @RequestMapping(value = "/updates/{project-id}/{page-no}", produces = MediaType.APPLICATION_XML_VALUE)
@@ -75,9 +74,8 @@ public class APIController {
     @RequestMapping(value = "/bookmark", method = RequestMethod.GET, produces = MediaType.APPLICATION_XML_VALUE)
     public BookmarkList getBookmarkList(HttpSession session) {
         String token = (String) session.getAttribute(AccountService.TOKEN_KEY);
-        AuthTicket authTicket = new AuthTicket(token);
 
-        int result = accountService.checkRole(authTicket);
+        int result = accountService.checkRole(token);
         if (result == AccountService.LOGIN_AS_USER) {
             return bookmarkService.getBookmarkList(token);
         }
@@ -87,9 +85,9 @@ public class APIController {
     @RequestMapping(value = "/bookmark/{project-id}", method = RequestMethod.POST, produces = MediaType.APPLICATION_XML_VALUE)
     public BookmarkList bookmarkProject(@PathVariable("project-id") int projectId, HttpSession session) {
         String token = (String) session.getAttribute(AccountService.TOKEN_KEY);
-        AuthTicket authTicket = new AuthTicket(token);
+//        AuthTicket authTicket = new AuthTicket(token);
 
-        int result = accountService.checkRole(authTicket);
+        int result = accountService.checkRole(token);
         if (result == AccountService.LOGIN_AS_USER) {
             return bookmarkService.bookmarkProject(token, projectId);
         }
@@ -99,9 +97,9 @@ public class APIController {
     @RequestMapping(value = "/bookmark/checkout/{project-id}", method = RequestMethod.POST, produces = MediaType.APPLICATION_XML_VALUE)
     public BookmarkList checkoutProject(@PathVariable("project-id") int projectId, HttpSession session) {
         String token = (String) session.getAttribute(AccountService.TOKEN_KEY);
-        AuthTicket authTicket = new AuthTicket(token);
+//        AuthTicket authTicket = new AuthTicket(token);
 
-        int result = accountService.checkRole(authTicket);
+        int result = accountService.checkRole(token);
         if (result == AccountService.LOGIN_AS_USER) {
             return bookmarkService.checkoutBookmark(token, projectId);
         }
@@ -111,9 +109,9 @@ public class APIController {
     @RequestMapping(value = "/unbookmark/{project-id}", method = RequestMethod.DELETE, produces = MediaType.APPLICATION_XML_VALUE)
     public BookmarkList unbookmarkProject(@PathVariable("project-id") int projectId, HttpSession session) {
         String token = (String) session.getAttribute(AccountService.TOKEN_KEY);
-        AuthTicket authTicket = new AuthTicket(token);
+//        AuthTicket authTicket = new AuthTicket(token);
 
-        int result = accountService.checkRole(authTicket);
+        int result = accountService.checkRole(token);
         if (result == AccountService.LOGIN_AS_USER) {
             return bookmarkService.unbookmarkProject(token, projectId);
         }

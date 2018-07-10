@@ -40,18 +40,11 @@ public class WebController {
         String mostViewList = projectService.getMostViewByXML();
         String xsl = ComUtils.getResourceXSL("latest_item.xsl");
         String mostviewXsl = ComUtils.getResourceXSL("most_view.xsl");
-        AccountEntity accountEntity = null;
 
-        AuthTicket ticket = null;
-        if (ticket == null) {
-            String token = (String) session.getAttribute(AccountService.TOKEN_KEY);
-            ticket = new AuthTicket(token);
-            if (token != null) {
-                accountEntity = accountService.getAccount(token);
-            }
-        }
+        String token = (String) session.getAttribute(AccountService.TOKEN_KEY);
+        AccountEntity accountEntity = accountService.getAccount(token);
 
-        int role = accountService.checkRole(ticket);
+        int role = accountService.checkRole(token);
         boolean isAdmin = role == AccountService.LOGIN_AS_ADMIN;
         boolean isUser = role >= 0;
 
@@ -69,14 +62,10 @@ public class WebController {
 
     @GetMapping(value = "/search")
     public String getSearchPage(ModelMap model, HttpSession session, @RequestParam Map<String, String> params) {
-        AuthTicket ticket = null;
-
         String token = (String) session.getAttribute(AccountService.TOKEN_KEY);
-        ticket = new AuthTicket(token);
-
         String keyword = params.get("keyword");
 
-        int role = accountService.checkRole(ticket);
+        int role = accountService.checkRole(token);
         boolean isAdmin = role == AccountService.LOGIN_AS_ADMIN;
         boolean isUser = role >= 0;
 
@@ -97,20 +86,12 @@ public class WebController {
 
         String xsl = ComUtils.getResourceXSL("latest_item.xsl");
         String mostviewXsl = ComUtils.getResourceXSL("most_view.xsl");
-        String token = "";
-        AccountEntity accountEntity = null;
-
-        if (ticket == null) {
-            token = (String) session.getAttribute(AccountService.TOKEN_KEY);
-            ticket = new AuthTicket(token);
-
-            if (token != null) {
-                accountEntity = accountService.getAccount(token);
-            }
-        }
+        String token = (String) session.getAttribute(AccountService.TOKEN_KEY);
+        AccountEntity accountEntity = accountService.getAccount(token);
+        ;
 
 
-        int role = accountService.checkRole(ticket);
+        int role = accountService.checkRole(token);
         boolean isAdmin = role == AccountService.LOGIN_AS_ADMIN;
         boolean isUser = role >= 0;
 
@@ -131,20 +112,13 @@ public class WebController {
     @GetMapping("/project-detail")
     public String getProjectDetail(@RequestParam(name = "name", required = true) int id, ModelMap model, HttpSession session) {
 //        ProjectEntity projectEntity = projectService.getProjectById(id);
+        String token = (String) session.getAttribute(AccountService.TOKEN_KEY);
+        AccountEntity accountEntity = accountService.getAccount(token);
 
-        AuthTicket ticket = null;
-        AccountEntity accountEntity = null;
-        if (ticket == null) {
-            String token = (String) session.getAttribute(AccountService.TOKEN_KEY);
-            ticket = new AuthTicket(token);
-            if (token != null) {
-                accountEntity = accountService.getAccount(token);
-            }
-        }
         List<ProjectEntity> recommendList = projectService.getProjectRecomList(accountEntity);
         SearchProjects sameGenreList = projectService.getSameGenreList(id);
 
-        int role = accountService.checkRole(ticket);
+        int role = accountService.checkRole(token);
         boolean isAdmin = role == AccountService.LOGIN_AS_ADMIN;
         boolean isUser = role >= 0;
 

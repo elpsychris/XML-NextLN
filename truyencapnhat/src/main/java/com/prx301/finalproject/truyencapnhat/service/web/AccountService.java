@@ -37,12 +37,12 @@ public class AccountService {
         return newToken;
     }
 
-    public int checkRole(AuthTicket ticket) {
-        if (ticket == null || ticket.getToken() == null) {
+    public int checkRole(String token) {
+        if (token == null || token.isEmpty()) {
             return LOGIN_FAILED;
         }
 
-        AccountEntity check = tokenMap.get(ticket.getToken());
+        AccountEntity check = tokenMap.get(token);
         if (check == null) {
             return LOGIN_FAILED;
         }
@@ -53,12 +53,11 @@ public class AccountService {
         return LOGIN_AS_USER;
     }
 
-    public boolean logout(AuthTicket ticket, HttpSession session) {
-        if (ticket == null) {
+    public boolean logout(String token, HttpSession session) {
+        if (token == null) {
             return false;
         }
-        if (checkRole(ticket) >= 0) {
-            String token = ticket.getToken();
+        if (checkRole(token) >= 0) {
             tokenMap.remove(token);
             session.removeAttribute(AccountService.TOKEN_KEY);
             return true;

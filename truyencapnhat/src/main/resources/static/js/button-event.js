@@ -418,7 +418,11 @@ function onSignupRequestSubmit(e) {
     xhr.onreadystatechange = function (ev) {
         if (this.readyState == 4 && this.status == 200) {
             if (this.responseText == "") {
-                showSignupResponseMessage("Đăng ký thành công");
+                addNoti("Tài khoản đã được đăng ký", 1);
+                document.getElementById("signup-password").value = "";
+                document.getElementById("signup-confirm").value = "";
+                document.getElementById("signup-username").value = "";
+                openLoginProject();
             } else {
                 showSignupResponseMessage(this.responseText);
             }

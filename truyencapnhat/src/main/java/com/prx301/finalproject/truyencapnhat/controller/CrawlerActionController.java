@@ -29,8 +29,7 @@ public class CrawlerActionController {
         boolean isAuth = false;
         if (session != null) {
             String token = (String) session.getAttribute(AccountService.TOKEN_KEY);
-            AuthTicket ticket = new AuthTicket(token);
-            isAuth = accountService.checkRole(ticket) == AccountService.LOGIN_AS_ADMIN;
+            isAuth = accountService.checkRole(token) == AccountService.LOGIN_AS_ADMIN;
         }
 
         if (!isAuth) {
@@ -45,8 +44,7 @@ public class CrawlerActionController {
         boolean isAuth = false;
         if (session != null) {
             String token = (String) session.getAttribute(AccountService.TOKEN_KEY);
-            AuthTicket ticket = new AuthTicket(token);
-            isAuth = accountService.checkRole(ticket) == AccountService.LOGIN_AS_ADMIN;
+            isAuth = accountService.checkRole(token) == AccountService.LOGIN_AS_ADMIN;
         }
 
         if (!isAuth) {
@@ -61,8 +59,7 @@ public class CrawlerActionController {
         boolean isAuth = false;
         if (session != null) {
             String token = (String) session.getAttribute(AccountService.TOKEN_KEY);
-            AuthTicket ticket = new AuthTicket(token);
-            isAuth = accountService.checkRole(ticket) == AccountService.LOGIN_AS_ADMIN;
+            isAuth = accountService.checkRole(token) == AccountService.LOGIN_AS_ADMIN;
         }
 
         if (!isAuth) {
@@ -77,8 +74,7 @@ public class CrawlerActionController {
         boolean isAuth = false;
         if (session != null) {
             String token = (String) session.getAttribute(AccountService.TOKEN_KEY);
-            AuthTicket ticket = new AuthTicket(token);
-            isAuth = accountService.checkRole(ticket) == AccountService.LOGIN_AS_ADMIN;
+            isAuth = accountService.checkRole(token) == AccountService.LOGIN_AS_ADMIN;
         }
 
         if (!isAuth) {
@@ -93,8 +89,7 @@ public class CrawlerActionController {
         boolean isAuth = false;
         if (session != null) {
             String token = (String) session.getAttribute(AccountService.TOKEN_KEY);
-            AuthTicket ticket = new AuthTicket(token);
-            isAuth = accountService.checkRole(ticket) == AccountService.LOGIN_AS_ADMIN;
+            isAuth = accountService.checkRole(token) == AccountService.LOGIN_AS_ADMIN;
         }
 
         if (!isAuth) {
