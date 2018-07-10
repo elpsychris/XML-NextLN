@@ -132,10 +132,7 @@
             Cập nhật
         </div>
         <div class="project-nav-item tab-button" onclick="changeTab(this,1)">
-            Bình luận
-        </div>
-        <div class="project-nav-item tab-button" onclick="changeTab(this,2)">
-            Review
+            Có thể bạn sẽ thích
         </div>
     </div>
     <div class="main-content">
@@ -173,10 +170,6 @@
                 </div>
             </div>
             <div class="tab-content">
-                <h1>Đang cập nhật</h1>
-            </div>
-
-            <div class="tab-content">
                 <div class="search-result">
                     <div class="card-panel-horz">
                         <div class="panel-header">Đề xuất</div>
@@ -201,8 +194,16 @@
                                                         </c:choose>
                                                     </div>
                                                 </div>
-                                                <div class="thumbnail"><img
-                                                        src="${project.projectCover}"></div>
+                                                <c:choose>
+                                                    <c:when test="${fn:contains(project.projectCover,';')}">
+                                                        <div class="thumbnail"><img
+                                                                src="${fn:split(project.projectCover,';')[0]}"></div>
+                                                    </c:when>
+                                                    <c:otherwise>
+                                                        <div class="thumbnail"><img
+                                                                src="${project.projectCover}"></div>
+                                                    </c:otherwise>
+                                                </c:choose>
                                                 <span class="author">${project.projectAuthor}</span><span
                                                     class="time">${project.projectView}</span>
                                             </div>
@@ -245,8 +246,16 @@
                                                         </c:choose>
                                                     </div>
                                                 </div>
-                                                <div class="thumbnail"><img
-                                                        src="${project.projectCover}"></div>
+                                                <c:choose>
+                                                    <c:when test="${fn:contains(project.projectCover,';')}">
+                                                        <div class="thumbnail"><img
+                                                                src="${fn:split(project.projectCover,';')[0]}"></div>
+                                                    </c:when>
+                                                    <c:otherwise>
+                                                        <div class="thumbnail"><img
+                                                                src="${project.projectCover}"></div>
+                                                    </c:otherwise>
+                                                </c:choose>
                                                 <span class="author">${project.projectAuthor}</span><span
                                                     class="time">${project.projectView}</span>
                                             </div>
@@ -288,4 +297,7 @@
 <script type="text/javascript" src="./js/load-event.js"></script>
 <script type="text/javascript" src="./js/search-event.js"></script>
 <script type="text/javascript" src="./js/bookmark-script.js"></script>
+<script>
+    onLoadScore();
+</script>
 </html>

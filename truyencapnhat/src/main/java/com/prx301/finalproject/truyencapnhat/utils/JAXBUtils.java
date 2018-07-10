@@ -60,6 +60,9 @@ public class JAXBUtils {
         }catch (UnmarshalException ex) {
             ex.printStackTrace();
             logger.log(Logger.LOG_LEVEL.ERROR, "Error happened in the Unmarshalling progress", ex, JAXBUtils.class);
+        }catch (NullPointerException ex) {
+            logger.log(Logger.LOG_LEVEL.ERROR, "Error happened in the Unmarshalling progress", ex, JAXBUtils.class);
+            return null;
         }
         return object;
     }

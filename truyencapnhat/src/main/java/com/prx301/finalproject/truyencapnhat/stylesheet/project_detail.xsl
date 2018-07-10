@@ -10,11 +10,23 @@
         <div class="info-wrapper">
             <div class="project-cover">
                 <div class="project-cover-item">
+                    <div class="rating-info">
+                        <div class="site-rate">3</div>
+                        <div class="our-rate">4</div>
+                        <div class="your-rate animated">?</div>
+                    </div>
                     <img class="card-2">
                         <xsl:attribute name="src">
                             <xsl:choose>
                                 <xsl:when test="//p:project/p:cover">
-                                    <xsl:value-of select="//p:project/p:cover"/>
+                                    <xsl:choose>
+                                        <xsl:when test="contains(//p:project/p:cover,';')">
+                                            <xsl:value-of select="substring-before(//p:project/p:cover,';')"/>
+                                        </xsl:when>
+                                        <xsl:otherwise>
+                                            <xsl:value-of select="//p:project/p:cover"/>
+                                        </xsl:otherwise>
+                                    </xsl:choose>
                                 </xsl:when>
                                 <xsl:otherwise>
                                     nocover.jpg
@@ -26,6 +38,7 @@
                         <div class="project-name">
                             <xsl:value-of select="//p:project/p:name"/>
                         </div>
+                        <div id="please-login">Đăng nhập để theo dõi project này</div>
                         <div class="bookmark-btn" onclick="bookmarkIt(this, false)">
                             <xsl:attribute name="id">book-project-<xsl:value-of select="//p:project/p:id"/>
                             </xsl:attribute>

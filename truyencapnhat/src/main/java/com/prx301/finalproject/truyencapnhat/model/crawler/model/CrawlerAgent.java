@@ -81,6 +81,10 @@ public class CrawlerAgent implements Runnable {
         } catch (InterruptedException e) {
             logger.log(Logger.LOG_LEVEL.ERROR, e, SpiderService.class);
         }
+        if (this.result == null || this.result.getNode() == null) {
+            this.agentStatus = STOPPED;
+            return;
+        }
 
         try {
             Schema schema = JAXBUtils.getSchema("src/main/java/com/prx301/finalproject/truyencapnhat/schema/project_page.xsd");

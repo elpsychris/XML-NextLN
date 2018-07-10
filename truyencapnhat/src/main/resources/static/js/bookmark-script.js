@@ -111,6 +111,13 @@ function createBookmarkItem(project) {
 
     var thumbE = document.createElement("div");
     thumbE.className = "thumb";
+    if (project["cover"] != null && project["cover"].length > 0) {
+        var cover = project["cover"];
+        if (cover.indexOf(";") > 0) {
+            cover = cover.split(";")[0];
+        }
+        thumbE.style.background = "linear-gradient(to right, rgba(255, 255, 255, 0) 20%, rgba(255, 255, 255, 1)), url('"+ cover + "')";
+    }
 
     var infoE = document.createElement("div");
     infoE.className = "info";
@@ -154,11 +161,15 @@ function setBookmarkStatus() {
 
     var bookmarkBtn = document.getElementsByClassName("bookmark-btn")[0];
     var bookmarkedBtn = document.getElementsByClassName("bookmarked-btn")[0];
+    var bookmarkMsg = document.getElementById("please-login");
+    var ratingBtn = document.getElementsByClassName("rating-overlay")[0];
 
     if (!isUser) {
         if (bookmarkedBtn != null && bookmarkedBtn != null) {
             bookmarkBtn.style.display = "none";
             bookmarkedBtn.style.display = "none";
+            ratingBtn.style.display = "none";
+            bookmarkMsg.style.display = "flex";
         }
         return;
     }
@@ -170,10 +181,12 @@ function setBookmarkStatus() {
         if (isBookmarked) {
             bookmarkBtn.style.display = "none";
             bookmarkedBtn.style.display = "block";
+            bookmarkMsg.style.display = "none";
 
         } else {
             bookmarkedBtn.style.display = "none";
             bookmarkBtn.style.display = "block";
+            bookmarkMsg.style.display = "none";
 
         }
     }

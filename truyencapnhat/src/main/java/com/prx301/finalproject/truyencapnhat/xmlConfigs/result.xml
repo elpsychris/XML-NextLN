@@ -1,149 +1,490 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<html>
-    <body>
-        <h1 class="h1">
-            <span itemprop="name">&amp;quot;Bungaku Shoujo&amp;quot; Minarai</span>
-        </h1>
-        <table border="0" cellpadding="0" cellspacing="0" width="100%">
-            <tr>
-                <td class="borderClass" width="225" style="border-width: 0 1px 0 0;" valign="top">
-                    <div class="js-scrollfix-bottom" style="width: 225px">
-                        <div style="text-align: center;">
-                            <a href="https://myanimelist.net/manga/18072/Bungaku_Shoujo_Minarai/pics">
-                                <img src="https://myanimelist.cdn-dena.com/images/manga/5/27656.jpg"
-                                     alt="&amp;quot;Bungaku Shoujo&amp;quot; Minarai" itemprop="image" class="ac"></img>
-                            </a>
-                        </div>
-                        <div class="profileRows pb0">
-                            <a href="https://myanimelist.net/login.php?from=%2Fmanga%2F18072%2FBungaku_Shoujo_Minarai&amp;amp;error=login_required">
-                                Add to My List
-                            </a>
-                        </div>
-                        <div id="profileRows" class="pt0">
-                            <a href="https://myanimelist.net/login.php?from=%2Fmanga%2F18072%2FBungaku_Shoujo_Minarai&amp;amp;error=login_required"
-                               style="font-weight: normal;">
-                                <span id="favOutput">Add to Favorites</span>
-                            </a>
-                        </div>
-                        <div class="js-sns-icon-container icon-block ">
-                            <a data-ga-network="facebook" data-ga-screen="Share Button Location: common"
-                               class="js-share-button-popup js-share-button-tracking sprite-icon-social icon-social icon-facebook"
-                               target="_blank"
-                               href="http://www.facebook.com/share.php?u=https%3A%2F%2Fmyanimelist.net%2Fmanga%2F18072%2FBungaku_Shoujo_Minarai"></a>
-                            <a data-ga-network="twitter" data-ga-screen="Share Button Location: common"
-                               class="js-share-button-popup js-share-button-tracking sprite-icon-social icon-social icon-twitter"
-                               target="_blank"
-                               href="http://twitter.com/share?related=MyAnimeList.net&amp;amp;via=myanimelist&amp;amp;url=https%3A%2F%2Fmyanimelist.net%2Fmanga%2F18072%2FBungaku_Shoujo_Minarai&amp;amp;text=%22Bungaku%20Shoujo%22%20Minarai&amp;amp;hashtags=manga"></a>
-                            <a data-ga-network="google+" data-ga-screen="Share Button Location: common"
-                               class="js-share-button-popup js-share-button-tracking sprite-icon-social icon-social icon-google"
-                               target="_blank"
-                               href="https://plus.google.com/share?url=https%3A%2F%2Fmyanimelist.net%2Fmanga%2F18072%2FBungaku_Shoujo_Minarai"></a>
-                            <a data-ga-network="reddit" data-ga-screen="Share Button Location: common"
-                               class="js-share-button-popup js-share-button-tracking sprite-icon-social icon-social icon-reddit"
-                               target="_blank"
-                               href="http://reddit.com/submit?url=https%3A%2F%2Fmyanimelist.net%2Fmanga%2F18072%2FBungaku_Shoujo_Minarai&amp;amp;title=%22Bungaku%20Shoujo%22%20Minarai"></a>
-                            <a data-ga-network="tumblr" data-ga-screen="Share Button Location: common"
-                               class="js-share-button-popup js-share-button-tracking sprite-icon-social icon-social icon-tumblr"
-                               target="_blank"
-                               href="http://www.tumblr.com/share/link?url=https%3A%2F%2Fmyanimelist.net%2Fmanga%2F18072%2FBungaku_Shoujo_Minarai&amp;amp;name=%22Bungaku%20Shoujo%22%20Minarai"></a>
-                        </div>
-                        <h2>Alternative Titles</h2>
-                        <div class="spaceit_pad">
-                            <span class="dark_text">Synonyms:</span>
-                            Book Girl: Apprentice, Literature Girl: An Apprentice
-                        </div>
-                        <div class="spaceit_pad">
-                            <span class="dark_text">Japanese:</span>
-                            “文学少女”見習い
-                        </div>
-                        <h2>Information</h2>
-                        <div>
-                            <span class="dark_text">Type:</span>
-                            <a href="/topmanga.php?type=novels">Novel</a>
-                        </div>
-                        <div class="spaceit">
-                            <span class="dark_text">Volumes:</span>
-                            3
-                        </div>
-                        <div>
-                            <span class="dark_text">Chapters:</span>
-                            30
-                        </div>
-                        <div class="spaceit">
-                            <span class="dark_text">Status:</span>
-                            Finished
-                        </div>
-                        <div>
-                            <span class="dark_text">Published:</span>
-                            Apr 30, 2009 to Aug 30, 2010
-                        </div>
-                        <div class="spaceit">
-                            <span class="dark_text">Genres:</span>
-                            No genres have been added yet.
-                        </div>
-                        <div>
-                            <span class="dark_text">Authors:</span>
-                            <a href="/people/7606/Mizuki_Nomura">Nomura, Mizuki</a>
-                            (Story), <a href="/people/7607/Miho_Takeoka">Takeoka, Miho</a> (Art)
-                        </div>
-                        <div class="spaceit">
-                            <span class="dark_text">Serialization:</span>
-                            None
-                        </div>
-                        <h2>Statistics</h2>
-                        <div class="po-r js-statistics-info di-ib" data-id="info1">
-                            <span itemprop="aggregateRating" itemtype="http://schema.org/AggregateRating">
-                                <span class="dark_text">Score:</span>
-                                <span itemprop="ratingValue">7.80</span>
-                                <sup>
-                                    <small>1</small>
-                                </sup>
-                                <small>(scored by <span itemprop="ratingCount">68</span> users)
-                                </small>
-                            </span>
-                            <div class="statistics-info info1">
-                                <small>
-                                    <sup>1</sup>
-                                    indicates a weighted score. Please note that 'Not yet published' titles are
-                                    excluded.
-                                </small>
-                            </div>
-                        </div>
-                        <div class="spaceit po-r js-statistics-info di-ib" data-id="info2">
-                            <span class="dark_text">Ranked:</span> #1684
-                            <sup>
-                                <small>2</small>
-                            </sup>
-                            <div class="statistics-info info2">
-                                <small>
-                                    <sup>2</sup>
-                                    based on the <a href="/topmanga.php">top manga</a> page. Please note that 'R18+'
-                                    titles are excluded.
-                                </small>
-                            </div>
-                        </div>
-                        <div>
-                            <span class="dark_text">Popularity:</span>
-                            #13228
-                        </div>
-                        <div class="spaceit">
-                            <span class="dark_text">Members:</span>
-                            432
-                        </div>
-                        <div>
-                            <span class="dark_text">Favorites:</span>
-                            3
-                        </div>
-                        <div class="clearfix mauto mt16" style="width:160px;padding-right10px;">
-                            <div class="_unit " style="width:160px;display: block !important;" data-height="600">
-                                <div id="pc_manga_detail_side_sky" class="" style="width:160px;">
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </td>
-            </tr>
-        </table>
-    </body>
-</html>
+<p:projects xmlns:p='http://t3.com/2018/project-page'>
+    <p:project>
+        <p:id>56</p:id>
+        <p:name>6</p:name>
+        <p:alter-name>Japanese: 6 -ゼクス-, ;Synonyms: Eighty Six, Japanese: 86―エイティシックス―,;Synonyms: Eighty Six, Japanese:
+            86―エイティシックス―,
+        </p:alter-name>
+        <p:publish-date></p:publish-date>
+        <p:author>Rairaku, Rei;Shirabi</p:author>
+        <p:illustrator>Cosmic;Asato, Asato</p:illustrator>
+        <p:hash>1409478044</p:hash>
+        <p:view>990</p:view>
+        <p:point>8.0</p:point>
+        <p:genres>mystery|drama|sci-fi</p:genres>
+        <p:last_update>10/07/2018 10:16</p:last_update>
+        <p:total_update>0</p:total_update>
+        <p:users>0</p:users>
+        <p:cover>
+            https://myanimelist.cdn-dena.com/images/manga/2/167691.jpg;https://myanimelist.cdn-dena.com/images/manga/3/194315.jpg
+        </p:cover>
+        <p:rating>0.0</p:rating>
+        <p:link>https://myanimelist.net/manga/72185/6;https://myanimelist.net/manga/104039/86</p:link>
+    </p:project>
+    <p:project>
+        <p:id>50</p:id>
+        <p:name>3-Z Class's Ginpachi-sensei</p:name>
+        <p:alter-name>Japanese: ３年Ｚ組銀八先生,</p:alter-name>
+        <p:publish-date></p:publish-date>
+        <p:author>Sorachi, Hideaki</p:author>
+        <p:illustrator>Oosaki, Tomohito</p:illustrator>
+        <p:hash>-625889549</p:hash>
+        <p:view>1155</p:view>
+        <p:point>8.0</p:point>
+        <p:genres>comedy|school|shounen</p:genres>
+        <p:last_update>10/07/2018 10:16</p:last_update>
+        <p:total_update>0</p:total_update>
+        <p:users>0</p:users>
+        <p:cover>https://myanimelist.cdn-dena.com/images/manga/3/28580.jpg</p:cover>
+        <p:rating>0.0</p:rating>
+        <p:link>https://myanimelist.net/manga/14022/3-Z_Classs_Ginpachi-sensei</p:link>
+    </p:project>
+    <p:project>
+        <p:id>2</p:id>
+        <p:name>Bungaku Shoujo Series</p:name>
+        <p:alter-name>English: Book Girl, Synonyms: Literature Girl, Book Girl and the Suicidal Mime, Book Girl and the
+            Famished Spirit, Japanese: “文学少女”シリーズ, ;Synonyms: Bungaku Shoujo to Koisuru Souwashuu, Japanese:
+            “文学少女”と恋する挿話集【エピソード】, ;Bungaku Shoujo to Koisuru Episode
+        </p:alter-name>
+        <p:publish-date></p:publish-date>
+        <p:author>Nomura, Mizuki</p:author>
+        <p:illustrator>Takeoka, Miho</p:illustrator>
+        <p:hash>1559163188</p:hash>
+        <p:view>1129</p:view>
+        <p:point>7.0</p:point>
+        <p:genres>mystery|drama|romance</p:genres>
+        <p:last_update>10/07/2018 10:13</p:last_update>
+        <p:total_update>0</p:total_update>
+        <p:users>0</p:users>
+        <p:cover>
+            https://myanimelist.cdn-dena.com/images/manga/1/16232.jpg;https://myanimelist.cdn-dena.com/images/manga/1/115243.jpg
+        </p:cover>
+        <p:rating>0.0</p:rating>
+        <p:link>
+            https://myanimelist.net/manga/10000/Bungaku_Shoujo_Series;https://myanimelist.net/manga/67349/Bungaku_Shoujo_to_Koisuru_Episode
+        </p:link>
+    </p:project>
+    <p:project>
+        <p:id>6</p:id>
+        <p:name>Fushigi Toriatsukaimasu: Tsukumodou Kottouten</p:name>
+        <p:alter-name>Synonyms: Tsukumodo Antique Shop - We Handle &quot;Mysteriosities&quot;, Japanese: “不思議”取り扱います
+            付喪堂骨董店,
+        </p:alter-name>
+        <p:publish-date></p:publish-date>
+        <p:author>Takeshima, Satoshi</p:author>
+        <p:illustrator>Odou, Akihiko</p:illustrator>
+        <p:hash>-2035157019</p:hash>
+        <p:view>1002</p:view>
+        <p:point>8.0</p:point>
+        <p:genres>mystery|fantasy</p:genres>
+        <p:last_update>10/07/2018 10:13</p:last_update>
+        <p:total_update>0</p:total_update>
+        <p:users>0</p:users>
+        <p:cover>https://myanimelist.cdn-dena.com/images/manga/1/107795.jpg</p:cover>
+        <p:rating>0.0</p:rating>
+        <p:link>https://myanimelist.net/manga/62841/Fushigi_Toriatsukaimasu__Tsukumodou_Kottouten</p:link>
+    </p:project>
+    <p:project>
+        <p:id>20</p:id>
+        <p:name>.hack//Cell</p:name>
+        <p:alter-name>English: .hack//Cell, Japanese: .hack//CELL,</p:alter-name>
+        <p:publish-date></p:publish-date>
+        <p:author>Suzukaze, Ryou</p:author>
+        <p:illustrator>Mutsuki, Akira</p:illustrator>
+        <p:hash>-299455487</p:hash>
+        <p:view>907</p:view>
+        <p:point>7.0</p:point>
+        <p:genres>action|fantasy|game|sci-fi</p:genres>
+        <p:last_update>10/07/2018 10:13</p:last_update>
+        <p:total_update>0</p:total_update>
+        <p:users>0</p:users>
+        <p:cover>https://myanimelist.cdn-dena.com/images/manga/4/126613.jpg</p:cover>
+        <p:rating>0.0</p:rating>
+        <p:link>https://myanimelist.net/manga/12547/hack__Cell</p:link>
+    </p:project>
+    <p:project>
+        <p:id>60</p:id>
+        <p:name>7th</p:name>
+        <p:alter-name>Synonyms: Seventh, Sevens, Japanese: セブンス,</p:alter-name>
+        <p:publish-date></p:publish-date>
+        <p:author>Tomozo</p:author>
+        <p:illustrator>Mishima, Yomu</p:illustrator>
+        <p:hash>-1423006167</p:hash>
+        <p:view>873</p:view>
+        <p:point>8.0</p:point>
+        <p:genres>action|drama|fantasy|supernatural</p:genres>
+        <p:last_update>10/07/2018 10:16</p:last_update>
+        <p:total_update>0</p:total_update>
+        <p:users>0</p:users>
+        <p:cover>https://myanimelist.cdn-dena.com/images/manga/3/169375.jpg</p:cover>
+        <p:rating>0.0</p:rating>
+        <p:link>https://myanimelist.net/manga/95109/7th</p:link>
+    </p:project>
+    <p:project>
+        <p:id>234</p:id>
+        <p:name>Akuryou Series</p:name>
+        <p:alter-name>Synonyms: Ghost Hunt, Akurei, Japanese: 悪霊シリーズ,</p:alter-name>
+        <p:author>Ono, Fuyumi</p:author>
+        <p:illustrator></p:illustrator>
+        <p:hash>438381542</p:hash>
+        <p:view>741</p:view>
+        <p:point>8.0</p:point>
+        <p:genres>mystery|supernatural</p:genres>
+        <p:last_update>10/07/2018 10:24</p:last_update>
+        <p:total_update>0</p:total_update>
+        <p:users>0</p:users>
+        <p:cover>https://myanimelist.cdn-dena.com/images/manga/3/28683.jpg</p:cover>
+        <p:rating>0.0</p:rating>
+        <p:link>https://myanimelist.net/manga/14269/Akuryou_Series</p:link>
+    </p:project>
+    <p:project>
+        <p:id>23</p:id>
+        <p:name>.hack//Tasogare no Hibun</p:name>
+        <p:alter-name>Synonyms: .hack//Epitaph of Twilight, Japanese: .hack//黄昏の碑文,</p:alter-name>
+        <p:publish-date></p:publish-date>
+        <p:author>Kawasaki, Miu</p:author>
+        <p:illustrator>Shiina, Asako</p:illustrator>
+        <p:hash>-529863120</p:hash>
+        <p:view>683</p:view>
+        <p:point>7.0</p:point>
+        <p:genres>action|adventure|fantasy|game|sci-fi</p:genres>
+        <p:last_update>10/07/2018 10:13</p:last_update>
+        <p:total_update>0</p:total_update>
+        <p:users>0</p:users>
+        <p:cover>https://myanimelist.cdn-dena.com/images/manga/1/26763.jpg</p:cover>
+        <p:rating>0.0</p:rating>
+        <p:link>https://myanimelist.net/manga/17635/hack__Tasogare_no_Hibun</p:link>
+    </p:project>
+    <p:project>
+        <p:id>222</p:id>
+        <p:name>Akuma no Sonnet</p:name>
+        <p:alter-name>Synonyms: Akuma no Soneto, Devil&#039;s Sonnet, Sonnet of the Devil, Japanese: 悪魔のソネット,
+        </p:alter-name>
+        <p:publish-date></p:publish-date>
+        <p:author>Shinjou, Mayu</p:author>
+        <p:illustrator>Kurihara, Chihiro</p:illustrator>
+        <p:hash>-325529205</p:hash>
+        <p:view>652</p:view>
+        <p:point>5.0</p:point>
+        <p:genres>fantasy|romance</p:genres>
+        <p:last_update>10/07/2018 10:24</p:last_update>
+        <p:total_update>0</p:total_update>
+        <p:users>0</p:users>
+        <p:cover>https://myanimelist.cdn-dena.com/images/manga/2/33030.jpg</p:cover>
+        <p:rating>0.0</p:rating>
+        <p:link>https://myanimelist.net/manga/20697/Akuma_no_Sonnet</p:link>
+    </p:project>
+    <p:project>
+        <p:id>24</p:id>
+        <p:name>.hack//Zero</p:name>
+        <p:alter-name>Japanese: .hack//ZERO,</p:alter-name>
+        <p:author>Yokote, Michiko</p:author>
+        <p:illustrator>Kawashima, Ryojun</p:illustrator>
+        <p:hash>-1554388489</p:hash>
+        <p:view>615</p:view>
+        <p:point>7.0</p:point>
+        <p:genres>fantasy|game</p:genres>
+        <p:last_update>10/07/2018 10:13</p:last_update>
+        <p:total_update>0</p:total_update>
+        <p:users>0</p:users>
+        <p:cover>https://myanimelist.cdn-dena.com/images/manga/3/22476.jpg</p:cover>
+        <p:rating>0.0</p:rating>
+        <p:link>https://myanimelist.net/manga/15077/hack__Zero</p:link>
+    </p:project>
+    <p:project>
+        <p:id>331</p:id>
+        <p:name>Angel Beats!: Track Zero</p:name>
+        <p:alter-name>Japanese: Angel Beats! ―Track ZERO―, ;English: FEALs lead the way!, Japanese: エンジェル・フェスタ！, ;Angel
+            Festa!
+        </p:alter-name>
+        <p:publish-date></p:publish-date>
+        <p:author>Maeda, Jun;Kagami, Yuu</p:author>
+        <p:illustrator>GotoP;Kawakami, Tetsuya</p:illustrator>
+        <p:hash>-1477102798</p:hash>
+        <p:view>2246</p:view>
+        <p:point>5.0</p:point>
+        <p:genres>action|comedy|drama|supernatural|music|school|slice of life</p:genres>
+        <p:last_update>10/07/2018 10:49</p:last_update>
+        <p:total_update>0</p:total_update>
+        <p:users>0</p:users>
+        <p:cover>
+            https://myanimelist.cdn-dena.com/images/manga/3/176840.jpg;https://myanimelist.cdn-dena.com/images/manga/2/176000.jpg
+        </p:cover>
+        <p:rating>0.0</p:rating>
+        <p:link>
+            https://myanimelist.net/manga/16648/Angel_Beats__Track_Zero;https://myanimelist.net/manga/83723/Angel_Festa
+        </p:link>
+    </p:project>
+    <p:project>
+        <p:id>370</p:id>
+        <p:name>Ao no Exorcist</p:name>
+        <p:alter-name>Synonyms: Ao no Exorcist: Weekend Hero, Japanese: 青の祓魔師(エクソシスト),</p:alter-name>
+        <p:publish-date></p:publish-date>
+        <p:author>Katou, Kazue</p:author>
+        <p:illustrator>Yajima, Aya</p:illustrator>
+        <p:hash>342903245</p:hash>
+        <p:view>1875</p:view>
+        <p:point>7.0</p:point>
+        <p:genres>action|fantasy|shounen|supernatural</p:genres>
+        <p:last_update>10/07/2018 10:51</p:last_update>
+        <p:total_update>0</p:total_update>
+        <p:users>0</p:users>
+        <p:cover>https://myanimelist.cdn-dena.com/images/manga/1/117967.jpg</p:cover>
+        <p:rating>0.0</p:rating>
+        <p:link>https://myanimelist.net/manga/28103/Ao_no_Exorcist</p:link>
+    </p:project>
+    <p:project>
+        <p:id>353</p:id>
+        <p:name>Ano Hi Mita Hana no Namae wo Bokutachi wa Mada Shiranai.</p:name>
+        <p:alter-name>Synonyms: AnoHana, We Still Don&#039;t Know the Name of the Flower We Saw That Day, Japanese:
+            あの日見た花の名前を僕達はまだ知らない。,
+        </p:alter-name>
+        <p:author>Okada, Mari</p:author>
+        <p:illustrator>Tanaka, Masayoshi</p:illustrator>
+        <p:hash>-1984099249</p:hash>
+        <p:view>1502</p:view>
+        <p:point>8.0</p:point>
+        <p:genres>drama</p:genres>
+        <p:last_update>10/07/2018 10:51</p:last_update>
+        <p:total_update>0</p:total_update>
+        <p:users>0</p:users>
+        <p:cover>https://myanimelist.cdn-dena.com/images/manga/3/84563.jpg</p:cover>
+        <p:rating>0.0</p:rating>
+        <p:link>https://myanimelist.net/manga/47957/Ano_Hi_Mita_Hana_no_Namae_wo_Bokutachi_wa_Mada_Shiranai</p:link>
+    </p:project>
+    <p:project>
+        <p:id>21</p:id>
+        <p:name>.hack//GU</p:name>
+        <p:alter-name>English: .hack//G.U., Japanese: .hack//G.U.,</p:alter-name>
+        <p:publish-date></p:publish-date>
+        <p:author>Hamazaki, Tatsuya</p:author>
+        <p:illustrator>Morita, Yuzuka</p:illustrator>
+        <p:hash>-601067387</p:hash>
+        <p:view>1472</p:view>
+        <p:point>7.0</p:point>
+        <p:genres>fantasy|game|sci-fi</p:genres>
+        <p:last_update>10/07/2018 10:13</p:last_update>
+        <p:total_update>0</p:total_update>
+        <p:users>0</p:users>
+        <p:cover>https://myanimelist.cdn-dena.com/images/manga/4/15485.jpg</p:cover>
+        <p:rating>0.0</p:rating>
+        <p:link>https://myanimelist.net/manga/11350/hack__GU</p:link>
+    </p:project>
+    <p:project>
+        <p:id>258</p:id>
+        <p:name>Amagi Brilliant Park</p:name>
+        <p:alter-name>Synonyms: AmaBuri, Japanese: 甘城ブリリアントパーク, ;Japanese: 甘城ブリリアントパーク メープル サモナー, ;Amagi Brilliant Park:
+            Maple Summoner
+        </p:alter-name>
+        <p:publish-date></p:publish-date>
+        <p:author>Gatoh, Shoji;Nakajima, Yuka</p:author>
+        <p:illustrator>Nakajima, Yuka;Yanagawa, Keishou</p:illustrator>
+        <p:hash>-258269821</p:hash>
+        <p:view>1234</p:view>
+        <p:point>5.0</p:point>
+        <p:genres>comedy|fantasy|magic</p:genres>
+        <p:last_update>10/07/2018 10:47</p:last_update>
+        <p:total_update>0</p:total_update>
+        <p:users>0</p:users>
+        <p:cover>
+            https://myanimelist.cdn-dena.com/images/manga/3/175109.jpg;https://myanimelist.cdn-dena.com/images/manga/3/141173.jpg
+        </p:cover>
+        <p:rating>0.0</p:rating>
+        <p:link>
+            https://myanimelist.net/manga/57979/Amagi_Brilliant_Park;https://myanimelist.net/manga/81573/Amagi_Brilliant_Park__Maple_Summoner
+        </p:link>
+    </p:project>
+    <p:project>
+        <p:id>73</p:id>
+        <p:name>Aa! Megami-sama!: First End</p:name>
+        <p:alter-name>English: Oh My Goddess! First End, Synonyms: Shousetsu-ban Aa! Megami-sama!: Shoshuu, Japanese:
+            小説版 ああっ女神さまっ 初終－First End－,
+        </p:alter-name>
+        <p:publish-date></p:publish-date>
+        <p:author>Touma, Yumi</p:author>
+        <p:illustrator>Matsubara, Hidenori</p:illustrator>
+        <p:hash>342254317</p:hash>
+        <p:view>605</p:view>
+        <p:point>7.0</p:point>
+        <p:genres>comedy|fantasy|romance</p:genres>
+        <p:last_update>10/07/2018 10:16</p:last_update>
+        <p:total_update>0</p:total_update>
+        <p:users>0</p:users>
+        <p:cover>https://myanimelist.cdn-dena.com/images/manga/2/161788.jpg</p:cover>
+        <p:rating>0.0</p:rating>
+        <p:link>https://myanimelist.net/manga/4603/Aa_Megami-sama__First_End</p:link>
+    </p:project>
+    <p:project>
+        <p:id>191</p:id>
+        <p:name>Akikan!</p:name>
+        <p:alter-name>Synonyms: Empty Can!, Japanese: アキカン!,</p:alter-name>
+        <p:publish-date></p:publish-date>
+        <p:author>Suzuhira, Hiro</p:author>
+        <p:illustrator>Ranjou, Riku</p:illustrator>
+        <p:hash>-1103690804</p:hash>
+        <p:view>557</p:view>
+        <p:point>6.0</p:point>
+        <p:genres>comedy|romance</p:genres>
+        <p:last_update>10/07/2018 10:21</p:last_update>
+        <p:total_update>0</p:total_update>
+        <p:users>0</p:users>
+        <p:cover>https://myanimelist.cdn-dena.com/images/manga/2/154247.jpg</p:cover>
+        <p:rating>0.0</p:rating>
+        <p:link>https://myanimelist.net/manga/11913/Akikan</p:link>
+    </p:project>
+    <p:project>
+        <p:id>247</p:id>
+        <p:name>Allison</p:name>
+        <p:alter-name>English: Allison, Japanese: アリソン,</p:alter-name>
+        <p:publish-date></p:publish-date>
+        <p:author>Sigsawa, Keiichi</p:author>
+        <p:illustrator>Kuroboshi, Kouhaku</p:illustrator>
+        <p:hash>1168819341</p:hash>
+        <p:view>519</p:view>
+        <p:point>7.0</p:point>
+        <p:genres>action|adventure</p:genres>
+        <p:last_update>10/07/2018 10:46</p:last_update>
+        <p:total_update>0</p:total_update>
+        <p:users>0</p:users>
+        <p:cover>https://myanimelist.cdn-dena.com/images/manga/2/64119.jpg</p:cover>
+        <p:rating>0.0</p:rating>
+        <p:link>https://myanimelist.net/manga/7086/Allison</p:link>
+    </p:project>
+    <p:project>
+        <p:id>198</p:id>
+        <p:name>Aku no Musume</p:name>
+        <p:alter-name>Synonyms: Daughter of Evil, Japanese: 悪ノ娘,</p:alter-name>
+        <p:publish-date></p:publish-date>
+        <p:author>Akuno-P</p:author>
+        <p:illustrator>Ichika</p:illustrator>
+        <p:hash>-1791544003</p:hash>
+        <p:view>499</p:view>
+        <p:point>7.0</p:point>
+        <p:genres>drama</p:genres>
+        <p:last_update>10/07/2018 10:23</p:last_update>
+        <p:total_update>0</p:total_update>
+        <p:users>0</p:users>
+        <p:cover>https://myanimelist.cdn-dena.com/images/manga/3/104349.jpg</p:cover>
+        <p:rating>0.0</p:rating>
+        <p:link>https://myanimelist.net/manga/60559/Aku_no_Musume</p:link>
+    </p:project>
+    <p:project>
+        <p:id>16</p:id>
+        <p:name>(Kono Sekai wa Mou Ore ga Sukutte Tomi to Kenryoku wo Te ni Iretashi, Onna Kishi ya Onna Maou to Shiro
+            de Tanoshiku Kurashiteru kara, Ore Igai no Yuusha wa) Mou Isekai ni Konaide Kudasai.
+        </p:name>
+        <p:alter-name>Synonyms: I have already saved this world, took all the riches, and gained all the power, I&#039;m
+            living a fun life in a castle with a woman knight and a female Demon Lord, so, please, we don&#039;t need
+            more heroes here!, Japanese: （この世界はもう俺が救って富と権力を手に入れたし、女騎士や女魔王と城で楽しく暮らしてるから、俺以外の勇者は）もう異世界に来ないでください。,
+        </p:alter-name>
+        <p:publish-date></p:publish-date>
+        <p:author>Itou, Hiro</p:author>
+        <p:illustrator>Ogipote</p:illustrator>
+        <p:hash>1905871841</p:hash>
+        <p:view>476</p:view>
+        <p:point>8.0</p:point>
+        <p:genres>fantasy</p:genres>
+        <p:last_update>10/07/2018 10:13</p:last_update>
+        <p:total_update>0</p:total_update>
+        <p:users>0</p:users>
+        <p:cover>https://myanimelist.cdn-dena.com/images/manga/1/193541.jpg</p:cover>
+        <p:rating>0.0</p:rating>
+        <p:link>
+            https://myanimelist.net/manga/105108/Kono_Sekai_wa_Mou_Ore_ga_Sukutte_Tomi_to_Kenryoku_wo_Te_ni_Iretashi_Onna_Kishi_ya_Onna_Maou_to_Shiro_de_Tanoshiku_Kurashiteru_kara_Ore_Igai_no_Yuusha_wa_Mou_Isekai_ni_Konaide_Kudasai
+        </p:link>
+    </p:project>
+    <p:project>
+        <p:id>360</p:id>
+        <p:name>Another</p:name>
+        <p:alter-name>English: Another, Japanese: Another, ;Japanese: アナザー・ビート, ;Another Beat</p:alter-name>
+        <p:publish-date></p:publish-date>
+        <p:author>Itou, Noizi;Otani, Osamu</p:author>
+        <p:illustrator>Ayatsuji, Yukito;Sahara, Natsuki</p:illustrator>
+        <p:hash>665335608</p:hash>
+        <p:view>3000</p:view>
+        <p:point>5.0</p:point>
+        <p:genres>mystery|horror|thriller|action|fantasy</p:genres>
+        <p:last_update>10/07/2018 10:51</p:last_update>
+        <p:total_update>0</p:total_update>
+        <p:users>0</p:users>
+        <p:cover>
+            https://myanimelist.cdn-dena.com/images/manga/2/141955.jpg;https://myanimelist.cdn-dena.com/images/manga/1/159888.jpg
+        </p:cover>
+        <p:rating>0.0</p:rating>
+        <p:link>https://myanimelist.net/manga/29699/Another;https://myanimelist.net/manga/71983/Another_Beat</p:link>
+    </p:project>
+    <p:project>
+        <p:id>102</p:id>
+        <p:name>Ai no Kusabi</p:name>
+        <p:alter-name>English: Ai no Kusabi, Synonyms: Wedge of Interval, Love&#039;s Wedge, Wedge Between, The Space
+            Between, Japanese: 間の楔,
+        </p:alter-name>
+        <p:author>Yoshihara, Rieko</p:author>
+        <p:illustrator>Michihara, Katsumi</p:illustrator>
+        <p:hash>877069172</p:hash>
+        <p:view>2822</p:view>
+        <p:point>8.0</p:point>
+        <p:genres>drama|romance|sci-fi|yaoi</p:genres>
+        <p:last_update>10/07/2018 10:19</p:last_update>
+        <p:total_update>0</p:total_update>
+        <p:users>0</p:users>
+        <p:cover>https://myanimelist.cdn-dena.com/images/manga/1/31609.jpg</p:cover>
+        <p:rating>0.0</p:rating>
+        <p:link>https://myanimelist.net/manga/1401/Ai_no_Kusabi</p:link>
+    </p:project>
+    <p:project>
+        <p:id>18</p:id>
+        <p:name>.hack//Another Birth</p:name>
+        <p:alter-name>English: .hack//Another Birth, Synonyms: .hack//Mou Hitotsu no Tanjou, Japanese: .hack//ANOTHER
+            BIRTH,
+        </p:alter-name>
+        <p:author>Kawasaki, Miu</p:author>
+        <p:illustrator>Ito, Kazunori</p:illustrator>
+        <p:hash>-276580262</p:hash>
+        <p:view>2692</p:view>
+        <p:point>7.0</p:point>
+        <p:genres>adventure|drama|fantasy|game|school|sci-fi</p:genres>
+        <p:last_update>10/07/2018 10:13</p:last_update>
+        <p:total_update>0</p:total_update>
+        <p:users>0</p:users>
+        <p:cover>https://myanimelist.cdn-dena.com/images/manga/3/126599.jpg</p:cover>
+        <p:rating>0.0</p:rating>
+        <p:link>https://myanimelist.net/manga/1355/hack__Another_Birth</p:link>
+    </p:project>
+    <p:project>
+        <p:id>77</p:id>
+        <p:name>Absolute Duo</p:name>
+        <p:alter-name>Japanese: アブソリュート・デュオ,</p:alter-name>
+        <p:publish-date></p:publish-date>
+        <p:author>Hiiragiboshi, Takumi</p:author>
+        <p:illustrator>Asaba, Yuu</p:illustrator>
+        <p:hash>-115666339</p:hash>
+        <p:view>2476</p:view>
+        <p:point>7.0</p:point>
+        <p:genres>action|ecchi|romance|school|harem|supernatural</p:genres>
+        <p:last_update>10/07/2018 10:16</p:last_update>
+        <p:total_update>0</p:total_update>
+        <p:users>0</p:users>
+        <p:cover>https://myanimelist.cdn-dena.com/images/manga/3/175374.jpg</p:cover>
+        <p:rating>0.0</p:rating>
+        <p:link>https://myanimelist.net/manga/51025/Absolute_Duo</p:link>
+    </p:project>
+    <p:project>
+        <p:id>284</p:id>
+        <p:name>Ame no Hi no Iris</p:name>
+        <p:alter-name>English: Iris on Rainy Days, Japanese: 雨の日のアイリス,</p:alter-name>
+        <p:publish-date></p:publish-date>
+        <p:author>Matsuyama, Takeshi</p:author>
+        <p:illustrator>Hirasato</p:illustrator>
+        <p:hash>1954613851</p:hash>
+        <p:view>2267</p:view>
+        <p:point>8.0</p:point>
+        <p:genres>drama|romance|sci-fi|slice of life|psychological</p:genres>
+        <p:last_update>10/07/2018 10:47</p:last_update>
+        <p:total_update>0</p:total_update>
+        <p:users>0</p:users>
+        <p:cover>https://myanimelist.cdn-dena.com/images/manga/3/164392.jpg</p:cover>
+        <p:rating>0.0</p:rating>
+        <p:link>https://myanimelist.net/manga/56923/Ame_no_Hi_no_Iris</p:link>
+    </p:project>
+</p:projects>

@@ -32,6 +32,7 @@ sideWindowE.addEventListener("wheel", function (ev) {
     var topMargin = navBar.clientHeight;
     var ratio = (sideWindowE.clientHeight - topMargin) / showingTab.clientHeight;
     if (ratio > 1) {
+        enableScroll();
         return;
     }
     var y = ev.deltaY;

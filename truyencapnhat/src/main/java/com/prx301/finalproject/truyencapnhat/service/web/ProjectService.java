@@ -259,29 +259,59 @@ public class ProjectService {
         if (projectEntity == null) {
             return;
         }
+        double curScore = projectEntity.getProjectRating();
+        int curUsers = projectEntity.getProjectUsers();
 
         if (existLog == null) {
             List<ProjectActivity> projectActivities = new ArrayList<>();
             projectActivities.add(new ProjectActivity(projectId, point));
 
             existLog = new ActivityLog(projectActivities);
+            curScore = ((curScore * curUsers) + point) / (curUsers + 1);
+            curUsers += 1;
         } else {
             List<ProjectActivity> projectActivities = existLog.getLogList();
             ProjectActivity existAct = checkProjectActExist(projectId, projectActivities);
             if (existAct == null) {
                 existAct = new ProjectActivity(projectId, point);
                 projectActivities.add(existAct);
+                curScore = ((curScore * curUsers) + point) / (curUsers + 1);
+                curUsers += 1;
             } else {
+                curScore = ((curScore * curUsers) - existAct.getRating() + point) / curUsers;
                 existAct.setRating(point);
             }
         }
+        projectEntity.setProjectRating(curScore);
+        projectEntity.setProjectUsers(curUsers);
 
         String updateLogString = activityLogToString(existLog);
         accountEntity.setActivity(updateLogString);
 
         accountRepo.save(accountEntity);
+        projectRepo.save(projectEntity);
 
         activityLogMap.put(accountEntity.getUsername(), existLog);
+    }
+
+    public String getProjectRate(AccountEntity accountEntity, int projectId) {
+        if (accountEntity == null) {
+            return null;
+        }
+
+        ActivityLog log = activityLogMap.get(accountEntity.getUsername());
+        if (log == null) {
+            return null;
+        }
+
+        List<ProjectActivity> ratedAct = log.getLogList();
+        for (ProjectActivity projectActivity : ratedAct) {
+            if (projectActivity.getProjectId() == projectId) {
+                return projectActivity.getRating() + "";
+            }
+        }
+
+        return null;
     }
 
     private String activityLogToString(ActivityLog log) {

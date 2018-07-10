@@ -134,4 +134,12 @@ public class APIController {
             projectService.rateProject(accountEntity, projectId, point);
         }
     }
+
+    @RequestMapping(value = "/rating/{project-id}", method = RequestMethod.GET)
+    public String getProjectRate(@PathVariable("project-id") int projectId, HttpSession session) {
+        String token = (String) session.getAttribute(AccountService.TOKEN_KEY);
+
+        AccountEntity accountEntity = accountService.getAccount(token);
+        return projectService.getProjectRate(accountEntity, projectId);
+    }
 }

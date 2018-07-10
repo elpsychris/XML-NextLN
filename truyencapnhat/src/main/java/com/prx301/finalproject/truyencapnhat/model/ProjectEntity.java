@@ -27,9 +27,12 @@ import java.util.*;
         "updateVols",
         "projectLastUpdate",
         "projectTotalUpdate",
+        "projectUsers",
+        "projectCover",
+        "projectRating",
         "projectLink",
-        "bookmarkEntityList",
-        "projectCover"
+        "bookmarkEntityList"
+
 })
 @Entity
 @Table(name = "Project", schema = "dbo", catalog = "NU_DB")
@@ -93,9 +96,9 @@ public class ProjectEntity {
     private String projectCover;
     private List<BookmarkEntity> bookmarkEntityList;
     @XmlElement(name = "rating")
-    private double projectRating;
+    private double projectRating = 0;
     @XmlElement(name = "users")
-    private int projectUsers;
+    private int projectUsers = 0;
 
 
     @Id
@@ -294,12 +297,13 @@ public class ProjectEntity {
         return projectRating;
     }
 
-    @Basic
-    @Column(name = "project_total_user")
+
     public void setProjectRating(double projectRating) {
         this.projectRating = projectRating;
     }
 
+    @Basic
+    @Column(name = "project_total_user")
     public int getProjectUsers() {
         return projectUsers;
     }

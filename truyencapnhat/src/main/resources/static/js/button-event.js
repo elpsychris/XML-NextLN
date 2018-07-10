@@ -466,13 +466,12 @@ function showLoginResponseMessage(msg) {
 }
 
 function onRatingChange(e, projectId) {
-    console.log("You select: " + e.value);
     var point = e.value;
     var xhr = new XMLHttpRequest();
 
     xhr.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-            console.log(this.responseText);
+            onLoadScore();
         }
     };
 

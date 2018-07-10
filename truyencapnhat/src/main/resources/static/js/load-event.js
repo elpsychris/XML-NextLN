@@ -28,6 +28,42 @@ function showCache(num) {
         // setScrollTo(0);
     }, 200);
 }
+function loadSelect(el, val) {
+    if (el == null) {
+        return;
+    }
+
+    for (var i = 0; i < el.options.length; i++) {
+        if (el.options[i].value == val) {
+            el.selectedIndex = i;
+        }
+    }
+}
+function onLoadScore() {
+    var bookmarkBtn = document.getElementsByClassName("bookmark-btn")[0];
+    var myRate = document.getElementsByClassName("your-rate")[0];
+    var ratingSelect = document.getElementById("rating");
+
+    if (bookmarkBtn != null) {
+        var projectId = bookmarkBtn.id.replace("book-project-","");
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function (ev) {
+            if (this.status == 200 && this.readyState == 4) {
+                if (this.responseText != null && this.responseText.length > 0) {
+                    myRate.textContent = this.responseText;
+                    loadSelect(ratingSelect, this.responseText);
+                    myRate.classList.add("bounceIn");
+                    setTimeout(function () {
+                        myRate.classList.remove("bounceIn");
+                    }, 200);
+                }
+            }
+        };
+
+        xhr.open("GET", "/api/rating/" + projectId);
+        xhr.send();
+    }
+}
 
 function onLoadCache(num, isShow) {
     if (isShow == null) {
