@@ -10,7 +10,8 @@ import java.util.List;
         "config",
         "uriResolverClassName",
         "cleanFilter",
-        "status"
+        "status",
+        "schemaUri"
 })
 public class ConfigComp {
     @XmlElement(name = "name")
@@ -26,7 +27,8 @@ public class ConfigComp {
     private List<CleanFilter> cleanFilter;
     @XmlElement(name = "status")
     private int status;
-
+    @XmlElement(name = "schema")
+    private String schemaUri;
 
     public String getName() {
         return name;
@@ -74,5 +76,13 @@ public class ConfigComp {
 
     public void setStatus(int status) {
         this.status = status;
+    }
+
+    public String getSchemaUri() {
+        return schemaUri;
+    }
+
+    public void setSchemaUri(String schemaUri) {
+        this.schemaUri = schemaUri;
     }
 }

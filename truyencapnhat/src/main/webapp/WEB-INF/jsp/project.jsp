@@ -99,7 +99,7 @@
 <div class="header-bar">
     <div class="crumb-bar">
             <span>
-                <a href="/">Trang chủ</a> >
+                <a href="/">Trang chủ</a>
                 <a>
                     <c:choose>
                         <c:when test="${fn:length(project.projectName) gt 40}">

@@ -21,6 +21,7 @@
                     </filter-patterns>
                 </filter>
             </clean-filters>
+            <schema>src/main/java/com/prx301/finalproject/truyencapnhat/schema/project_page.xsd</schema>
             <!--<status>inactive</status>-->
         </component>
         <component>
@@ -44,6 +45,7 @@
                     </filter-patterns>
                 </filter>
             </clean-filters>
+            <schema>src/main/java/com/prx301/finalproject/truyencapnhat/schema/project_page.xsd</schema>
             <!--<status>active</status>-->
         </component>
     </components>

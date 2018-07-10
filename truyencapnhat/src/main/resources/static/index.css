@@ -875,10 +875,19 @@ input[type=checkbox] {
     margin-left: 10px;
 }
 
+.crumb-bar a:nth-child(1):after {
+    content: '\f054';
+    font-family: FontAwesome;
+    position: absolute;
+    right: -15px;
+}
+
 .crumb-bar a {
     padding: 10px 15px;
     background: rgba(255, 255, 255, .7);
     border-radius: 20px;
+    margin: 0 5px;
+    position: relative;
 }
 
 .header-bar .nav-item-center {

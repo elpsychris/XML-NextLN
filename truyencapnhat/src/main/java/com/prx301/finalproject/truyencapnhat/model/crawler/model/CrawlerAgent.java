@@ -88,7 +88,12 @@ public class CrawlerAgent implements Runnable {
         }
 
         try {
-            Schema schema = JAXBUtils.getSchema(SCHEMA_DIR);
+            Schema schema = null;
+
+            String schemaDir = configComponent.getSchemaUri();
+            if (schemaDir != null) {
+                schema = JAXBUtils.getSchema(SCHEMA_DIR);
+            }
             Projects projects = JAXBUtils.<Projects>xmlToObject(this.result, schema, Projects.class);
             if (projects != null) {
                 List<ProjectEntity> projectEntityList = projectRepo.findAll();
